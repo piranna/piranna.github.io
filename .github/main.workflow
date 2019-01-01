@@ -9,5 +9,6 @@ action "piranna/jekyll-social" {
   env = {
     user = "piranna"
     repo = "piranna.github.io"
+    baseUrl = "https://piranna.github.io/"
   }
 }
