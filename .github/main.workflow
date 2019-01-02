@@ -6,9 +6,4 @@ workflow "New workflow" {
 action "piranna/jekyll-social" {
   uses = "piranna/jekyll-social@master"
   secrets = ["GITHUB_TOKEN", "social"]
-  env = {
-    user = "piranna"
-    repo = "piranna.github.io"
-    baseUrl = "https://piranna.github.io/"
-  }
 }
