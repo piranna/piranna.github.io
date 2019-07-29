@@ -5,5 +5,5 @@ workflow "New workflow" {
 
 action "piranna/jekyll-social" {
   uses = "piranna/jekyll-social@master"
-  secrets = ["GITHUB_TOKEN", "social"]
+  secrets = ["GITHUB_TOKEN", "social", "user_access_token"]
 }
