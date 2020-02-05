@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1 class="date">{{ page.date | date: "%B %e, %Y" }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  {% include twitter.html %}
+</article>
