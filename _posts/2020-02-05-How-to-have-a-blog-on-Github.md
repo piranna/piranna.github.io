@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to have a blog on Github
+twitter: '1225206478035963905'
 ---
 
 Since I was a child I never liked to write. I was more a thinker, a tinker and a
