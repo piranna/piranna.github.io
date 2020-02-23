@@ -28,3 +28,5 @@ can get more info about my past work experience in my
 - [![Vocento](https://upload.wikimedia.org/wikipedia/commons/0/08/Vocento_logo.svg "Vocento")](https://www.vocento.com/)
 - [![BotXO](https://www.botxo.ai/wp-content/uploads/2019/03/BotXO_logo.png "BotXO")](https://www.botxo.ai/)
 - [![lingbe](https://lingbe.com/logo.b37d81ec.svg "lingbe")](https://lingbe.com/)
+- [![bpost](https://www.bpost.be/sites/all/themes/custom/bpost_selfservice/logo.png "bpost")](https://www.bpost.be/)
+- [![qvantel](https://www.itewiki.fi/write/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
