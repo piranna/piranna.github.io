@@ -7,10 +7,21 @@ permalink: /hire-me/
 If you like the kind of projects I'm working on, I'm available for hiring. I'm
 mainly interested on remote freelance projects (both short and long term), but
 sometimes I'm open to considerate changing my main employer job or to do onsite
-projects if it's interesting and we can negotiate the terms and conditions. You
-can get more info about my past work experience in my
+projects if both the task and the offer are interesting and we can negotiate the
+terms and conditions. You can get more info about my past work experience in my
 [LinkedIn](https://www.linkedin.com/in/piranna/) profile or in my
 [Curriculum Vitae](Leganes-Combarro_Jesus_resume.pdf).
+
+*What could have my ideal job?*
+
+- Interesting and stimulating project, probably related to R&D, specially in an
+  academic context (jobs with real posibility of writting academic papers will
+  **always** be of my interest), or allowing me to learn about new skills,
+  technologies or knowledge areas.
+- 100% remote with clear specificacions, roadmap and requirements, and
+  [async communications](https://doist.com/blog/asynchronous-communication/)
+  friendly.
+- Posibility of traveling for work or conferences assistance is a plus.
 
 ## Open Source contributions
 
