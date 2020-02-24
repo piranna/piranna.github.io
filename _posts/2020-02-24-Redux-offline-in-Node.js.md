@@ -1,4 +1,7 @@
-# `redux-offline` in Node.js
+---
+layout: post
+title: `redux-offline` in Node.js
+---
 
 Experimenting with [redux-offline](https://github.com/redux-offline/redux-offline),
 I've done a Proof-of-Concept about how to use
