@@ -1,7 +1,6 @@
 ---
 layout: post
-title: `redux-offline` in Node.js
-twitter: '1232054402216755201'
+title: redux-offline in Node.js
 ---
 
 Experimenting with [redux-offline](https://github.com/redux-offline/redux-offline),
