@@ -14,11 +14,14 @@ terms and conditions. You can get more info about my past work experience in my
 
 *What could have my ideal job?*
 
-- Interesting and stimulating project, probably related to R&D, specially in an
-  academic context (jobs with real posibility of writting academic papers will
-  **always** be of my interest), or allowing me to learn about new skills,
-  technologies or knowledge areas.
-- 100% remote with clear specificacions, roadmap and requirements, and
+- Interesting and stimulating project, allowing me to learn about new skills,
+  technologies or knowledge areas (not necesarily computer engineering related).
+  Current main interests are WebAssembly, FPGAs, unsupervised learning and
+  quantum computing.
+- Research & Development projects, specially in academic contexts. Jobs with
+  **real** posibilities of publishing academic papers will **always** be of my
+  interest and have priority over others than don't.
+- 100% remote positions with clear specificacions, roadmap and requirements, and
   [async communications](https://doist.com/blog/asynchronous-communication/)
   friendly.
 - Posibility of traveling for work or conferences assistance is a plus.
