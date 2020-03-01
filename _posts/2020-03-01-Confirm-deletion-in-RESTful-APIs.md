@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Confirm deletion in RESTful APIs
+twitter: '1234189351241867265'
 ---
 
 When designing web services, it's normal to include an option to delete an
