@@ -47,9 +47,12 @@ user needs (also as a single-process OS or bootable USB, and was planned support
 for networked GUI).
 
 This project won the spanish national
-[IX Free Software Universitary Championship](http://concursosoftwarelibre.us.es/1415/node/34.html)
-and was my bachelor thesis, graduated with distinction, and I was also invited
-to give some keynotes at *OpenExpoDay 2015* and *JsDayEs 2016* conferences.
+[IX Free Software Universitary Championship](http://concursosoftwarelibre.us.es/1415/node/34.html),
+was my [bachelor thesis](https://github.com/piranna/pfc) (graduated with
+distinction), and I was also invited to give some keynotes at
+*OpenExpoDay 2015* and *JsDayEs 2017* conferences.
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/220960658" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 ### [ShareIt!](https://github.com/ShareIt-project)
 
