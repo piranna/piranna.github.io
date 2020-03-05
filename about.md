@@ -18,15 +18,16 @@ designs, modularity and reusability.
 
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
-and been CTO of two start-ups, and currently I'm working as Tech Lead backend at
-[BotXO](https://www.botxo.ai), and as part-time freelance developer, consultor
-and auditor.
+and been CTO of two start-ups (and co-founder of one of them). Currently I'm
+working as Tech Lead backend at [BotXO](https://www.botxo.ai) and as part-time
+freelance developer, consultor and auditor. In my spare time i like to read
+books, go to cinema or travelling, go running or cycling, or work on my own side
+projects to improve my skills and craft things with cool high-edge technologies.
 
 ## More Information
 
-- Foundational member of
-  [Spain Robotic & Domotic Association](https://www.arde.cc/)
-- Member of MadridWireless and AlcorcónWireless communities
+- Co-founder of [Spain Robotic & Domotic Association](https://www.arde.cc)
+- Co-founder of AlcorcónWireless and Ex-Member of MadridWireless communities
 - Grant receiver for *3DS - 3 Days Startup*, Madrid 2012
 - WebRTC pioneer since 2012
 - [NodeOS](https://node-os.com/) lead developer
