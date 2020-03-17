@@ -52,7 +52,7 @@ was my [bachelor thesis](https://github.com/piranna/pfc) (graduated with
 distinction), and I was also invited to give some keynotes at
 *OpenExpoDay 2015* and *JsDayEs 2017* conferences.
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/220960658" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/220960658" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
 ### [ShareIt!](https://github.com/ShareIt-project)
 
