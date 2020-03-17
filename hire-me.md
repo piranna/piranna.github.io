@@ -12,19 +12,57 @@ terms and conditions. You can get more info about my past work experience in my
 [LinkedIn](https://www.linkedin.com/in/piranna/) profile or in my
 [Curriculum Vitae](Leganes-Combarro_Jesus_resume.pdf).
 
-*What could have my ideal job?*
+## My ideal job (AKA *Santa's letter*)
 
-- Interesting and stimulating project, allowing me to learn about new skills,
+### How would it be
+
+- Makes a difference, both for my career and to make the world a better place.
+- "Make money" is a priority, but it's **not** the main priority (definitely,
+  not the only one).
+- Responsability position with decision on projects and company future.
+- Travel frequently. If it's due assistance to conferences, that's a plus.
+
+### What could it have
+
+- Interesting and stimulating projects, allowing me to learn about new skills,
   technologies or knowledge areas (not necesarily computer engineering related).
-  Current main interests are WebAssembly, FPGAs, unsupervised learning and
-  quantum computing.
 - Research & Development projects, specially in academic contexts. Jobs with
   **real** posibilities of publishing academic papers will **always** be of my
   interest and have priority over others than don't.
-- 100% remote positions with clear specificacions, roadmap and requirements, and
+- 100% remote positions with flexible schedule and
   [async communications](https://doist.com/blog/asynchronous-communication/)
-  friendly.
-- Posibility of traveling for work or conferences assistance is a plus.
+  friendly, with clear specificacions, roadmap and requirements.
+- Travel expenses and fully paid accomodation during all my relocation time.
+- Bonuses and beneficts directly acountable to both my own performance and the
+  company one.
+- Acknowledge of my involvement in company progress, both short term (cash, paid
+  extra holidays, travels, technological equipment...) and long term (shares or
+  equity).
+
+## Current main expertise areas
+
+- Projects auditories (quality, best practices)
+- Systems programming (Python, C++)
+- Design of high performance systems, specifications and protocols
+- Full-stack web development
+- Backend web development (Node.js, Django)
+- Mobile apps (ReactNative)
+- Frontend web development (web APIs, React)
+
+### Other areas interested to work with
+
+- Robotics
+- Operating systems design
+- Filesystems design
+- WebAssembly
+- FPGAs and/or hardware design
+- WebRTC
+
+### Areas willing to learn or improve
+
+- Rust programming language
+- Unsupervised machine learning
+- Quantum computing
 
 ## Open Source contributions
 
