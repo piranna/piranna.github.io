@@ -73,6 +73,7 @@ terms and conditions. You can get more info about my past work experience in my
 - [re-start](https://github.com/react-everywhere/re-start) (React Native
   Everywhere)
 - [redux-offline](https://github.com/redux-offline/redux-offline)
+- [num2words](https://pypi.org/project/num2words/)
 
 ## Companies collaborations
 
