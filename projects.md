@@ -43,8 +43,8 @@ architectures, it implements advanced features like asynchronous send and
 reception, flow control with backpressure, use multiple transports in parallel,
 or auto-recovering.
 
-This project was sponsored by [Takeafile](https://takeafile.com) with funds from
-the European Union's [Horizon 2020](https://ec.europa.eu/programmes/horizon2020)
+This project was sponsored by [Takeafile Labs](https://takeafile.com) with funds
+from European Union [Horizon 2020](https://ec.europa.eu/programmes/horizon2020)
 program.
 
 ### [NodeOS](https://node-os.com/)
