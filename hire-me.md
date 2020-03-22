@@ -67,8 +67,8 @@ terms and conditions. You can get more info about my past work experience in my
 ## Open Source contributions
 
 - [![Kurento](https://www.kurento.org/sites/default/files/kurento.png "Kurento")](https://www.kurento.org/)
-- [![Takeafile](https://avatars0.githubusercontent.com/u/44590114?s=50 "Takeafile") Takeafile](https://github.com/Takeafile)
-- [![Wasmer](https://avatars3.githubusercontent.com/u/44205449?s=50 "Wasmer") Wasmer](https://wasmer.io/)
+- [![takeafile](../images/logos/takeafile.svg "Takeafile Labs")](https://github.com/Takeafile)
+- [![Wasmer](../images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
 - [node-canvas](https://github.com/Automattic/node-canvas)
 - [re-start](https://github.com/react-everywhere/re-start) (React Native
   Everywhere)
