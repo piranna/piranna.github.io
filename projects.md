@@ -20,6 +20,16 @@ This project also involved the development from scratch a project-level rules
 async engine and of a tasks runner with support for parallel execution and
 multiple optional alternatives, since none of them was available at that time.
 
+### [istanbul-js](https://istanbul.js.org/)
+
+`istanbul` is a code coverage tool that's being used internally by
+[Jest](https://jestjs.io/) testing framework, developed by Facebook and the
+current de-facto standard for Node.js, React and Javascript projects. Its
+default text output format was too much limited when showing the number of code
+coverage missing lines, so I refactored it reduce the number of decoration
+characters and auto-adjust to the width of the terminal by default, in addition
+of showing consecutive missing lines to be able to show more of them.
+
 ### [node-canvas](https://github.com/Automattic/node-canvas)
 
 As part of the development of [NodeOS](#NodeOS) to provide it some basic graphic
