@@ -4,13 +4,13 @@ title: Hire me
 permalink: /hire-me/
 ---
 
-If you like the kind of projects I'm working on, I'm available for hiring. I'm
-mainly interested on remote freelance projects (both short and long term), but
-sometimes I'm open to considerate changing my main employer job or to do onsite
-projects if both the task and the offer are interesting and we can negotiate the
-terms and conditions. You can get more info about my past work experience in my
-[LinkedIn](https://www.linkedin.com/in/piranna/) profile or in my
-[Curriculum Vitae](Leganes-Combarro_Jesus_resume.pdf).
+If you like the kind of projects and technologies I've been working on, I'm
+available for hiring. I'm mainly interested on remote freelance projects (both
+short and long term), but sometimes I'm open to considerate employee positions
+or to do onsite projects if both the tasks and the offer are interesting, and we
+can negotiate the terms and conditions. You can get more info about my past work
+experience in my [LinkedIn](https://www.linkedin.com/in/piranna/) profile or in
+my [Curriculum Vitae](Leganes-Combarro_Jesus_resume.pdf).
 
 ## My ideal job (AKA *Santa's letter*)
 
@@ -39,49 +39,59 @@ terms and conditions. You can get more info about my past work experience in my
   extra holidays, travels, technological equipment...) and long term (shares or
   equity).
 
-## Current main expertise areas
+## Main expertise areas
 
-- Projects auditories (quality, best practices)
-- Systems programming (Python, C++)
+- Projects auditories
+  - Project structure and code quality
+  - Development best practices
+- Open Source and Open Standards evangelization
+- Systems programming
+- Software & systems architecture
+- Technical leadership
 - Design of high performance systems, specifications and protocols
-- Full-stack web development
-- Backend web development (Node.js, Django)
-- Mobile apps (ReactNative)
-- Frontend web development (web APIs, React)
+- Backend & full-stack web development
+- Frontend web development & web APIs
+- Mobile multiplatform apps (ReactNative, PWAs)
+- *To do what any others can't*
+
+In detail info about knowledge areas and experience can be found in the
+[uses](uses.md) page.
 
 ### Other areas interested to work with
 
-- Robotics
+- Research & Development, high-edge technologies and specifications
 - Operating systems design
 - Filesystems design
 - WebAssembly
-- FPGAs and/or hardware design
 - WebRTC
+- Drivers development
 
-### Areas willing to learn or improve
+### Areas willing to improve or learn
 
-- Rust programming language
+- Robotics
+- FPGAs and/or hardware design
+- Rust programming language related projects
 - Unsupervised machine learning
 - Quantum computing
 
-## Open Source contributions
+## Open Source professional collaborations
 
-- [![Kurento](https://www.kurento.org/sites/default/files/kurento.png "Kurento")](https://www.kurento.org/)
-- [![takeafile](../images/logos/takeafile.svg "Takeafile Labs")](https://github.com/Takeafile)
+Collaborations with Open Source companies
+
 - [![Wasmer](../images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
-- [node-canvas](https://github.com/Automattic/node-canvas)
-- [re-start](https://github.com/react-everywhere/re-start) (React Native
-  Everywhere)
-- [redux-offline](https://github.com/redux-offline/redux-offline)
-- [istanbul-js](https://istanbul.js.org/)
-- [num2words](https://pypi.org/project/num2words/)
+- [![Kurento](https://www.kurento.org/sites/default/files/kurento.png "Kurento")](https://www.kurento.org/)
 
-## Companies collaborations
+Additionally, I've been contracted to work in the development of some specific
+100% Open Source projects for the next companies:
 
+- [![takeafile](../images/logos/takeafile.svg "Takeafile Labs")](https://takeafile.com)
 - [![Telefónica](https://www.telefonica.com/documents/153952/154445/lgo_telefonica_at.png/40901b9a-1f77-4a6d-a03c-e44f56c695ed "Telefónica")](https://www.telefonica.com)
-- [![Vocento](https://upload.wikimedia.org/wikipedia/commons/0/08/Vocento_logo.svg "Vocento")](https://www.vocento.com/)
+
+## Private collaborations
+
 - [![BotXO](https://www.botxo.ai/wp-content/uploads/2019/03/BotXO_logo.png "BotXO")](https://www.botxo.ai/)
-- [![lingbe](https://lingbe.com/logo.b37d81ec.svg "lingbe")](https://lingbe.com/)
 - [![bpost](https://www.bpost.be/sites/all/themes/custom/bpost_selfservice/logo.png "bpost")](https://www.bpost.be/)
-- [![qvantel](https://www.itewiki.fi/write/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
+- [![lingbe](https://lingbe.com/logo.b37d81ec.svg "lingbe")](https://lingbe.com/)
 - [![Ventrata](../images/logos/Ventrata.png "Ventrata")](https://ventrata.com/)
+- [![qvantel](https://www.itewiki.fi/write/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
+- [![Vocento](https://upload.wikimedia.org/wikipedia/commons/0/08/Vocento_logo.svg "Vocento")](https://www.vocento.com/)

@@ -4,8 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
-Most important Open Source projects I've been worked on, both personal or in a
-professional basis for third-party organizations.
+Most important Open Source projects I've conceived, designed and developed from
+scratch, both personal or for third-party organizations in a professional basis.
 
 ## Personal projects
 
@@ -19,43 +19,6 @@ documentation, tests...
 This project also involved the development from scratch a project-level rules
 async engine and of a tasks runner with support for parallel execution and
 multiple optional alternatives, since none of them was available at that time.
-
-### [istanbul-js](https://istanbul.js.org/)
-
-`istanbul` is a code coverage tool that's being used internally by
-[Jest](https://jestjs.io/) testing framework, developed by Facebook and the
-current de-facto standard for Node.js, React and Javascript projects. Its
-default text output format was too much limited when showing the number of code
-coverage missing lines, so I refactored it reduce the number of decoration
-characters and auto-adjust to the width of the terminal by default, in addition
-of showing consecutive missing lines to be able to show more of them.
-
-### [node-canvas](https://github.com/Automattic/node-canvas)
-
-As part of the development of [NodeOS](#NodeOS) to provide it some basic graphic
-capabilities, I added support for configurable backends on `node-canvas`, with
-the intention of being able to draw directly on the Linux `FbDev` framebuffer
-device instead of just only in memory. Backends support was already accepted in
-upstream code, but FbDev code is still pending of approval. In the future, plan
-is to add support for other graphic systems like accelerated Linux DRM/KMS, X11,
-Windows GDI, or OSX Metal.
-
-This project was later sponsored by [Ventrata](https://ventrata.com/) to add
-support for double-buffering, VSync and 24bits color mode.
-
-### [TransFast](https://github.com/Takeafile)
-
-Initially designed as a one-to-one high performance files transfer protocol
-based on WebRTC DataChannels, it evolved into a transport-agnostic
-streams-oriented communications protocol for general purpose heavily influenced
-by [Node.js streams](https://nodejs.org/api/stream.html). Taking ideas from P2P
-architectures, it implements advanced features like asynchronous send and
-reception, flow control with backpressure, use multiple transports in parallel,
-or auto-recovering.
-
-This project was sponsored by [Takeafile Labs](https://takeafile.com) with funds
-from European Union [Horizon 2020](https://ec.europa.eu/programmes/horizon2020)
-program.
 
 ### [NodeOS](https://node-os.com/)
 
@@ -95,6 +58,20 @@ University of Madrid, November 2012.
 
 ## Third parties
 
+### [TransFast](https://github.com/Takeafile)
+
+Initially designed as a one-to-one high performance files transfer protocol
+based on WebRTC DataChannels, it evolved into a transport-agnostic
+streams-oriented communications protocol for general purpose heavily influenced
+and based by [Node.js streams](https://nodejs.org/api/stream.html). Taking
+ideas from P2P architectures, it implements advanced features like asynchronous
+send and reception, flow control with backpressure, use multiple transports in
+parallel, or auto-recovering.
+
+This project was sponsored by [Takeafile Labs](https://takeafile.com) with funds
+from European Union [Horizon 2020](https://ec.europa.eu/programmes/horizon2020)
+program.
+
 ### [Context Broker](https://github.com/ContextBroker)
 
 Node.js bindings for [Orion IoT server](https://fiware-orion.readthedocs.io/).
@@ -121,8 +98,10 @@ web conferences or [Facebook](https://www.facebook.com/) and
 flexibility and performance. In contrast to other ones, it's focused on provide
 a thin low-level layer on top of [GStreamer](https://gstreamer.freedesktop.org/)
 with an easy to use API instead of a high-level aproach that does everything
-that's needed to create a videoconference aplication. In this project I was
-responsible to design and develop the Javascript and Node.js APIs, based on my
-previous experience from developing [ShareIt!](#shareit).
+that's needed to create a videoconference aplication.
+
+In this project I was contracted as responsable to design and develop the
+([Javascript and Node.js APIs](https://github.com/Kurento/kurento-client-js),
+based on my previous WebRTC experience from developing [ShareIt!](#shareit).
 
 Kurento team was acquired by [Twilio](https://www.twilio.com/) in 2016.
