@@ -12,7 +12,7 @@ Most important contributions to third-parties Open Source projects
 [Jest](https://jestjs.io/) testing framework, developed by Facebook and the
 current de-facto standard for Node.js, React and Javascript projects. Its
 default text output format was too much limited when showing the number of code
-coverage missing lines, so I refactored it reduce the number of decoration
+coverage missing lines, so I refactored it to reduce the number of decoration
 characters and auto-adjust to the width of the terminal by default, in addition
 of grouping ranges of consecutive missing lines to be able to show more of them.
 
@@ -33,5 +33,5 @@ support for double-buffering, VSync and 24bits color mode.
 
 - [redux-offline](https://github.com/redux-offline/redux-offline)
 - [re-start](https://github.com/react-everywhere/re-start) (AKA
-  `ReactNative Everywhere`)
+  *ReactNative Everywhere*)
 - [num2words](https://pypi.org/project/num2words/)

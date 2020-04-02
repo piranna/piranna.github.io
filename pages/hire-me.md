@@ -76,8 +76,6 @@ In detail info about knowledge areas and experience can be found in the
 
 ## Open Source professional collaborations
 
-Collaborations with Open Source companies
-
 - [![Wasmer](../images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
 - [![Kurento](https://www.kurento.org/sites/default/files/kurento.png "Kurento")](https://www.kurento.org/)
 
