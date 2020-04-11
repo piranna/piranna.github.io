@@ -14,7 +14,8 @@ current de-facto standard for Node.js, React and Javascript projects. Its
 default text output format was too much limited when showing the number of code
 coverage missing lines, so I refactored it to reduce the number of decoration
 characters and auto-adjust to the width of the terminal by default, in addition
-of grouping ranges of consecutive missing lines to be able to show more of them.
+of [grouping ranges](https://github.com/istanbuljs/istanbuljs/pull/525) of
+consecutive missing lines to be able to show more of them.
 
 ## [node-canvas](https://github.com/Automattic/node-canvas)
 

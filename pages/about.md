@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 Passionate computers engineer and ex-PhD. candidate in Computers Engineering.
-Proud advocate of Open Source, standards and specifications.
+Proud advocate of Open Source, standards, specifications, and best practices.
 
 With 15 years of professional experience and involved in Open Source scene and
 wireless communities since 17 years old, I have been working both profesionally
