@@ -1,8 +1,11 @@
 ---
 image: 2020-04-25-How-to-simulate-Chrome-is-running-in-a-TTY.png
-image_alt: Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled
+image_alt: >-
+  Screenshot of the blog with `tty` media rule and a custom terminal inspired
+  CSS stylesheet enabled
 layout: post
 title: How to simulate Chrome is running in a TTY
+twitter: '1254121252001910791'
 ---
 
 I've always loved terminals and retro-computing. I find they were a technology
