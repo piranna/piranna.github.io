@@ -5,6 +5,7 @@ image_alt: >-
   CSS stylesheet enabled
 layout: post
 title: How to simulate Chrome is running in a TTY
+twitter: '1254123327683248129'
 ---
 
 I've always loved terminals and retro-computing. I find they were a technology
