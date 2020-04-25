@@ -202,7 +202,7 @@ thing because there's almost no grid web devices out there, but being capable of
 properly support them in a standard way has removed me an ich in the back of my
 head. At least, now this blog is one of the few sites that support them... :-D
 
-![Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled](../images/2020-04-25-How-to-simulate-Chrome-is-running-in-a-TTY.png "Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled")
+![Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled](/images/2020-04-25-How-to-simulate-Chrome-is-running-in-a-TTY.png "Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled")
 
 Next step, create a terminal inspired CSS stylesheet to use as base one when
 designing terminal compatible websites... and find a way to override some of the
