@@ -34,6 +34,34 @@ projects to improve my skills and craft things with cool high-edge technologies.
 - Several years runner at San Silvestre Vallecana 10km run, Madrid (53'38")
 - Currently learning chinese *JustForFun&trade;*
 
+### Recomendations & testimonies
+
+[Diego González](https://www.linkedin.com/in/xmunch), Founder of SciArt Lab |
+Software Engineer / Blockchain Expert at Docuten:
+
+> Jesus is much more than a brilliant developer. He loves to achieve complex
+> goals just by using a keyboard and a bunch of code lines. I would describe him
+> as a creative and genius mind, a geek with a lot of technical skills but also
+> with engagement and passion. Jesus is that kind of guy that can launch a
+> project to the top. I strongly recommend him.
+
+[Juan Francisco Gato Luis](https://www.linkedin.com/in/jfcogato), Android R+D &
+Singer:
+
+> I don't need so much words to recommend Jesús. Just one case, if you need a
+> man that works for a project and not for money, this guy could reach it. He
+> just can do it, and if he don't how to made it, he will reach a way.
+
+[Juan Searle](https://www.linkedin.com/in/juansearle), CTO at Full Circle_ apps:
+
+> I agree a lot with everything [you've proposed]. I'm surprised that you have
+> owned the code in just some hours, without documentation and without mentoring
+> from our side. Cool!
+>
+> This afternoon we'll have a call with the client and let's see if we get their
+> aproval for the testing/refactoring, I'll keep you updated. We're going to
+> propose it as a critical action to be done.
+
 ## Contact me
 
 [{{ site.footer-links.email }}](mailto:{{ site.footer-links.email }})
