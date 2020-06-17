@@ -122,7 +122,7 @@ Open Source projects for the next companies:
 
 ## Private collaborations
 
-- [![BotXO](https://www.botxo.ai/wp-content/uploads/2019/03/BotXO_logo.png "BotXO")](https://www.botxo.ai/)
+- [![BotXO](../images/logos/BotXO.png "BotXO")](https://www.botxo.ai/)
 - [![bpost](https://www.bpost.be/sites/all/themes/custom/bpost_selfservice/logo.png "bpost")](https://www.bpost.be/)
 - [![lingbe](https://lingbe.com/logo.b37d81ec.svg "lingbe")](https://lingbe.com/)
 - [![Ventrata](../images/logos/Ventrata.png "Ventrata")](https://ventrata.com/)
