@@ -98,10 +98,13 @@ web conferences or [Facebook](https://www.facebook.com/) and
 flexibility and performance. In contrast to other ones, it's focused on provide
 a thin low-level layer on top of [GStreamer](https://gstreamer.freedesktop.org/)
 with an easy to use API instead of a high-level aproach that does everything
-that's needed to create a videoconference aplication.
+that's needed to create a videoconference aplication. Kurento team was acquired
+by [Twilio](https://www.twilio.com/) in 2016.
 
-In this project I was contracted as responsable to design and develop the
-([Javascript and Node.js APIs](https://github.com/Kurento/kurento-client-js),
-based on my previous WebRTC experience from developing [ShareIt!](#shareit).
-
-Kurento team was acquired by [Twilio](https://www.twilio.com/) in 2016.
+In Kurento I was responsable of design and develop its Javascript and Node.js
+[client APIs](https://github.com/Kurento/kurento-client-js) and its WebRTC
+[browser utilities](https://github.com/Kurento/kurento-utils), based on my
+previous experience from developing [ShareIt!](#shareit). After that, in 2020 I
+was sponsored by [Veedeo.me](https://veedeo.me) to update `kurento-utils`
+browser utilities package to current WebRTC APIs and Javascript standards and
+best practices.
