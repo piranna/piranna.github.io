@@ -129,7 +129,10 @@ Open Source projects for the next companies:
 - [![qvantel](https://www.itewiki.fi/write/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
 - [![Vocento](https://upload.wikimedia.org/wikipedia/commons/0/08/Vocento_logo.svg "Vocento")](https://www.vocento.com/)
 
-## Interviews FAQs
+<details>
+  <summary>
+  ## Interviews FAQs
+  </summary>
 
 ### 👨 Personal questions
 
@@ -367,3 +370,5 @@ as my main job, and at the same time I'm working as freelancer on remote for
 - Work on a research project, ideally somewhat related to own research areas
 - Position with responsability that could help me to improve my career both
   profesional and academically, with publishing of papers
+
+</details>
