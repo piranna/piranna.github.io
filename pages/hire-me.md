@@ -131,7 +131,7 @@ Open Source projects for the next companies:
 
 <details>
   <summary>
-  ## Interviews FAQs
+    <h2>Interviews FAQs</h2>
   </summary>
 
 ### 👨 Personal questions
