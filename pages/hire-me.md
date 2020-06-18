@@ -131,7 +131,7 @@ Open Source projects for the next companies:
 
 <details>
   <summary>
-    <h2>Interviews FAQs</h2>
+    <b style="font-size: 24px">Interviews FAQs</b>
   </summary>
 
 ### 👨 Personal questions
