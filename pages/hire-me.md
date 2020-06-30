@@ -181,7 +181,8 @@ hours both to complete the code test or to do an actual task in your code base,
 so you can evaluate my work on first hand.
 
 By the way, *big guys* like Google, Apple, Microsoft, IBM, Amazon, Ebay...
-**don't** do code tests, but do in-site technical interviews instead. It's true
+**don't** do code tests, or they are short ones like *katas* to know about your
+reasoning, but instead they do in-site technical interviews instead. It's true
 their selection processes are long and tyring and you need to prepare yourself
 for them in advance, but not only their job conditions, salaries and prestige
 compensate that effort, but also they usually pay flight tickets and hotel rooms
@@ -311,13 +312,16 @@ principles, and hope the ones of clients and companies I work with are aligned
 to mines:
 
 - "*Make money*" is **not** one of the company main priorities (both directly or
-  indirectly), nor it's of their clients. I work mostly for the project and the
+  indirectly), nor it's of their clients, or at least it's not the main purposse
+  of the project I'm going to work with. I work mostly for the project and the
   technology themselves and what I can learn from them, not for their revenues.
-  Money and beneficts must always be a collateral effect, not a main objective.
+  Acording to my *ethos*, money and beneficts must always be a collateral effect
+  of work and a medium to achieve experiences, not a main objective by itself.
 - If *money* is a direct or indirect core concept of the project up to the point
   that removing it makes the project pointless, probably I would not be so much
-  interested on working on it. Maybe about the technology, or the concept, or
-  the oportunities it can provide me, but not by the project itself alone.
+  interested on working on it if there's no other elements like the technologies
+  being used or the project concept or the oportunities that it can provide me,
+  but definitely not by the project itself alone.
 
 #### Do you prefer to work alone, or as part of a group?
 
@@ -370,5 +374,13 @@ as my main job, and at the same time I'm working as freelancer on remote for
 - Work on a research project, ideally somewhat related to own research areas
 - Position with responsability that could help me to improve my career both
   profesional and academically, with publishing of papers
+
+#### If I would made you a job offer, what would make you to reject it?
+
+If I pass the selection process, I would have already consider the pros & cons
+regarding lefting my current job, so only I would reject a job offer if the
+tasks I would be involved are not motivating or that the salary difference would
+not compensate the change (or would also means a drop in my buying and life
+level, in case relocation is required for the job position).
 
 </details>
