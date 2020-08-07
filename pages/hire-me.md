@@ -353,9 +353,9 @@ on their knowledge area.
 
 #### Do you currently have a job? What do you like and dislike about it?
 
-Currently I'm working as *Tech Lead Backend* for [BotXO](https://www.botxo.ai/)
-as my main job, and at the same time I'm working as freelancer on remote for
-[Veedeo.me](http://veedeo.me) at my spare time.
+Currently I'm working as *Tech Lead Backend* and *DevOps* for
+[BotXO](https://www.botxo.ai/) as my main job, and I'm activelly looking for a
+project to work on remote as freelancer in my spare time (maybe yours! :-D ).
 
 ##### 👍 Likes
 
@@ -367,8 +367,7 @@ as my main job, and at the same time I'm working as freelancer on remote for
 
 ##### 👎 Dislikes
 
-- lots of legacy code and design decissions, and almost no time sloted to fix
-  them
+- legacy code and design decissions, and almost no time sloted to fix them
 - architecture complex and very cohexionated, with lots of inter-dependencies
   between projects
 
