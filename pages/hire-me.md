@@ -117,7 +117,7 @@ Additionally, I've been contracted to work in the design and development of some
 Open Source projects for the next companies:
 
 - [![Toucan events](../images/logos/Toucan.png "Toucan events")](http://toucan.events/)
-- [![Veedeo.me](../images/logos/Veedeo.me.svg "Veedeo.me")](http://veedeo.me/)
+- [![Veedeo.me](../images/logos/Veedeo.me.svg "Veedeo.me")](https://veedeo.me/)
 - [![takeafile](../images/logos/takeafile.svg "Takeafile Labs")](https://takeafile.com)
 - [![Telefónica](https://www.telefonica.com/documents/153952/154445/lgo_telefonica_at.png/40901b9a-1f77-4a6d-a03c-e44f56c695ed "Telefónica")](https://www.telefonica.com)
 
