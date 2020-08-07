@@ -61,6 +61,14 @@ Singer:
 > This afternoon we'll have a call with the client and let's see if we get their
 > aproval for the testing/refactoring, I'll keep you updated. We're going to
 > propose it as a critical action to be done.
+>
+> ...
+>
+> Tell you that it has been a pleasure to count on you for this job: serious,
+> decisive and accessible. My idea is to have someone to whom I can ask for
+> NodeJs development and evolution of projects already done like this one from
+> TVN, and I think I've found the right person. If you are still available I
+> will count on you in future projects without a doubt.
 
 ## Contact me
 
