@@ -7,14 +7,14 @@ permalink: /about/
 Passionate computers engineer and ex-PhD. candidate in Computers Engineering.
 Proud advocate of Open Source, standards, specifications, and best practices.
 
-With 15 years of professional experience and involved in Open Source scene and
-wireless communities since 17 years old, I have been working both profesionally
-or in personal side projects in almost all computer engineering areas, including
-web development, robotics, operating systems desing, videogames, networking,
-or drivers programming. My profile is purely technical, with a great interest in
-hard-to-solve problems, quality of code, performance optimizations, high-edge
-technologies, and design of clean APIs and architectures focused on minimal
-designs, modularity and reusability.
+With more than 18 years of professional experience, and involved in Open Source
+scene and wireless communities since 17 years old, I have been working both
+profesionally or in personal side projects in almost all computer engineering
+areas, including web development, robotics, operating systems desing,
+videogames, networking, or drivers programming. My profile is purely technical,
+with a great interest in hard-to-solve problems, quality of code, performance
+optimizations, high-edge technologies, and design of clean APIs and
+architectures focused on minimal designs, modularity and reusability.
 
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
