@@ -130,10 +130,13 @@ Open Source projects for the next companies:
 - [![qvantel](https://www.itewiki.fi/write/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
 - [![Vocento](https://upload.wikimedia.org/wikipedia/commons/0/08/Vocento_logo.svg "Vocento")](https://www.vocento.com/)
 
+## Interviews FAQs
+
+Interesting or habitual questions I've been asked during job interviews, or when
+negotiating with clients to work on a freelance project.
+
 <details>
-  <summary>
-    <b style="font-size: 24px">Interviews FAQs</b>
-  </summary>
+  <summary>Expand</summary>
 
 ### 👨 Personal questions
 
