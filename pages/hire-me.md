@@ -384,12 +384,14 @@ A project I can feel my own and get involved on it, helping to define its shape.
 Also a project that can make me proud of and help to learn new things and
 improve my career, ideally both profesionally and in academic areas.
 
-#### If I would made you a job offer, what would make you to reject it?
+#### If I made you an offer, what would make you to reject it?
 
-If I pass the selection process, I would have already consider the pros & cons
-regarding lefting my current job, so only I would reject a job offer if the
-tasks I would be involved are not motivating or that the salary difference would
-not compensate the change (or would also means a drop in my buying and life
-level, in case relocation is required for the job position).
+If we get up to this point, probably I would have already consider the pros &
+cons regarding changing my current job, so only I would reject a job offer if
+the tasks I would be involved are not motivating enought, or the final salary
+difference with my current job would not compensate the change (this includes
+the case when relocation is required and it makes me a drop in my buying level
+and/or life quality), so it's better that we discuss these topics in the first
+interview.
 
 </details>
