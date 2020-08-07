@@ -378,6 +378,12 @@ project to work on remote as freelancer in my spare time (maybe yours! :-D ).
 - Position with responsability that could help me to improve my career both
   profesional and academically, with publishing of papers
 
+#### What you are looking for in your next job?
+
+A project I can feel my own and get involved on it, helping to define its shape.
+Also a project that can make me proud of and help to learn new things and
+improve my career, ideally both profesionally and in academic areas.
+
 #### If I would made you a job offer, what would make you to reject it?
 
 If I pass the selection process, I would have already consider the pros & cons
