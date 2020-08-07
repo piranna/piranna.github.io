@@ -24,10 +24,11 @@ freelance developer, consultor and auditor. In my spare time i like to read
 books, go to cinema or travelling, go running or cycling, or work on my own side
 projects to improve my skills and craft things with cool high-edge technologies.
 
-## More Information
+## Interesting facts
 
 - Co-founder of [Spain Robotic & Domotic Association](https://www.arde.cc)
 - Co-founder of AlcorcónWireless and Ex-Member of MadridWireless communities
+- Participant of *Spring Mathematics Championship*, Madrid 2004
 - Grant receiver for *3DS - 3 Days Startup*, Madrid 2012
 - WebRTC pioneer since 2012
 - [NodeOS](https://node-os.com/) lead developer
