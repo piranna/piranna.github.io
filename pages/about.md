@@ -37,6 +37,15 @@ projects to improve my skills and craft things with cool high-edge technologies.
 
 ### Recomendations & testimonies
 
+[Jorge Abrines](https://es.linkedin.com/in/jorge-abrines-b092423), CTO of
+Vaelsys:
+
+> Jesus is a worker with a lot of knowledge in several technical areas, from
+> low level programming up to scripting languages, and including devices
+> integration that's where he was helping us. He is a person with a great
+> interest for learning and improve himself each day, and I recommend him
+> specially for his technical expertise and aptitudes.
+
 [Diego González](https://www.linkedin.com/in/xmunch), Founder of SciArt Lab |
 Software Engineer / Blockchain Expert at Docuten:
 
