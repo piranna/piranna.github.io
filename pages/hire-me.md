@@ -196,21 +196,20 @@ and show that you are truly interested in your candidates too.
 
 #### Are you available to relocate?
 
-I prefer (almost) fully remote positions, or if not, job positions located in
-Madrid, Spain (both downtown or MetroSur area), but I'm also available for
-relocation. If that's mandatory, I have only three conditions:
+I'm interested mostly on full remote positions (specially on frelance projects),
+or job positions located in Madrid, Spain. I'm open to relocation depending of
+conditions, but mandatory ones are:
 
-1. salary / daily rate needs to be at least the same I would earn by working on
-   Madrid or fully on remote, plus a proportional increment if destination city
-   live level is higher than Madrid.
-2. company needs to provide me accomodation, or pay me a suplement for the flat
-   rental and give me any warrants or help I would need to rent it by myself
+1. salary is at least the same I would earn after a job change here on Madrid,
+   plus a proportional increment to adjust to live and cost level of destination
+   city, whichever is higher.
+2. company provides me accomodation during all my contract or re-imbourse me the
+   flat rental as an addition over the salary.
 3. company provides me flight tickets for both joining and leaving the company,
    and to go home and back at least twice a year (one of them for Christmas).
 
-On the other hand, I'm a *travel junkie*, so if it's a remote position but the
-job requires me to travel, I consider this a plus and the best of both worlds
-:-)
+On the other hand, I'm a *travel junkie*, so I don't have any problem about
+travel frequently (in fact, I consider it a plus).
 
 ### 💻 Technology
 
