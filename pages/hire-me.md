@@ -255,6 +255,13 @@ new skills or knowledge that can be useful to me to do it, specially if they are
 stablished and future-proof industrial standards and not just some temporally
 fashioned or hyped libraries and frameworks.
 
+#### What are the three things you think are the most important to improve a software project?
+
+1. Fully automate all processes, remove the human factor allways that's possible
+2. Register and trace all the errors, so they can be replicated later
+3. Document the behaviour that should have the project, and update it while it's
+   being implemented with its actual one
+
 ### 🏆 Achievements
 
 #### What's the technical challenge you are most proud of?
