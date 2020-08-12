@@ -371,6 +371,18 @@ project to work on remote as freelancer in my spare time (maybe yours! :-D ).
 - architecture complex and very cohexionated, with lots of inter-dependencies
   between projects
 
+#### What would motivate you to change job?
+
+1. The most important, an interesting project that caught my attention and
+   motivates me to do the change by itself, no matter any other things like
+   salary, relocation or social beneficts. This can be the project topic,
+   technologies being used, the profesional or academic career oportunities that
+   it can offer me...
+2. A salary according to my expectations.
+3. Quantity and quality of social beneficts provided in addition to the salary,
+   specially restaurant card, public transport card, gym subscription, remote
+   work, flexible schedule...
+
 #### What would motivate you to join a new project?
 
 - Higher salary maintaining or improving all my perks and social beneficts
