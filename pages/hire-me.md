@@ -158,31 +158,32 @@ I'm proud to say that I have been able to work all my life in my true passion.
 
 My background has provided me a lot of experience and knowledge in almost all
 computers engineering areas, both professionally or in side projects, so I can
-be able to understand the implications of each decision at several levels. I
-love high edge technology and to know how everything works and what's able to
-do. This gives me a tendency to put technology on its limits, sometimes
-unconsciosly and anothers on purposse, by using the code or service beyond the
-developer original intention, but also to find and use the most concise,
-specific and idiomatic way of doing the things by using any available feature or
-design decision that can help to write a clean and maintenable code, that
-usually leads me to find bugs and usage corner cases. That also has lead myself
-to put high attention on code quality and to develop simple and minimal APIs in
-all the code I develop, and to enforce that high quality standards on others.
-
-#### What are your hobbies outside of work?
-
-Besides working on my own research side projects, I like running, travelling,
-diner out, visit museums, going to cinema or reading, between others.
+be able to understand the implications of each decision at several levels (extra
+costs, delays, performance issues, bandwidth usage, user experience, possible
+bottlenecks...), and clearly explain the systems tradeoffs and business
+implications that are derived for each one of them. I love high edge technology
+and to know how everything works and what's able to do. This gives me a tendency
+to put technology on its limits, sometimes unconsciosly and anothers on
+purposse, by using the code or service beyond the developer original intention,
+but also to find and use the most concise, specific and idiomatic way of doing
+the things by using any available feature or design decision that can help to
+write a clean and maintenable code, that usually leads me to find bugs and usage
+corner cases. That also has lead myself to put high attention on code quality
+and to develop simple and minimal APIs in all the code I develop, and to enforce
+that high quality standards on others.
 
 #### What's your opinion about code tests?
 
 I have a "no code tests" policy, it's time I can't dedicate to my freelance
 projects nor my friends, family or hobbies. I have more than 10 years of Open
 Source code published in my [Github account](https://github.com/piranna), that
-clearly show my capabilities and code quality standards. If you *still* consider
-that's not enought and need an actual code test, you can contract me for some
-hours both to complete the code test or to do an actual task in your code base,
-so you can evaluate my work on first hand.
+clearly show my capabilities and code quality standards. If you consider that's
+not enought and need to check yourself my work, you can contract me for some
+hours both to do an actual task in your code base, so you can evaluate my work
+on first hand. If you *still* insists that I need to do a code test, it's better
+that your offer *really* interest me (specially about the payment), or I would
+discard it since you don't respect candidates (your future employees) work-life
+balance.
 
 By the way, *big guys* like Google, Apple, Microsoft, IBM, Amazon, Ebay...
 **don't** do code tests, or they are short ones like *katas* to know about your
@@ -191,7 +192,7 @@ their selection processes are long and tyring and you need to prepare yourself
 for them in advance, but not only their job conditions, salaries and prestige
 compensate that effort, but also they usually pay flight tickets and hotel rooms
 just so devs can be able to go to their offices and interview them. They *value*
-their candidates time, and invest in them, so don't be more *picky* than they
+their candidates time, and invest in them, so don't be more *picky* than them,
 and show that you are truly interested in your candidates too.
 
 #### Are you available to relocate?
@@ -433,6 +434,15 @@ on their knowledge area.
 - Co-workers are technically as good as me or better, so I can be able to learn
   from them, or they have initiative and are eager to learn and improve
   themselves
+
+As cleary explained at https://mailchi.mp/bonillaware/sabotear-tu-empresa, these
+points are a direct result of having a motivated team, and that's a
+responsability of the company itself:
+
+> To motivate our team members -beyond a correct retribution- we only need to
+> create an environment where they can do their work well, where each time they
+> can do it better and, in addition, they contribute to a purposse whom they
+> believe, beyond earn more and more money.
 
 #### Do you currently have a job? What do you like and dislike about it?
 
