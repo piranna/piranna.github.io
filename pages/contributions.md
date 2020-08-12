@@ -30,6 +30,13 @@ Linux DRM/KMS, X11, Windows GDI, or OSX Metal.
 This project was later sponsored by [Ventrata](https://ventrata.com/) to add
 support for double-buffering, VSync and 24bits color mode.
 
+## [node-webrtc](https://github.com/node-webrtc/node-webrtc)
+
+As a WebRTC pioneer since 2012 with [ShareIt!](projects#ShareIt), I've been
+contributing to other projects, specially using `node-webrtc` as a building
+block for Node.js applications, where I've worked to improve the APIs
+compatibility with browsers in addition to maintenance tasks.
+
 ## Other contributions
 
 - [redux-offline](https://github.com/redux-offline/redux-offline)
