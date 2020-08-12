@@ -56,6 +56,20 @@ This project won the spanish national
 and was invited to give a keynote at first spanish WebRTC summit at Politechnic
 University of Madrid, November 2012.
 
+### [PirannaFS](https://github.com/piranna/PirannaFS)
+
+Modular filesystem build with Python and using [SQLite](https://www.sqlite.org)
+to manage metadata, allowing to the user to customize its behaviour by using
+plugins, and inspired by other new generation filesystems like
+[BeFS](https://en.wikipedia.org/wiki/Be_File_System),
+[ZFS](https://en.wikipedia.org/wiki/OpenZFS) or
+[Ext4](https://en.wikipedia.org/wiki/Ext4).
+
+This was my first open source project with some public repercussion, and won the
+Madrid local edition of the spanish national
+[V Free Software Universitary Championship](http://www.concursosoftwarelibre.org)
+and was *Honorable Mention* in the national edition, both in 2011.
+
 ## Third parties
 
 ### [TransFast](https://github.com/Takeafile)
