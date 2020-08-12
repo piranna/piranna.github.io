@@ -120,5 +120,5 @@ In Kurento I was responsable of design and develop its Javascript and Node.js
 [browser utilities](https://github.com/Kurento/kurento-utils), based on my
 previous experience from developing [ShareIt!](#shareit). After that, in 2020 I
 was sponsored by [Veedeo.me](https://veedeo.me) to update `kurento-utils`
-browser utilities package to current WebRTC APIs and Javascript standards and
-best practices.
+browser utilities package to make use of current WebRTC APIs and to follow newer
+Javascript standards and best practices.
