@@ -138,7 +138,7 @@ negotiating with clients to work on a freelance project.
 <details>
   <summary>Expand</summary>
 
-### 👨 Personal questions
+### 🤝 Introduction questions
 
 #### Why should I hire you? What makes you different from other candidates?
 
@@ -285,6 +285,83 @@ proud of, both mine or from others, in the [projects](projects.md) page.
   [HTML5 for Masterminds](http://www.formasterminds.com/html5_for_masterminds_3rd_edition/)
   by J.D. Gauchat due to my pioneer work on WebRTC with
   [DataChannels-polyfill](https://github.com/ShareIt-project/DataChannel-polyfill)
+
+### 👨 Personal questions
+
+#### What are your hobbies outside of work?
+
+Besides working on my own research side projects, I like running, travelling,
+diner out, visit museums, going to cinema or reading, between others.
+
+#### What achievements are you more proud of, outside of technology?
+
+I'm mostly proud of the achievements with my personal side projects (technoology
+is my hobby), but besides that, I'm also proud of have done the New Year's Eve
+10km run in 53 minutes, and that I've started learning chinese.
+
+#### If you could be able to organize an intelectual dinner, what three people (live or dead) would you invite?
+
+The two first ones would be
+[Nikola Tesla](https://en.wikipedia.org/wiki/Nikola_Tesla), and my friend
+[Elisenda Bou](https://www.linkedin.com/in/elisendabou), one of the most
+brilliant minds I've ever meet 😛
+
+Third one would be a bit more difficult.
+[Thomas Edison](https://en.wikipedia.org/wiki/Thomas_Edison) is a good option as
+a justapoint of Nikola Tesla, but although being a good inventor too, it was a
+bit prepotent and pretentious.
+[Leonardo da Vinci](https://en.wikipedia.org/wiki/Leonardo_da_Vinci) would be my
+next option (was one of my idols since a child), but it's a bit topic and
+outdated, so in a more actual context I would have doubts to choose between
+[Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk) or
+[Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs). That would make four and
+no three persons, but being there all of us 5, that would be a really
+interesting dinner and maybe new projects or new ideas would appear there.
+
+I'm not sure if Steve Jobs could sound a bit cliche or more like a strange
+selection, since he's the only one that's not an engineer. Apple is now a
+consumer product and a status symbol, but before his death, due to his high
+standards Apple computers were a simbol of quality and things well done and a
+creative tool. It's documented that he wanted macOS to be an Open Source
+operating system like Linux, and this was not possible because by doing so,
+Microsoft would not port Office suite to it. Something similar happened with
+iTunes Store, where he doesn't want to use DRM on their published songs,
+allowing them to be freely usable and redistribuible, and he was forced to add
+it by an exigence of discrographic records. This kind of ideals about free and
+open knowledge and culture are something I totally feel identified myself with.
+
+#### What things do you have in your personal "life's to-do" list?
+
+My major dream since I was a child was to became an astronaut, since I had the
+idea that as a scientist, it was not possible to get higher, both literal or
+metaphorically. The main reason was to feel ingravity, so since now I've lost
+almost any oportunity to became an astronaut, now on absolut top of my list is
+to do a [zero G fligth](https://en.wikipedia.org/wiki/Reduced-gravity_aircraft)
+🙂.
+
+In second place, it's to do a travel around the world. I don't have a particular
+destination or route, just only to visit as most countries as possible... and
+return to my journey's origin from the other side :-D Relate to that, a recent
+incorporation to the list is to became myself a member of
+[the Travelers' Century Club](https://travelerscenturyclub.org/), that represent
+travelers who have visited 100 or more of the world's countries and territories
+(by the moment I've visited 13 and counting). Also related to this is to visit
+Antartica and join the [300 Club](https://en.wikipedia.org/wiki/300_Club) 😀.
+
+#### How do you expect your boss should be?
+
+The most important things, it has a technical background, so it can understand
+when it's explained what problems does we have or why something can't be done.
+
+The second one, *make money* is not its priority, and it's managing the company
+because really love what it's doing and believe in the company itself, alse when
+it's in losses. It must not take decissions just only for money no matter the
+consecuences, I truly believe that work must be done by some reasons besides
+money, and *make money* must be just a collateral effect of working, not its
+main reason to be. I have already changed jobs in the past just for that single
+reason, where nobody cared by the company and everybody was there only for the
+(huge) monthly payment, including me. When I got myself that I was not behaving
+according to my ethic principles, I left the company.
 
 ### 🏢 Company culture
 
