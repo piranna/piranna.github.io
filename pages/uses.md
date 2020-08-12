@@ -6,16 +6,18 @@ permalink: /uses
 
 ## Laptop
 
-- Slimbook PRO2, 32GB
+- Slimbook ProX 15"
+- Slimbook PRO2
 
 ### Previous laptops
 
-- Lenovo ThinkPad T530, 16GB
-- Slimbook Classic, 16GB
-- MacBook Pro 15" 2013, 8GB
-- Dell Latitude, 4GB
-- MacBook 2007, 2GB
-- iBook 2004, 1GB (upgraded to 2GB)
+- Lenovo ideapad 330
+- Lenovo ThinkPad T530
+- Slimbook Classic
+- Apple MacBook Pro 15" 2013
+- Dell Latitude
+- Apple MacBook 2007
+- Apple iBook 2004
 
 ## Operating system
 
@@ -26,6 +28,7 @@ permalink: /uses
 
 - Debian
 - macOS
+- Windows
 
 ## Code editor
 
@@ -45,10 +48,14 @@ permalink: /uses
 - C/C++
 - Rust
 
-## Previous programming languages
+### Previous programming languages
 
 - Java
 - PHP
+- Ruby
+- Pascal
+- Haskell
+- Prolog
 
 ## Libraries & frameworks
 
@@ -61,10 +68,20 @@ permalink: /uses
 - Express
 - OpenGL
 - PyGTK
+- SDL
 
 ## Languages
 
 - Spanish (native)
-- English (TOEFL 80/120)
+- English (TOEFL 80/120, B2)
 - French (basic knowledge)
 - Chinese (beginner)
+
+## Books readed
+
+- **Operating Systems: Design and Implementation**, Andrew S. Tanenbaum
+- **Programmer's Guide to the IBM PC**, Peter Norton
+
+### Reading
+
+- **Practical Machine Learning with Rust**, Joydeep Bhattacharjee
