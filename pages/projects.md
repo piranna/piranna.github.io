@@ -78,7 +78,8 @@ Initially designed as a one-to-one high performance files transfer protocol
 based on WebRTC DataChannels, it evolved into a transport-agnostic
 streams-oriented communications protocol for general purpose heavily influenced
 and based by [Node.js streams](https://nodejs.org/api/stream.html). Taking
-ideas from P2P architectures, it implements advanced features like asynchronous
+ideas from P2P architectures (conceptually, I consider it myself
+[ShareIt!](#ShareIt!) 2.0), it implements advanced features like asynchronous
 send and reception, flow control with backpressure, use multiple transports in
 parallel, or auto-recovering.
 
