@@ -22,13 +22,15 @@ consecutive missing lines to be able to show more of them.
 As part of the development of [NodeOS](projects#NodeOS) to provide it some basic
 graphic capabilities, I added support for configurable backends on
 `node-canvas`, with the intention of being able to draw directly on the Linux
-`FbDev` framebuffer device instead of just only in memory. Backends support was
-already accepted in upstream code, but FbDev code is still pending of approval.
-In the future, plan is to add support for other graphic systems like accelerated
-Linux DRM/KMS, X11, Windows GDI, or OSX Metal.
+`FbDev` framebuffer device instead of just only in memory, in addition to X11
+and Windows GDI (Win32 API). Backends support has been already accepted in
+upstream code, while FbDev, X11 and Win32 code are still pending of approval. In
+the future, I plan to add support for other graphic systems like accelerated
+Linux DRM/KMS or macOS Quartz.
 
-This project was later sponsored by [Ventrata](https://ventrata.com/) to add
-support for double-buffering, VSync and 24bits color mode.
+This project was later being sponsored by [Ventrata](https://ventrata.com/) to
+add improve FbDev backend adding support for double-buffering, VSync and 24bits
+color mode, and easing the path to add new *screen based* backends.
 
 ## [node-webrtc](https://github.com/node-webrtc/node-webrtc)
 
