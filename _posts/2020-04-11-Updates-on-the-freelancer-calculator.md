@@ -43,9 +43,11 @@ full-time in long-term projects in both cases (that's not the usual for
 freelance contracts), and the increased margins are at expenses of unemployment
 and retirement mortages and other social beneficts (both provided by goberment
 taxes or by companies themselves). Instead, this calculator shows how much is a
-safe range to ask for as a freelance, since for the same net salary a company
-could be earning up to a 20% of costs than contracting an employee, so don't be
-afraid of asking for high bucks, and in the case of a freelancer not working at
-the same time as employee, it shows that he should pay a higher freelance quota
-(80% of freelancers in Spain pay the minimum one due to the small ROI we usually
-get for it), contract a retirement mortage... or more probably, do both things.
+safe range to ask for as a freelance, since for a worker with the same net
+salary a company could be saving up to a 20% of costs than contracting an
+employee, so don't be afraid of asking for high bucks, and in the case of a
+freelancer not working at the same time as employee, it shows that he should pay
+a higher freelance quota (in Spain, currently you decide your own social
+security compensation and 80% of freelancers pay the minimum exigible by law due
+to the small ROI we usually get for it, and so this calculator use that number),
+pay for a retirement mortage... or more probably, do both things.
