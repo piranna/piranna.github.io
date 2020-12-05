@@ -6,11 +6,11 @@ permalink: /uses
 
 ## Laptop
 
-- Slimbook ProX 15"
 - Slimbook PRO2
 
 ### Previous laptops
 
+- Slimbook ProX 15"
 - Lenovo ideapad 330
 - Lenovo ThinkPad T530
 - Slimbook Classic
@@ -21,7 +21,7 @@ permalink: /uses
 
 ## Operating system
 
-- Ubuntu Mate 20.04
+- Ubuntu Mate 20.10
 - Android Go 8.1
 
 ### Previous operating systems
@@ -62,6 +62,7 @@ permalink: /uses
 - React & ReactNative
 - Fastify
 - Django
+- WebRTC
 
 ### Previous libraries & frameworks
 
