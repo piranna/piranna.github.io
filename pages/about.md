@@ -37,8 +37,14 @@ projects to improve my skills and craft things with cool high-edge technologies.
 
 ### Recomendations & testimonies
 
+Recomendations from co-workers and managers of my previous job companies, and
+testimonies from clients about my freelance projects.
+
+<details>
+  <summary>Expand</summary>
+
 [Jorge Abrines](https://es.linkedin.com/in/jorge-abrines-b092423), CTO of
-Vaelsys:
+[Vaelsys](https://vaelsys.com/):
 
 > Jesus is a worker with a lot of knowledge in several technical areas, from
 > low level programming up to scripting languages, and including devices
@@ -62,7 +68,8 @@ Singer:
 > man that works for a project and not for money, this guy could reach it. He
 > just can do it, and if he don't how to made it, he will reach a way.
 
-[Juan Searle](https://www.linkedin.com/in/juansearle), CTO at Full Circle_ apps:
+[Juan Searle](https://www.linkedin.com/in/juansearle), CTO at
+[Full Circle_ apps](https://fullcircle.es/):
 
 > I agree a lot with everything [you've proposed]. I'm surprised that you have
 > owned the code in just some hours, without documentation and without mentoring
@@ -79,6 +86,27 @@ Singer:
 > NodeJs development and evolution of projects already done like this one from
 > TVN, and I think I've found the right person. If you are still available I
 > will count on you in future projects without a doubt.
+
+[Isabel Dorado](https://www.linkedin.com/in/isabeldoradomoreno/), Remote Talent
+Advocate at [Circular](https://trycircular.com/):
+
+> Senior developer with experience leading teams and really hands on. Background
+> in both back and frontend development. His expertise is related to Python,
+> Node and C++. Spanish and English!
+
+[Miguel Muñoz Royo](https://www.linkedin.com/in/miguelmunoz/), Business and
+Technical Lead at [UST Global](https://ustglobal.es/):
+
+> The truth is that the conversation with Jesús has been very good. He's a
+> Node.js super architect with experience more than enough for the profile we
+> are looking for.
+
+[Judith Aranda Rubio](https://www.linkedin.com/in/juditharanda/), Talent
+Management at [Ferrovial](https://www.ferrovial.com/):
+
+> Wide development experiences and skills.
+
+</details>
 
 ## Contact me
 
