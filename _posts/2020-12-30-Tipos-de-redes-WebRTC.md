@@ -5,6 +5,8 @@ title: Tipos de redes WebRTC
 twitter: '1344349398004858880'
 ---
 
+[English version]({% post_url 2020-12-30-Types-of-WebRTC-networks %})
+
 Respecto a arquitecturas WebRTC, no hay una bala de plata. Dependendiendo de
 cual sea el caso de uso, la arquitectura óptima puede variar de un proyecto a
 otro. Por este motivo, voy a explicar las principales arquitecturas de red que
