@@ -2,6 +2,7 @@
 lang: es
 layout: post
 title: Tipos de redes WebRTC
+twitter: '1344349398004858880'
 ---
 
 Respecto a arquitecturas WebRTC, no hay una bala de plata. Dependendiendo de

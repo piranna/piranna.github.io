@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: Types of WebRTC networks
+twitter: '1344349398789214212'
 ---
 
 When it comes to WebRTC architectures, there is no silver bullet. Depending on
