@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to move Javascript functions out of its closure to save memory
+twitter: '1335506116860645376'
 ---
 
 [Long time ago](https://twitter.com/el_piranna/status/1297515263957639170)
