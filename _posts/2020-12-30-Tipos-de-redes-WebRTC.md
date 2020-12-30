@@ -29,7 +29,7 @@ La solución trivial y obvia al problema de la arquitectura P2P cuando quieres
 que haya más de dos participantes, es simplemente crear conexiones con los
 nuevos participantes. Es la arquitectura que usan aplicaciones como
 [appear.in](https://appear.in/)... pero el problema es que debido a su
-simplicidad, es también la solución menos óptima de todas: en número de
+simplicidad, es también la solución menos óptima de todas: el número de
 conexiones crece respecto al número de participantes en la red mesh, llegando a
 crecer el número de conexiones exponencialmente en casos de redes mesh
 completamente conectadas (todos con todos). Además, esto implica que puede que
@@ -112,7 +112,7 @@ de casos de uso han sido aplicaciones de videoconferencia, sin necesidad de un
 procesamiento de los streams en el lado del servidor más allá de grabar las
 sesiones. Todo esto junto con la búsqueda de reducir costes de servidor ha hecho
 que hayan ido adquirido popularidad los *Selective Forwarding Unit*, los cuales
-reciben un único stream desde los peers, pero envían varios streams de vuelta,
+reciben un único stream desde los peers pero envían varios streams de vuelta,
 correspondientes a los demás peers. Esto obviamente implica un mayor consumo de
 ancho de banda y de CPU de los clientes, pero tiene la ventaja de que estos
 pueden mostrarlos como quieran, o incluso indicarle al servidor que solo les
@@ -133,4 +133,4 @@ servidores para propagar la señal y distribuir el procesamiento, como ofrecía
 habitual consiste en combinar conexiones P2P con un servidor centralizado, de
 forma que se alternen entre unas y otro dinámicamente según el número de peers
 que haya en sesión, usando una conexión P2P cuando solo haya dos peers y
-migrando a un MCU o SFU cuando haya 3 o más
+migrando a un MCU o SFU cuando haya 3 o más.
