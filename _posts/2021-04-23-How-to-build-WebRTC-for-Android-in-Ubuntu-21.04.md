@@ -94,7 +94,7 @@ comments:
    [Chromium data website](https://chromiumdash.appspot.com/branches), and match
    it with the *WebRTC* column to find the daily branch number. For example, to
    build the `libWebrtc` library version used by latest stable Chrome 91 (build
-   number `4472`) you would just need to change to the `branch-heads/4472:
+   number `4472`) you would just need to change to the `branch-heads/4472`:
 
    ```sh
    git checkout branch-heads/4472
