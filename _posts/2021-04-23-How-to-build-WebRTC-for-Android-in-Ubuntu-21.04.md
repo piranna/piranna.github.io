@@ -100,7 +100,8 @@ comments:
    git checkout branch-heads/4472
    ```
 
-   This will left the repository in detached mode, but it's nos something that can worry us. Also, you can see all available branches in case you want to
+   This will left the repository in detached mode, but it's not something to
+   worry about. Also, you can see all available branches in case you want to
    use another daily branch by executing `git branch -r`. At this moment, latest
    one is `4485`.
 
@@ -126,9 +127,9 @@ comments:
    tools_webrtc/android/build_aar.py
    ```
 
-Once we have build the library, to update the code and build newer versions is
-just a matter of run `git remote update` to get the new daily build branches,
-and repeat the steps 6 and 7.
+8. Once we have build the library, to update the code and build newer versions
+   is just a matter of run `git remote update` to get the new daily build
+   branches, and repeat the steps 6 and 7.
 
 Ideally, all this steps could be automated and run in a nightly basis, creating
 a new reference in Maven to this automated builds.
