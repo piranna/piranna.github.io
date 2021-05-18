@@ -16,6 +16,7 @@
 <meta name="author" content="{{ site.name }}" />
 {% if site.footer-links.twitter %}
   <meta name="twitter:creator" content="{{ site.footer-links.twitter }}" />
+  <meta name="twitter:site" content="{{ site.footer-links.twitter }}" />
 {% endif %}
 
 {% if page.title %}
@@ -27,7 +28,6 @@
 {% endif %}
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="{{ site.footer-links.twitter }}" />
 
 {% if page.image %}
   <meta property="og:image" content="{{ "/images/" | append: page.image | absolute_url }}" />
