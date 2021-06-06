@@ -111,6 +111,7 @@ In detail info about my knowledge areas and experience can be found in the
 
 ## Open Source professional collaborations
 
+- [![Atos Research & Innovation](https://atos.net/wp-content/themes/atos/images/atos-logo-menu-bar.png)](https://atos.net/en/about-us/innovation-and-research)
 - [![Wasmer](../images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
 - [![Kurento](https://www.kurento.org/sites/default/files/kurento.png "Kurento")](https://www.kurento.org/)
 
@@ -436,7 +437,7 @@ on their knowledge area.
   from them, or they have initiative and are eager to learn and improve
   themselves
 
-As cleary explained at https://mailchi.mp/bonillaware/sabotear-tu-empresa, these
+As cleary explained at <https://mailchi.mp/bonillaware/sabotear-tu-empresa>, these
 points are a direct result of having a motivated team, and that's a
 responsability of the company itself:
 
