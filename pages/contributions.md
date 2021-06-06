@@ -17,6 +17,17 @@ characters and auto-adjust to the width of the terminal by default, in addition
 of [grouping ranges](https://github.com/istanbuljs/istanbuljs/pull/525) of
 consecutive missing lines to be able to show more of them.
 
+## [libWebrtc](https://webrtc.googlesource.com/src/)
+
+Google implementation of WebRTC spec, used in Chrome browser and Android,
+between others. In this one, I added support for the `removeTrack` event in the
+[Java bindings](https://webrtc.googlesource.com/src/+/ffbfba979f9d48176c7ed5dcc60b6a8076303b71),
+to allow dynamic removal of video and audio tracks from PeerConnection objects
+in Android applications.
+
+This contribution was sponsored by
+[Atos Research & Innovation](https://atos.net/en/about-us/innovation-and-research).
+
 ## [node-canvas](https://github.com/Automattic/node-canvas)
 
 As part of the development of [NodeOS](projects#NodeOS) to provide it some basic
