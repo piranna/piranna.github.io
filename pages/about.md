@@ -66,7 +66,7 @@ Singer:
 
 > I don't need so much words to recommend Jesús. Just one case, if you need a
 > man that works for a project and not for money, this guy could reach it. He
-> just can do it, and if he don't how to made it, he will reach a way.
+> just can do it, and if he don't [know] how to made it, he will reach a way.
 
 [Juan Searle](https://www.linkedin.com/in/juansearle), CTO at
 [Full Circle_ apps](https://fullcircle.es/):
