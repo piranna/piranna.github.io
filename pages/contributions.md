@@ -39,6 +39,18 @@ contributing to other projects, specially using `node-webrtc` as a building
 block for Node.js applications, where I've worked to improve the APIs
 compatibility with browsers in addition to maintenance tasks.
 
+## [num2words](https://pypi.org/project/num2words/)
+
+`num2words` is a Python library that provides word captions of numerals for
+multiple languages and dialects. As part of my work at
+[qvantel](https://qvantel.com/), not only I added support for algerian french
+(where numerals are based on increments of 100, instead of increments of 20 as
+speaked in France) but also added support for their coins scheme, and refactor
+support of generic french language to simplify it and add make it easier to add
+support for other dialects like swiss french, that give me some compliments both
+from library owner and my superiors for the clean work I did and how much easy
+and streamlined it was now to use and improve the library itself.
+
 ## [redux-offline](https://github.com/redux-offline/redux-offline)
 
 `redux-offline` provides helper functions to allow to operate with network
@@ -67,15 +79,3 @@ project.
 
 You can find more info about `re-start` in
 [What's re-start?](../_posts/2020-04-15-Whats-re-start.md)
-
-## [num2words](https://pypi.org/project/num2words/)
-
-`num2words` is a Python library that provides word captions of numerals for
-multiple languages and dialects. As part of my work at
-[qvantel](https://qvantel.com/), not only I added support for algerian french
-(where numerals are based on increments of 100, instead of increments of 20 as
-speaked in France) but also added support for their coins scheme, and refactor
-support of generic french language to simplify it and add make it easier to add
-support for other dialects like swiss french, that give me some compliments both
-from library owner and my superiors for the clean work I did and how much easy
-and streamlined it was now to use and improve the library itself.
