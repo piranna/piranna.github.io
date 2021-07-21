@@ -176,6 +176,12 @@ that high quality standards on others.
 
 #### What's your opinion about code tests?
 
+Short answer: no. Whoever is interested to know about my coding skills, can take
+a look at my [Github account](https://github.com/piranna) or my
+[projects portfolio](projects.md).
+
+Long answer:
+
 I have a "no code tests" policy, it's time I can't dedicate to my freelance
 projects nor my friends, family or hobbies. I have more than 10 years of Open
 Source code published in my [Github account](https://github.com/piranna), that
@@ -199,20 +205,23 @@ and show that you are truly interested in your candidates too.
 
 #### Are you available to relocate?
 
-I'm interested mostly on full remote positions (specially on frelance projects),
-or job positions located in Madrid, Spain. I'm open to relocation depending of
-conditions, but mandatory ones are:
+I'm interested mostly on 100% remote positions (specially regarding freelance
+projects), or job positions located in Madrid, Spain. I'm open to relocate if we
+can negotiate the conditions, but mandatory ones are:
 
-1. salary is at least the same I would earn after a job change here on Madrid,
-   plus a proportional increment to adjust to live and cost level of destination
-   city, whichever is higher.
-2. company provides me accomodation during all my contract or re-imbourse me the
-   flat rental as an addition over the salary.
-3. company provides me flight tickets for both joining and leaving the company,
-   and to go home and back at least twice a year (one of them for Christmas).
+1. base salary is equiparable to what I could earn for a remote or in-site
+   position here on Madrid, plus a proportional increment to adjust it to live
+   and cost level of destination city, whichever final salary is higher.
+2. company provides accomodation during all the time of the contract, or pays a
+   monthly bonus to cover flat rental costs.
+3. company provides flight tickets for both joining and leaving the company. It
+   also provides go-and-back tickets at least twice a year of my election (most
+   probably one of them will be for Christmas), allowing me to work 100% remote
+   at least for a continuos month each time.
 
-On the other hand, I'm a *travel junkie*, so I don't have any problem about
-travel frequently (in fact, I consider it a plus).
+On the other hand, I'm a *travel junkie*, so I don't have any problem if I need
+to travel frequently due to job requirements. In fact, I consider this as an
+advantage for the job position :-)
 
 ### 💻 Technology
 
