@@ -6,9 +6,9 @@ twitter: '1413030769308704768'
 ---
 
 Javascript don't have the concept of abstract classes, but it's fairly easy to
-implement them: don't allow it :-) Just check if the `constructor` of the
-instance we are creating is the own class instead of one of its childrens, and
-don't allow it:
+implement: don't allow to instanciate them :-) Just check if the `constructor`
+of the instance we are creating is the own class instead of one of its
+childrens, and don't throw an error if it is:
 
 ```js
 class A
@@ -30,7 +30,7 @@ b instanceof A  // true
 b instanceof B  // true
 ```
 
-Just take in account, that since we are checking the `this` object, in case the
+Take in account that since we are checking the `this` object, in case the
 abstract class is extending from another parent base class (like for example
 `EventEmitter`), then we need to do the checking **after** calling to the
 constructor of the parent base class with the `super()` function.

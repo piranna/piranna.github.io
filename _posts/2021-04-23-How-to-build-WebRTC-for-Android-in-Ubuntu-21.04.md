@@ -129,7 +129,8 @@ comments:
 
 8. Once we have build the library, to update the code and build newer versions
    is just a matter of run `git remote update` to get the new daily build
-   branches, and repeat the steps 6 and 7.
+   branches, and compile again. In case of problems, repeat the steps 6 and 7 to
+   fully download again the build tools and dependencies and compile once again.
 
 Ideally, all this steps could be automated and run in a nightly basis, creating
 a new reference in Maven to this automated builds.
