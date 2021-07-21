@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: Presenting Mafalda SFU
+twitter: '1417988668082442240'
 ---
 
 [Mafalda SFU](https://github.com/Mafalda-SFU) is a massively vertical and
