@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: Abstract classes in Javascript
+twitter: '1413030769308704768'
 ---
 
 Javascript don't have the concept of abstract classes, but it's fairly easy to
