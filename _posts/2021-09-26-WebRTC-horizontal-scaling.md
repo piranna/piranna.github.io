@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: WebRTC horizontal scaling
+twitter: '1442020997159211011'
 ---
 
 When aproaching the horizontal scaling of WebRTC servers, we have two main
