@@ -54,3 +54,43 @@ In conclussion, between these two approaches, it seems that the central server
 is the one that best fit this particular use case, since it's the one that best
 balance CPU and bandwidth usage, and also allow to easily change the heuristics
 without needing to spin-down the WebRTC servers.
+
+## Update: Mafalda aproach
+
+Based on these two traditional network architectures, I decided to apply my own
+solutions for each one of the use cases, the centralized and decentralized one.
+
+### Mafalda-horizontal
+
+`Mafalda-horizontal` package is build on top of *Remote Mafalda*, and the same
+than this one or the original *Mafalda* one, it follows the same Mafalda API, so
+it's intercambiable with them and allow easily to upgrade from the vertical
+scalability aproach to the horizontal one without modifying the code. It works
+as a client to multiple *Remote Mafalda* instances, managing the balancing of
+the resources, and also the routing between the servers. Also, since it follows
+the Mafalda API, it can be used as a *Remote Mafalda* instance, so it's possible
+to implement an hierarchical architecture with multiple layers of servers, all
+of them accesible from a single endpoint, while at the same time not wasting
+resources to propagate the clients media between the servers since these ones
+gets connected directly to the instances of Mediasoup.
+
+### Mafalda-swarm
+
+On the other hand, `Mafalda-swarm` package implements a decentralized federated
+P2P aproach, and in fact this is the one I originally envisioned to implement,
+being `Mafalda-horizontal` just an intermediate step to help me to develop the
+remote versions of `Mediasoup` and `Mafalda` modules... and have quickly an
+horizontal scalling solution that can be of commercial interest while I develop
+`Mafalda-swarm`, that's the really interesting and funny one to implement :-P
+
+In Mediasoup, the most important info to consume a stream is its `Producer` ID.
+These ones are unique UUIDs, and they can be explicitly set by hand. In fact,
+they are the only ones Mediasoup objects whom constructor allow it, and the
+Mediasoup method `Router.pipeToRouter()` sets the `Producer` in the destination
+`Router` with the ID in the original one, so it can be considered a good
+practice. Based on that, `Mafalda-swarm` makes use of a DHT to map the
+`Producer` IDs to the servers where's located the original one, so it's possible
+to directly ask to it and decrease lags and delays. The original producer server
+can be busy, so it will delegate the request to another server from the ones
+that are already consuming that stream, so this way they can balance themselves
+without external administration, just adding new servers to the swarm.
