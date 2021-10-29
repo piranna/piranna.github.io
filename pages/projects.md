@@ -51,7 +51,7 @@ the first working implementation of WebRTC DataChannels API, available 4 months
 before of experimental versions of Chrome and Firefox browsers, and build using
 WebSockets as transport layer.
 
-This project won the spanish national
+This project won the "Most Innovative Project" award in the spanish national
 [VII Free Software Universitary Championship](http://www.concursosoftwarelibre.org/1213/premiados-vii-cusl.html)
 and was invited to give a keynote at first spanish WebRTC summit at Politechnic
 University of Madrid, November 2012.
