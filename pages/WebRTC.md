@@ -44,9 +44,14 @@ addition to develop my own WebRTC and streaming projects.
 
 ### 2012
 
-- [ShareIt!](projects.md#shareit) (personal project, July 2012 - 2014)
-  - first serverless P2P filesharing application fully written in JavaScript
-- [DataChannel-polyfill](https://github.com/ShareIt-project/DataChannel-polyfill) (August - September 2012)
+- [ShareIt!](projects.md#shareit) (July 2012 - 2014)
+  - Personal project
+  - first serverless P2P filesharing application fully written in broser
+    client-side JavaScript, based on
+    [Gnutella](https://en.wikipedia.org/wiki/Gnutella) protocol and architecture
+- [DataChannel-polyfill](https://github.com/ShareIt-project/DataChannel-polyfill)
+  (August - September 2012)
+  - Personal project
   - First working implementation of WebRTC
     [RTCDataChannel](https://w3c.github.io/webrtc-pc/#rtcdatachannel) API using
     [WebSocket](https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface)s
@@ -64,7 +69,8 @@ addition to develop my own WebRTC and streaming projects.
     [ShareIt!](projects.md#shareit) project
 - [Kurento](projects.md#kurento) (July 2013 - June 2015)
   - Design and development of HTML5, Node.js and Javascript APIs for Kurento
-    media server
+    media server, based on [GStreamer](https://gstreamer.freedesktop.org/)
+  - Company adquired by [Twilio](https://www.twilio.com/) in September 2016
 
 ### 2015
 
@@ -74,15 +80,17 @@ addition to develop my own WebRTC and streaming projects.
 ### 2016
 
 - [UnifyMe](https://twitter.com/unify_me) (September 2016 - November 2018)
+  - CTO & co-founder
   - UCaaS - Unified Communications as a Service
 
 ### 2018
 
 - [TransFast](projects.md#transfast) (July 2018 - December 2018)
-  - personal project sponsored by [Takeafile](https://github.com/Takeafile)
+  - Personal project sponsored by [Takeafile](https://github.com/Takeafile)
   - High-performance transport-agnostic streams-oriented communications protocol
 - [lingbe](https://www.lingbe.com/) (December 2018 - August 2019)
-  - CTO & WebRTC Expert, videoconference-based language exchange mobile app
+  - CTO & WebRTC Expert
+  - Videocalls-based language exchange mobile app
 
 ### 2019
 
@@ -99,27 +107,33 @@ addition to develop my own WebRTC and streaming projects.
 - [HelloOtter](https://www.hellootter.com/) (November 2020 - April 2021)
 - [Atos Research & Innovation](https://atos.net/en/about-us/innovation-and-research)
   (September 2020 - May 2021)
-  - WebRTC Expert, R&D of HLS P2P video streaming from VR headsets
+  - WebRTC Expert and R&D of HLS P2P video streaming from VR headsets
   - Improvement of Google `libwebrtc` library
     [Java bindings](https://webrtc-review.googlesource.com/c/src/+/218847)
 - [Zerintia](https://zerintia.com/) (October 2020 - January 2021)
-  - R&D of video streaming and recording platform based on Mediasoup
+  - R&D of video streaming and recording platform based on
+    [Mediasoup](https://mediasoup.org/) and [ffmpeg](https://www.ffmpeg.org/)
 
 ### 2021
 
+Started working as full-time WebRTC Architect, in addition to my own projects.
+
 - [Councilbox](https://www.councilbox.com/) (January 2021 - June 2021)
-  - Mediasoup consultory and performance improvements of massive videocalls
-- [Mafalda SFU](https://github.com/Mafalda-SFU) (personal project, March 2021 -
-  Present)
+  - Mediasoup consultory and performance improvements of massive videocalls,
+    receiving up to 30 videos at the same time in a browser in a regular laptop
+- [Mafalda SFU](https://github.com/Mafalda-SFU) (March 2021 - Present)
   - Personal project
   - Massively parallel vertical and horizontal scalable SFU build on top of
     Mediasoup
 - [Dyte](https://www.dyte.in/) (June 2021 - Present)
-  - Design and development of Mediasoup horizontal scaling
+  - Design and development of Mediasoup horizontal scaling, project quality
+    consultory, and performance improvements for modular WebRTC platform
 - [Tegus medical](https://www.tegusmedical.com/) (July 2021 - Present)
-  - WebRTC consultory
+  - WebRTC consultory and design of new WebRTC architecture for recording and
+    streaming of hospitals operating rooms
 - [Virbela](https://www.virbela.com/) (August 2021 - Present)
   - Mediasoup and performance improvements of [FrameVR](https://framevr.io/)
     platform
 - [Fermax](https://www.fermax.com/) (October 2021 - Present)
-  - Mediasoup and WebRTC architecture consultory
+  - Mediasoup and WebRTC architecture consultory, and design of new WebRTC
+    architecture for remote control of video intercoms
