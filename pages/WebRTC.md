@@ -67,6 +67,9 @@ addition to develop my own WebRTC and streaming projects.
   (23-24th May 2013)
   - Winner of "Most Innovative Project" award with
     [ShareIt!](projects.md#shareit) project
+
+### 2013 to 2015
+
 - [Kurento](projects.md#kurento) (July 2013 - June 2015)
   - Design and development of HTML5, Node.js and Javascript APIs for Kurento
     media server, based on [GStreamer](https://gstreamer.freedesktop.org/)
@@ -77,7 +80,7 @@ addition to develop my own WebRTC and streaming projects.
 - Telepado (September 2015 - December 2015)
   - [Telegram](https://telegram.org/) protocol based chat application
 
-### 2016
+### 2016 to 2018
 
 - [UnifyMe](https://twitter.com/unify_me) (September 2016 - November 2018)
   - CTO & co-founder
