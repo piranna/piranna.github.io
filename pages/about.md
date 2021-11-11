@@ -78,9 +78,7 @@ Singer:
 > This afternoon we'll have a call with the client and let's see if we get their
 > aproval for the testing/refactoring, I'll keep you updated. We're going to
 > propose it as a critical action to be done.
->
-> ...
->
+
 > Tell you that it has been a pleasure to count on you for this job: serious,
 > decisive and accessible. My idea is to have someone to whom I can ask for
 > NodeJs development and evolution of projects already done like this one from
@@ -112,6 +110,14 @@ Management at [Ferrovial](https://www.ferrovial.com/):
 > Jesus was working with us at Councilbox in a very ambitious project to
 > replace our video conferencing server. His experience at webrtc helped us
 > complete the migration of our video infrastructure to Mediasoup.
+
+[James Croney](https://github.com/techtruth), Tech Lead at [Virbela](https://virbela.com/):
+
+> You have good eyes for spotting best approaches and practices for things, even
+> if people ignore them.
+
+> You have a good head on your shoulders about code and you offer good insights
+> about things.
 
 </details>
 
