@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: Presenting Mediasoup Horizontal
+twitter: '1477742653383008261'
 ---
 
 ALthough [Mafalda SFU](https://mafalda.io) is mainly focused on vertical scaling
