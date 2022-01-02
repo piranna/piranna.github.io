@@ -174,34 +174,34 @@ corner cases. That also has lead myself to put high attention on code quality
 and to develop simple and minimal APIs in all the code I develop, and to enforce
 that high quality standards on others.
 
-#### What's your opinion about code tests?
+#### What do your think about code tests? Do you do take-home code assignements?
 
-Short answer: no. Whoever is interested to know about my coding skills, can take
-a look at my [Github account](https://github.com/piranna) or my
-[projects portfolio](projects.md).
+Short answer: **no**.
 
 Long answer:
 
-I have a "no code tests" policy, it's time I can't dedicate to my freelance
-projects nor my friends, family or hobbies. I have more than 10 years of Open
-Source code published in my [Github account](https://github.com/piranna), that
-clearly show my capabilities and code quality standards. If you consider that's
-not enought and need to check yourself my work, you can contract me for some
-hours both to do an actual task in your code base, so you can evaluate my work
-on first hand. If you *still* insists that I need to do a code test, it's better
-that your offer *really* interest me (specially about the payment), or I would
-discard it since you don't respect candidates (your future employees) work-life
-balance.
+I have no problems about doing technical interviews, but I have a "no unpaid
+code tests" policy, that apply to both pair-coding tests, and more specially
+take-home code assignements. I have more than 12 years of Open Source code in my
+[Github account](https://github.com/piranna) and my
+[projects portfolio](projects.md), that clearly show my capabilities and code
+quality standards, and the time I spend on your code tests is money I'm not
+earning on my freelance projects, or time I'm not with my friends, family or
+hobbies.
 
-By the way, *big guys* like Google, Apple, Microsoft, IBM, Amazon, Ebay...
-**don't** do code tests, or they are short ones like *katas* to know about your
-reasoning, but instead they do in-site technical interviews instead. It's true
-their selection processes are long and tyring and you need to prepare yourself
-for them in advance, but not only their job conditions, salaries and prestige
-compensate that effort, but also they usually pay flight tickets and hotel rooms
-just so devs can be able to go to their offices and interview them. They *value*
-their candidates time, and invest in them, so don't be more *picky* than them,
-and show that you are truly interested in your candidates too.
+If you consider that's not enought and need to check yourself my work, you can
+contract me for some hours as a freelance to do an actual task in your code
+base, so you can evaluate my work on first hand. If you *still* insists that I
+need to do an unpaid code test or take-home code assignement, for me it's an
+almost instant discard of your offer, specially if I'm told so at the end of an
+interview, instead of tell me the full selection process before hand. That's
+rude, and I feel betrayed by making waste my time.
+
+By the way, *big guys* like Google, Apple, Microsoft, IBM, Amazon, Facebook,
+Ebay... **don't** do code tests, but instead they do in-site technical
+interviews instead, also paying flight tickets and hotel rooms if needed. They
+*value* their employees and candidates time and invest in them, so don't be more
+*picky* and show that you are truly interested in your candidates too.
 
 #### Are you available to relocate?
 
