@@ -4,7 +4,7 @@ layout: post
 title: Presenting Mediasoup Horizontal
 ---
 
-ALthough [Mafalda SFU](https://mafalda.io) is mainly focused on vertical scaling
+Although [Mafalda SFU](https://mafalda.io) is mainly focused on vertical scaling
 of [Mediasoup](https://mediasoup.org/) and the WebRTC stack, the main problem
 I've found companies are facing is about how to easily implement Medisoup
 [horizontal](https://en.wikipedia.org/wiki/Scalability#Horizontal_or_scale_out)
