@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: Manifest of a perfectionist
+twitter: '1468320408260669445'
 ---
 
 I'm a bit obsesive with code and architecture quality, and having them done like
