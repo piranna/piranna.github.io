@@ -31,8 +31,9 @@ projects to improve my skills and craft things with cool high-edge technologies.
 - Participant of *Spring Mathematics Championship*, Madrid 2004
 - Grant receiver for *3DS - 3 Days Startup*, Madrid 2012
 - WebRTC pioneer since 2012
-- [NodeOS](https://node-os.com/) lead developer
-- Several years runner at San Silvestre Vallecana 10km run, Madrid (53'38")
+- [NodeOS](projects.md#nodeos) lead developer, and [Mafalda SFU](projects.md#mafalda) founder
+- Several years Madrid San Silvestre Vallecana 10km runner (53'38", 2019)
+- Been in 10 countries & 2 continents
 - Currently learning chinese *JustForFun&trade;*
 
 ### Recomendations & testimonies
