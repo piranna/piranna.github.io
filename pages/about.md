@@ -7,22 +7,44 @@ permalink: /about/
 Passionate computers engineer and ex-PhD. candidate in Computers Engineering.
 Proud advocate of Open Source, standards, specifications, and best practices.
 
-With more than 18 years of professional experience, and involved in Open Source
-scene and wireless communities since 17 years old, I have been working both
-profesionally or in personal side projects in almost all computer engineering
-areas, including web development, robotics, operating systems desing,
-videogames, networking, or drivers programming. My profile is purely technical,
-with a great interest in hard-to-solve problems, quality of code, performance
-optimizations, high-edge technologies, and design of clean APIs and
+With more than 18 years of professional experience, and being involved in Open
+Source scene and wireless communities since I was 17 years old, I have been
+working both profesionally or in personal side projects in almost all computer
+engineering areas, including web development, robotics, operating systems
+desing, videogames, networking, or drivers programming. My profile is purely
+technical, with a great interest in hard-to-solve problems, quality of code,
+performance optimizations, high-edge technologies, and design of clean APIs and
 architectures focused on minimal designs, modularity and reusability.
+
+I'm fullstack with preference for backend, R&D and academic projects. Thanks to
+that, I have more than 10 years of experience with Node.js, and I'm also expert
+in Python and C++ between other languajes, and I'm currently interested on Rust.
+Regarding mobile apps, I hace 5 years of experience with ReactNative.
 
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
 and been CTO of two start-ups (and co-founder of one of them). Currently I'm
-working as Tech Lead backend at [BotXO](https://www.botxo.ai) and as part-time
-freelance developer, consultor and auditor. In my spare time i like to read
+working as WebRTC Architect at [Dyte](https://www.dyte.io/) and as part-time
+freelance developer, consultor and auditor. In my spare time I like to read
 books, go to cinema or travelling, go running or cycling, or work on my own side
 projects to improve my skills and craft things with cool high-edge technologies.
+
+## Academic experience
+
+I have a *Licenciature in Computers Engineering*, and convalidated It to the
+equivalent *Master in Computers Engineering*. My Licenciature (and Master)
+thesis was
+*[NodeOS](projects.md#nodeos), a minimal operating system for Node.js based applications*,
+with more than 6000 stargazers on GitHub, winner on the Systems category at the
+[11th CUSL national championship](https://www.concursosoftwarelibre.org), and
+graduated with distinction. My Licenciature thesis director was
+[Prof. Enrique Soriano-Salvador](https://gsyc.urjc.es/~esoriano/).
+
+I started my Ph.D., but currently is on-hold. My PhD thesis was *Co-focal
+microscope techniques applied to neurology*, where I was compositing
+multi-gigabyte high resolution multi-layer microscope scan images of neurons to
+generate 3D models. My Ph.D. thesis director was
+[Ph.D. Sofía Bayona-Beriso](https://gestion2.urjc.es/pdi/ver/sofia.bayona).
 
 ## Interesting facts
 
@@ -31,7 +53,8 @@ projects to improve my skills and craft things with cool high-edge technologies.
 - Participant of *Spring Mathematics Championship*, Madrid 2004
 - Grant receiver for *3DS - 3 Days Startup*, Madrid 2012
 - WebRTC pioneer since 2012
-- [NodeOS](projects.md#nodeos) lead developer, and [Mafalda SFU](projects.md#mafalda) founder
+- [NodeOS](projects.md#nodeos) lead developer, and
+  [Mafalda SFU](projects.md#mafalda) founder
 - Several years Madrid San Silvestre Vallecana 10km runner (53'38", 2019)
 - Been in 10 countries & 2 continents
 - Currently learning chinese *JustForFun&trade;*

@@ -128,10 +128,10 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
   - Personal project
   - Massively parallel vertical and horizontal scalable SFU build on top of
     Mediasoup
-- [Dyte](https://www.dyte.in/) (June 2021 - Present)
+- [Dyte](https://www.dyte.io/) (June 2021 - Present)
   - Design and development of Mediasoup horizontal scaling, project quality
     consultory, and performance improvements for modular WebRTC platform
-- [Tegus medical](https://www.tegusmedical.com/) (July 2021 - Present)
+- [Tegus medical](https://www.tegusmedical.com/) (July 2021 - August 2021)
   - WebRTC consultory and design of new WebRTC architecture for recording and
     streaming of hospitals operating rooms
 - [Virbela](https://www.virbela.com/) (August 2021 - Present)

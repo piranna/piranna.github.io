@@ -26,6 +26,7 @@ permalink: /uses
 
 ### Previous operating systems
 
+- Ubuntu (since 5.04)
 - Debian
 - macOS
 - Windows
@@ -82,7 +83,4 @@ permalink: /uses
 
 - **Operating Systems: Design and Implementation**, Andrew S. Tanenbaum
 - **Programmer's Guide to the IBM PC**, Peter Norton
-
-### Reading
-
 - **Practical Machine Learning with Rust**, Joydeep Bhattacharjee
