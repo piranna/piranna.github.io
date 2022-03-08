@@ -204,10 +204,10 @@ them and show that you are truly interested in your candidates too.
 
 #### Where are you located?
 
-I travel frequently and don't have a fixed location, but mainly on Europe (UTC
-to UTC+2 timezones). If your question is oriented to adjust your salary offer to
-the life level costs of the city where I'm living, you can consider that I'm
-located in downtown London.
+I travel frequently and don't have a fixed location, but mostly I'm living in
+western Europe (UTC to UTC+2 timezones). If your question is related to adjust
+your salary offer to life level costs, you can target your offer to the region
+of London, Great Britain.
 
 #### Are you available to relocate?
 
