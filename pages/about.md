@@ -19,7 +19,7 @@ architectures focused on minimal designs, modularity and reusability.
 I'm fullstack with preference for backend, R&D and academic projects. Thanks to
 that, I have more than 10 years of experience with Node.js, and I'm also expert
 in Python and C++ between other languajes, and I'm currently interested on Rust.
-Regarding mobile apps, I hace 5 years of experience with ReactNative.
+Regarding mobile apps, I have 5 years of experience with ReactNative.
 
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
