@@ -211,23 +211,26 @@ of London, Great Britain.
 
 #### Are you available to relocate?
 
-I'm interested mostly on 100% remote positions (specially regarding freelance
+I'm interested mainly on 100% remote positions (specially regarding freelance
 projects), or job positions located in Spain (specially Madrid, Canary Islands,
 Valencia or Barcelona, mostly in that order). I'm open to relocate if we can
 negotiate the conditions, but mandatory ones are:
 
-1. base salary is equal or greater to what I can get for an in-site position
-   in Madrid or Barcelona, plus a proportional increment to adjust to live level
-   costs of destination city, whichever is higher.
-2. offer includes social beneficts (including health costs and paid holidays)
-   equiparable to Spain base legal ones or better.
-3. company provides accomodation during all the time of the contract, or a
-   flat rental monthly bonus.
-4. company provides flight tickets for both joining and leaving the company.
+1. base salary is equal or greater to what I can get for an in-site position in
+   Madrid (Spain), adjusted to live level costs of destination city, whichever
+   is higher.
+2. company provides accomodation during all the time of the contract, or a
+   flat rental equivalent monthly bonus.
+3. company provides flight/train tickets for both joining and leaving the
+   company.
+4. offer includes social beneficts (including health costs and paid holidays)
+   equal or better to the Spain basic legal ones.
 
-On the other hand, I'm a *travel junkie*, so I don't have any problem if I need
-to travel frequently due to job requirements. In fact, I consider this as an
-advantage for the job position :-)
+If it's not possible to meet these requirements, I'm also able to work 100% on
+remote and travel as frequently as required, as far as company pays flight /
+train tickets, diets and hotel room. In fact, I'm a *travel junkie*, and I would
+consider the requirement of need to travel frequently as an advantage of the job
+position :-)
 
 ### 💻 Technology
 
