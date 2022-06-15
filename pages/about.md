@@ -24,7 +24,7 @@ Regarding mobile apps, I have 5 years of experience with ReactNative.
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
 and been CTO of two start-ups (and co-founder of one of them). Currently I'm
-working as WebRTC Architect at [Dyte](https://www.dyte.io/) and as part-time
+working as *WebRTC Architect* at [Dyte](https://www.dyte.io/) and as part-time
 freelance developer, consultor and auditor. In my spare time I like to read
 books, go to cinema or travelling, go running or cycling, or work on my own side
 projects to improve my skills and craft things with cool high-edge technologies.
