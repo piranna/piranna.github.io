@@ -143,6 +143,14 @@ Management at [Ferrovial](https://www.ferrovial.com/):
 > You have a good head on your shoulders about code and you offer good insights
 > about things.
 
+[Sol Rengifo Calderón](https://www.linkedin.com/in/sol-rengifo-calder%C3%B3n-5ba96514a/),
+founder of [Gud](https://gud.social/), July 2022:
+
+> Working with Jesus has been a luxury. He has been able to offer us an accurate
+> and detailed view of the status of the project and has advised us at all times
+> in an accurate, clear, honest and very professional manner. We will continue
+> to collaborate with him without a doubt.
+
 </details>
 
 ## Contact me
