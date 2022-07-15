@@ -68,7 +68,7 @@ testimonies from clients about my freelance projects.
   <summary>Expand</summary>
 
 [Jorge Abrines](https://es.linkedin.com/in/jorge-abrines-b092423), CTO of
-[Vaelsys](https://vaelsys.com/):
+[Vaelsys](https://vaelsys.com/), July 2012:
 
 > Jesus is a worker with a lot of knowledge in several technical areas, from
 > low level programming up to scripting languages, and including devices
@@ -77,7 +77,7 @@ testimonies from clients about my freelance projects.
 > specially for his technical expertise and aptitudes.
 
 [Diego González](https://www.linkedin.com/in/xmunch), Founder of SciArt Lab |
-Software Engineer / Blockchain Expert at Docuten:
+Software Engineer / Blockchain Expert at Docuten, May 2014:
 
 > Jesus is much more than a brilliant developer. He loves to achieve complex
 > goals just by using a keyboard and a bunch of code lines. I would describe him
@@ -86,14 +86,14 @@ Software Engineer / Blockchain Expert at Docuten:
 > project to the top. I strongly recommend him.
 
 [Juan Francisco Gato Luis](https://www.linkedin.com/in/jfcogato), Android R+D &
-Singer:
+Singer, May 2014:
 
 > I don't need so much words to recommend Jesús. Just one case, if you need a
 > man that works for a project and not for money, this guy could reach it. He
 > just can do it, and if he don't [know] how to made it, he will reach a way.
 
 [Juan Searle](https://www.linkedin.com/in/juansearle), CTO at
-[Full Circle_ apps](https://fullcircle.es/):
+[Full Circle_ apps](https://fullcircle.es/), December 2020:
 
 > I agree a lot with everything [you've proposed]. I'm surprised that you have
 > owned the code in just some hours, without documentation and without mentoring
@@ -110,32 +110,33 @@ Singer:
 > will count on you in future projects without a doubt.
 
 [Isabel Dorado](https://www.linkedin.com/in/isabeldoradomoreno/), Remote Talent
-Advocate at [Circular](https://trycircular.com/):
+Advocate at [Circular](https://trycircular.com/), December 2020:
 
 > Senior developer with experience leading teams and really hands on. Background
 > in both back and frontend development. His expertise is related to Python,
 > Node and C++. Spanish and English!
 
 [Miguel Muñoz Royo](https://www.linkedin.com/in/miguelmunoz/), Business and
-Technical Lead at [UST Global](https://ustglobal.es/):
+Technical Lead at [UST Global](https://ustglobal.es/), December 2020:
 
 > The truth is that the conversation with Jesús has been very good. He's a
 > Node.js super architect with experience more than enough for the profile we
 > are looking for.
 
 [Judith Aranda Rubio](https://www.linkedin.com/in/juditharanda/), Talent
-Management at [Ferrovial](https://www.ferrovial.com/):
+Management at [Ferrovial](https://www.ferrovial.com/), December 2020:
 
 > Wide development experiences and skills.
 
 [Alberto Doval Iglesias](https://www.linkedin.com/in/albertodoval/), CTO at
-[Councilbox](https://www.councilbox.com/):
+[Councilbox](https://www.councilbox.com/), June 2021:
 
 > Jesus was working with us at Councilbox in a very ambitious project to
 > replace our video conferencing server. His experience at webrtc helped us
 > complete the migration of our video infrastructure to Mediasoup.
 
-[James Croney](https://github.com/techtruth), Tech Lead at [Virbela](https://virbela.com/):
+[James Croney](https://github.com/techtruth), Tech Lead at
+[Virbela](https://virbela.com/), November 2021:
 
 > You have good eyes for spotting best approaches and practices for things, even
 > if people ignore them.
