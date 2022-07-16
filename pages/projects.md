@@ -41,9 +41,10 @@ distinction), and I was also invited to give some keynotes at
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/220960658" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
-#### Citations
+<details>
+  <summary>Citations</summary>
 
-- [Novática 236.pdf](papers/Novática 236.pdf), April-June 2016:
+- [Novática 236.pdf](<papers/Novática 236.pdf>), April-June 2016:
 
   > Se entregaron también menciones especiales para los proyectos:
   >
@@ -59,8 +60,8 @@ distinction), and I was also invited to give some keynotes at
   > **NodeOS** of **Jesús Leganés Combarro** (Rey Juan Carlos University).
 
 - [The Case for Writing Network Drivers in
-High-Level Programming Languages](papers/The Case for Writing Network Drivers in
-High-Level Programming Languages.pdf),
+High-Level Programming Languages](<papers/The Case for Writing Network Drivers in
+High-Level Programming Languages.pdf>),
   13 September 2019:
 
   > 4.10.1 Related work. JavaScript is rarely used for low-level code, the most
@@ -68,6 +69,8 @@ High-Level Programming Languages.pdf),
   > with Node.js as user space. OS.js runs a window manager and applications in
   > the browser and is backed by a server running Node.js on a normal OS.
   > Neither of these implements driver-level code in JavaScript.
+
+</details>
 
 ### [ShareIt!](https://github.com/ShareIt-project)
 
@@ -85,9 +88,10 @@ This project won the "Most Innovative Project" award in the spanish national
 and was invited to give a keynote at first spanish WebRTC summit at Politechnic
 University of Madrid, November 2012.
 
-#### Citations
+<details>
+  <summary>Citations</summary>
 
-- [Introducing ufo.js: A browser-oriented p2p network.pdf](papers/Introducing ufo.js: A browser-oriented p2p network.pdf),
+- [Introducing ufo.js: A browser-oriented p2p network.pdf](<papers/Introducing ufo.js: A browser-oriented p2p network.pdf>),
   February 2014:
 
   > Among real life applications using the datachannel as best as they can, we
@@ -98,6 +102,8 @@ University of Madrid, November 2012.
   > connection to each peer; these connections are used to accomplish all the
   > signaling procedures between peers. Thus the actual p2p communication
   > happens during file transfers.
+
+</details>
 
 ### [PirannaFS](https://github.com/piranna/PirannaFS)
 
