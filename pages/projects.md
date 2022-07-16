@@ -44,7 +44,7 @@ distinction), and I was also invited to give some keynotes at
 <details>
   <summary>Citations</summary>
 
-- [Novática 236.pdf](<papers/Novática 236.pdf>), April-June 2016:
+- [Novática 236.pdf](<../papers/Novática 236.pdf>), April-June 2016:
 
   > Se entregaron también menciones especiales para los proyectos:
   >
@@ -60,8 +60,7 @@ distinction), and I was also invited to give some keynotes at
   > **NodeOS** of **Jesús Leganés Combarro** (Rey Juan Carlos University).
 
 - [The Case for Writing Network Drivers in
-High-Level Programming Languages](<papers/The Case for Writing Network Drivers in
-High-Level Programming Languages.pdf>),
+High-Level Programming Languages](<../papers/The Case for Writing Network Drivers in High-Level Programming Languages.pdf>),
   13 September 2019:
 
   > 4.10.1 Related work. JavaScript is rarely used for low-level code, the most
@@ -91,7 +90,7 @@ University of Madrid, November 2012.
 <details>
   <summary>Citations</summary>
 
-- [Introducing ufo.js: A browser-oriented p2p network.pdf](<papers/Introducing ufo.js: A browser-oriented p2p network.pdf>),
+- [Introducing ufo.js: A browser-oriented p2p network.pdf](<../papers/Introducing ufo.js: A browser-oriented p2p network.pdf>),
   February 2014:
 
   > Among real life applications using the datachannel as best as they can, we
