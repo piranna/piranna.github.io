@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: How to use a different email for a group of git repositories
+twitter: '1548423325302415360'
 ---
 
 If you have a folder with multiple repositories that you want your commits use a
