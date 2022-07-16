@@ -41,6 +41,34 @@ distinction), and I was also invited to give some keynotes at
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/220960658" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
+#### Citations
+
+- [Novática 236.pdf](papers/Novática 236.pdf), April-June 2016:
+
+  > Se entregaron también menciones especiales para los proyectos:
+  >
+  > [...]
+  >
+  > **NodeOS** de **Jesús Leganés Combarro** (Universidad Rey Juan Carlos).
+
+  (english translation)
+  > They were also given honorable mentions for the projects:
+  >
+  > [...]
+  >
+  > **NodeOS** of **Jesús Leganés Combarro** (Rey Juan Carlos University).
+
+- [The Case for Writing Network Drivers in
+High-Level Programming Languages](papers/The Case for Writing Network Drivers in
+High-Level Programming Languages.pdf),
+  13 September 2019:
+
+  > 4.10.1 Related work. JavaScript is rarely used for low-level code, the most
+  > OS-like projects are **NodeOS** and OS.js. **NodeOS** uses the Linux kernel
+  > with Node.js as user space. OS.js runs a window manager and applications in
+  > the browser and is backed by a server running Node.js on a normal OS.
+  > Neither of these implements driver-level code in JavaScript.
+
 ### [ShareIt!](https://github.com/ShareIt-project)
 
 First P2P filesharing webapp based on client-side Javascript and HTML5, build
@@ -56,6 +84,20 @@ This project won the "Most Innovative Project" award in the spanish national
 [VII Free Software Universitary Championship](http://www.concursosoftwarelibre.org/1213/premiados-vii-cusl.html)
 and was invited to give a keynote at first spanish WebRTC summit at Politechnic
 University of Madrid, November 2012.
+
+#### Citations
+
+- [Introducing ufo.js: A browser-oriented p2p network.pdf](papers/Introducing ufo.js: A browser-oriented p2p network.pdf),
+  February 2014:
+
+  > Among real life applications using the datachannel as best as they can, we
+  > should definitely mention **shareit** and sharefest. Such applications allow
+  > browsers to share files in the absence of any form of upload to external
+  > servers, as opposed to well-known services such as Dropbox or Google Drive.
+  > Both **shareit** and sharefest use an external server holding and managing a
+  > connection to each peer; these connections are used to accomplish all the
+  > signaling procedures between peers. Thus the actual p2p communication
+  > happens during file transfers.
 
 ### [PirannaFS](https://github.com/piranna/PirannaFS)
 
