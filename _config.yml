@@ -60,6 +60,9 @@ permalink: pretty
 version: v1.2.0
 
 markdown: CommonMarkGhPages
+commonmark:
+  options: ["UNSAFE", "SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
