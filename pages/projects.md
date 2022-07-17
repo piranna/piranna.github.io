@@ -46,18 +46,22 @@ distinction), and I was also invited to give some keynotes at
 
 - [Novática 236.pdf](<../papers/Novática 236.pdf>), April-June 2016:
 
-  > Se entregaron también menciones especiales para los proyectos:
-  >
-  > [...]
-  >
-  > **NodeOS** de **Jesús Leganés Combarro** (Universidad Rey Juan Carlos).
-
-  (english translation)
   > They were also given honorable mentions for the projects:
   >
   > [...]
   >
   > **NodeOS** of **Jesús Leganés Combarro** (Rey Juan Carlos University).
+
+  <details>
+    <summary>Original (spanish)</summary>
+
+    > Se entregaron también menciones especiales para los proyectos:
+    >
+    > [...]
+    >
+    > **NodeOS** de **Jesús Leganés Combarro** (Universidad Rey Juan Carlos).
+
+  </details>
 
 - [The Case for Writing Network Drivers in
 High-Level Programming Languages](<../papers/The Case for Writing Network Drivers in High-Level Programming Languages.pdf>),
