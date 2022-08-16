@@ -16,7 +16,7 @@ created some days before, we decided to fix that issue once for all. Come and
 follow us to see how at Dyte we take code quality serious, and how at Dyte we
 don’t just simply apply a linter to our source code.
 
-![Dyte does not simple apply a linter to its code](6ji533.jpg)
+![Dyte does not simple apply a linter to its code](./6ji533.jpg)
 
 ## Linting
 
