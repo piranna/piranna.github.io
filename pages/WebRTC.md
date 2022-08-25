@@ -4,40 +4,42 @@ title: WebRTC
 permalink: /webrtc/
 ---
 
-I've been working with [WebRTC](https://webrtc.org/) since 2012, less than a
-year later it started to surface discussions about developing it, being one of
-the pioneers of that technology here in Spain.
+I've been working with [WebRTC](https://webrtc.org/) since 2012, less than one
+year after they were started the discussions about design and develop its
+specifications, being one of the pioneers of this technology here in Spain.
 
-I got involved on that technology while developing
-[ShareIt!](projects.md#shareit), the first serverless P2P filesharing
-application fully written in JavaScript, and with whom I won the "Most
-Innovative Project" award in the spanish national
-[VII Free Software Universitary Championship](http://www.concursosoftwarelibre.org/1213/premiados-vii-cusl.html). To develop it, I needed to create
+I got involved on it while developing [ShareIt!](projects.md#shareit), the first
+serverless P2P filesharing application written fully in client side JavaScript,
+and with whom I won the "Most Innovative Project" award at the spanish national
+[VII Free Software Universitary Championship](http://www.concursosoftwarelibre.org/1213/premiados-vii-cusl.html).
+To develop it, I also needed to create
 [DataChannel-polyfill](https://github.com/ShareIt-project/DataChannel-polyfill),
 the first working implementation of WebRTC
-[RTCDataChannel](https://w3c.github.io/webrtc-pc/#rtcdatachannel) API four
+[RTCDataChannel](https://w3c.github.io/webrtc-pc/#rtcdatachannel) API, four
 months before it was available in experimental versions of both Chrome and
-Firexfox browsers, using
-[WebSocket](https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface)s
-instead of a
+Firefox browsers, using for it
+[WebSocket](https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface)
+connections instead of a
 [SCTP](https://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol)
 connection as transport layer.
 
-Thanks to that both projects, I was invited to do a keynote in the first Spain
-WebRTC summit, hosted at
+Thanks to both projects, I was invited to do a keynote in the first Spain WebRTC
+summit, hosted at
 [Madrid Polytechnic University](http://www.upm.es/internacional) in November
 2012, and got a paragraph talking about my work at
 [HTML5 for Masterminds](http://www.formasterminds.com/html5_for_masterminds_3rd_edition/) book, written by
 [John D. Gauchat](http://www.jdgauchat.com/). After that, I was invited to work
-at [eFace2Face](https://github.com/eface2face), and joined the
-[Kurento](projects.md#kurento) team for two years.
+at [eFace2Face](https://github.com/eface2face), and later I joined the
+[Kurento](projects.md#kurento) team for two years, where I was responsible for
+design and develop the Node.js, Javascript and HTML5 APIs for Kurento media
+server.
 
 In the next years, I've been working as WebRTC Expert for multiple projects,
-including the two start-ups where I've been also working as CTO,
+including the two start-ups where I've also been working as CTO,
 [UnifyMe](https://twitter.com/unify_me) and [lingbe](https://www.lingbe.com/).
-But since short before the Covid-19 pandemic, I started to be contracted by each
-times more companies to work as freelance WebRTC Expert, until December 2020
-when I decided to work full-time ofering my services as WebRTC Architect, in
+But since short before it started the Covid-19 pandemic, I got contracted each
+time by more companies to work as freelance WebRTC Expert, so in December 2020,
+I decided to work full-time offering my services as WebRTC Architect, in
 addition to develop my own WebRTC and streaming projects.
 
 ## Chronology
@@ -134,7 +136,7 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
 - [Tegus medical](https://www.tegusmedical.com/) (July 2021 - August 2021)
   - WebRTC consultory and design of new WebRTC architecture for recording and
     streaming of hospitals operating rooms
-- [Virbela](https://www.virbela.com/) (August 2021 - Present)
+- [Virbela](https://www.virbela.com/) (August 2021 - February 2022)
   - Mediasoup and performance improvements of [FrameVR](https://framevr.io/)
     platform
 - [Fermax](https://www.fermax.com/) (October 2021 - Present)
