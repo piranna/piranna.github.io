@@ -1,9 +1,11 @@
 ---
 lang: en
 layout: post
-title: How to build WebRTC for Android in Ubuntu 21.04
+title: How to build WebRTC for Android in Ubuntu 21.04 and 22.04
 twitter: '1385546685472854019'
 ---
+
+**2022-9-29**: Updated to Ubuntu 22.04 and use `gclient` command
 
 Google used to provide
 [prebuild Android images](https://bintray.com/google/webrtc/google-webrtc) of
@@ -34,9 +36,8 @@ binary mobile library `.aar` file was published and
 [there are instructions to build it yourself](https://medium.com/@abdularis/how-to-compile-native-webrtc-from-source-for-android-d0bac8e4c933),
 that's a huge advantage over needing to compile and build the libraries yourself
 by hand. But while I was using it, I've found some issues and errors in the
-instructions themselves when executing them on Ubuntu 21.04 (released just
-yesterday :-) ), so here are the fixed instructions with some additional
-comments:
+instructions themselves when executing them on Ubuntu 21.04 and 22.04, so here
+are the fixed instructions with some additional comments:
 
 1. Create a new folder where to work in. This seems obvious, but if not, you'll
    end up filling with garbage your `$HOME` directory (I'm n00b). Maybe having
@@ -69,11 +70,11 @@ comments:
 4. Get the build environment tools and Chromium source code using `depot_tools`,
    and `cd` inside it. This will a 16GB checkout and will take **A LONG TIME**.
    In my case, it lasted 4.5 hours for the `fetch` command and more than one
-   hour for the `gsync` one...:
+   hour for the `gclient` one...:
 
    ```sh
    fetch --nohooks webrtc_android
-   gsync sync
+   gclient sync
    cd src
    ```
 
@@ -85,6 +86,14 @@ comments:
    ./build/install-build-deps.sh
    ```
 
+   Ubuntu 22.04 is not supported yet by the build system and it will exit with
+   an error. We can bypass the checks for the supported operating system and
+   supported operating systems versions by using the `--unsupported` flag:
+
+   ```sh
+   ./build/install-build-deps.sh --unsupported
+   ```
+
 6. Select the release to build. Until WebRTC M80 release, there were branches
    for each one of the Chromium releases, so it was easy to know what version
    was each one, but after that, Google started to create branches in a daily
@@ -93,24 +102,24 @@ comments:
    library of a particular release, you can search for your desired Milestion at
    [Chromium data website](https://chromiumdash.appspot.com/branches), and match
    it with the *WebRTC* column to find the daily branch number. For example, to
-   build the `libWebrtc` library version used by latest stable Chrome 91 (build
-   number `4472`) you would just need to change to the `branch-heads/4472`:
+   build the `libWebrtc` library version used by latest stable Chrome 106 (build
+   number `5249`) you would just need to change to the `branch-heads/5249`:
 
    ```sh
-   git checkout branch-heads/4472
+   git checkout branch-heads/5249
    ```
 
    This will left the repository in detached mode, but it's not something to
    worry about. Also, you can see all available branches in case you want to
    use another daily branch by executing `git branch -r`. At this moment, latest
-   one is `4485`.
+   one is `5329`.
 
    Once changed to the desired daily build branch, we need to
    [reset and sync the repository code](https://stackoverflow.com/a/61321315/586382),
    and download again more dependencies and code. It seems this is needed
-   because previous `gsync` when we were in `master` branch would have left some
-   temporal files (maybe we could have changed branches before?) so the build
-   could fail, so this way we make sure to have the correct ones:
+   because previous `gclient` when we were in `master` branch would have left
+   some temporal files (maybe we could have changed branches before?) so the
+   build could fail, and this way we make sure to have the correct ones:
 
    ```sh
    gclient revert
