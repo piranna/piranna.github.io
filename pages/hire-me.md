@@ -192,39 +192,61 @@ contract me for some hours as a freelance to do an actual task in your code
 base, so you can evaluate my work on first hand. If you *still* insists that I
 need to do an unpaid code test or take-home code assignement, for me it's an
 almost instant discard of your offer, specially if I'm told so at the end of an
-interview instead of tell me how is the full selection process before hand.
-That's rude, and I feel betrayed by making waste my time, and show how low do
-you value your employees-to-be work-life balance.
+interview instead of tell me how the full selection process is before hand.
+That's rude, and I feel betrayed by you making waste my time, and it shows how
+low do you value your employees-to-be work-life balance if you don't respect it
+starting at the selection process.
 
 By the way, *big guys* like Google, Apple, Microsoft, IBM, Amazon, Facebook,
 Ebay... **don't** do code tests, but instead they do in-site technical
 interviews, paying flight tickets and hotel rooms if needed. They *value* their
 employees and candidates time and invest in them, so don't be more *picky* than
-them and show that you are truly interested in your candidates too.
+them, and show that you are truly interested in your candidates too.
 
 #### Where are you located?
 
-I travel frequently and don't have a fixed location, but mostly I'm living in
-western Europe (UTC to UTC+2 timezones). If your question is related to adjust
-your salary offer to life level costs, you can target your offer to the region
-of London, Great Britain.
+I travel frequently and don't have a fixed location. Mostly I'm living in
+western Europe (UTC to UTC+2 timezones), but I'm also frequently visiting United
+Arabic Emirates and India (UTC+4 and UTC+5.5 timezones).
+
+If your question is related to adjust your salary offer to life level costs, you
+can target your offer to the region of London, Great Britain.
 
 #### Are you available to relocate?
 
-I'm interested mainly on 100% remote positions (specially regarding freelance
-projects), or job positions located in Spain (specially Madrid, Canary Islands,
-Valencia or Barcelona, mostly in that order). I'm open to relocate if we can
-negotiate the conditions, but mandatory ones are:
+I'm interested mostly just only on 100% remote positions, specially regarding
+freelance projects. I can consider in-site or hybrid job positions or reloation
+depending of the conditions, mandatory ones are:
 
-1. base salary is equal or greater to what I can get for an in-site position in
-   Madrid (Spain), adjusted to live level costs of destination city, whichever
-   is higher.
-2. company provides accomodation during all the time of the contract, or a
-   flat rental equivalent monthly bonus.
-3. company provides flight/train tickets for both joining and leaving the
-   company.
-4. offer includes social beneficts (including health costs and paid holidays)
-   equal or better to the Spain basic legal ones.
+- job location needs to be easily accesible in public transport, or company
+  provides a driver, cab or taxi. All transport costs will be paid by the
+  company
+- daily conmute time will be considered part of my paid working hours, being
+  that regular or extra ones depending of the assigned schedule. Conmute hours
+  can be compensated as extra paid holidays or free days too
+- all this conditions needs to be specified in the contract
+
+Additionally, for in-site or hybrid job positions:
+
+- in **Madrid (Spain) area**, company will pay meal diets for all the days I
+  would need to be presentially
+- in **outside of Madrid area**, company will pay both arrive and leave flight
+  or train tickets (also if it's in a daily or weekly basis), and accomodation
+  for all the time I would need to be presentially
+
+Finally, if due to costs, times or logistics permanent relocation is mandatory,
+additionally:
+
+- company will provide accomodation during all the time of the trial period, or
+  all the in-site time for freelance projects. After that, company will provide
+  a monthly bonus or salary / honoraries increment to cover flat rental costs
+- inside **Spain**, base salary will be equal or better to what I can get for an
+  in-site position in Madrid (Spain)
+- outside **Spain**, base salary / honoraries will be at least a 30% higher or
+  better to what I can get for a similar job position working on remote, and
+  company offer will also includes social beneficts equal or better to the Spain
+  basic legal ones, including health insurance, paid holidays, work and legal
+  rights...
 
 If it's not possible to meet these requirements, I'm also able to work 100% on
 remote and travel as frequently as required, as far as company pays flight /
