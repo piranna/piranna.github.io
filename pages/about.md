@@ -60,9 +60,9 @@ generate 3D models. My Ph.D. thesis director was
 
 ### Countries visited
 
-I've been in 18
-[Century Club](https://travelerscenturyclub.org/countries-and-territories),
-16 countries & 3 continents
+I've been so far in 18
+[Century Club](https://travelerscenturyclub.org/countries-and-territories)
+territories, 16 countries, and 3 continents
 
 - **Europe**
   - 🇪🇺 **European Union**
