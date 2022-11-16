@@ -56,10 +56,42 @@ generate 3D models. My Ph.D. thesis director was
 - [NodeOS](projects.md#nodeos) lead developer, and
   [Mafalda SFU](projects.md#mafalda) founder
 - Several years Madrid San Silvestre Vallecana 10km runner (53'38", 2019)
-- Been in 10 countries & 2 continents
 - Currently learning chinese *JustForFun&trade;*
 
-### Recomendations & testimonies
+### Countries visited
+
+I've been in 18
+[Century Club](https://travelerscenturyclub.org/countries-and-territories),
+16 countries & 3 continents
+
+- **Europe**
+  - 🇪🇺 **European Union**
+    - 🇪🇸 **Spain**: Madrid, Valencia, Toledo, Segovia, Tarragona, Castellón,
+      Cadiz, Sevilla, Almería, Oviedo, Malaga, Merida, Barcelona, Coruña,
+      Pontevedra, Zamora, Zaragoza, Teruel
+      - 🇮🇨 **Canary Islands**: Gran Canaria (Las Palmas, Maspalomas),
+        Fuerteventura
+    - 🇵🇹 **Portugal**: Oporto, Lisboa
+    - 🇩🇪 **Germany**: Hamburg
+    - 🇦🇹 **Austria**: Viena
+    - 🇨🇿 **Czech Republic**: Brno
+    - 🇮🇹 **Italy**: Milan
+    - 🇧🇪 **Belgium**: Bruselas, Bruges
+    - 🇧🇬 **Bulgaria**: Sofia
+    - 🇵🇱 **Poland**: Katowice
+  - 🇬🇧 **United Kingdom**:
+    - 🇬🇮 **Gibraltar**
+    - 🏴󠁧󠁢󠁥󠁮󠁧󠁿 **England**: London
+    - 🇮🇪 **Ireland**: Dublin
+  - 🇨🇭 **Switzerland**: Zurich
+- **Africa**
+  - 🇲🇦 **Morocco**: Marrakech
+- **Asia**
+  - 🇶🇦 **Qatar**: Doha
+  - 🇮🇳 **India**: Bangalore
+  - 🇦🇪 **United Arab Emirates**: Abu Dhabi, Dubai
+
+## Recomendations & testimonies
 
 Recomendations from co-workers and managers of my previous job companies, and
 testimonies from clients about my freelance projects.
