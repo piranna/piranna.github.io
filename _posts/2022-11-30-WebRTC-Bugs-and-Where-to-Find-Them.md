@@ -12,7 +12,7 @@ it fail. We are going to analize some of the most common ones, and when
 possible, see how we can fix them or find some alternatives solutions to
 minimize their impact.
 
-![Zoom meetings are just modern seances](Zoom-meetings-are-just-modern-seances.jpeg)
+![Zoom meetings are just modern seances](/images/2022-11-30-WebRTC-Bugs-and-Where-to-Find-Them/Zoom-meetings-are-just-modern-seances.jpeg)
 
 Here we are assuming code is (mostly) well writting, so failure points have not
 been previously considered nor taken measures against them. If that would be the
@@ -78,7 +78,7 @@ different private networks. This exchange of information is responsability of
 the *signaling server*, and exchanged info is provided by
 [STUN and TURN servers](https://blog.ivrpowers.com/post/technologies/what-is-stun-turn-server/).
 
-![](ivrpowers-turn-stun-screen.005.jpeg)
+![STUN vs TURN](/images/2022-11-30-WebRTC-Bugs-and-Where-to-Find-Them/stun-vs-turn.jpeg)
 
 A [STUN server](https://bloggeek.me/webrtcglossary/stun/) provide a way for
 clients to know what's their actual public IP and in what TCP/UDP port are they
