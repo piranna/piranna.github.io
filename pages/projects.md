@@ -63,8 +63,7 @@ distinction), and I was also invited to give some keynotes at
 
   </details>
 
-- [The Case for Writing Network Drivers in
-High-Level Programming Languages](<../papers/The Case for Writing Network Drivers in High-Level Programming Languages.pdf>),
+- [The Case for Writing Network Drivers in High-Level Programming Languages](<../papers/The Case for Writing Network Drivers in High-Level Programming Languages.pdf>),
   13 September 2019:
 
   > 4.10.1 Related work. JavaScript is rarely used for low-level code, the most
@@ -105,6 +104,13 @@ University of Madrid, November 2012.
   > connection to each peer; these connections are used to accomplish all the
   > signaling procedures between peers. Thus the actual p2p communication
   > happens during file transfers.
+
+  **Note**: [ShareIt!](projects.md#shareit) used an external server to bootstrap
+  the initial discovery and signaling with other peers, once they were connected
+  to at least another peer and being part of the P2P network, the discovery and
+  signaling with new peers was done directly between peers over the P2P network
+  itself, leaving the connection with the external server as a fallback
+  mechanims.
 
 </details>
 

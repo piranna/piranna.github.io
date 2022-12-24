@@ -46,6 +46,60 @@ multi-gigabyte high resolution multi-layer microscope scan images of neurons to
 generate 3D models. My Ph.D. thesis director was
 [Ph.D. Sofía Bayona-Beriso](https://gestion2.urjc.es/pdi/ver/sofia.bayona).
 
+<details>
+  <summary>Citations</summary>
+
+- [NodeOS](projects.md#nodeos)
+  - [Novática 236.pdf](<../papers/Novática 236.pdf>), April-June 2016:
+
+    > They were also given honorable mentions for the projects:
+    >
+    > [...]
+    >
+    > **NodeOS** of **Jesús Leganés Combarro** (Rey Juan Carlos University).
+
+    <details>
+      <summary>Original (spanish)</summary>
+
+      > Se entregaron también menciones especiales para los proyectos:
+      >
+      > [...]
+      >
+      > **NodeOS** de **Jesús Leganés Combarro** (Universidad Rey Juan Carlos).
+
+    </details>
+
+  - [The Case for Writing Network Drivers in High-Level Programming Languages](<../papers/The Case for Writing Network Drivers in High-Level Programming Languages.pdf>),
+    13 September 2019:
+
+    > 4.10.1 Related work. JavaScript is rarely used for low-level code, the
+    > most OS-like projects are **NodeOS** and OS.js. **NodeOS** uses the Linux
+    > kernel with Node.js as user space. OS.js runs a window manager and
+    > applications in the browser and is backed by a server running Node.js on
+    > a normal OS. Neither of these implements driver-level code in JavaScript.
+
+- [ShareIt!](projects.md#shareit)
+  - [Introducing ufo.js: A browser-oriented p2p network.pdf](<../papers/Introducing ufo.js: A browser-oriented p2p network.pdf>),
+    February 2014:
+
+    > Among real life applications using the datachannel as best as they can, we
+    > should definitely mention **shareit** and sharefest. Such applications
+    > allow browsers to share files in the absence of any form of upload to
+    > external servers, as opposed to well-known services such as Dropbox or
+    > Google Drive. Both **shareit** and sharefest use an external server
+    > holding and managing a connection to each peer; these connections are
+    > used to accomplish all the signaling procedures between peers. Thus the
+    > actual p2p communication happens during file transfers.
+
+    **Note**: [ShareIt!](projects.md#shareit) used an external server to
+    bootstrap the initial discovery and signaling with other peers, once they
+    were connected to at least another peer and being part of the P2P network,
+    the discovery and signaling with new peers was done directly between peers
+    over the P2P network itself, leaving the connection with the external
+    server as a fallback mechanims.
+
+</details>
+
 ## Interesting facts
 
 - Co-founder of [Spain Robotic & Domotic Association](https://www.arde.cc)
