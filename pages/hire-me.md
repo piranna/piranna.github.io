@@ -109,7 +109,7 @@ More in detail info about my knowledge areas and experience can be found in the
 
 ## Open Source professional collaborations
 
-- [![Atos Research & Innovation](https://atos.net/wp-content/themes/atos/images/atos-logo-menu-bar.png)](https://atos.net/en/about-us/innovation-and-research)
+- [![Atos Research & Innovation](../images/logos/Atos.png.png)](https://atos.net/en/about-us/innovation-and-research)
 - [![Wasmer](../images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
 - [![Kurento](../images/logos/Kurento.png "Kurento")](https://www.kurento.org/)
 
@@ -124,11 +124,11 @@ Open Source projects for the next companies:
 ## Private collaborations
 
 - [![BotXO](../images/logos/BotXO.png "BotXO")](https://www.botxo.ai/)
-- [![bpost](https://www.bpost.be/sites/all/themes/custom/bpost_selfservice/logo.png "bpost")](https://www.bpost.be/)
+- [![bpost](../images/logos/bpost.png "bpost")](https://www.bpost.be/)
 - [![lingbe](../images/logos/lingbe.png "lingbe")](https://lingbe.com/)
 - [![Ventrata](../images/logos/Ventrata.png "Ventrata")](https://ventrata.com/)
-- [![qvantel](https://www.itewiki.fi/write/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
-- [![Vocento](https://upload.wikimedia.org/wikipedia/commons/0/08/Vocento_logo.svg "Vocento")](https://www.vocento.com/)
+- [![qvantel](../images/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
+- [![Vocento](../images/logos/Vocento.svg "Vocento")](https://www.vocento.com/)
 
 ## Interviews FAQs
 
