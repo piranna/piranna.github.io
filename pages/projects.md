@@ -93,7 +93,7 @@ University of Madrid, November 2012.
 <details>
   <summary>Citations</summary>
 
-- [Introducing ufo.js: A browser-oriented p2p network.pdf](<../papers/Introducing ufo.js: A browser-oriented p2p network.pdf>),
+- [Introducing ufo.js: A browser-oriented p2p network.pdf](<../papers/Introducing ufo.js - A browser-oriented p2p network.pdf>),
   February 2014:
 
   > Among real life applications using the datachannel as best as they can, we

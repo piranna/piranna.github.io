@@ -79,7 +79,7 @@ generate 3D models. My Ph.D. thesis director was
     > a normal OS. Neither of these implements driver-level code in JavaScript.
 
 - [ShareIt!](projects.md#shareit)
-  - [Introducing ufo.js: A browser-oriented p2p network.pdf](<../papers/Introducing ufo.js: A browser-oriented p2p network.pdf>),
+  - [Introducing ufo.js: A browser-oriented p2p network.pdf](<../papers/Introducing ufo.js - A browser-oriented p2p network.pdf>),
     February 2014:
 
     > Among real life applications using the datachannel as best as they can, we
