@@ -335,6 +335,24 @@ proud of, both mine or from others, in the [projects](projects.md) page.
 
 ### 👨 Personal questions
 
+#### Tell me about a real life, non-technical hack you've done
+
+[Five guys](https://www.fiveguys.com/) offers a veggie sandwich, where you can
+add grilled cheese as an extra. At the same time, they also offer a grilled
+cheese sandwich. You can add to the sandwiches all the toppings that you want by
+free... and they have available as toppings all the same ingredients that are
+part of the veggie sandwich, minus the grilled cheese. So, the hack is, by
+taking as basis a grilled cheese hamburguer and adding as toppings all the
+ingredients of the veggie sandwich, you can have a cheese veggie sandwich also
+cheaper than the original veggie sandwich alone. The first time I put in
+practice this hack, the cashier was not funny at all, as if she would be angry
+with me for discovering that loop-hole.
+
+As a side note, I personally find Five Guys hamburguers to have too much fat,
+being in my opinion this "hack" or the original cheese veggie sandwich the only
+tasteful ones they have. That's how I found this loop-hole in the first place,
+and since then my "hack" sandwich is usually the only product I consume from them the few times I buy there.
+
 #### What are your hobbies outside of work?
 
 Besides working on my own research side projects, I like running, travelling,
