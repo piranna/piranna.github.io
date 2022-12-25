@@ -10,6 +10,22 @@ them are open-source, and I'm always looking for new ideas and collaborations.
 
 ## Personal projects
 
+### [Mafalda SFU](https://mafalda.io)
+
+Massively vertical and horizontal scalable SFU built on top of
+[Mediasoup](https://mediasoup.org/), automatically managing the resources based
+on their capacity, so in theory with the enough resources it could be possible
+to host videoconference rooms with unlimited number of participants in a
+transparent way for both users and developers, and API compatible with
+`Mediasoup` so it's possible to upgrade current code bases to use it and scale
+in a matter of minutes. Initially a personal proof of concept, in the first
+month of development (March 2021) it got interest from several companies, so I
+decided to develop it as a commercial product. It's still a work-in-progress,
+but it already supports vertical scalability with multi-CPU Mediasoup routers,
+horizontal scalability with routers over several servers, and easy integration
+with current code bases, being mostly missing just only the support for routers distributed across multiple CPUs over several servers. In addition to that, long
+term roadmap includes support for transparent decentralized P2P video streaming.
+
 ### [projectlint](https://github.com/projectlint)
 
 Linter to check global quality of projects, based on my experience doing code
