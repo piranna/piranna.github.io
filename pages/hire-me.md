@@ -111,7 +111,7 @@ More in detail info about my knowledge areas and experience can be found in the
 
 - [![Atos Research & Innovation](https://atos.net/wp-content/themes/atos/images/atos-logo-menu-bar.png)](https://atos.net/en/about-us/innovation-and-research)
 - [![Wasmer](../images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
-- [![Kurento](https://www.kurento.org/sites/default/files/kurento.png "Kurento")](https://www.kurento.org/)
+- [![Kurento](../images/logos/Kurento.png "Kurento")](https://www.kurento.org/)
 
 Additionally, I've been contracted to work in the design and development of some
 Open Source projects for the next companies:

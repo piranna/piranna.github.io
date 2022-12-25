@@ -163,7 +163,7 @@ Kudos.
 
 This project was sponsored by [Telefónica R&D](http://www.tid.es/) division.
 
-### [![Kurento](https://www.kurento.org/sites/default/files/kurento.png "Kurento")](https://www.kurento.org/)
+### [![Kurento](../images/logos/Kurento.png "Kurento")](https://www.kurento.org/)
 
 Kurento is the lead WebRTC media server, powering [Skype](https://www.skype.com)
 web conferences or [Facebook](https://www.facebook.com/) and
