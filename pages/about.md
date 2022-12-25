@@ -123,7 +123,7 @@ generate 3D models. My Ph.D. thesis director was
 - [NodeOS](projects.md#nodeos) lead developer, and
   [Mafalda SFU](projects.md#mafalda) founder
 - Several years Madrid San Silvestre Vallecana 10km runner (53'38", 2019)
-- Currently learning chinese *JustForFun&trade;*
+- Currently learning chinese and arabic *JustForFun&trade;*
 
 ### Countries visited
 
