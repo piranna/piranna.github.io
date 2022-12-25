@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: Linting @ Dyte
+twitter: '1607096592103866369'
 ---
 
 *Corporate version previously published at <https://dyte.io/blog/linting-at-dyte>*

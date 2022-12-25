@@ -3,6 +3,7 @@ lang: en
 layout: post
 tags: Mafalda SFU
 title: How to use private repositories as npm git dependencies on Github Actions
+twitter: '1607096594700140544'
 ---
 
 I'm advocate of automatization, and that includes not only CI/CD pipelines, but

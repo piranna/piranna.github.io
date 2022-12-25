@@ -2,6 +2,7 @@
 lang: en
 layout: post
 title: How to (properly) deploy Node.js applications
+twitter: '1607096592946941952'
 ---
 
 Recently I've been involved in a new Typescript project all of my own where I
