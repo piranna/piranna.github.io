@@ -133,12 +133,24 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
 - [Dyte](https://www.dyte.io/) (June 2021 - Present)
   - Design and development of Mediasoup horizontal scaling, project quality
     consultory, and performance improvements for modular WebRTC platform
-- [Tegus medical](https://www.tegusmedical.com/) (July 2021 - August 2021)
+- [Tegus medical](https://www.tegusmedical.com/) (July 2021 - January 2022)
   - WebRTC consultory and design of new WebRTC architecture for recording and
     streaming of hospitals operating rooms
 - [Virbela](https://www.virbela.com/) (August 2021 - February 2022)
   - Mediasoup and performance improvements of [FrameVR](https://framevr.io/)
     platform
-- [Fermax](https://www.fermax.com/) (October 2021 - Present)
+- [Fermax](https://www.fermax.com/) (October 2021 - September 2022)
   - Mediasoup and WebRTC architecture consultory, and design of new WebRTC
     architecture for remote control of video intercoms
+
+### 2022
+
+- [Pulse](https://pulse.ooo/) (February 2022 - March 2022)
+  - WebRTC auditor for social streaming browser extension
+- [GUD](https://gud.social/) (June 2022 - September 2022)
+  - WebRTC architect and consultor for mental health startup
+- [Comera](https://mycomera.com/) (September 2022 - Present)
+  - WebRTC architect and consultor for UAE based startup, building a local
+    marked oriented competitor app to Whatsapp and Telegram
+- [Soundstage](https://www.soundstage.fm/) (December 2022 - Present)
+  - WebRTC scalability auditor
