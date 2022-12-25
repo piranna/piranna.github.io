@@ -100,6 +100,19 @@ generate 3D models. My Ph.D. thesis director was
 
 </details>
 
+### Certificates
+
+- College Degre
+  - [Título universitario.pdf](../certificates/Título universitario/Título universitario.pdf)
+  - [Progreso académico](../certificates/Título universitario/Progreso académico.pdf)
+  - [Progreso académico 2](../certificates/Título universitario/Progreso académico 2.pdf)
+  - [BOE-A-2015-5187](../certificates/Título universitario/BOE-A-2015-5187.pdf)
+- Scrum Master
+  - [Certified Scrum Master - CSM](../certificates/Certified Scrum Master - CSM.pdf)
+  - [Metodología de gestión y desarrollo de proyectos de software con Scrum](../certificates/Metodología de gestión y desarrollo de proyectos de software con Scrum.pdf)
+- [Chino - participación](../certificates/Chino - participación.pdf)
+- [Psicotécnico piloto](../certificates/Psicotécnico piloto.pdf)
+
 ## Interesting facts
 
 - Co-founder of [Spain Robotic & Domotic Association](https://www.arde.cc)
