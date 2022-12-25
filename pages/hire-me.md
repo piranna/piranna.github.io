@@ -210,7 +210,9 @@ western Europe (UTC to UTC+2 timezones), but I'm also frequently visiting United
 Arabic Emirates and India (UTC+4 and UTC+5.5 timezones).
 
 If your question is related to adjust your salary offer to life level costs, you
-can target your offer to the region of London, Great Britain.
+can target your offer to the region of London, Great Britain for western Europe
+projects, and Abu Dhabi, United Arabic Emirates for middle East and Asia based
+projects.
 
 #### Are you available to relocate?
 
