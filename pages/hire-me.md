@@ -109,26 +109,26 @@ More in detail info about my knowledge areas and experience can be found in the
 
 ## Open Source professional collaborations
 
-- [![Atos Research & Innovation](../images/logos/Atos.png.png)](https://atos.net/en/about-us/innovation-and-research)
-- [![Wasmer](../images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
-- [![Kurento](../images/logos/Kurento.png "Kurento")](https://www.kurento.org/)
+- [![Atos Research & Innovation]({{ site.baseurl }}/images/logos/Atos.png.png)](https://atos.net/en/about-us/innovation-and-research)
+- [![Wasmer]({{ site.baseurl }}/images/logos/Wasmer.svg "Wasmer")](https://wasmer.io/)
+- [![Kurento]({{ site.baseurl }}/images/logos/Kurento.png "Kurento")](https://www.kurento.org/)
 
 Additionally, I've been contracted to work in the design and development of some
 Open Source projects for the next companies:
 
-- [![Toucan events](../images/logos/Toucan.png "Toucan events")](http://toucan.events/)
-- [![Callab.me](../images/logos/Callab.me.svg "Callab.me")](https://callab.me/)
-- [![takeafile](../images/logos/takeafile.svg "Takeafile Labs")](https://takeafile.com)
-- [![Telefónica](../images/logos/Telefonica.png "Telefónica")](https://www.telefonica.com)
+- [![Toucan events]({{ site.baseurl }}/images/logos/Toucan.png "Toucan events")](http://toucan.events/)
+- [![Callab.me]({{ site.baseurl }}/images/logos/Callab.me.svg "Callab.me")](https://callab.me/)
+- [![takeafile]({{ site.baseurl }}/images/logos/takeafile.svg "Takeafile Labs")](https://takeafile.com)
+- [![Telefónica]({{ site.baseurl }}/images/logos/Telefonica.png "Telefónica")](https://www.telefonica.com)
 
 ## Private collaborations
 
-- [![BotXO](../images/logos/BotXO.png "BotXO")](https://www.botxo.ai/)
-- [![bpost](../images/logos/bpost.png "bpost")](https://www.bpost.be/)
-- [![lingbe](../images/logos/lingbe.png "lingbe")](https://lingbe.com/)
-- [![Ventrata](../images/logos/Ventrata.png "Ventrata")](https://ventrata.com/)
-- [![qvantel](../images/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
-- [![Vocento](../images/logos/Vocento.svg "Vocento")](https://www.vocento.com/)
+- [![BotXO]({{ site.baseurl }}/images/logos/BotXO.png "BotXO")](https://www.botxo.ai/)
+- [![bpost]({{ site.baseurl }}/images/logos/bpost.png "bpost")](https://www.bpost.be/)
+- [![lingbe]({{ site.baseurl }}/images/logos/lingbe.png "lingbe")](https://lingbe.com/)
+- [![Ventrata]({{ site.baseurl }}/images/logos/Ventrata.png "Ventrata")](https://ventrata.com/)
+- [![qvantel]({{ site.baseurl }}/images/logos/qvantel.png "qvantel")](https://www.qvantel.com/)
+- [![Vocento]({{ site.baseurl }}/images/logos/Vocento.svg "Vocento")](https://www.vocento.com/)
 
 ## Interviews FAQs
 

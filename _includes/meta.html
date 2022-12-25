@@ -30,8 +30,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 
 {% if page.image %}
-  <meta property="og:image" content="{{ "/images/" | append: page.image | absolute_url }}" />
-  <meta name="twitter:image" content="{{ "/images/" | append: page.image | absolute_url }}" />
+  <meta property="og:image" content="{{ site.baseurl }}{{ "/images/" | append: page.image | absolute_url }}" />
+  <meta name="twitter:image" content="{{ site.baseurl }}{{ "/images/" | append: page.image | absolute_url }}" />
 {% else %}
   <meta property="og:image" content="{{ site.avatar }}" />
   <meta name="twitter:image" content="{{ site.avatar }}" />

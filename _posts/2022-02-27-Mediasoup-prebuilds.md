@@ -26,7 +26,7 @@ is included in their path, similar to how other similar solutions like
 [prebuildify](https://github.com/prebuild/prebuildify) works. In fact, I've used
 `prebuildify` as inspiration for this PR.
 
-![](../images/2022-02-27-Mediasoup-prebuilds.png)
+![]({{ site.baseurl }}/images/2022-02-27-Mediasoup-prebuilds.png)
 
 For simplicity, prebuilds are compiled using three different jobs running in
 parallel, one for each one of the operating systems supported by Github Actions
