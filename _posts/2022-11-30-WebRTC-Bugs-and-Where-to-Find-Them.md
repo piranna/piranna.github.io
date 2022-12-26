@@ -257,11 +257,26 @@ maybe the issue is happening during it.
 
 ### Sender
 
-If the connection is done, but we can't see or ear the other participant, maybe
-they are muted and we didn't know it. This can happen in both ends, sender and
-receiver. Maybe sender has his microphone muted or its volume input level very
-low, or their webcam can be disabled (not only by the user or the operating
-system security policies, but it can also be disabled by the device
+If the connection is done, but we can't see or ear the other participant, we can
+think on an issue with the capturing devices. According to
+[Jitsi documentation](https://jitsi.github.io/handbook/docs/user-guide/user-guide-start-a-jitsi-meeting#desktop-or-mobile-browser),
+this can be due to the capture devices are not present, or they are not
+activated (on some laptops you can actively switch the webcam on/off), they are
+not plugged in (only necessary for external webcams), or they are not installed
+(some devices require the camera to be installed first). Regarding audio devices
+and microphones, they could not be available (especially with desktop devices, a
+microphone is never actually integrated. Here you need an external microphone or
+headset, which you connect to the appropriate ports on your PC), they are not
+activated (on some laptops with an integrated microphone or headsets there is a
+switch to activate / deactivate the microphone), they are not plugged in (only
+necessary for external microphones), or they are not installed (on some old
+computers the microphone must be installed).
+
+If capture devices are working properly, maybe they are muted and we didn't know
+it. This can happen in both ends, sender and receiver. Maybe sender has his
+microphone muted or its volume input level very low, or their webcam can be
+disabled (not only by the user or the operating system security policies, but it
+can also be disabled by the computer
 [BIOS](https://en.wikipedia.org/wiki/BIOS) or
 [UEFI](https://en.wikipedia.org/wiki/UEFI), but also at hardware level!), or it
 has a webcam cover or a sticker, or just simply user is covering the camera with
@@ -317,17 +332,22 @@ account that exchanging the initial signaling information is about 4KB in size
 (less than half if send compressed, since SDPs are plain text and they compress
 really well), including all the ICE Candidates, but after that, a single generic
 audio track compressed with Opus codec can need about 70KB (like 20x more data)
-**per second**, while a video track with a resolution as low as 640x480 pixeles
-can need 100KB/s or more, and for 720p or 1080p resolutions we would need about
-1-2MB/s or more for each one of the tracks (and 4K HD streams can easily get up
-to 20MB/s or more). In these cases it becames impractical to pretend to have a
-streaming session, since sending all the data would produce cuts in the stream
-all the time and add incresing delays over time, or the drop of data would
-decrease the quality beyond reasonable levels. So in some situations (specially
-the extremely limited ones), it's better to think about if a (video-)conference
-it's the best option, or consider other alternatives, like just a chat messaging
-system. You can still use WebRTC to send the chat messages without needing a
-centralized server by using
+**per second**. A video track with a resolution as low as 320×180 pixeles can
+[need 200Kb/s or more](https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-requirements),
+while a 640×360 resolution would require 500Kb/s, and for 720p HD resolution we
+would need about 2.5Mb/s or more for each one of the tracks (and 4K HD streams
+can easily get up to 10Mb/s or more), so don't expect to have 20 users using 4K
+on a server with 100Mbits/s upload and download. For a friends/small
+organization server, 1 Gbits/s will often be enough but for a serious server 10
+Gbits/s is advisable. Several (or many...) bridges having each a 10 Gbits/s link
+are used by big deployments. In these cases it becames impractical to pretend to
+have a streaming session, since sending all the data would produce cuts in the
+stream all the time and add incresing delays over time, or the drop of data
+would decrease the quality beyond reasonable levels. So in some situations
+(specially the extremely limited ones), it's better to think about if a
+(video-)conference it's the best option, or consider other alternatives, like
+just a chat messaging system. You can still use WebRTC to send the chat messages
+without needing a centralized server by using
 [DataChannel](https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel)
 objects as transport layer.
 
@@ -356,12 +376,12 @@ party processes or services, where they can "steal" the resources and make the
 operating system (specially on Android) to kill our call process, forcing our
 app to try to reconnect. This can happens specially when an app doesn't make use
 of the operating system
-[CallKit](https://developer.apple.com/documentation/callkit) or DoNotDisturb
-APIs, or some other similar ones to let to know to the operating system and the
-other apps that we are currently in a call, so they can get and steal the access
-to the microphone and speaker when they receive an incoming call without the
-user allowing it, or on resources constrained systems they can also force the
-termination of our app.
+[CallKit](https://developer.apple.com/documentation/callkit), [ConnectionService](https://developer.android.com/reference/android/telecom/ConnectionService),
+or other similar calls integration or "do not disturb" APIs, or some other
+similar ones to let to know to the operating system and the other apps that we
+are currently in a call, so they can get and steal the access to the microphone
+and speaker when they receive an incoming call without the user allowing it, or
+on resources constrained systems they can also force the termination of our app.
 
 Other way where low-end devices can be severely afected is by the number of
 participants, since the bigger a session is, the more streams they need to
