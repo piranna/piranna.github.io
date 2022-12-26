@@ -5,8 +5,6 @@ title: Linting @ Dyte
 twitter: '1607096592103866369'
 ---
 
-*Corporate version previously published at <https://dyte.io/blog/linting-at-dyte>*
-
 At [Dyte](https://www.dyte.io/) we are now 44 persons, most of them developers,
 and each one has his own personal code style. This has lead sometimes to huge
 code conflicts when doing merges that create some annoyances and delays, so we
@@ -200,3 +198,5 @@ run: echo ${{secrets.YOUR_SECRET }} | sed 's/./& /g'
 This way, Github Action could not match the output with any of the stored secrets, and would print the string verbatin.
 
 **Disclaimer**: please don’t do that with your production secrets, just use some ones deditated for testing purposses, and ideally one-use-only throw away ones.
+
+*Corporate version previously published at <https://dyte.io/blog/linting-at-dyte>*
