@@ -89,3 +89,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+jekyll-spaceship:
+  mermaid-processor:
+    syntax:
+      code: 'mermaid'
+plugins:
+  - jekyll-spaceship
