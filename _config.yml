@@ -77,11 +77,6 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
 # Exclude these files from your production _site
 exclude:
   - Gemfile
@@ -94,5 +89,9 @@ jekyll-spaceship:
   mermaid-processor:
     syntax:
       code: 'mermaid'
+
+# Use the following plug-ins
 plugins:
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-spaceship
