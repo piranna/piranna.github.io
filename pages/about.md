@@ -158,7 +158,7 @@ territories, 16 countries, and 3 continents
   - 🇮🇳 **India**: Bangalore
   - 🇦🇪 **United Arab Emirates**: Abu Dhabi, Dubai
 
-## Recomendations & testimonies
+## Recomendations, testimonies & quotes
 
 Recomendations from co-workers and managers of my previous job companies, and
 testimonies from clients about my freelance projects.
@@ -194,19 +194,19 @@ Singer, May 2014:
 [Juan Searle](https://www.linkedin.com/in/juansearle), CTO at
 [Full Circle_ apps](https://fullcircle.es/), December 2020:
 
-> I agree a lot with everything [you've proposed]. I'm surprised that you have
+> "I agree a lot with everything [you've proposed]. I'm surprised that you have
 > owned the code in just some hours, without documentation and without mentoring
 > from our side. Cool!
 >
 > This afternoon we'll have a call with the client and let's see if we get their
 > aproval for the testing/refactoring, I'll keep you updated. We're going to
-> propose it as a critical action to be done.
+> propose it as a critical action to be done."
 
-> Tell you that it has been a pleasure to count on you for this job: serious,
+> "Tell you that it has been a pleasure to count on you for this job: serious,
 > decisive and accessible. My idea is to have someone to whom I can ask for
 > NodeJs development and evolution of projects already done like this one from
 > TVN, and I think I've found the right person. If you are still available I
-> will count on you in future projects without a doubt.
+> will count on you in future projects without a doubt."
 
 [Isabel Dorado](https://www.linkedin.com/in/isabeldoradomoreno/), Remote Talent
 Advocate at [Circular](https://trycircular.com/), December 2020:
@@ -237,11 +237,11 @@ Management at [Ferrovial](https://www.ferrovial.com/), December 2020:
 [James Croney](https://github.com/techtruth), Tech Lead at
 [Virbela](https://virbela.com/), November 2021:
 
-> You have good eyes for spotting best approaches and practices for things, even
-> if people ignore them.
+> "You have good eyes for spotting best approaches and practices for things,
+> even if people ignore them."
 
-> You have a good head on your shoulders about code and you offer good insights
-> about things.
+> "You have a good head on your shoulders about code and you offer good insights
+> about things."
 
 [Sol Rengifo Calderón](https://www.linkedin.com/in/sol-rengifo-calder%C3%B3n-5ba96514a/),
 founder of [Gud](https://gud.social/), July 2022:
