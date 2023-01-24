@@ -55,6 +55,14 @@ was my [bachelor thesis](https://github.com/piranna/pfc) (graduated with
 distinction), and I was also invited to give some keynotes at
 *OpenExpoDay 2015* and *JsDayEs 2017* conferences.
 
+IX Concurso Universitario de Software, 7th & 8th May 2015:
+![Jesús Leganés Combarro presentando su proyecto NodeOS en la Fase Final del IX Concurso Universitario de Software Libre, que tuvo lugar los días 7 y 8 de mayo de 2015 en la Sala de Grados de la Facultad de Ciencias de la Universidad de Zaragoza.](../images/Jesús_Leganés_Combarro_en_la_Fase_Final_del_IX_CUSL.jpeg)
+![Enrique Teruel Doñate (Delegado del Rector para el SICUZ) entrega el diploma a Jesús Leganés Combarro por su proyecto NodeOS. La Fase Final del IX Concurso Universitario de Software tuvo lugar los días 7 y 8 de mayo de 2015, en la Sala de Grados de la Facultad de Ciencias de la Universidad de Zaragoza.](../images/Jesús_Leganés_Combarro_recibe_su_diploma_en_el_IX_CUSL.jpeg)
+
+XXVIII Jornadas Técnicas del GUL UC3M, 10th November 2016:
+<iframe src="https://www.youtube.com/embed/aK9ixiOE2Hs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+JsDayEs 2017:
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/220960658" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
 <details>
