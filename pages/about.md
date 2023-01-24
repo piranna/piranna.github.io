@@ -251,6 +251,11 @@ founder of [Gud](https://gud.social/), July 2022:
 > in an accurate, clear, honest and very professional manner. We will continue
 > to collaborate with him without a doubt.
 
+[Kushagra Vaish](https://www.linkedin.com/in/kushagra-vaish-9437b3110/),
+CTO and co-founder of [Dyte](https://dyte.io/), January 2023:
+
+> "Project you touch, project that increase its quality globally."
+
 </details>
 
 ## Contact me
