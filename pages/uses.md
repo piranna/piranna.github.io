@@ -4,12 +4,23 @@ title: Uses
 permalink: /uses
 ---
 
+## Toolbelt
+
+- [npm check updates](https://github.com/raineorshine/npm-check-updates)
+- [gnomon](https://github.com/paypal/gnomon)
+
+### .bash_aliases
+
+- `alias gru='git remote update --prune'`
+
 ## Laptop
 
-- Slimbook PRO2
+- Slimbook Executive 16"
+- Lenovo ThinkPad T16
 
 ### Previous laptops
 
+- Slimbook PRO2
 - Slimbook ProX 15"
 - Lenovo ideapad 330
 - Lenovo ThinkPad T530
@@ -21,15 +32,14 @@ permalink: /uses
 
 ## Operating system
 
-- Ubuntu Mate 20.10
-- Android Go 8.1
+- Ubuntu Mate 23.04
 
 ### Previous operating systems
 
 - Ubuntu (since 5.04)
-- Debian
-- macOS
-- Windows
+- Debian 3.0 "Woody" - 8.0 "Jessie"
+- macOS 7.0.1 - 10.13.6
+- Windows 3.11 - 10
 
 ## Code editor
 
@@ -44,7 +54,8 @@ permalink: /uses
 
 ## Programming languages
 
-- Node.js / Javascript
+- Node.js (since 0.8)
+- Javascript
 - Python
 - C/C++
 - Rust
@@ -60,10 +71,10 @@ permalink: /uses
 
 ## Libraries & frameworks
 
+- WebRTC
 - React & ReactNative
 - Fastify
 - Django
-- WebRTC
 
 ### Previous libraries & frameworks
 
@@ -78,6 +89,7 @@ permalink: /uses
 - English (TOEFL 80/120, B2)
 - French (basic knowledge)
 - Chinese (beginner)
+- Arabic (beginner)
 
 ## Books readed
 
