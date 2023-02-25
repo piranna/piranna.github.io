@@ -130,7 +130,7 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
   - Personal project
   - Massively parallel vertical and horizontal scalable SFU build on top of
     Mediasoup
-- [Dyte](https://www.dyte.io/) (June 2021 - Present)
+- [Dyte](https://www.dyte.io/) (June 2021 - March 2023)
   - Design and development of Mediasoup horizontal scaling, project quality
     consultory, and performance improvements for modular WebRTC platform
 - [Tegus medical](https://www.tegusmedical.com/) (July 2021 - January 2022)
@@ -152,5 +152,5 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
 - [Comera](https://mycomera.com/) (September 2022 - Present)
   - WebRTC architect and consultor for UAE based startup, building a local
     marked oriented competitor app to Whatsapp and Telegram
-- [Soundstage](https://www.soundstage.fm/) (December 2022 - Present)
+- [Soundstage](https://www.soundstage.fm/) (December 2022 - January 2023)
   - WebRTC scalability auditor
