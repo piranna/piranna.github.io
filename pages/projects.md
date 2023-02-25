@@ -114,6 +114,9 @@ This project won the "Most Innovative Project" award in the spanish national
 and was invited to give a keynote at first spanish WebRTC summit at Politechnic
 University of Madrid, November 2012.
 
+VII Concurso Universitario de Software, Granada 23th & 24th May 2013:
+![Winners of VII Free Software University Championship](../images/VII_CUSL.jpg)
+
 <details>
   <summary>Citations</summary>
 
