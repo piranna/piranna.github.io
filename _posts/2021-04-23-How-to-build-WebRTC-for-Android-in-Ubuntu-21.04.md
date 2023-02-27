@@ -1,7 +1,7 @@
 ---
 lang: en
 layout: post
-title: How to build WebRTC for Android in Ubuntu 21.04
+title: How to build WebRTC for Android in Ubuntu ~21.04~ 22.04
 twitter: '1385546685472854019'
 ---
 
@@ -18,6 +18,9 @@ purposses, and
 app?), and they just only provided another build in August 2020 (1.0.32006) to
 fill some important security holes, in case someone (everybody?) was still using
 the binary mobile libraries.
+
+*editor's note*: content updated on February 27nd 2023 to reflect the latest
+changes in the build process.
 
 In addition to that, that binary libraries are available to use with Maven, but
 [Bintray will be deprecated](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/)
@@ -66,18 +69,38 @@ comments:
    sudo apt install python-is-python3
    ```
 
-4. Get the build environment tools and Chromium source code using `depot_tools`,
+4. Install [snap](https://snapcraft.io/). I hate it (I'm old school, and an
+   [APT](https://en.wikipedia.org/wiki/APT_(software)) fan), but it seems now
+   some Chromium build tools are only available as snap packages. I will need to
+   review this in the future, but for now, just install it:
+
+   ```sh
+   sudo apt install snap
+   ```
+
+5. Get the build environment tools and Chromium source code using `depot_tools`,
    and `cd` inside it. This will a 16GB checkout and will take **A LONG TIME**.
    In my case, it lasted 4.5 hours for the `fetch` command and more than one
-   hour for the `gsync` one...:
+   hour for the `gclient` one...:
 
    ```sh
    fetch --nohooks webrtc_android
-   gsync sync
+   gclient sync
    cd src
    ```
 
-5. Install build dependencies. This will download again more dependencies, in
+6. Update all system dependencies. It should not be needed, but the fact is that
+   building the library has failed me in a slate install of Ubuntu 22.04. After
+   updating the system to the latests packages, it worked fine. So, just in
+   case, execute the following commands:
+
+   ```sh
+   apt update
+   apt upgrade
+   apt dist-upgrade
+   ```
+
+7. Install build dependencies. This will download again more dependencies, in
    this case system wide build tools. One of them will be Python 2, so the
    previously installed `python-is-python3` package will be removed:
 
@@ -85,7 +108,11 @@ comments:
    ./build/install-build-deps.sh
    ```
 
-6. Select the release to build. Until WebRTC M80 release, there were branches
+   In case you are not using one of the Ubuntu LTS versions, you may need to
+   use the `--unsupported` flag to by-pass the version checks and install the
+   dependencies, but it didn't worked for me. Your mileage may vary.
+
+8. Select the release to build. Until WebRTC M80 release, there were branches
    for each one of the Chromium releases, so it was easy to know what version
    was each one, but after that, Google started to create branches in a daily
    basis. Use what's currently in `master` branch or from any of the daily
@@ -93,31 +120,31 @@ comments:
    library of a particular release, you can search for your desired Milestion at
    [Chromium data website](https://chromiumdash.appspot.com/branches), and match
    it with the *WebRTC* column to find the daily branch number. For example, to
-   build the `libWebrtc` library version used by latest stable Chrome 91 (build
-   number `4472`) you would just need to change to the `branch-heads/4472`:
+   build the `libWebrtc` library version used by latest stable Chrome 110 (build
+   number `5481`) you would just need to change to the `branch-heads/5481`:
 
    ```sh
-   git checkout branch-heads/4472
+   git checkout branch-heads/5481
    ```
 
    This will left the repository in detached mode, but it's not something to
    worry about. Also, you can see all available branches in case you want to
    use another daily branch by executing `git branch -r`. At this moment, latest
-   one is `4485`.
+   one is `5620` (`dev` branch is at `5615`).
 
    Once changed to the desired daily build branch, we need to
    [reset and sync the repository code](https://stackoverflow.com/a/61321315/586382),
    and download again more dependencies and code. It seems this is needed
-   because previous `gsync` when we were in `master` branch would have left some
-   temporal files (maybe we could have changed branches before?) so the build
-   could fail, so this way we make sure to have the correct ones:
+   because previous `gclient` when we were in `master` branch would have left
+   some temporal files (maybe we could have changed branches before?) so the
+   build could fail, so this way we make sure to have the correct ones:
 
    ```sh
    gclient revert
    gclient sync
    ```
 
-7. Finally, compile the AAR file. This will compile `libWebrtc` library for all
+9. Finally, compile the AAR file. This will compile `libWebrtc` library for all
    the Android native supported platforms (`arm64-v8a`, `armeabi-v7a`, `x86` and
    `x86_64`) and package them in a `libwebrtc.aar` file in the root of the
    `src` folder that can be used in our Android project as a local dependency or
@@ -127,10 +154,11 @@ comments:
    tools_webrtc/android/build_aar.py
    ```
 
-8. Once we have build the library, to update the code and build newer versions
-   is just a matter of run `git remote update` to get the new daily build
-   branches, and compile again. In case of problems, repeat the steps 6 and 7 to
-   fully download again the build tools and dependencies and compile once again.
+10. Once we have build the library, to update the code and build newer versions
+    is just a matter of run `git remote update` to get the new daily build
+    branches, and compile again. In case of problems, repeat the steps 6 and 7
+    to fully download again the build tools and dependencies and compile once
+    again.
 
 Ideally, all this steps could be automated and run in a nightly basis, creating
 a new reference in Maven to this automated builds.
