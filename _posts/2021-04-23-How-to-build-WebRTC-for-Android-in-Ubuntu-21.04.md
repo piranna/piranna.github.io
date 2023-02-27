@@ -169,7 +169,9 @@ the Github Actions only provides 2000 minutes per month (a bit more than 1 hour
 per day), so without a cache it would be problematic to generate nightly builds,
 but checking only to run where there are new Milestones (similar to what I do in
 [OS lifecycle](https://github.com/projectlint/OS-lifecycle) repo), it could
-probably work... Maybe one day I'll implement it :-)
+probably work... Maybe one day I'll implement it :-) By the moment, the raw JSON
+info for the different Milestones can be found at
+<https://chromiumdash.appspot.com/fetch_milestones>.
 
 ## Bonus update: add the library as a dependency
 
