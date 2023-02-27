@@ -70,8 +70,9 @@ comments:
    ```
 
 4. Install [snap](https://snapcraft.io/). I hate it (I'm old school, and an
-   [APT](https://en.wikipedia.org/wiki/APT_(software)) fan), but it seems now
-   some Chromium build tools are only available as snap packages. I will need to
+   [APT](https://en.wikipedia.org/wiki/APT_(software)) fan), but now Chromium
+   build tools make use of [bazel](https://bazel.build/), and it's only
+   available as snap packages, at least for recent versions. I will need to
    review this in the future, but for now, just install it:
 
    ```sh
