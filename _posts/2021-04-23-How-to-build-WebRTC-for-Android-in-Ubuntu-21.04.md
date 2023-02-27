@@ -51,7 +51,7 @@ comments:
    cd webrtc_android
    ```
 
-2. Install Chromium `depot_tools` and export them:
+2. Download the Chromium `depot_tools`, and export them:
 
    ```sh
    git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
@@ -188,7 +188,8 @@ for our use case are:
    3. Enter the location of the `libwebrtc.aar` file then click **Finish**.
 
    Android Studio creates a module directory, copies the `libwebrtc.aar` file
-   into the module, and generates a `build.gradle` file for it, with the following contents:
+   into the module, and generates a `build.gradle` file for it, with the
+   following contents:
 
    ```gradle
    configurations.maybeCreate("default")

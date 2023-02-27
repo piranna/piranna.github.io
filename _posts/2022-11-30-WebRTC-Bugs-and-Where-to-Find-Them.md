@@ -38,13 +38,13 @@ of the issues).
 
 ### Permissions
 
-But when something worked for us and later it doesn't for
-others, or does it randomly, we need to address first our research to the
-environment configuration. One of the reasons can be lack of permissions in the
-platform, in case there are some (maybe company enabled) policies that prevent
-to use them. Lack of permissions can come from the application itself too, maybe
-the user doesn't have permissions to access to that conference room, or could
-have not logged-in at all. In some cases, it can be a badly designed login or
+But when something worked for us and later it doesn't for others, or does it
+randomly, we need to address first our research to the environment
+configuration. One of the reasons can be lack of permissions in the platform, in
+case there are some (maybe company enabled) policies that prevent to use them.
+Lack of permissions can come from the application itself too, maybe the user
+doesn't have permissions to access to that conference room, or could have not
+logged-in at all. In some cases, it can be a badly designed login or
 authentication mechanism the one that can prevent to use the application itself.
 
 ## Connecting
