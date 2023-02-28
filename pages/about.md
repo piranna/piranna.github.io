@@ -103,7 +103,7 @@ generate 3D models. My Ph.D. thesis director was
 ### Certificates
 
 - College Degre
-  - [Título universitario.pdf](../certificates/Título universitario/Título universitario.pdf)
+  - [Título universitario](../certificates/Título universitario/Título universitario.pdf)
   - [Progreso académico](../certificates/Título universitario/Progreso académico.pdf)
   - [Progreso académico 2](../certificates/Título universitario/Progreso académico 2.pdf)
   - [BOE-A-2015-5187](../certificates/Título universitario/BOE-A-2015-5187.pdf)
