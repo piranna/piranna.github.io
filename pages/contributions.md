@@ -6,6 +6,10 @@ permalink: /contributions/
 
 Most important contributions to third-parties Open Source projects
 
+## [browserslist]()
+
+features
+
 ## [istanbul-js](https://istanbul.js.org/)
 
 `istanbul-js` is a code coverage tool that's being used internally by
@@ -27,6 +31,11 @@ in Android applications.
 
 This contribution was sponsored by
 [Atos Research & Innovation](https://atos.net/en/about-us/innovation-and-research).
+
+## [node.js]()
+
+static builds
+test
 
 ## [node-canvas](https://github.com/Automattic/node-canvas)
 
