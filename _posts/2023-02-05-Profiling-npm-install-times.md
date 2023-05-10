@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: Mafalda SFU
 title: Profiling `npm install` times
 ---
 

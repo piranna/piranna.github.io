@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: Mafalda SFU
 title: How to migrate from Jest to node:test
 ---
 

@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: Mafalda SFU
 title: Presenting Mafalda SFU
 twitter: '1417988668082442240'
 ---

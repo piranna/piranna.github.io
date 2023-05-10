@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: Mafalda SFU
 title: WebRTC horizontal scaling
 twitter: '1442020997159211011'
 ---

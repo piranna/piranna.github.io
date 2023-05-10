@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: Mafalda SFU
 title: Presenting Mediasoup Horizontal
 twitter: '1477742653383008261'
 ---
