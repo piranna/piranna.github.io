@@ -6,7 +6,7 @@ permalink: /webrtc/
 
 I've been working with [WebRTC](https://webrtc.org/) since 2012, less than one
 year after they were started the discussions about design and develop its
-specifications, being one of the pioneers of this technology here in Spain.
+specifications, being one of the pioneers of this technology in Spain.
 
 I got involved on it while developing [ShareIt!](projects.md#shareit), the first
 serverless P2P filesharing application written fully in client side JavaScript,
@@ -39,8 +39,9 @@ including the two start-ups where I've also been working as CTO,
 [UnifyMe](https://twitter.com/unify_me) and [lingbe](https://www.lingbe.com/).
 But since short before it started the Covid-19 pandemic, I got contracted each
 time by more companies to work as freelance WebRTC Expert, so in December 2020,
-I decided to work full-time offering my services as WebRTC Architect, in
-addition to develop my own WebRTC and streaming projects.
+I decided to work full-time offering my services as WebRTC Architect and
+consultor, and as [Mediasoup](https://mediasoup.org/) Expert, in addition to
+develop my own WebRTC and streaming projects.
 
 ## Chronology
 
@@ -117,7 +118,7 @@ addition to develop my own WebRTC and streaming projects.
     [Java bindings](https://webrtc-review.googlesource.com/c/src/+/218847)
 - [Zerintia](https://zerintia.com/) (October 2020 - January 2021)
   - R&D of video streaming and recording platform based on
-    [Mediasoup](https://mediasoup.org/) and [ffmpeg](https://www.ffmpeg.org/)
+    Mediasoup and [ffmpeg](https://www.ffmpeg.org/)
 
 ### 2021
 
@@ -149,7 +150,7 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
   - WebRTC auditor for social streaming browser extension
 - [GUD](https://gud.social/) (June 2022 - September 2022)
   - WebRTC architect and consultor for mental health startup
-- [Comera](https://mycomera.com/) (September 2022 - Present)
+- [Comera](https://mycomera.com/) (September 2022 - March 2023)
   - WebRTC architect and consultor for UAE based startup, building a local
     marked oriented competitor app to Whatsapp and Telegram
 - [Soundstage](https://www.soundstage.fm/) (December 2022 - January 2023)
