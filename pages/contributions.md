@@ -97,9 +97,9 @@ being a *React Native* template to be a CLI tool capable of enable support for
 the additional platforms to any other already available *React Native* current
 project.
 
+You can find more info about `re-start` in
+[What's re-start?](../_posts/2020-04-15-Whats-re-start.md)
+
 [React Native Spain @ F8 Madrid](https://www.meetup.com/es-ES/react-native-spain/events/250280501/),
 Madrid 3th May 2018:
 !["re-start: write once, run everywhere" por Jesús Leganés-Combarro](../images/F8_Madrid.webp)
-
-You can find more info about `re-start` in
-[What's re-start?](../_posts/2020-04-15-Whats-re-start.md)
