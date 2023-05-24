@@ -9,7 +9,7 @@ available for hiring. I'm mainly interested on remote freelance projects (both
 short and long term), but sometimes I'm open to consider employee positions or on-site projects, if both tasks and offer are interesting, and we can negotiate
 the terms and conditions. You can get more info about my past work experience at
 my [LinkedIn profile](https://www.linkedin.com/in/piranna/) or at my
-[Curriculum Vitae](https://www.dropbox.com/s/0jo5lizq0xp0j39/Leganes-Combarro_Jesus_resume.pdf).
+[Curriculum Vitae](https://www.dropbox.com/scl/fi/kloa1vx5kp41zvy86smg3/Leganes-Combarro_Jesus_resume-WebRTC-Node.js-Python.pdf?dl=0&rlkey=tvukxua9o33eigbb18egy2qvz).
 
 ## My ideal job (AKA *Santa's letter*)
 
