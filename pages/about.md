@@ -110,8 +110,9 @@ generate 3D models. My Ph.D. thesis director was
 - Scrum Master
   - [Certified Scrum Master - CSM](../certificates/Certified Scrum Master - CSM.pdf)
   - [Metodología de gestión y desarrollo de proyectos de software con Scrum](../certificates/Metodología de gestión y desarrollo de proyectos de software con Scrum.pdf)
-- [Chino - participación](../certificates/Chino - participación.pdf)
-- [Psicotécnico piloto](../certificates/Psicotécnico piloto.pdf)
+- [Introduction to Chinese - participation](../certificates/Chino - participación.pdf)
+- [Psicotechnic - fligh pilot](../certificates/Psicotécnico piloto.pdf)
+- [Introduction to Machine Learning](../certificates/certificates/Introducción Aprendizaje Automático.pdf)
 
 ## Interesting facts
 
