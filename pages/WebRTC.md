@@ -140,7 +140,7 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
 - [Virbela](https://www.virbela.com/) (August 2021 - February 2022)
   - Mediasoup and performance improvements of [FrameVR](https://framevr.io/)
     platform
-- [Fermax](https://www.fermax.com/) (October 2021 - September 2022)
+- [Fermax](https://www.fermax.com/) (October 2021 - Present)
   - Mediasoup and WebRTC architecture consultory, and design of new WebRTC
     architecture for remote control of video intercoms
 
@@ -152,6 +152,11 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
   - WebRTC architect and consultor for mental health startup
 - [Comera](https://mycomera.com/) (September 2022 - March 2023)
   - WebRTC architect and consultor for UAE based startup, building a local
-    marked oriented competitor app to Whatsapp and Telegram
+    market oriented app competitor of Whatsapp and Telegram
 - [Soundstage](https://www.soundstage.fm/) (December 2022 - January 2023)
   - WebRTC scalability auditor
+
+### 2023
+
+- [Engageli]([https://pulse.ooo/](https://www.engageli.com/)) (March 2023 - May 2023)
+  - WebRTC architect for online educational platform
