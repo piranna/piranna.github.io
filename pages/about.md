@@ -257,6 +257,15 @@ CTO and co-founder of [Dyte](https://dyte.io/), January 2023:
 
 > "Project you touch, project that increase its quality globally."
 
+[Alexander Gavazov](https://www.linkedin.com/in/agavazov/),
+Principal Tech & Lead at [Intellias](https://intellias.com/), September 2023
+([LinkedIn comment](https://www.linkedin.com/feed/update/urn:li:activity:7113593290288955392?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7113593290288955392%2C7113611003703009280%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287113611003703009280%2Curn%3Ali%3Aactivity%3A7113593290288955392%29)):
+
+> Having interacted with Jesus, I can confidently recommend him not only as a
+> principal in JS (end-to-end), but also for any matters related to engineering.
+> His extensive knowledge and commitment are evident in every task he
+> undertakes, showcasing a high level of expertise in every project.
+
 </details>
 
 ## Contact me
