@@ -6,7 +6,8 @@ permalink: /hire-me/
 
 If you like the kind of projects and technologies I've been working on, I'm
 available for hiring. I'm mainly interested on remote freelance projects (both
-short and long term), but sometimes I'm open to consider employee positions or on-site projects, if both tasks and offer are interesting, and we can negotiate
+short and long term), but sometimes I'm open to consider employee positions or
+on-site projects, if both tasks and offer are interesting, and we can negotiate
 the terms and conditions. You can get more info about my past work experience at
 my [LinkedIn profile](https://www.linkedin.com/in/piranna/) or at my
 [Curriculum Vitae](https://www.dropbox.com/scl/fi/kloa1vx5kp41zvy86smg3/Leganes-Combarro_Jesus_resume-WebRTC-Node.js-Python.pdf?dl=0&rlkey=tvukxua9o33eigbb18egy2qvz).
@@ -20,21 +21,21 @@ long-term, but most of the topics also apply to freelance projects.
 
 - Company has something that makes it different from the other ones, and makes
   it to not be "just another one". It can be anything, like a really interesting
-  and unique project, exceptional perks, being a boost in my career, incentivate
+  and unique project, exceptional perks, being a boost in my career, incentive
   workers initiative and personal side projects, a lot of paid holidays, being
   able to work with and learn from a known and prestigious person... Anything
-  that differenciates itself, and if having several alternatives with equal
+  that differentiates itself, and if having several alternatives with equal
   conditions, could make me choice to join it instead of any of its competitors.
 - Makes a difference, both for my career and to make the world a better place.
-- A responsability position with decision on projects and company future, and
-  with real posibilities to improve both of them, also in ways not directly job
+- A responsibility position with decision on projects and company future, and
+  with real possibilities to improve both of them, also in ways not directly job
   related but also oriented to work conditions and the company itself.
 - Travel frequently. I'm a *travel junkie*, so although I understand the
   concerns of others, for me it's a plus, so the more the merrier. If it's for
   assistance to conferences, double score :-)
 
 By the way, this points are a common factor of *the big guys*, like Google,
-Apple, Microsoft, Amazon... Salaries, laboral conditions, prestige and the kind
+Apple, Microsoft, Amazon... Salaries, labor conditions, prestige and the kind
 of projects they work with, give them a *fast past* in my priorities list, and
 you can get into it too if your offer seems to me as interesting as theirs
 
@@ -42,28 +43,28 @@ you can get into it too if your offer seems to me as interesting as theirs
 
 - Interesting, creative and stimulating projects, allowing me to learn about new
   skills, technologies or knowledge areas that can be of my interests (not
-  necesarily just only related to computer engineering).
+  necessarily just only related to computer engineering).
 - Research & Development projects, specially in academic contexts. Jobs with
-  **real** posibilities of publishing academic papers will **always** be of my
+  **real** possibilities of publishing academic papers will **always** be of my
   interest and have priority over others than don't.
-- Incentivate workers to improve themselves and achieve technical excelence.
+- Incentive workers to improve themselves and achieve technical excellence.
   This includes (but not only just sticks to) that the company fulfills the
   [Joel's test](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/)
 - All company code and intellectual property (at least the one not directly
-  related with the company's bussines model) is published as Open Source and/or
+  related with the company's business model) is published as Open Source and/or
   as Creative Commons.
 - 100% remote positions with flexible schedule and management based on
   [async communications](https://doist.com/blog/asynchronous-communication/),
-  with clear specificacions, roadmap and requirements. This does not exclude of
+  with clear specifications, roadmap and requirements. This does not exclude of
   having face-to-face meetings, but based on my experience, usually a hands-on
   meeting once each two months is more than enough.
-- Travel expenses and fully paid accomodation during all my relocation time, no
+- Travel expenses and fully paid accommodation during all my relocation time, no
   matter how long is it.
-- Bonuses and beneficts directly acountable to both my own performance and the
+- Bonuses and benefits directly accountable to both my own performance and the
   company one.
 - Acknowledge of my involvement in the company (including voluntary overtime),
-  being this in both short term beneficts and revenues (bonuses, extra paid
-  holidays, travels for leisure or bussines, technological equipment...) and
+  being this in both short term benefits and revenues (bonuses, extra paid
+  holidays, travels for leisure or business, technological equipment...) and
   long term ones (additional shares or equity).
 
 ## Main expertise areas
@@ -74,7 +75,7 @@ you can get into it too if your offer seems to me as interesting as theirs
 - Open Source and Open Standards evangelization
 - Systems programming
 - Software & systems architecture
-- WebRTC consultory & architecture
+- WebRTC consulting & architecture
 - Expertise consulting
 - Technical leadership and guidelines
 - Design of high performance systems
@@ -93,7 +94,7 @@ More in detail info about my knowledge areas and experience can be found in the
 
 - Research & Development, high-edge technologies and new specifications
 - Operating systems design
-- Filesystems design
+- Filesystem design
 - WebAssembly
 - Drivers development
 
@@ -104,7 +105,7 @@ More in detail info about my knowledge areas and experience can be found in the
 - Rust programming language related projects
 - Unsupervised machine learning
 - Artificial Intelligence and Machine Learning
-- Natural Language Programing
+- Natural Language Programming
 - Quantum computing
 
 ## Open Source professional collaborations
@@ -144,13 +145,14 @@ negotiating with clients to work on a freelance project.
 
 Computers engineering has been my vocation since I was 14 years old, and since
 then I've been involved with computers in a lot of aspects, like being one of
-the most active member of MadridWireless and AlcorcónWireless citizen wireless
+the most active member of MadridWireless and AlcorconWireless citizen wireless
 groups or [Madrid Macintosh Users Group](http://gumcam.org), or being one of the
-founder member of [Robotic and Domotic Spain Association](https://www.arde.cc).
-I've been working as computers programmer professionally since 17 years old, and
-also being involved in Open Source communities since then. I love puzzles and
+founder member of
+[Robotics and Domotics Spain Association](https://www.arde.cc). I've been
+working as computers programmer professionally since 17 years old, and also
+being involved in Open Source communities since then. I love puzzles and
 anything that can be an intellectual challenge to me (that's one of the reasons
-I started to learn chinese), and for me programing is like a sort of creative
+I started to learn chinese), and for me programming is like a sort of creative
 jigsaw. Due to that, I've been involved in the development of more than 300 Open
 Source projects, some of them awarded in national championships, and also I've
 being invited to do keynotes and stand-up at several national conferences, and
@@ -163,14 +165,14 @@ costs, delays, performance issues, bandwidth usage, user experience, possible
 bottlenecks...), and clearly explain the systems tradeoffs and business
 implications that are derived for each one of them. I love high edge technology
 and to know how everything works and what's able to do. This gives me a tendency
-to put technology on its limits, sometimes unconsciosly and anothers on
-purposse, by using the code or service beyond the developer original intention,
-but also to find and use the most concise, specific and idiomatic way of doing
-the things by using any available feature or design decision that can help to
-write a clean and maintenable code, that usually leads me to find bugs and usage
-corner cases. That also has lead myself to put high attention on code quality
-and to develop simple and minimal APIs in all the code I develop, and to enforce
-that high quality standards on others.
+to put technology on its limits, sometimes unconsciously and another on purpose,
+by using the code or service beyond the developer original intention, but also
+to find and use the most concise, specific and idiomatic way of doing the things
+by using any available feature or design decision that can help to write a clean
+and maintainable code, that usually leads me to find bugs and usage corner
+cases. That also has lead myself to put high attention on code quality and to
+develop simple and minimal APIs in all the code I develop, and to enforce that
+high quality standards on others.
 
 #### What do your think about code tests? Do you do take-home code assignements?
 
@@ -180,17 +182,17 @@ Long answer:
 
 I have no problems about doing technical interviews, but I have a "no unpaid
 code tests" policy, that apply to both pair-coding tests but more specially
-take-home code assignements. I have more than 16 years of Open Source code in my
+take-home code assignments. I have more than 16 years of Open Source code in my
 [Github account](https://github.com/piranna) and my
 [projects portfolio](projects.md), that clearly show my capabilities and code
 quality standards, and the time I spend on your code tests is money I'm not
 earning on my freelance projects, or time I'm not with my friends, family or
 hobbies.
 
-If you consider that's not enought and need to check yourself my work, you can
+If you consider that's not enough and need to check yourself my work, you can
 contract me for some hours as a freelance to do an actual task in your code
 base, so you can evaluate my work on first hand. If you *still* insists that I
-need to do an unpaid code test or take-home code assignement, for me it's an
+need to do an unpaid code test or take-home code assignment, for me it's an
 almost instant discard of your offer, specially if I'm told so at the end of an
 interview instead of tell me how the full selection process is before hand.
 That's rude, and I feel betrayed by you making waste my time, and it shows how
@@ -211,42 +213,42 @@ Arabic Emirates and India (UTC+4 and UTC+5.5 timezones).
 
 If your question is related to adjust your salary offer to life level costs, you
 can target your offer to the region of London, Great Britain for western Europe
-projects, and Abu Dhabi, United Arabic Emirates for middle East and Asia based
-projects.
+projects, and Abu Dhabi or Dubai, United Arabic Emirates for middle East and
+Asia based projects.
 
 #### Are you available to relocate?
 
 I'm interested mostly just only on 100% remote positions, specially regarding
-freelance projects. I can consider in-site or hybrid job positions or reloation
+freelance projects. I can consider in-site or hybrid job positions or relocation
 depending of the conditions, mandatory ones are:
 
-- job location needs to be easily accesible in public transport, or company
+- job location needs to be easily accessible in public transport, or company
   provides a driver, cab or taxi. All transport costs will be paid by the
   company
-- daily conmute time will be considered part of my paid working hours, being
-  that regular or extra ones depending of the assigned schedule. Conmute hours
+- daily commute time will be considered part of my paid working hours, being
+  that regular or extra ones depending of the assigned schedule. Commute hours
   can be compensated as extra paid holidays or free days too
 - all this conditions needs to be specified in the contract
 
 Additionally, for in-site or hybrid job positions:
 
 - in **Madrid (Spain) area**, company will pay meal diets for all the days I
-  would need to be presentially
+  would need to be presential
 - in **outside of Madrid area**, company will pay both arrive and leave flight
-  or train tickets (also if it's in a daily or weekly basis), and accomodation
-  for all the time I would need to be presentially
+  or train tickets (also if it's in a daily or weekly basis), and accommodation
+  for all the time I would need to be presential
 
 Finally, if due to costs, times or logistics permanent relocation is mandatory,
 additionally:
 
-- company will provide accomodation during all the time of the trial period, or
+- company will provide accommodation during all the time of the trial period, or
   all the in-site time for freelance projects. After that, company will provide
   a monthly bonus or salary / honoraries increment to cover flat rental costs
 - inside **Spain**, base salary will be equal or better to what I can get for an
   in-site position in Madrid (Spain)
 - outside **Spain**, base salary / honoraries will be at least a 30% higher or
   better to what I can get for a similar job position working on remote, and
-  company offer will also includes social beneficts equal or better to the Spain
+  company offer will also includes social benefits equal or better to the Spain
   basic legal ones, including health insurance, paid holidays, work and legal
   rights...
 
