@@ -37,6 +37,13 @@ This project also involved the development from scratch a project-level rules
 async engine and of a tasks runner with support for parallel execution and
 multiple optional alternatives, since none of them was available at that time.
 
+### [WasMachine](https://github.com/piranna/wasmachine)
+
+Proof-of-Concetp implementation of WebAssembly on FPGAs. Binary WebAssembly bytecode is more optimized for reduced size than direct execution, but still was able to run some basic instructions, and implement on-the-fly translation for some of the more complex ones. Usage was intended as a "hardware accelerator of web pages" before WebAssembly compilers instead of interpreters became the main strength, but later was sugested to promote it as an alternative to JVM in SIM cards.
+
+[Web Assembly workshop by Dan Callahan](https://www.todojs.com/web-assembly-workshop-by-dan-callahan/), NodeJS Madrid meetup, 2017:
+<iframe src="https://player.vimeo.com/video/207967535?t=1h40m36s" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
 ### [NodeOS](https://node-os.com/)
 
 Minimal operating system build on top of [Linux kernel](https://www.kernel.org/)
