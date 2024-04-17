@@ -49,7 +49,7 @@ strength, but later was sugested to promote it as an alternative to JVM in SIM
 cards.
 
 [Web Assembly workshop by Dan Callahan](https://www.todojs.com/web-assembly-workshop-by-dan-callahan/), NodeJS Madrid meetup, 2017 (my keynote starts at 1:40:36):
-<iframe src="https://player.vimeo.com/video/207967535?t=1h40m36s" width="100%" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/207967535?t=1h40m36s" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
 ### [NodeOS](https://node-os.com/)
 
@@ -74,10 +74,10 @@ IX Concurso Universitario de Software, Zaragoza 7th & 8th May 2015:
 ![Enrique Teruel Doñate (Delegate of the Rector for SICUZ) presents the diploma to Jesús Leganés Combarro for his NodeOS project](../images/Jesús_Leganés_Combarro_recibe_su_diploma_en_el_IX_CUSL.jpeg)
 
 XXVIII Jornadas Técnicas del GUL UC3M, Leganés 10th November 2016 (spanish):
-<iframe src="https://www.youtube.com/embed/aK9ixiOE2Hs" width="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/aK9ixiOE2Hs" width="100%" height="360" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 JsDayEs 2017, Madrid (english):
-<iframe src="https://player.vimeo.com/video/220960658" width="100%" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/220960658" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
 <details>
   <summary>Citations</summary>
