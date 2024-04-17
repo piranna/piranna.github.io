@@ -23,7 +23,8 @@ month of development (March 2021) it got interest from several companies, so I
 decided to develop it as a commercial product. It's still a work-in-progress,
 but it already supports vertical scalability with multi-CPU Mediasoup routers,
 horizontal scalability with routers over several servers, and easy integration
-with current code bases, being mostly missing just only the support for routers distributed across multiple CPUs over several servers. In addition to that, long
+with current code bases, being mostly missing just only the support for routers
+distributed across multiple CPUs over several servers. In addition to that, long
 term roadmap includes support for transparent decentralized P2P video streaming.
 
 ### [projectlint](https://github.com/projectlint)
@@ -39,9 +40,15 @@ multiple optional alternatives, since none of them was available at that time.
 
 ### [WasMachine](https://github.com/piranna/wasmachine)
 
-Proof-of-Concetp implementation of WebAssembly on FPGAs. Binary WebAssembly bytecode is more optimized for reduced size than direct execution, but still was able to run some basic instructions, and implement on-the-fly translation for some of the more complex ones. Usage was intended as a "hardware accelerator of web pages" before WebAssembly compilers instead of interpreters became the main strength, but later was sugested to promote it as an alternative to JVM in SIM cards.
+Proof-of-Concetp implementation of WebAssembly on FPGAs. Binary WebAssembly
+bytecode is more optimized for reduced size than direct execution, but still was
+able to run some basic instructions, and implement on-the-fly translation for
+some of the more complex ones. Usage was intended as a "hardware accelerator of
+web pages" before WebAssembly compilers instead of interpreters became the main
+strength, but later was sugested to promote it as an alternative to JVM in SIM
+cards.
 
-[Web Assembly workshop by Dan Callahan](https://www.todojs.com/web-assembly-workshop-by-dan-callahan/), NodeJS Madrid meetup, 2017:
+[Web Assembly workshop by Dan Callahan](https://www.todojs.com/web-assembly-workshop-by-dan-callahan/), NodeJS Madrid meetup, 2017 (my keynote starts at 1:40:36):
 <iframe src="https://player.vimeo.com/video/207967535?t=1h40m36s" width="100%" frameborder="0" allowfullscreen></iframe>
 
 ### [NodeOS](https://node-os.com/)
