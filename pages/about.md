@@ -266,6 +266,24 @@ Principal Tech & Lead at [Intellias](https://intellias.com/), September 2023
 > His extensive knowledge and commitment are evident in every task he
 > undertakes, showcasing a high level of expertise in every project.
 
+[Matt Knowles](https://www.linkedin.com/in/mattknowles0/),
+Lead Senior Software Engineer at [Level Ex](https://www.levelex.com/), November 2024:
+
+> Jesus has a deep knowledge of the WebRTC / SFU space. His work history is
+> across various companies in the WebRTC / SFU space including his own SFU
+> service https://mafalda.io.
+> 
+> Our system can be diverse and complex. Jesus was comfortable navigating across
+> the various code bases and pulling out insights. His communication was good
+> during working sessions and with summaries of independent work giving actionable
+> suggestions. Jesus was flexible with his schedule when dealing with time zone
+> differences (US to Spain).
+> 
+> If you are looking for a knowledgeable resource to help a new or existing WebRTC
+> / SFU project I can recommend Jesus.
+> 
+> Matt
+
 </details>
 
 ## Contact me
