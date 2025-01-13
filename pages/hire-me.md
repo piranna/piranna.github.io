@@ -10,7 +10,7 @@ short and long term), but sometimes I'm open to consider employee positions or
 on-site projects, if both tasks and offer are interesting, and we can negotiate
 the terms and conditions. You can get more info about my past work experience at
 my [LinkedIn profile](https://www.linkedin.com/in/piranna/) or at my
-[Curriculum Vitae](https://www.dropbox.com/scl/fi/4axd7k8m2gk0zlzb74rz9/Leganes-Combarro-Jesus.pdf?rlkey=5nfrwk7fkvhx6ox1eaktr24bp&dl=0)
+[Curriculum Vitae](https://www.dropbox.com/scl/fi/ct0zxm6znmgc8p2q43ui0/Leganes-Combarro-Jesus.pdf?rlkey=1x5lqzc4nqgbzdjqo0tatb7r9&dl=0)
 
 ## My ideal job (AKA *Santa's letter*)
 
