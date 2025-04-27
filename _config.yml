@@ -97,3 +97,6 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-spaceship
+
+# https://talk.jekyllrb.com/t/error-your-site-could-not-be-built-no-repo-name-found/5688/3
+repository: piranna/piranna.github.io
