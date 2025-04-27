@@ -89,6 +89,7 @@ exclude:
 
 jekyll-spaceship:
   mermaid-processor:
+    mode: pre-fetch  # fetch image at building stage
     syntax:
       code: mermaid
 
