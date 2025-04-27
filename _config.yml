@@ -84,6 +84,8 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - vendor
+  - bundle
 
 jekyll-spaceship:
   mermaid-processor:
