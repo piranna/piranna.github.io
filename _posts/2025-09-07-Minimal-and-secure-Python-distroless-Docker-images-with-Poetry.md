@@ -126,11 +126,13 @@ dependencies, which are not needed in production.
 ```Dockerfile
 FROM distroless-poetry AS builder
 
+# Copy project files to the image
 WORKDIR /src
 
 COPY poetry.lock pyproject.toml README.md ./
 COPY my_package ./my_package
 
+# Create the bundled virtualenv
 ARG POETRY_VIRTUALENVS_OPTIONS_NO_PIP=true
 RUN ["poetry", "bundle", "venv", "--no-cache", "--only=main", "/venv"]
 ```
@@ -140,7 +142,13 @@ RUN ["poetry", "bundle", "venv", "--no-cache", "--only=main", "/venv"]
 The final stage is the actual image we will use in production. It's also based
 on the same version of the distroless image for Python 3 on Debian from scratch,
 but this time using the `nonroot` variant, which runs as a non-root user by
-default.
+default. Its home folder and image default working directory is located at
+`/home/nonroot`, so we can mount our data volume there.
+
+Later, we copy the virtual environment files created in the previous stage to
+the `/venv` folder in the final image. This way, we would have isolated the
+application code from both the rest of the operating system files, and from the
+application data at the home folder of the `nonroot` user.
 
 To optimize the image size, we only copy the `uvicorn` binary that will launch
 our application later (this is an example for a
@@ -156,8 +164,8 @@ alternative maybe could be to move them out to a separate directory).
 To increase the security, we use the `--chown` flag to set the group of the
 files to the `nonroot` group, and use the `--chmod` flag to set the permissions
 to `050` for the `uvicorn` binary. This way, only the group (`nonroot`) can
-read and execute it. We also use it so only the `nonroot` group can read and
-access the `lib/` folder.
+read and execute it. We also use the `--chmod` flag so only the `nonroot` group
+can read and access the `lib/` folder.
 
 Final step is to run the application. For this, we set the `PYTHONPATH`
 environment variable to include the path to the `site-packages` folder in the
@@ -170,6 +178,10 @@ application with `uvicorn`, binding to all network interfaces (`0.0.0.0`).
 ```Dockerfile
 FROM gcr.io/distroless/python3-debian${DEBIAN_VERSION}:nonroot
 
+# WORKDIR is already /home/nonroot, mount your data volume there
+VOLUME /home/nonroot
+
+# Copy files from builder
 COPY \
   --chmod=050 --chown=root:nonroot \
   --from=builder /venv/bin/uvicorn /venv/bin/uvicorn
@@ -179,23 +191,17 @@ COPY \
   --exclude=!**/*.dist-info/LICENSE* --exclude=!**/*.dist-info/licenses \
   --from=builder /venv/lib /venv/lib
 
+# Set PYTHONPATH to find packages installed in the virtualenv
 ARG PYTHON_VERSION
 ENV PYTHONPATH=/venv/lib/python${PYTHON_VERSION}/site-packages
 
-# WORKDIR is already /home/nonroot, mount your data volume there
+# Run the web server
 EXPOSE 80
 
 CMD ["/venv/bin/uvicorn", "my_package.web:app", "--host", "0.0.0.0", "--port", "80"]
 ```
 
 And that's it, only remaining step is to build the image with `docker build .`.
-Since we are using the `nonroot` variant of the distroless image, it will run as
-a non-root user with its home folder at `/home/nonroot` by default. This will be
-the working directory, so you can mount your data volume there if needed. This
-way, we would have isolated the application code at the `/venv` folder from the
-rest of the filesystem, with only read and execute permissions for the `nonroot`
-group, and from the data at the home folder of the `nonroot` user, with read and
-write permissions.
 
 Once the docker container is built, a way to run this image (including a
 read-only root filesystem to increase security even further, although with the
