@@ -207,7 +207,7 @@ Once the docker container is built, a way to run this image (including a
 read-only root filesystem to increase security even further, although with the
 usage of `--chmod` should not be necessary) would be:
 
-```bash
+```sh
 docker run \
   --publish 8000:80 --read-only --rm --volume /path/to/data:/home/nonroot \
   my-image
