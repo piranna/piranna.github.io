@@ -1,8 +1,10 @@
 ---
 lang: en
 layout: post
-title: How to build WebRTC for Android in Ubuntu ~21.04~ ~22.04~ 25.04
-twitter: '1385546685472854019'
+redirect_from:
+  - /2021/04/23/How-to-build-WebRTC-for-Android-in-Ubuntu-21.04/
+  - /2023/02/27/How-to-build-WebRTC-for-Android-in-Ubuntu-22.04/
+title: How to build WebRTC for Android in Ubuntu 25.04
 ---
 
 Google used to provide
@@ -19,8 +21,9 @@ app?), and they just only provided another build in August 2020 (1.0.32006) to
 fill some important security holes, in case someone (everybody?) was still using
 the binary mobile libraries.
 
-**Editor's note**: content updated on February 27nd 2023 and September 16nd 2025
-to reflect the latest changes in the build process.
+**Editor's note**: original version for Ubuntu 21.04 at April 23rd 2021. Content
+updated to reflect the latest changes in the build process for Ubuntu 22.04 at
+February 27th 2023, and for Ubuntu 25.04 at September 16th 2025.
 
 In addition to that, that binary libraries were available to use with Maven, but
 [Bintray was deprecated](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/)
