@@ -4,6 +4,6 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem "github-pages", "~> 227", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 gem 'jekyll-redirect-from'
 gem 'jekyll-spaceship', group: :jekyll_plugins
