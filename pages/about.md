@@ -7,35 +7,35 @@ permalink: /about/
 Passionate computers engineer and ex-PhD. candidate in Computers Engineering.
 Proud advocate of Open Source, standards, specifications, and best practices.
 
-With more than 18 years of professional experience, and being involved in Open
-Source scene and wireless communities since I was 17 years old, I have been
-working both profesionally or in personal side projects in almost all computer
-engineering areas, including web development, robotics, operating systems
-desing, videogames, networking, or drivers programming. My profile is purely
-technical, with a great interest in hard-to-solve problems, quality of code,
-performance optimizations, high-edge technologies, and design of clean APIs and
-architectures focused on minimal designs, modularity and reusability.
+With more than 22 years of professional experience in software development, and
+being involved in Open Source scene and wireless communities since I was 17
+years old, I have been working both professionally or in personal side projects
+in almost all computer engineering areas, including web development, robotics,
+operating systems design, videogames, networking, drivers programming, or AI. My
+profile is purely technical, with a great interest in hard-to-solve problems,
+quality of code, performance optimizations, high-edge technologies, and design
+of clean APIs and architectures focused on minimal designs, modularity and
+reusability.
 
 I'm fullstack with preference for backend, R&D and academic projects. Thanks to
-that, I have more than 10 years of experience with Node.js, and I'm also expert
-in Python and C++ between other languajes, and I'm currently interested on Rust.
-Regarding mobile apps, I have 5 years of experience with ReactNative.
+that, I have more than 14 years of experience with Node.js (since v0.8), 19
+years with Python (since 2.4), and 20 years with C++, between other languages
+like Rust, Java or Go. Regarding mobile apps, I have 8 years of experience with
+React Native, being also speaker at [Meta F8](/contributions#re-start).
 
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
-and been CTO of two start-ups (and co-founder of one of them). Currently I'm
-working as *WebRTC Architect* at [Dyte](https://www.dyte.io/) and as part-time
-freelance developer, consultor and auditor. In my spare time I like to read
-books, go to cinema or travelling, go running or cycling, or work on my own side
-projects to improve my skills and craft things with cool high-edge technologies.
+and been CTO of several start-ups (and co-founder of two of them). In my spare
+time I like to read books, go to cinema or travelling, go running or cycling, or
+work on my own side projects to improve my skills and craft things with cool
+high-edge technologies.
 
 ## Academic experience
 
-I have a *Licenciature in Computers Engineering*, and convalidated It to the
-equivalent *Master in Computers Engineering*. My Licenciature (and Master)
-thesis was
+I have a *Licenciature in Computers Engineering*, convalidated to the equivalent
+*Master in Computers Engineering*. My Licenciature (and Master) thesis was
 *[NodeOS](projects.md#nodeos), a minimal operating system for Node.js based applications*,
-with more than 6000 stargazers on GitHub, winner on the Systems category at the
+with more than 7000 stargazers on GitHub, winner on the Systems category at the
 [11th CUSL national championship](https://www.concursosoftwarelibre.org), and
 graduated with distinction. My Licenciature thesis director was
 [Prof. Enrique Soriano-Salvador](https://gsyc.urjc.es/~esoriano/).
@@ -128,9 +128,9 @@ generate 3D models. My Ph.D. thesis director was
 
 ### Countries visited
 
-I've been so far in 18
-[Century Club](https://travelerscenturyclub.org/countries-and-territories)
-territories, 16 countries, and 3 continents
+I've been so far in 21 territories and 4 regions of the
+[Century Club](https://travelerscenturyclub.org/countries-and-territories), and
+a total of 18 countries and 3 continents:
 
 - **Europe**
   - 🇪🇺 **European Union**
@@ -152,12 +152,17 @@ territories, 16 countries, and 3 continents
     - 🏴󠁧󠁢󠁥󠁮󠁧󠁿 **England**: London
     - 🇮🇪 **Ireland**: Dublin
   - 🇨🇭 **Switzerland**: Zurich
+  - 🇫🇷 **France**: Poitiers
 - **Africa**
   - 🇲🇦 **Morocco**: Marrakech
-- **Asia**
+  - 🇪🇬 **Egypt**: Cairo
+- **Middle East**
   - 🇶🇦 **Qatar**: Doha
+  - 🇦🇪 **United Arab Emirates**
+    - Abu Dhabi, Al Ain
+    - Dubai
+- **Asia**
   - 🇮🇳 **India**: Bangalore
-  - 🇦🇪 **United Arab Emirates**: Abu Dhabi, Dubai, Al Ain
 
 ## Recomendations, testimonies & quotes
 
@@ -271,17 +276,17 @@ Lead Senior Software Engineer at [Level Ex](https://www.levelex.com/), November 
 
 > Jesus has a deep knowledge of the WebRTC / SFU space. His work history is
 > across various companies in the WebRTC / SFU space including his own SFU
-> service https://mafalda.io.
-> 
+> service <https://mafalda.io>.
+>
 > Our system can be diverse and complex. Jesus was comfortable navigating across
 > the various code bases and pulling out insights. His communication was good
 > during working sessions and with summaries of independent work giving actionable
 > suggestions. Jesus was flexible with his schedule when dealing with time zone
 > differences (US to Spain).
-> 
+>
 > If you are looking for a knowledgeable resource to help a new or existing WebRTC
 > / SFU project I can recommend Jesus.
-> 
+>
 > Matt
 
 </details>
