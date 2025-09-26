@@ -13,6 +13,10 @@ layout: default
     gap: 2rem;
   }
 
+  .posts > .post {
+    padding-bottom: 0px;
+  }
+
   @media (min-width: 768px) {
     .main-content {
       flex-direction: row;
@@ -61,17 +65,18 @@ layout: default
       <a href="https://github.com/piranna" target="_blank"
          rel="noopener">GitHub</a>.
     </p>
-    <nav style="text-align: center; margin-top: 1rem;">
+    <p style="text-align: center; margin-top: 1rem;">
       <a href="{{ site.baseurl }}/about">About Me</a> |
       <a href="{{ site.baseurl }}/projects">Projects</a> |
       <a href="{{ site.baseurl }}/contributions">Open Source</a> |
       <a href="{{ site.baseurl }}/webrtc">WebRTC</a> |
       👉<a href="{{ site.baseurl }}/hire-me"><b>Hire Me</b></a>
+    </p>
   </div>
 
   <div class="container posts">
     <h2>Recent Posts</h2>
-    {% for post in site.posts limit: 5 %}
+    {% for post in site.posts limit: 4 %}
     <article class="post">
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
