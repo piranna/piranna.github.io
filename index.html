@@ -2,22 +2,84 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
+<style>
+  #main.container {
+    max-width: none;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .main-content {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .container.intro {
+      flex: 1;
+      margin-right: 2rem;
+    }
+
+    .container.posts {
+      flex: 1;
+    }
+  }
+</style>
+
+<div class="main-content">
+  <div class="container intro">
+    <h2>Jesús Leganés-Combarro</h2>
+    <p>
+      Polymath Software Engineer & Architect
+    </p>
+    <p>
+      Specialized in WebRTC, Streaming, Backend & Systems. CTO experience in
+      startups and international projects across UAE, US, and Europe. Always
+      curious, always building.
+    </p>
+    <ul>
+      <li>Real-time communications & low-latency streaming</li>
+      <li>Software architecture & scalable backend systems</li>
+      <li>CTO & team leadership in multicultural environments</li>
+      <li>Multidisciplinary R&D: from AI to operating systems</li>
+    </ul>
+    <p>
+      I <i>shine</i> at the intersection of disciplines: designing
+      architectures, leading teams, and building systems that just work. Over
+      the years, I’ve delivered high-impact projects in the UAE, Europe, and the
+      US, always balancing quality, scalability, and innovation.
+    </p>
+    <p>
+      I write about WebRTC, open source projects, and other tech topics on this
+      blog. You can also find me on
+      <a href="https://www.linkedin.com/in/piranna/" target="_blank"
+         rel="noopener">LinkedIn</a>, and
+      <a href="https://github.com/piranna" target="_blank"
+         rel="noopener">GitHub</a>.
+    </p>
+    <nav style="text-align: center; margin-top: 1rem;">
+      <a href="{{ site.baseurl }}/about">About Me</a> |
+      <a href="{{ site.baseurl }}/projects">Projects</a> |
+      <a href="{{ site.baseurl }}/contributions">Open Source</a> |
+      <a href="{{ site.baseurl }}/webrtc">WebRTC</a> |
+      👉<a href="{{ site.baseurl }}/hire-me"><b>Hire Me</b></a>
+  </div>
+
+  <div class="container posts">
+    <h2>Recent Posts</h2>
+    {% for post in site.posts limit: 5 %}
     <article class="post">
-
-      <h2>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h2>
-      <div class="date">
-        {{ post.date | date: "%B %e, %Y" }}
-      </div>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <div class="date">
+          {{ post.date | date: "%B %e, %Y" }}
+        </div>
+      </article>
+      {% endfor %}
+  </div>
 </div>
