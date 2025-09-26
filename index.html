@@ -75,7 +75,7 @@ layout: default
   <div class="container posts">
     <h2>Recent Posts</h2>
     {% for post in site.posts limit: 4 %}
-    <article class="post">
+      <article class="post">
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </h3>
@@ -83,6 +83,9 @@ layout: default
           {{ post.date | date: "%B %e, %Y" }}
         </div>
       </article>
-      {% endfor %}
+    {% endfor %}
+    <p style="text-align: center; margin-top: 1rem;">
+      <a href="{{ site.baseurl }}/blog">More Posts</a>
+    </p>
   </div>
 </div>
