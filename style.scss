@@ -19,8 +19,16 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
   color: $darkGray;
+    display: flex;
+    flex-direction: column;
+  font: 18px/1.4 $helvetica;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 .container {
@@ -241,6 +249,11 @@ nav {
 // .main
 //
 
+.page-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
@@ -272,10 +285,11 @@ nav {
 }
 
 .wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
   background-color: $lightGray;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+    flex-shrink: 0;
+    margin-top: 50px;
 }
 
 footer {
