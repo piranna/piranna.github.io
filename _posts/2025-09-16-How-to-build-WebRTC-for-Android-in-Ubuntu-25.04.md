@@ -216,7 +216,7 @@ this, storing the nightly builds as project releases or also as a
 [Github Packages Maven repository](https://github.com/features/packages), but
 the Github Actions only provides 2000 minutes per month (a bit more than 1 hour
 per day), so without a cache it would be problematic to generate nightly builds,
-but checking only to run where there are new Milestones (similar to what I do in
+but checking only to run when there are new Milestones (similar to what I do in
 [OS lifecycle](https://github.com/projectlint/OS-lifecycle) repo), it could
 probably work... Maybe one day I'll implement it :-) By the moment, the raw JSON
 info for the different Milestones can be found at
@@ -228,45 +228,29 @@ An important topic I've not covered before: how to use the compiled `.aar` file.
 [Android documentation](https://developer.android.com/studio/projects/android-library#AddDependency)
 has full info about how to create and use libraries as dependencies with
 [Android Studio](https://developer.android.com/studio), but the important steps
+to [use our compiled `libwebrtc.aar` file](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
 for our use case are:
 
 1. Add the `libwebrtc.aar` file:
 
-   1. Click **File > New > New Module**.
-   2. Click **Import .JAR/.AAR Package**, then click **Next**.
-   3. Enter the location of the `libwebrtc.aar` file then click **Finish**.
+   1. Click **File > Project Structure > Dependencies**.
+   2. Click **➕**, and select **Jar Dependency** in the menu.
+   3. Enter the location of the `libwebrtc.aar` file, and select
+      **implementation** option. Then click **OK**.
 
-   Android Studio creates a module directory, copies the `libwebrtc.aar` file
-   into the module, and generates a `build.gradle` file for it, with the
-   following contents:
-
-   ```gradle
-   configurations.maybeCreate("default")
-   artifacts.add("default", file('libwebrtc.aar'))
-   ```
-
-2. Make sure the `libwebrtc` library is listed at the top of your
-   `settings.gradle` file, like this:
-
-   ```gradle
-   include ':app', ':libwebrtc'
-   ```
-
-3. Open the app module's `build.gradle` file and add a new line for the
-   `libwebrtc` library to the `dependencies` block as shown in the following
-   snippet:
+2. Open the app module's `build.gradle` or `build.gradle.kts` file, and confirm
+   there's a new line for the `libwebrtc` library to the `dependencies` block as
+   shown in the following snippet:
 
    ```gradle
    dependencies {
-      implementation project(":libwebrtc")
+      implementation files("path/to/libwebrtc.aar")
    }
    ```
 
-   In case there was a reference to the old `libwebrtc` library from the Maven
-   registry, remove it too.
+   In case there's a reference to the old `libwebrtc` library, remove it too.
 
-4. Click **Sync Project with Gradle Files**.
+3. Click **Sync Project with Gradle Files**.
 
 From now on, next project builds will be using your build of the `libwebrtc.aar`
-file located at `libwebrtc/libwebrtc.aar`, instead of obsolete one provided by
-Maven.
+file, instead of the previous one.
