@@ -1,7 +1,7 @@
 ---
 lang: en
 layout: post
-tags: Mafalda SFU
+tags: Mafalda SFU, npm, performance, profiling, gnomon
 title: Profiling `npm install` times
 ---
 

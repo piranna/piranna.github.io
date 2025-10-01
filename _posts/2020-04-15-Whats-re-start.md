@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: react-native, restart, javascript, mobile, cross-platform
 title: What's `re-start`?
 twitter: '1250499542698594304'
 ---

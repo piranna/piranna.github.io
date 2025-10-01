@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: perfectionism, programming, software, architecture, quality
 title: Manifest of a perfectionist
 twitter: '1468320408260669445'
 ---

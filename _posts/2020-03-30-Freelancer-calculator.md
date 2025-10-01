@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: calculator, freelance, taxes, spain
 title: Freelancer calculator
 twitter: '1244683827173380096'
 ---

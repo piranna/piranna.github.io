@@ -1,7 +1,7 @@
 ---
 lang: en
 layout: post
-tags: coauthored-with-chatgpt, fastify, typescript, nodejs, django, webdev
+tags: coauthored-with-chatgpt, fastify, typescript, nodejs, django, webdev, programming, cbv, class-based-views, architecture, design-patterns, api, http, web-frameworks
 title: Bringing Class-Based Views to Fastify (Inspired by Django)
 ---
 

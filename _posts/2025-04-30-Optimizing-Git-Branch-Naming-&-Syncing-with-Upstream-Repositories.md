@@ -1,8 +1,8 @@
 ---
 lang: en
 layout: post
+tags: git, coauthored-with-chatgpt, version-control, upstream, branches, naming
 title: Optimizing Git Branch Naming & Syncing with Upstream Repositories
-tags: git, coauthored-with-chatgpt
 ---
 
 When working with multiple remote repositories, especially when syncing changes

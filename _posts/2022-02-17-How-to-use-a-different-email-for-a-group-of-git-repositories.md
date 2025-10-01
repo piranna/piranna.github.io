@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: git, email, configuration
 title: How to use a different email for a group of git repositories
 twitter: '1548423325302415360'
 ---

@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: javascript, performance, programming
 title: How to move Javascript functions out of its closure to save memory
 twitter: '1335506116860645376'
 ---

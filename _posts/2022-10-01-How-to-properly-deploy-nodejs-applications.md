@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: nodejs, deployment, npm, typescript, server, devops
 title: How to (properly) deploy Node.js applications
 twitter: '1607096592946941952'
 ---

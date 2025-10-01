@@ -1,6 +1,7 @@
 ---
 lang: en
 layout: post
+tags: webrtc, bugs, troubleshooting, stun, turn, connectivity, codecs
 title: WebRTC Bugs and Where to Find Them
 twitter: '1607096593831821313'
 ---

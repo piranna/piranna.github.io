@@ -1,7 +1,7 @@
 ---
 lang: en
 layout: post
-tags: Mafalda SFU
+tags: Mafalda SFU, github actions, npm, packages, registry, workflow
 title: How to install npm packages stored at GitHub Packages Registry as dependencies in a GitHub Actions workflow
 ---
 

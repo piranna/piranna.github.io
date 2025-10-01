@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: javascript, nodejs, redux, redux-offline
 title: redux-offline in Node.js
 twitter: '1232057416415621128'
 ---

@@ -1,8 +1,8 @@
 ---
 lang: en
 layout: post
+tags: docker, python, poetry, distroless, security, devops
 title: Minimal and secure Python distroless Docker images with Poetry
-tags: docker
 ---
 
 For a recent project, I needed to create a Docker image for a Python application

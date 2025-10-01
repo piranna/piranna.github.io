@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: proposals
+tags: proposals, rest, api, design
 title: Confirm deletion in RESTful APIs
 twitter: '1234189351241867265'
 ---

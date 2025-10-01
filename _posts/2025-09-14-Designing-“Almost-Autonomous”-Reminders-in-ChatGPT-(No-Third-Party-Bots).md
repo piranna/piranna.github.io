@@ -1,8 +1,8 @@
 ---
 lang: en
 layout: post
+tags: ai, automation, chatgpt, coauthored-with-chatgpt, openai, productivity, reminders, tasks, scheduling
 title: Designing “Almost-Autonomous” Reminders in ChatGPT (No Third-Party Bots)
-tags: ai, automation, chatgpt, coauthored-with-chatgpt, openai
 ---
 
 How we went from a one-off ping to a nightly, varied, almost-autonomous reminder
