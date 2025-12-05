@@ -289,6 +289,23 @@ Lead Senior Software Engineer at [Level Ex](https://www.levelex.com/), November 
 >
 > Matt
 
+[Deborah Iori](https://www.linkedin.com/in/deborah-i-36777083/), Computer scientist and
+student at
+[Adalid](https://grupoaspasia.com/empresa/adalid-servicios-corporativos-s-l/), December 2025:
+
+> I had the opportunity to attend the Web Servers course taught by this professor at
+> the Grupo Aspasia Training Center, Madrid Tetuán, and it was a very positive experience.
+>
+> He has a strong technical background and an excellent ability to explain complex concepts
+> in a clear and simple way. He guided us from the basics, such as using Ubuntu commands
+> and understanding core server concepts, to more advanced topics like setting up servers
+> with Node.js, Apache, and Tomcat, working with Docker, developing applications with
+> Django and FastAPI, and using Git and GitHub for version control.
+>
+> I highly recommend him as a teacher for his deep knowledge and professionalism. His
+> teaching made the learning process practical, well-structured, and motivating, and he
+> was always available to answer questions.
+
 </details>
 
 ## Contact me
