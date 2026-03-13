@@ -5,7 +5,7 @@ tags: coauthored-with-chatgpt, android, bluetooth, networking, tailscale, vpn, p
 title: Routing Android Device Through a Laptop Using Bluetooth PAN and Tailscale
 ---
 
-### *A Practical Walkthrough of a Surprisingly Hard Problem*
+## *A Practical Walkthrough of a Surprisingly Hard Problem*
 
 For a task that sounded trivial at first, this experiment turned into a
 surprisingly deep dive into Android networking limitations, routing constraints,
