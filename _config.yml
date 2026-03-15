@@ -32,7 +32,6 @@ footer-links:
   googleplus: # anything in your profile username that comes after plus.google.com/
   npm: piranna
 
-
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
@@ -89,7 +88,7 @@ exclude:
 
 jekyll-spaceship:
   mermaid-processor:
-    mode: pre-fetch  # fetch image at building stage
+    mode: pre-fetch # fetch image at building stage
     syntax:
       code: mermaid
 
@@ -106,10 +105,13 @@ whitelist:
 # https://talk.jekyllrb.com/t/error-your-site-could-not-be-built-no-repo-name-found/5688/3
 repository: piranna/piranna.github.io
 
+gems:
+  - jekyll-paginate-v2
+
 pagination:
   enabled: true
   per_page: 10
-  permalink: '/blog/page/:num/'
+  permalink: "/blog/page/:num/"
 
 autopages:
   enabled: true
@@ -117,7 +119,7 @@ autopages:
     layouts:
       - autopage_tags.htmls
     title: Posts tagged ':tag'
-    permalink: '/tag/:tag/'
+    permalink: "/tag/:tag/"
     silent: false
     slugify:
       mode: pretty
