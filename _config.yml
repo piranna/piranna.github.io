@@ -105,3 +105,20 @@ whitelist:
 
 # https://talk.jekyllrb.com/t/error-your-site-could-not-be-built-no-repo-name-found/5688/3
 repository: piranna/piranna.github.io
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/blog/page/:num/'
+
+autopages:
+  enabled: true
+  tags:
+    layouts:
+      - autopage_tags.htmls
+    title: Posts tagged ':tag'
+    permalink: '/tag/:tag/'
+    silent: false
+    slugify:
+      mode: pretty
+      cased: false
