@@ -18,9 +18,9 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   color: $darkGray;
-    display: flex;
+  display: flex;
     flex-direction: column;
   font: 18px/1.4 $helvetica;
 }
@@ -38,7 +38,12 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
@@ -79,13 +84,15 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
+  cursor: pointer;
+  &:hover,
+    &:active {
     color: $blue;
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin: 15px 0;
   padding-left: 30px;
 }
@@ -98,19 +105,25 @@ ol {
   list-style-type: decimal;
 }
 
-ol ul, ul ol, ul ul, ol ol {
+ol ul,
+ul ol,
+ul ul,
+ol ol {
   margin: 0;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -142,12 +155,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
+  content: " ";
     display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -265,9 +278,30 @@ nav {
   border-bottom: none;
 }
 
-.post, .page {
+.pagination {
+  margin: 2em 0;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid $lightGray;
+    color: $darkGray;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      border-color: $gray;
+      color: $gray;
+    }
+  }
+}
+
+.post,
+.page {
   blockquote {
-    margin: 1.8em .8em;
+    margin: 1.8em 0.8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
@@ -289,7 +323,7 @@ nav {
   background-color: $lightGray;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
-    flex-shrink: 0;
+  flex-shrink: 0;
     margin-top: 32px;
 }
 
