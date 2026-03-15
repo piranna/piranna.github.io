@@ -113,6 +113,9 @@ pagination:
   per_page: 10
   permalink: "/blog/page/:num/"
   sort_reverse: true
+  trail:
+    before: 1
+    after: 3
 
 autopages:
   enabled: true
