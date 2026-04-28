@@ -338,6 +338,6 @@ If you use this project or its data in your work, please cite it as:
 
 ```text
 Leganés-Combarro, Jesús (2026).
-"WebRTC bitrate is not what you think: building a reproducible codec benchmark"
-https://piranna.github.io/2026/04/28/WebRTC-bitrate-is-not-what-you-think:-building-a-reproducible-codec-benchmark/
+"WebRTC bitrate is not what you think"
+https://piranna.github.io/2026/04/28/WebRTC-bitrate-is-not-what-you-think/
 ```
