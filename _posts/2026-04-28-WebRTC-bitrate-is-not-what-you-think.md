@@ -1,9 +1,13 @@
 ---
+code: https://github.com/piranna/Content-PeerConnection-bandwidth
+DOI: 10.5281/zenodo.19961278
 lang: en
 layout: post
 tags: webrtc, video, codec, bitrate, benchmark, measurement, reproducibility
 title: WebRTC bitrate is not what you think
 ---
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19961278.svg)](https://doi.org/10.5281/zenodo.19961278)
 
 Most WebRTC discussions about bitrate are wrong.
 
@@ -332,12 +336,39 @@ it, you’re not controlling it.
 
 You’re just hoping.
 
+## Limitations
+
+This experiment was conducted under controlled network conditions. Real-world
+environments (packet loss, jitter, heterogeneous hardware) may introduce
+additional behaviors such as increased keyframe frequency and bursty bitrate
+patterns.
+
+## Future Work
+
+Future work includes extending these measurements to:
+
+- lossy networks
+- SFU-based topologies
+- heterogeneous encoder environments
+
+## Reference Implementation
+
+The full implementation used to generate these results is available at
+[Content-PeerConnection-bandwidth](https://github.com/piranna/Content-PeerConnection-bandwidth)
+
 ## Citing
 
-If you use this project or its data in your work, please cite it as:
+If you reference this work, please cite the article:
 
 ```text
 Leganés-Combarro, Jesús (2026).
 "WebRTC bitrate is not what you think"
 https://piranna.github.io/2026/04/28/WebRTC-bitrate-is-not-what-you-think/
+DOI: 10.5281/zenodo.19961278
+
+Reference implementation:
+https://github.com/piranna/Content-PeerConnection-bandwidth
 ```
+
+> Note: Parts of this work were developed with the assistance of AI tools. All
+> experiments, validation and conclusions are my own.
