@@ -28,12 +28,12 @@ title: Blog
 
 <div class="pagination">
   {% for trail in paginator.page_trail %}
-  {% if page.url == trail.path %}
-  <b>{{ trail.num }}</b>
-  {% else %}
-  <a href="{{ trail.path | prepend: site.baseurl }}"
-     title="{{trail.title}}">{{ trail.num }}</a>
-  {% endif %}
+    <a {% if page.url != trail.path %}
+       href="{{ trail.path | prepend: site.baseurl }}" {% endif %}
+      title="{{trail.title}}"
+    >
+      {{ trail.num }}
+    </a>
   {% if trail.next %} | {% endif %}
   {% endfor %}
 </div>
