@@ -370,5 +370,7 @@ Reference implementation:
 https://github.com/piranna/Content-PeerConnection-bandwidth
 ```
 
+---
+
 > Note: Parts of this work were developed with the assistance of AI tools. All
 > experiments, validation and conclusions are my own.
