@@ -1,73 +1,76 @@
 ---
 lang: en
 layout: post
-tags: ai-coauthored, audio, testing, fft, fixtures, end-to-end-testing, ci, validation, lossy-codecs, spectral-analysis, deterministic, audio-pipelines
+tags:
+  ai-coauthored, audio, testing, fft, fixtures, end-to-end-testing, ci,
+  validation, lossy-codecs, spectral-analysis, deterministic, audio-pipelines
 title: Deterministic Audio Fixtures for End-to-End Testing
 ---
 
-## Designing Robust Spectral Validation for Audio Pipelines
+## _Designing Robust Spectral Validation for Audio Pipelines_
 
 Testing audio systems is deceptively hard.
 
-Unlike text or structured data, audio pipelines are often
-**lossy, time-sensitive, and highly stateful**. Codecs introduce quantization
-noise, transports introduce jitter, buffers may reorder or drop frames, and
-decoders may subtly alter timing or amplitude. Traditional byte-level
-comparisons or waveform diffs are therefore brittle and misleading.
+Unlike text or structured data, audio pipelines are often **lossy,
+time-sensitive, and highly stateful**. Codecs introduce quantization noise,
+transports introduce jitter, buffers may reorder or drop frames, and decoders
+may subtly alter timing or amplitude. Traditional byte-level comparisons or
+waveform diffs are therefore brittle and misleading.
 
 In this article, I present
 [audio-test-fixtures](https://github.com/piranna/audio-test-fixtures), a
 **deterministic, spectral-based approach** to testing audio pipelines
-end-to-end. The result is a small but robust toolkit that generates
-**known audio fixtures** and validates decoded output using
-**FFT-based frequency analysis**, designed to work reliably even with lossy
-codecs and imperfect transports.
+end-to-end. The result is a small but robust toolkit that generates **known
+audio fixtures** and validates decoded output using **FFT-based frequency
+analysis**, designed to work reliably even with lossy codecs and imperfect
+transports.
 
 ## The Core Problem
 
 Let’s define the problem precisely:
 
-> *How can we mechanically and reliably verify that an audio signal survives encoding, transmission, and decoding without unacceptable distortion?*
+> _How can we mechanically and reliably verify that an audio signal survives
+> encoding, transmission, and decoding without unacceptable distortion?_
 
 Key constraints:
 
-* Bitwise equality is impossible with lossy codecs
-* Waveform comparison is extremely sensitive to phase, gain, and timing
-* Perceptual metrics (PESQ, POLQA) are heavyweight and opaque
-* Manual listening does not scale and is not CI-friendly
+- Bitwise equality is impossible with lossy codecs
+- Waveform comparison is extremely sensitive to phase, gain, and timing
+- Perceptual metrics (PESQ, POLQA) are heavyweight and opaque
+- Manual listening does not scale and is not CI-friendly
 
 What we need instead is:
 
-* Deterministic input
-* Known ground truth
-* A validation method tolerant to amplitude and phase drift
-* Machine-verifiable results
-* Clear pass/fail semantics
+- Deterministic input
+- Known ground truth
+- A validation method tolerant to amplitude and phase drift
+- Machine-verifiable results
+- Clear pass/fail semantics
 
 ## Design Overview
 
 The solution is split into **two clearly separated components**:
 
-1. **Audio Fixture Generator**
-   Generates a deterministic WAV file containing a known sequence of pure tones.
+1. **Audio Fixture Generator** Generates a deterministic WAV file containing a
+   known sequence of pure tones.
 
-2. **Audio Transmission Validator**
-   Compares a reference WAV with a decoded WAV using spectral analysis.
+2. **Audio Transmission Validator** Compares a reference WAV with a decoded WAV
+   using spectral analysis.
 
 This separation of responsibilities is critical:
 
-* Fixtures are generated once
-* Validation can be run repeatedly in CI, on-device, or in regression tests
+- Fixtures are generated once
+- Validation can be run repeatedly in CI, on-device, or in regression tests
 
 ## Why Pure Tones?
 
 Human voice spans roughly **80 Hz to 1.1 kHz**. Instead of attempting to
 simulate speech, we use **pure sinusoidal tones** because:
 
-* Their frequency is mathematically unambiguous
-* FFT peak detection is reliable
-* Harmonics and distortion are easy to observe
-* They are codec-agnostic
+- Their frequency is mathematically unambiguous
+- FFT peak detection is reliable
+- Harmonics and distortion are easy to observe
+- They are codec-agnostic
 
 Each tone becomes a **spectral marker** that we can later detect.
 
@@ -77,30 +80,30 @@ Each tone becomes a **spectral marker** that we can later detect.
 
 The generated file has strict, predictable properties:
 
-* **PCM WAV**
-* **16-bit**
-* **Mono**
-* **16 kHz**
-* **Exactly 10 seconds**
-* **160,000 samples**
+- **PCM WAV**
+- **16-bit**
+- **Mono**
+- **16 kHz**
+- **Exactly 10 seconds**
+- **160,000 samples**
 
 This makes it compatible with:
 
-* Embedded systems
-* Mobile platforms
-* Voice codecs
-* Low-latency transports
+- Embedded systems
+- Mobile platforms
+- Voice codecs
+- Low-latency transports
 
 ### Frequency Content
 
-The file contains **27 ascending notes**, from **E2 (82 Hz)** to
-**C6 (1046 Hz)**, covering the full vocal range.
+The file contains **27 ascending notes**, from **E2 (82 Hz)** to **C6 (1046
+Hz)**, covering the full vocal range.
 
 Each note consists of:
 
-* ~350 ms pure sine wave
-* 20 ms silence between notes
-* Short fade-in/out to avoid clicks
+- ~350 ms pure sine wave
+- 20 ms silence between notes
+- Short fade-in/out to avoid clicks
 
 ## Generator Implementation
 
@@ -122,10 +125,10 @@ same signal (modulo floating-point rounding).
 
 Determinism enables:
 
-* Stable CI tests
-* Meaningful regression comparisons
-* Long-term maintainability
-* Debuggable failures
+- Stable CI tests
+- Meaningful regression comparisons
+- Long-term maintainability
+- Debuggable failures
 
 If your input changes every run, your test results become meaningless.
 
@@ -136,27 +139,24 @@ If your input changes every run, your test results become meaningless.
 The validator checks multiple orthogonal dimensions:
 
 1. **WAV Metadata**
-
-   * Sample rate
-   * Bit depth
-   * Channel count
-   * Duration (with tolerance)
+   - Sample rate
+   - Bit depth
+   - Channel count
+   - Duration (with tolerance)
 
 2. **Spectral Integrity**
-
-   * Dominant frequency per segment
-   * Frequency deviation (Hz and %)
-   * Accuracy ratio (% within tolerance)
+   - Dominant frequency per segment
+   - Frequency deviation (Hz and %)
+   - Accuracy ratio (% within tolerance)
 
 3. **Signal Quality**
-
-   * Signal-to-Noise Ratio (SNR)
+   - Signal-to-Noise Ratio (SNR)
 
 Each metric answers a different question:
 
-* *Is the format correct?*
-* *Are frequencies preserved?*
-* *Is noise within acceptable bounds?*
+- _Is the format correct?_
+- _Are frequencies preserved?_
+- _Is noise within acceptable bounds?_
 
 ## FFT-Based Frequency Detection
 
@@ -171,19 +171,19 @@ dominant_freq = fft_freqs[np.argmax(np.abs(fft_result))]
 
 Important implementation details:
 
-* Hann windowing to reduce spectral leakage
-* Frequency band filtering (50 Hz – 1200 Hz)
-* Analysis window centered on tone (avoids silence)
+- Hann windowing to reduce spectral leakage
+- Frequency band filtering (50 Hz – 1200 Hz)
+- Analysis window centered on tone (avoids silence)
 
 This approach is:
 
-* Phase-invariant
-* Gain-invariant
-* Robust to small timing drift
+- Phase-invariant
+- Gain-invariant
+- Robust to small timing drift
 
 ## Frequency Tolerance
 
-Lossy codecs *will* introduce frequency smearing. Therefore, validation uses a
+Lossy codecs _will_ introduce frequency smearing. Therefore, validation uses a
 configurable tolerance:
 
 ```bash
@@ -208,13 +208,11 @@ A note is considered **valid** if:
 
 After analyzing all segments, we compute:
 
-* **Frequency accuracy**
-  Percentage of notes within tolerance
+- **Frequency accuracy** Percentage of notes within tolerance
 
-* **Mean frequency error**
+- **Mean frequency error**
 
-* **SNR (dB)**
-  Based on power ratio between reference and decoded signals
+- **SNR (dB)** Based on power ratio between reference and decoded signals
 
 Example output:
 
@@ -228,9 +226,9 @@ SNR: 38.7 dB
 
 The validator is explicitly designed for automation:
 
-* Exit code `0`: validation passed
-* Exit code `1`: validation failed
-* No human interpretation required
+- Exit code `0`: validation passed
+- Exit code `1`: validation failed
+- No human interpretation required
 
 Example:
 
@@ -241,62 +239,62 @@ validate-audio reference.wav decoded.wav --tolerance 10.0 \
 
 This allows seamless integration into:
 
-* GitHub Actions
-* GitLab CI
-* Jenkins
-* Embedded test harnesses
+- GitHub Actions
+- GitLab CI
+- Jenkins
+- Embedded test harnesses
 
 ## Why Not Waveform Comparison?
 
 Waveform diffs fail because:
 
-* Phase shifts invalidate comparisons
-* Gain normalization breaks equality
-* Minor resampling introduces drift
-* Codecs reorder samples internally
+- Phase shifts invalidate comparisons
+- Gain normalization breaks equality
+- Minor resampling introduces drift
+- Codecs reorder samples internally
 
-Spectral comparison answers the *right* question:
+Spectral comparison answers the _right_ question:
 
-> *Is the information content preserved within acceptable limits?*
+> _Is the information content preserved within acceptable limits?_
 
 ## Why Not Perceptual Metrics?
 
 Perceptual metrics (PESQ, POLQA):
 
-* Are complex and opaque
-* Often require licenses
-* Are hard to debug
-* Are slow and heavyweight
+- Are complex and opaque
+- Often require licenses
+- Are hard to debug
+- Are slow and heavyweight
 
 This approach is:
 
-* Transparent
-* Deterministic
-* Explainable
-* Fast
+- Transparent
+- Deterministic
+- Explainable
+- Fast
 
 ## Typical Use Cases
 
 This methodology works well for:
 
-* Audio codec validation
-* Transport integrity tests (UDP, BLE, RTP)
-* Embedded and mobile pipelines
-* Regression testing
-* Hardware-in-the-loop testing
-* DSP algorithm validation
+- Audio codec validation
+- Transport integrity tests (UDP, BLE, RTP)
+- Embedded and mobile pipelines
+- Regression testing
+- Hardware-in-the-loop testing
+- DSP algorithm validation
 
 ## Final Thoughts
 
-This project demonstrates that
-**audio testing does not need to be fuzzy or subjective**.
+This project demonstrates that **audio testing does not need to be fuzzy or
+subjective**.
 
 By:
 
-* Using deterministic fixtures
-* Focusing on spectral correctness
-* Accepting controlled loss
-* Producing machine-verifiable results
+- Using deterministic fixtures
+- Focusing on spectral correctness
+- Accepting controlled loss
+- Producing machine-verifiable results
 
 we can build **robust, maintainable, and scalable audio tests** that survive
 real-world conditions.

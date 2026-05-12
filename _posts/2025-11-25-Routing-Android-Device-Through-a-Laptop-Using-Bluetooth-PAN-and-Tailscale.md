@@ -1,11 +1,12 @@
 ---
 lang: en
 layout: post
-tags: coauthored-with-chatgpt, android, bluetooth, networking, tailscale, vpn, pan
+tags:
+  coauthored-with-chatgpt, android, bluetooth, networking, tailscale, vpn, pan
 title: Routing Android Device Through a Laptop Using Bluetooth PAN and Tailscale
 ---
 
-## *A Practical Walkthrough of a Surprisingly Hard Problem*
+## _A Practical Walkthrough of a Surprisingly Hard Problem_
 
 For a task that sounded trivial at first, this experiment turned into a
 surprisingly deep dive into Android networking limitations, routing constraints,
@@ -14,7 +15,9 @@ under the hood.
 
 My goal sounded simple:
 
-> **Connect an Android phone to my Linux laptop over Bluetooth PAN and route ALL traffic from the phone to the Internet through the laptop — without Wi-Fi, without mobile data, without USB tethering, and without root.**
+> **Connect an Android phone to my Linux laptop over Bluetooth PAN and route ALL
+> traffic from the phone to the Internet through the laptop — without Wi-Fi,
+> without mobile data, without USB tethering, and without root.**
 
 Easy peasy.
 
@@ -25,11 +28,11 @@ a VPN running on top of a Bluetooth PAN link.
 
 This post is meant to be:
 
-* **technically accurate**
-* **highly detailed**
-* **fully reproducible**
-* and still enjoyable to read for other engineers who appreciate weird
-networking challenges.
+- **technically accurate**
+- **highly detailed**
+- **fully reproducible**
+- and still enjoyable to read for other engineers who appreciate weird
+  networking challenges.
 
 Let’s begin.
 
@@ -41,12 +44,12 @@ connection worked.
 
 This part was surprisingly smooth:
 
-* The laptop received a `enx` interface with an IP `192.168.44.34`.
-* The phone received the counterpart `bt-pan` interface with IP `192.168.44.1`.
-* I could ping from the laptop to the phone.
-* And from the phone I could ping to the laptop (using Termux), and access a
-local HTTP server running on the laptop from the phone browser, confirming
-bidirectional connectivity.
+- The laptop received a `enx` interface with an IP `192.168.44.34`.
+- The phone received the counterpart `bt-pan` interface with IP `192.168.44.1`.
+- I could ping from the laptop to the phone.
+- And from the phone I could ping to the laptop (using Termux), and access a
+  local HTTP server running on the laptop from the phone browser, confirming
+  bidirectional connectivity.
 
 So far so good: **Bluetooth PAN was working as a local network interface.**
 
@@ -55,9 +58,9 @@ So far so good: **Bluetooth PAN was working as a local network interface.**
 
 But then came the real challenge.
 
-## 2. The Real Goal: Routing the Phone *Through* the Laptop
+## 2. The Real Goal: Routing the Phone _Through_ the Laptop
 
-The *normal* use-case of Bluetooth tethering is:
+The _normal_ use-case of Bluetooth tethering is:
 
 > **Laptop → Phone → Internet**
 
@@ -67,11 +70,11 @@ But what I needed was the opposite:
 
 This breaks the default assumptions of Android:
 
-* The phone wants to *provide* Internet via Bluetooth, not consume it.
-* Android networking is extremely locked down.
-* You cannot modify routing tables without root.
-* Bluetooth PAN cannot have a proxy configured.
-* And Android prioritizes Wi-Fi and mobile data interfaces aggressively.
+- The phone wants to _provide_ Internet via Bluetooth, not consume it.
+- Android networking is extremely locked down.
+- You cannot modify routing tables without root.
+- Bluetooth PAN cannot have a proxy configured.
+- And Android prioritizes Wi-Fi and mobile data interfaces aggressively.
 
 So even though the PAN connection existed, Android had no idea it should use it
 as a gateway.
@@ -89,10 +92,10 @@ ip route add default via 192.168.44.34 dev bt-pan
 
 Inside Termux:
 
-* `ip rule list` → *Permission denied*
-* `ip route` → read-only
-* Installing `sudo` → impossible
-* Installing `tsu` → impossible (Termux could not access the Internet)
+- `ip rule list` → _Permission denied_
+- `ip route` → read-only
+- Installing `sudo` → impossible
+- Installing `tsu` → impossible (Termux could not access the Internet)
 
 ![No `sudo make me a sandwich` for you]({{ site.baseurl }}/images/2025-11-25-Routing-Android-Device-Through-a-Laptop-Using-Bluetooth-PAN-and-Tailscale/No-sudo-make-me-a-sandwich-for-you.jpeg)
 
@@ -121,8 +124,8 @@ Simple, quick, and familiar.
 
 The plan was:
 
-* Phone uses laptop as an HTTP proxy
-* Laptop forwards traffic to the real Internet
+- Phone uses laptop as an HTTP proxy
+- Laptop forwards traffic to the real Internet
 
 But here came another Android limitation:
 
@@ -130,15 +133,15 @@ But here came another Android limitation:
 
 Proxy configuration is only available for:
 
-* Wi-Fi networks
-* Mobile data (in some OEMs)
-* VPNs
+- Wi-Fi networks
+- Mobile data (in some OEMs)
+- VPNs
 
 But not Bluetooth, at least with OEMs images (CyanogenMod was like a theme park
 for these kind of hacks).
 
-So even though I could serve files to the phone using the laptop,
-**I could not tell the phone to use the laptop as a gateway via a proxy**.
+So even though I could serve files to the phone using the laptop, **I could not
+tell the phone to use the laptop as a gateway via a proxy**.
 
 Another dead end.
 
@@ -151,18 +154,18 @@ The next ChatGPT idea was:
 
 Totally possible in theory:
 
-* Run OpenVPN/WireGuard on the laptop
-* Import config on Android
-* Force all traffic through the tunnel
+- Run OpenVPN/WireGuard on the laptop
+- Import config on Android
+- Force all traffic through the tunnel
 
 However:
 
-* I would need to generate certificates
-* Copy them to Android
-* Prepare `.ovpn` files
-* Configure firewall routes
-* Enable forwarding
-* And troubleshoot everything by hand
+- I would need to generate certificates
+- Copy them to Android
+- Prepare `.ovpn` files
+- Configure firewall routes
+- Enable forwarding
+- And troubleshoot everything by hand
 
 Given the time constraints and operational complexity, this was too heavy and
 error prone.
@@ -173,12 +176,12 @@ I needed something cleaner.
 
 At this point I remembered that:
 
-* I already had **Tailscale** VPN installed on both the laptop and the phone
+- I already had **Tailscale** VPN installed on both the laptop and the phone
   from a previous experiment
-* Tailscale supports **Exit Nodes** (I didn't know that, I planned to use old
+- Tailscale supports **Exit Nodes** (I didn't know that, I planned to use old
   school Linux routes, but later this came handy)
-* And more importantly…
-  **Android routes *all* traffic through any enabled VPN by default**
+- And more importantly… **Android routes _all_ traffic through any enabled VPN
+  by default**
 
 That last point is critical.
 
@@ -192,9 +195,10 @@ regardless of the physical interface underneath.
 
 And suddenly everything clicked.
 
-**If I activate Tailscale on the phone, it will prefer the VPN endpoint as its default gateway.
-If the laptop is configured as an Exit Node, it will become the phone's route to the Internet.
-The only remaining question is: will Tailscale connect over Bluetooth PAN?**
+**If I activate Tailscale on the phone, it will prefer the VPN endpoint as its
+default gateway. If the laptop is configured as an Exit Node, it will become the
+phone's route to the Internet. The only remaining question is: will Tailscale
+connect over Bluetooth PAN?**
 
 Spoiler: yes. Perfectly.
 
@@ -204,23 +208,20 @@ I activated airplane mode, removed the SIM card, and only re-enabled Bluetooth.
 
 The phone now had exactly **three network interfaces**:
 
-* `lo`
-* `bt-pan` (`192.168.44.1`)
-* `tun0` (Tailscale, something like `100.x.y.z`)
+- `lo`
+- `bt-pan` (`192.168.44.1`)
+- `tun0` (Tailscale, something like `100.x.y.z`)
 
 ![Android Network Interfaces with Bluetooth PAN and Tailscale]({{ site.baseurl }}/images/2025-11-25-Routing-Android-Device-Through-a-Laptop-Using-Bluetooth-PAN-and-Tailscale/Android-Network-Interfaces-with-Bluetooth-PAN-and-Tailscale.jpeg)
 
-No Wi-Fi.
-No mobile data.
-No cellular modem.
-No other paths.
+No Wi-Fi. No mobile data. No cellular modem. No other paths.
 
 I activated Tailscale and selected my laptop as the **Exit Node**.
 
 Tailscale did something beautiful:
 
-> It detected the laptop as a LAN peer (Bluetooth PAN counts as LAN!)
-> and established a direct tunnel entirely through the PAN link.
+> It detected the laptop as a LAN peer (Bluetooth PAN counts as LAN!) and
+> established a direct tunnel entirely through the PAN link.
 
 Now Tailscale traffic flowed like this:
 
@@ -273,10 +274,10 @@ Successful request to `example.com`.
 
 Everything was working exactly as intended:
 
-* Local access via PAN
-* VPN routing via Tailscale
-* Internet access routed through the laptop
-* Completely isolated, no Wi-Fi or mobile data involved
+- Local access via PAN
+- VPN routing via Tailscale
+- Internet access routed through the laptop
+- Completely isolated, no Wi-Fi or mobile data involved
 
 ## 9. Why This Works (Short Version)
 
@@ -290,13 +291,10 @@ This solution works because:
 
 It is effectively:
 
-> **A full VPN tunnel running over a Bluetooth PAN connection, with the laptop acting as a router.**
+> **A full VPN tunnel running over a Bluetooth PAN connection, with the laptop
+> acting as a router.**
 
-No root.
-No route hacks.
-No USB.
-No Wi-Fi.
-No SIM card.
+No root. No route hacks. No USB. No Wi-Fi. No SIM card.
 
 ## 10. Final Thoughts
 
@@ -304,11 +302,11 @@ This turned out to be a much more interesting experiment than expected. What
 started as a simple “reverse Bluetooth tethering” problem became a practical
 demonstration of:
 
-* Android network constraints
-* Tailscale’s smart peer discovery
-* How VPN default routing works on Android
-* The flexibility of Bluetooth PAN as an IP transport
-* How creative layering of tools can solve non-standard networking needs
+- Android network constraints
+- Tailscale’s smart peer discovery
+- How VPN default routing works on Android
+- The flexibility of Bluetooth PAN as an IP transport
+- How creative layering of tools can solve non-standard networking needs
 
 The final result is solid, reproducible, and useful for engineering contexts
 where devices must operate without Wi-Fi or mobile data, but still need
