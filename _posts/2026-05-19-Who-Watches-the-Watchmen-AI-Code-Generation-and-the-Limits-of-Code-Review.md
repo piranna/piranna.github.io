@@ -1,4 +1,7 @@
 ---
+image: 2026-05-19-Who-Watches-the-Watchmen-AI-Code-Generation-and-the-Limits-of-Code-Review.png
+image_alt: >-
+  Developers panicking as they are overwhelmed by a tsunami of AI-generated code
 lang: en
 layout: post
 tags:
