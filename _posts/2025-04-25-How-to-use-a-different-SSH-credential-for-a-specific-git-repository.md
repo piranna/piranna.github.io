@@ -7,6 +7,8 @@ title: How to use a different SSH credential for a specific git repository
 
 If you have multiple SSH keys and want to use a specific one for a particular Git repository, you can do so by configuring it on the SSH config file:
 
+<!--more-->
+
 ```config
 # ~/.ssh/config
 

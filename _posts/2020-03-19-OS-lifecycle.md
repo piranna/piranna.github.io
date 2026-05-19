@@ -12,6 +12,8 @@ ensures that the current version of the operating system where the code is
 running is maintained and updated. But, is there a npm package with info about
 the operating systems lifecycles? Nope... enter `OS lifecycle`.
 
+<!--more-->
+
 [OS lifecycle](https://github.com/projectlint/OS-lifecycle) offer a functions
 whom to query for the info of diferent operating systems on a specific date,
 inspired on [@pkgjs/nv](https://github.com/pkgjs/nv) package to query info about

@@ -14,6 +14,8 @@ it fail. We are going to analize some of the most common ones, and when
 possible, see how we can fix them or find some alternatives solutions to
 minimize their impact.
 
+<!--more-->
+
 ![Zoom meetings are just modern seances]({{ site.baseurl }}/images/2022-11-30-WebRTC-Bugs-and-Where-to-Find-Them/Zoom-meetings-are-just-modern-seances.jpeg)
 
 Here we are assuming code is (mostly) well writting, so failure points have not

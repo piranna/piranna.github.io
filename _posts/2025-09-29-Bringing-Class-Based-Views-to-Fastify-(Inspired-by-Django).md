@@ -22,6 +22,8 @@ different use cases. So I decided to sketch out a design for
 that feels natural to use, contract-first, and TypeScript-friendly. This post is
 a walk-through of that exploration during the rest of the Sunday.
 
+<!--more-->
+
 ## Why Class-Based Views?
 
 In Django, in addition to writing separate functions for each route, you can

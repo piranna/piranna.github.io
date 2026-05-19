@@ -9,6 +9,7 @@ How we went from a one-off ping to a nightly, varied, almost-autonomous reminder
 flow **inside ChatGPT**, and the three agent patterns you can use to build it —
 complete with runnable code.
 
+<!--more-->
 ---
 
 ## TL;DR

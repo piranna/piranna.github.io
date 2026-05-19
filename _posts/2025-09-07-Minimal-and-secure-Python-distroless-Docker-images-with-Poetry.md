@@ -16,6 +16,8 @@ much improvements on the ecosystem during this year, this time I wanted to take
 the opportunity to create a more secure and minimal image, and to know what
 would be the best practices for doing so.
 
+<!--more-->
+
 One of the changes in the process has been to use the distroless images also for
 the build stages, instead of using the
 [official Python images](https://hub.docker.com/_/python), also based on Debian.

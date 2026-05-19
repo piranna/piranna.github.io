@@ -21,6 +21,8 @@ source code, probably in lines number I could be able to make both Dan Brown
 and J.K. Rowling to fall on their knees :-P Unluckily, they have got more
 revenues for their jobs than me, good for them :-)
 
+<!--more-->
+
 Anyway, the point is that I was told some time ago by
 [Adrian Ferreres](https://twitter.com/ardiadrianadri) (and after that by some
 more people) that I should try to improve my digital image by writing a blog

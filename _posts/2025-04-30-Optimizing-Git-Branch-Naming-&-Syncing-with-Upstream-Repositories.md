@@ -13,6 +13,7 @@ this post, we'll walk through the decision-making process for setting up a clear
 naming convention and syncing branches between your repository and an upstream
 one.
 
+<!--more-->
 ---
 
 ## **The Problem: Syncing with Upstream Repositories**

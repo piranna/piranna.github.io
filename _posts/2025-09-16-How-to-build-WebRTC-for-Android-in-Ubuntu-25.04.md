@@ -22,6 +22,8 @@ app?), and they just only provided another build in August 2020 (1.0.32006) to
 fill some important security holes, in case someone (everybody?) was still using
 the binary mobile libraries.
 
+<!--more-->
+
 > **Editor's note**: original version for Ubuntu 21.04 at April 23rd 2021.
 > Content updated to reflect the latest changes in the build process for Ubuntu
 > 22.04 at February 27th 2023, and for Ubuntu 25.04 at September 16th 2025.

@@ -12,6 +12,8 @@ otro. Por este motivo, voy a explicar las principales arquitecturas de red que
 suelen aplicarse en proyectos basados en WebRTC (y principalmente aplicadas al
 streaming de video), y cuales son los pros y contras de cada uno de ellos.
 
+<!--more-->
+
 [English version]({% post_url 2020-12-30-Types-of-WebRTC-networks %})
 
 ## Arquitecturas descentralizadas

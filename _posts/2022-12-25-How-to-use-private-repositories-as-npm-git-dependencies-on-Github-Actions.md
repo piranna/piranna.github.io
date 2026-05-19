@@ -22,6 +22,8 @@ Github Pages as a
 decided to store and serve from it all the other repositories documentation as
 well... doing it in an automated way :-)
 
+<!--more-->
+
 The task can be splitted in two halves:
 [generate the documentation](#generate-the-documentation), and
 [publish it](#publish-the-documentation).

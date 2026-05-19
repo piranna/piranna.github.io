@@ -15,6 +15,8 @@ difficulties to add a new platform to an existing code, or forcing to have
 several different projects that could lead to duplicated efforts or diverge the
 features of them.
 
+<!--more-->
+
 [re-start](https://github.com/react-everywhere/re-start) is a set of
 pre-configured templates to create React Native projects that can run both on
 Android, iOS, web, Windows and Electron from a single source code base, unifying

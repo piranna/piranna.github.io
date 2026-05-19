@@ -11,6 +11,8 @@ can log them, but printing logs everywhere add a lot of noise, so it's better to
 throw errors and handle them in upper levels. Also, a thrown error is easy to
 check and test, but a log message is not, so they are better for unit testing.
 
+<!--more-->
+
 After throwing it, the caller function (and the one that expected it to work)
 can process it and decide if it's something that can be ignored (a warning) or
 not, but the actual function that had the error should **not** decide itself if

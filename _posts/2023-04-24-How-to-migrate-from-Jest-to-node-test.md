@@ -18,6 +18,8 @@ when needing to configure transpilation. That has lead to several people looking
 for alternatives, and having now a built-in test runner in Node.js, I decided to
 see myself how to migrate to it.
 
+<!--more-->
+
 First of all, it's to identify the replacements for the different Jest features.
 As already shown, [node:test](https://nodejs.org/api/test.html) module can the
 used as the test runner and for mocking, meanwhile

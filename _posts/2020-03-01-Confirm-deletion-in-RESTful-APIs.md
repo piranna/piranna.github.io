@@ -13,6 +13,8 @@ between different pages is *so* 2010-style, and there's no direct mapping at
 this point between REST APIs and CRUD operations, that I've been thinking in a
 REST compatible alternative: use a token.
 
+<!--more-->
+
 The idea is, when you want to remove an user or resource, call to the
 corresponding endpoint (ideally the resource path using the `DELETE` method),
 but instead of doing inmediatly the removal operation, return an unique token

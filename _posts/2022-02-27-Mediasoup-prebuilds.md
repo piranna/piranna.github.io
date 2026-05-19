@@ -12,6 +12,8 @@ needing to compile it at install on the target platform. This is done by
 compiling the Worker executables in advance for multiple platforms, and bundling
 them in the distributed package.
 
+<!--more-->
+
 Prebuilds are being compiled using
 [Github Actions](https://github.com/features/actions). Currently it's being
 configured to be able to

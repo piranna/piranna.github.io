@@ -9,6 +9,8 @@ I've been working lately a bit more on the
 [freelancer calculator](2020-03-30-Freelancer-calculator.md), and was able to
 identify and fix some of its errors.
 
+<!--more-->
+
 Main important one was not properly using the inverse of the fractions, like
 increasing a number by a third, and later decreasing the result also by a third
 instead of a quart to get the original number (`a + a/3 = b` -> `4a/3 = b` ->

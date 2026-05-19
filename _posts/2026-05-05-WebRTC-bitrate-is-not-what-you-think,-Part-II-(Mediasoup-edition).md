@@ -10,6 +10,7 @@ title: WebRTC bitrate is not what you think, Part II (Mediasoup edition)
 > What changes when you add an SFU ([Mediasoup](https://mediasoup.org/)) in the
 > middle of the pipeline?
 
+<!--more-->
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19988776.svg)](https://doi.org/10.5281/zenodo.19988776)
 
 ## Introduction

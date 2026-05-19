@@ -10,6 +10,8 @@ when feeding it tens of thousands of tasks from hundreds of producer threads,
 the executor happily accepted them all. The result? Memory usage ballooned,
 latency increased, and eventually the whole system became unstable.
 
+<!--more-->
+
 The root issue: by default, `ProcessPoolExecutor` accepts
 **an unbounded number of submissions**. The internal queue of work IDs grows
 without limit, and since every `submit()` creates a `Future`, you can easily

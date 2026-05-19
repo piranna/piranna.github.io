@@ -25,6 +25,8 @@ audio fixtures** and validates decoded output using **FFT-based frequency
 analysis**, designed to work reliably even with lossy codecs and imperfect
 transports.
 
+<!--more-->
+
 ## The Core Problem
 
 Let’s define the problem precisely:

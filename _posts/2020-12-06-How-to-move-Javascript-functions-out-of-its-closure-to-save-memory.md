@@ -10,6 +10,8 @@ I talked about a pattern I use (a lot!) abusing the functional methods of
 Javascript to earn some memory and CPU usage. I promised to create a blog post,
 and almost 4 months after (too much energy draining work...), here is it.
 
+<!--more-->
+
 ## The problem
 
 Imagine you have a list with info about Ubuntu versions...

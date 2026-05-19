@@ -30,6 +30,8 @@ idea of making it
 like [Links](http://links.twibright.com/), [w3m](http://w3m.sourceforge.net/) or
 [Lynx](https://lynx.invisible-island.net/).
 
+<!--more-->
+
 Web pages are independent of the platform they are rendered, being a screen or
 printed in paper or using a screen reader for visually imparied persons, so
 doing the adaptation for a terminal output using CSS stylesheets made totally

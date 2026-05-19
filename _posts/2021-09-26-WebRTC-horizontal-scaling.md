@@ -14,6 +14,8 @@ but they are not the most simple nor always the more efficient ones. So when
 deciding how to aproach Mafalda horizontal scaling, I needed to consider the
 pros and cons of each use case I would need, and here we have my conclusions.
 
+<!--more-->
+
 ## P2P
 
 The first one needs to maintain its own list of servers where to ask for extra

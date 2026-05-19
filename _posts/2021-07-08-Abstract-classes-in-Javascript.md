@@ -11,6 +11,8 @@ implement: don't allow to instanciate them :-) Just check if the `constructor`
 of the instance we are creating is the own class instead of one of its
 childrens, and don't throw an error if it is:
 
+<!--more-->
+
 ```js
 class A
 {

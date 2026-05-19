@@ -10,6 +10,8 @@ If you have a folder with multiple repositories that you want your commits use a
 different email account, but keep using your (personal) one for anything else,
 you can do it in two steps:
 
+<!--more-->
+
 1. create a new file with the git config that you want to use (not only email,
    you can change anything) for the repositories. For tidyness, I set it at the
    repositories folder named `gitconfig.ini`, since `.gitconfig` file uses the

@@ -11,6 +11,8 @@ I've done a Proof-of-Concept about how to use
 like a CLI command. This is useful for example when it's needed to do an offline
 aware application that needs to queue some operations until it's connected again.
 
+<!--more-->
+
 [redux](https://redux.js.org/) is mostly focused for
 [React](https://reactjs.org/) and
 [React Native](https://facebook.github.io/react-native/) applications, but it's

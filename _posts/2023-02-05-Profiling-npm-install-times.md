@@ -17,6 +17,8 @@ like [slow-deps](https://www.npmjs.com/package/slow-deps), so just by change, I
 [found on StackOverflow](https://stackoverflow.com/a/39991677/586382) a
 reference to [gnomon](https://github.com/paypal/gnomon).
 
+<!--more-->
+
 `gnomon` just only prepend timestamp information to the standard output of
 another command, so it's a bit crude for my use case, but with some tweaking can
 provide the needed info. In this case, by running `npm install` in verbose mode,

@@ -14,6 +14,8 @@ scaling. I've been working on a solution for this problem for a while on, and
 since Mafalda is build on top of Mediasoup, it's also needed to help it to
 provide transparent vertical and horizontal scaling, so let's see how it works.
 
+<!--more-->
+
 `Mediasoup-Horizontal` is a manager that allows to remotely control multiple
 instances of Mediasoup, providing a simple and easy to use API based on the one
 from the Javascript

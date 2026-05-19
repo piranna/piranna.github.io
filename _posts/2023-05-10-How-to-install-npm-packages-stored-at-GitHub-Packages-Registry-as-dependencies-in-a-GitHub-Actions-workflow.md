@@ -12,6 +12,8 @@ possible (for example, private packages) and sometimes we would need to publish
 multiple development versions while trying to debug some obscure issues. This
 is tedious and nasty, so that's why so much people like monorepos.
 
+<!--more-->
+
 Problem with them, is that `npm` was designed with modularity on mind, and tried
 to enforce the "one package, one repo" identity. That's why native support for
 monorepos and workspaces has been delayed for so much time. I personally agree

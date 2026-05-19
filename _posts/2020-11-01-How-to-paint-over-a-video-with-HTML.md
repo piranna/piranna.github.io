@@ -16,6 +16,8 @@ Sometimes, when you left out social networks and embrace back the Internet 90's
 spirit, you find yourself rediscovering that the Web is still an amazing place
 :-)
 
+<!--more-->
+
 ## Canvas recording
 
 [Canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)

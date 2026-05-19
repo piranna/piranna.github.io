@@ -12,6 +12,8 @@ Google Spreadsheet I've done a
 to adjust them. The calculator is focused for Spain taxes (one of the reasons
 texts are in spanish), but should be easy to addapt to other normatives.
 
+<!--more-->
+
 The spreadsheet has three tabs, one with the calculator from employee to
 freelance, another from freelance to employee, and the third one to store tax
 due percentages and costs. They are very easy to use, just only needs to set the

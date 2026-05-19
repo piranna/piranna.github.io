@@ -21,6 +21,8 @@ My goal sounded simple:
 
 Easy peasy.
 
+<!--more-->
+
 What follows is a detailed, chronological walkthrough of everything I tried,
 from the obvious approaches to the ones that Android outright refuses, and the
 final solution that actually worked: using [Tailscale](https://tailscale.com) as

@@ -10,6 +10,8 @@ Recently I've been involved in a new Typescript project all of my own where I
 would end up deploying it on production on a raw AWS machine, so no help from
 dev friendly PaaSs environments, as I usually prefer to work.
 
+<!--more-->
+
 I always disagreed with the idea of uploading the code directly to the server or
 Docker image both by hand or with `git clone` and transpile it on the server the
 same way I do in my development machine, both due to security issues (**NEVER**

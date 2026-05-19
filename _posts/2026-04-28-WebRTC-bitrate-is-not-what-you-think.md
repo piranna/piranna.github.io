@@ -23,6 +23,8 @@ I built something slightly different:
 
 This is what came out of it.
 
+<!--more-->
+
 ## The key idea: stop tweaking, start measuring
 
 Typical WebRTC demos let you:

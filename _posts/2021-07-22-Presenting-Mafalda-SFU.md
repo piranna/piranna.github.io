@@ -10,6 +10,8 @@ twitter: '1417988668082442240'
 horizontal scalable SFU built on top of [Mediasoup](https://mediasoup.org/).
 This allow to have (theorically) unlimited sized WebRTC-based video room calls.
 
+<!--more-->
+
 Mediasoup is one of the most important SFUs: open source, performant, and easy
 to use, but it's too much low level and RTP streams oriented, so it's main issue
 is its lack of off-the-shelf scalability. Due to that, Mediasoup `Router`

@@ -18,6 +18,8 @@ published on the
 It’s always nice when a side project receives some external recognition,
 especially one that started mostly as an experiment.
 
+<!--more-->
+
 ## How Mafalda SFU started
 
 Mafalda SFU originally started in early 2021 as a way to **learn about scaling
