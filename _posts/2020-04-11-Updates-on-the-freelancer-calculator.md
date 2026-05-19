@@ -2,7 +2,7 @@
 layout: post
 tags: calculator, freelance, taxes, spain
 title: Updates on the freelancer calculator
-twitter: '1248936943431364608'
+twitter: "1248936943431364608"
 ---
 
 I've been working lately a bit more on the

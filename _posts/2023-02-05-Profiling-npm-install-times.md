@@ -10,7 +10,7 @@ install times, specially since I'm using git dependencies. I tried to reduce
 times by [publishing](https://www.npmjs.com/org/mafalda) some of the most common
 packages to npm, so removing need to install and compile development
 dependencies like Typescript, but still install times were huge for no reason,
-so I needed some way to measure the install time of *each one* of the
+so I needed some way to measure the install time of _each one_ of the
 dependencies. This lead out options like
 [UNIX time command](https://man7.org/linux/man-pages/man1/time.1.html) or tools
 like [slow-deps](https://www.npmjs.com/package/slow-deps), so just by change, I
@@ -47,7 +47,7 @@ Focusing on that ones, we find two of them (output is truncated for brevity):
 ```
 
 `gnomon` show the time each line has been the last one shown in the terminal, so
-that time correspond to the generation of *the next line*. This is particularly
+that time correspond to the generation of _the next line_. This is particularly
 useful when showing "starting..." lines, to know in what task this time has been
 employed so much, but when showing only the conclusions (like it's the case), we
 need to focus on the next line instead.
@@ -60,7 +60,7 @@ minutes, and the problem is probably due to use Node.js v19.4.0 instead of a LTS
 version, I would not worry too much.
 
 Another project I have been having more important problems with install time has
-been the Remote Mediasoup integration tests, where install of *all* Mafalda
+been the Remote Mediasoup integration tests, where install of _all_ Mafalda
 subprojects is involved, and in fact Github Actions cancel the job step after
 about 10-12 minutes (does it has a timeout, or it thinks I'm mining
 cryptocurrencies?). So checking with `gnomon`, the timings percentages seems
@@ -90,7 +90,7 @@ the regular one
 that prevent using the latest one with Mafalda, working on fixing them at this
 moment).
 
-Mediasoup, *what else?*
+Mediasoup, _what else?_
 
 [Mediasoup](https://mediasoup.org/) by design is compiled on destination
 platform at install time, so it can take a lot of time to install with all CPU

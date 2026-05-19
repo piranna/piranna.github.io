@@ -2,7 +2,7 @@
 layout: post
 tags: react-native, restart, javascript, mobile, cross-platform
 title: What's `re-start`?
-twitter: '1250499542698594304'
+twitter: "1250499542698594304"
 ---
 
 [React Native](https://facebook.github.io/react-native/) is a framework derived
@@ -123,7 +123,7 @@ entrypoint, return instead the content of `App.js`. On the other hand,
 `react-scripts start` uses the file at `src/index.js` as default entrypoint for
 `web` platform, and trying to use the `App.js` file in the `web` platform fails
 because `react-scripts` can't use files outside `src` folder:
-https://gist.github.com/d62cbe56a14f809a127da2c4a20f1943
+<https://gist.github.com/d62cbe56a14f809a127da2c4a20f1943>
 
 As proposed by the error message, solution has been to just move `App.js` to
 `src/App.js` as part of the tasks done by the `finishInstall.js` script, and
@@ -141,7 +141,7 @@ to `re-start` project.
 
 ### ensure projects work unmodified once they are generated
 
-The main *leit-motiv* of `re-start` is to create projects that can run on
+The main _leit-motiv_ of `re-start` is to create projects that can run on
 several platforms, but this was not fully true for the generated projects,
 providing some basic config and needing some tune-ups to make this true. I've
 paid special attention to this point so generated projects can run in all the
@@ -186,7 +186,7 @@ Windows binaries need to be signed, so after doing that, if you try to build it
 you'll probably get an error about the included certificate has expired. To fix
 that issue, open the project solution file stored at `windows/<projectName>.sln`
 with VisualStudio to
-[update the signing certificate](https://msdn.microsoft.com/en-us/library/windows/apps/br230260(v=vs.110).aspx).
+[update the signing certificate](<https://msdn.microsoft.com/en-us/library/windows/apps/br230260(v=vs.110).aspx>).
 After creating the new certificate, when you'll try to build the Windows binary
 for the first time it will ask you to install the generated certificate in your
 system, so just accept it and let the build process to end.
@@ -200,9 +200,9 @@ possible to use local filesystem to serve the templates files (both directly or
 as a tarfile), tests for `re-start` could make use of `nock` to intercept the
 HTTP requests for the packages install or start a local npm proxy.
 
-Another future task is to check what libraries are needed to make `nuget.exe`
-to work on Linux, so generation of Windows binaries would not need to be done in
-a Windows host, and to add support for
+Another future task is to check what libraries are needed to make `nuget.exe` to
+work on Linux, so generation of Windows binaries would not need to be done in a
+Windows host, and to add support for
 [react-native-macos](https://github.com/ptmt/react-native-macos) to be able to
 generate native OSX binaries. And from a personal joice, create a new React
 Native port to render UI components in the terminal console. Why not? :-)

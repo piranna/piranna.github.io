@@ -2,7 +2,7 @@
 layout: post
 tags: blog, github, jekyll, tutorial
 title: How to have a blog on Github
-twitter: '1225206478035963905'
+twitter: "1225206478035963905"
 ---
 
 Since I was a child I never liked to write. I was more a thinker, a tinker and a
@@ -16,10 +16,10 @@ what I say and how I do it, and get to be really slow to get fully polished my
 final text (I mostly did my bachelor thesis code in 6 months... and later
 spended other 14 months more just for writting the project memory. It's ironic
 that the times I got to write something, people got surprised that I have a
-somewhat good style... and more ironic that having written so much (open)
-source code, probably in lines number I could be able to make both Dan Brown
-and J.K. Rowling to fall on their knees :-P Unluckily, they have got more
-revenues for their jobs than me, good for them :-)
+somewhat good style... and more ironic that having written so much (open) source
+code, probably in lines number I could be able to make both Dan Brown and J.K.
+Rowling to fall on their knees :-P Unluckily, they have got more revenues for
+their jobs than me, good for them :-)
 
 <!--more-->
 
@@ -40,9 +40,9 @@ both wherever I go and online. [Dev.io](https://dev.to) is really interesting
 (and I should be reading it A LOT more...) and should consider to use it as
 blog, but as I've just said I'm not into the blogging scene, and also I would
 like both to have control and not lost my blog posts, and have some greater
-visibility on social networks. So, I needed to find an alternative using what
-I get more use to. And what are the pages I'm connected in an almost daily
-basis? [Github](https://github.com/piranna) and
+visibility on social networks. So, I needed to find an alternative using what I
+get more use to. And what are the pages I'm connected in an almost daily basis?
+[Github](https://github.com/piranna) and
 [Twitter](https://twitter.com/el_piranna).
 
 Github not only works as my online portafolio by having a single place where all
@@ -64,9 +64,10 @@ The first step is to create the blog itself. Github Pages has been used for a
 [lot of use cases](https://github.com/cristinafsanz/github-pages) where a static
 site is enough (also as a cheap CDN...). Since it will be used as my main blog
 and website, I'm going to generate it as a "user site". This means that it will
-be available under a domain like http://piranna.github.io (you can be able later
-to config a custom domain to redirect to it, if you want), and for doing so,
-it's just enough by creating a Github repo with the name `piranna.github.io`.
+be available under a domain like <http://piranna.github.io> (you can be able
+later to config a custom domain to redirect to it, if you want), and for doing
+so, it's just enough by creating a Github repo with the name
+`piranna.github.io`.
 
 Github Pages are powered by [Jekyll](https://jekyllrb.com/), a generator of
 static web sites. It could be possible to create it from scratch (an
@@ -81,17 +82,19 @@ Jekyll Now has the problem than the original project owner is missing with no
 activity in two years and the project seems to be unmaintained, so things like
 changing the theme using the Github own
 [Jekyll Theme Chooser](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser/)
-or [Jekyll themes](https://help.github.com/articles/about-jekyll-themes-on-github/)
-doesn't work, and changing the theme needs to be done by hand, or you can fix the
-bug by [deleting](https://github.com/barryclark/jekyll-now/issues/745#issuecomment-364339715)
+or
+[Jekyll themes](https://help.github.com/articles/about-jekyll-themes-on-github/)
+doesn't work, and changing the theme needs to be done by hand, or you can fix
+the bug by
+[deleting](https://github.com/barryclark/jekyll-now/issues/745#issuecomment-364339715)
 the `_layouts/default.html` so it doesn't overwrites the one in the selected
 theme (since now it's possible to use external templates, it should be moved to
 one of them). Due to this things, that's why I've proposed to
 [fork the project](https://github.com/barryclark/jekyll-now/issues/1352) and
 maintain it collaboratelly (in-real-life problems of project developers and
-maintainers or also their death are by far, with the burn-out of not being
-payed nor recognized for our work while corps make a bucket of money, the main
-problem of Open Source...).
+maintainers or also their death are by far, with the burn-out of not being payed
+nor recognized for our work while corps make a bucket of money, the main problem
+of Open Source...).
 
 After forking Jekyll Now, the first thing you need to do is to edit the
 `_config.yml` file. This is needed for two purposses. The first one is to set
@@ -150,13 +153,13 @@ would fit better.
 To use Twitter as a comments platform, the process needs to be split in two
 tasks: publish the posts in Twitter, and show the Twitter threads in the blog
 itself. For the first one, I took the idea from
-https://ictsolved.github.io/blog/blogging/auto-post-articles-from-jekyll-blog-to-social-sites
+<https://ictsolved.github.io/blog/blogging/auto-post-articles-from-jekyll-blog-to-social-sites>
 where show how to use [IFTTT](https://ifttt.com/) to publish new tweets from
 your blog RSS feed. The title is a bit fake since it only shows how to do it
 with Twitter, but it's interesting since it's easy to do and also it's done in a
 way where just only publish the most recent one and not all the posts in the
 feed. Regarding putting the Twitter threads in the post, at
-https://flamiszoltan.me/twitter-as-comment-system propose a system where the
+<https://flamiszoltan.me/twitter-as-comment-system> propose a system where the
 tweet ID is added manually to the blog posts
 [front matter](https://jekyllrb.com/docs/front-matter/) (the mechanism that
 Jekyll has to add metadata to the markdown files) and used to render the tweets

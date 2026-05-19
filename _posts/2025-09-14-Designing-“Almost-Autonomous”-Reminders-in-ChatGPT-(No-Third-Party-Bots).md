@@ -1,7 +1,9 @@
 ---
 lang: en
 layout: post
-tags: ai, automation, chatgpt, coauthored-with-chatgpt, openai, productivity, reminders, tasks, scheduling
+tags:
+  ai, automation, chatgpt, coauthored-with-chatgpt, openai, productivity,
+  reminders, tasks, scheduling
 title: Designing “Almost-Autonomous” Reminders in ChatGPT (No Third-Party Bots)
 ---
 
@@ -10,7 +12,6 @@ flow **inside ChatGPT**, and the three agent patterns you can use to build it �
 complete with runnable code.
 
 <!--more-->
----
 
 ## TL;DR
 
@@ -18,10 +19,9 @@ complete with runnable code.
   ChatGPT:
   1. **Pre-Scheduled Simulation (In-Chat, Fixed):** prewrite times & texts
      (rotate weekly/monthly). Easiest, zero infra, no true randomness.
-  2. **External Agent + OpenAI Tasks (Delegated Planning):** a tiny daily
-     script asks the model for tonight’s plan (times + messages) and programs
-     **ChatGPT Tasks** so the pings appear here. True nightly randomness, low
-     infra.
+  2. **External Agent + OpenAI Tasks (Delegated Planning):** a tiny daily script
+     asks the model for tonight’s plan (times + messages) and programs **ChatGPT
+     Tasks** so the pings appear here. True nightly randomness, low infra.
   3. **In-Chat “Housekeeper” (Daily Wake-Up):** one daily Task (e.g., 23:30)
      that, when it fires, instructs ChatGPT to generate and schedule 2–3
      additional reminders between 23:30–00:30. Feels autonomous without running
@@ -30,8 +30,6 @@ complete with runnable code.
 - We finished with pattern **#3**: first visible reminder at **23:30**; I then
   schedule 2–3 more for the 23:30–00:30 window, with varied tone and “stop on
   **done**”.
-
----
 
 ## The Journey (Timeline of What We Actually Set Up)
 
@@ -45,13 +43,11 @@ complete with runnable code.
    - a daily **in-chat wake-up** Task (the “housekeeper”) that schedules the
      rest **at runtime**.
 5. **Final choice** → **Housekeeper @ 23:30** as the first visible reminder; I
-   program 2–3 more random reminders until 00:30. Commands: `done`,
-   `snooze 10`, `pause teeth`, `resume teeth`.
+   program 2–3 more random reminders until 00:30. Commands: `done`, `snooze 10`,
+   `pause teeth`, `resume teeth`.
 
 > Timezone throughout: **Europe/Madrid**. Window: **23:30–00:30**. Messages:
-  6–14 words, natural tone, ≤1 emoji, non-repetitive nightly.
-
----
+> 6–14 words, natural tone, ≤1 emoji, non-repetitive nightly.
 
 ## Doing It Natively in ChatGPT with Prompts
 
@@ -59,23 +55,20 @@ Before we explored agents or housekeepers, we discovered you can go quite far
 **just with prompts and built-in Tasks inside ChatGPT**. This doesn’t require
 any external script or API calls—everything lives in your conversation.
 
-- **Step 1: Create simple one-off reminders.**
-  Example: *“Remind me in one minute”* → ChatGPT can schedule a single Task with
-  the message **“It’s been a minute ⏰”**. You’ll see it pop up right here in
-  the thread.
+- **Step 1: Create simple one-off reminders.** Example: _“Remind me in one
+  minute”_ → ChatGPT can schedule a single Task with the message **“It’s been a
+  minute ⏰”**. You’ll see it pop up right here in the thread.
 
-- **Step 2: Add a daily fixed reminder.**
-  You can say *“Remind me every night at 22:30 to brush my teeth”*. This works,
-  but early on we noticed the copy felt too rigid—robotic or even condescending
-  — so we experimented with tone.
+- **Step 2: Add a daily fixed reminder.** You can say _“Remind me every night at
+  22:30 to brush my teeth”_. This works, but early on we noticed the copy felt
+  too rigid—robotic or even condescending — so we experimented with tone.
 
-- **Step 3: Build a nightly sequence (“window + insistence”).**
-  Instead of a single time, you can ask:
-  *“Remind me at 23:30, 23:45, 00:00, and 00:15 until I confirm”*. ChatGPT
-  schedules those four Tasks with different messages. If you reply **“done”**,
-  it cancels the rest for that night. If you say **“snooze 10”**, it can slot in
-  one more Task 10 minutes later. This approach gives you multi-step persistence
-  entirely through prompts.
+- **Step 3: Build a nightly sequence (“window + insistence”).** Instead of a
+  single time, you can ask: _“Remind me at 23:30, 23:45, 00:00, and 00:15 until
+  I confirm”_. ChatGPT schedules those four Tasks with different messages. If
+  you reply **“done”**, it cancels the rest for that night. If you say **“snooze
+  10”**, it can slot in one more Task 10 minutes later. This approach gives you
+  multi-step persistence entirely through prompts.
 
 ### Pros
 
@@ -91,13 +84,11 @@ any external script or API calls—everything lives in your conversation.
   explicitly.
 - Can get noisy if you try to manage many reminders manually.
 
----
-
 ## The Three Agent Patterns (with Code)
 
 > **Important:** The `Tasks` API names below (`client.tasks.create/update`) are
-  representative. Depending on your SDK/version, names or shapes may differ
-  slightly. Treat these as **templates**.
+> representative. Depending on your SDK/version, names or shapes may differ
+> slightly. Treat these as **templates**.
 
 ### 1) Pre-Scheduled Simulation (In-Chat, Fixed)
 
@@ -208,8 +199,6 @@ if __name__ == "__main__":
 
 - Variety is “pre-baked.” To change tone or timing nightly, you must re-plan.
 
----
-
 ### 2) External Agent + OpenAI Tasks (Delegated Planning)
 
 **When to choose:** You want **true nightly randomness** (fresh times + fresh
@@ -314,11 +303,9 @@ if __name__ == "__main__":
 
 - Requires a daily trigger (Actions/cron/Worker).
 
-> *Note:* You can expand messages by day-of-week, user mood, recent behavior
+> _Note:_ You can expand messages by day-of-week, user mood, recent behavior
 > (“if missed yesterday, nudge earlier”), etc.—the model can synthesize those
 > rules into the JSON plan.
-
----
 
 ### 3) In-Chat “Housekeeper” (Daily Wake-Up) — **Our Final Choice**
 
@@ -328,8 +315,8 @@ in ChatGPT.
 
 **How it works:**
 
-- You create **one recurring Task** at **23:30**. That message is your
-  **first visible reminder**.
+- You create **one recurring Task** at **23:30**. That message is your **first
+  visible reminder**.
 - Its prompt instructs ChatGPT to **immediately schedule 2–3 more** reminders at
   randomized minutes between **23:30–00:30**, ensure ≥10-minute spacing, and
   stop if you reply **done**.
@@ -403,26 +390,21 @@ if __name__ == "__main__":
   we did). A truly silent internal wake-up isn’t supported as a user-invisible
   message.
 
----
-
 ## Choosing the Right Pattern
 
-- **I want the simplest thing now** → **#1 Pre-Scheduled Simulation**.
-  Rotations keep it fresh enough for many people. Zero infra.
+- **I want the simplest thing now** → **#1 Pre-Scheduled Simulation**. Rotations
+  keep it fresh enough for many people. Zero infra.
 
-- **I want genuine nightly randomness** and don’t mind a tiny daily job →
-  **#2 External Agent + Tasks**.
-  Use GitHub Actions (daily), a cron on a VPS/NAS, or a Worker hitting a small
-  endpoint.
+- **I want genuine nightly randomness** and don’t mind a tiny daily job → **#2
+  External Agent + Tasks**. Use GitHub Actions (daily), a cron on a VPS/NAS, or
+  a Worker hitting a small endpoint.
 
 - **I want it all in ChatGPT** with minimal setup and a strong sense of autonomy
-  → **#3 Housekeeper** (our pick).
-  One recurring Task at 23:30; it schedules the additional reminders on the fly.
+  → **#3 Housekeeper** (our pick). One recurring Task at 23:30; it schedules the
+  additional reminders on the fly.
 
 > You can also combine them: use **#3** as the baseline and fall back to **#1**
-  (weekly rotation) if anything fails.
-
----
+> (weekly rotation) if anything fails.
 
 ## Operational Notes & Best Practices
 
@@ -431,14 +413,12 @@ if __name__ == "__main__":
 - **Spacing:** Keep ≥10 minutes between reminders to avoid spammy bursts.
 - **Copy style:** 6–14 words, natural, sometimes lightly humorous, max one
   emoji.
-- **Stopping logic:** Reply **done** to cancel the rest of the night;
-  **snooze X** to add one late reminder.
+- **Stopping logic:** Reply **done** to cancel the rest of the night; **snooze
+  X** to add one late reminder.
 - **Idempotency:** Save `task_id` so you can **update** instead of creating
   duplicates.
 - **Pause/Resume:** Add simple commands (`pause teeth`, `resume teeth`) to
   toggle the routine.
-
----
 
 ## What We Actually Ended Up With
 
@@ -449,9 +429,7 @@ if __name__ == "__main__":
   adapt if you missed yesterday), switch to **#2** so your script can keep
   longer-term state and feed it back into the plan.
 
----
-
-*Note on alternatives:* If you ever decide to move reminders off ChatGPT, you
+_Note on alternatives:_ If you ever decide to move reminders off ChatGPT, you
 can replace Tasks with notifications in other channels (e.g.,
 Telegram/Matrix/email) via an external agent. In this article we stayed strictly
 with **ChatGPT/OpenAI** delivery.

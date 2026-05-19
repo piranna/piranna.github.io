@@ -7,10 +7,10 @@ tags: webrtc, video, codec, bitrate, benchmark, measurement, reproducibility
 title: WebRTC bitrate is not what you think
 ---
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19961278.svg)](https://doi.org/10.5281/zenodo.19961278)
+
 Most WebRTC discussions about bitrate are wrong. Not because people don’t know
 the APIs, but because they don’t control the experiment.
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19961278.svg)](https://doi.org/10.5281/zenodo.19961278)
 
 So instead of asking:
 

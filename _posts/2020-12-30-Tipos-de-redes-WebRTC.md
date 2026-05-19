@@ -3,7 +3,7 @@ lang: es
 layout: post
 tags: webrtc, streaming, video, architecture
 title: Tipos de redes WebRTC
-twitter: '1344349398004858880'
+twitter: "1344349398004858880"
 ---
 
 Respecto a arquitecturas WebRTC, no hay una bala de plata. Dependendiendo de
@@ -21,12 +21,12 @@ streaming de video), y cuales son los pros y contras de cada uno de ellos.
 ### P2P
 
 Este es el más básico de todos ellos, y el único caso de uso para el que
-realmente se diseño WebRTC. En esta arquitectura se establece una conexión
-entre los dos clientes, generalmente llamados *peers*, y es la mas optima en
-cuanto a consumo de ancho de banda, calidad y de latencia, ya que ambos peers se
-conectan directamente, así que los únicos límites son los de la conexión y la
-CPU de ambos peers. Esta es la arquitectura más sencilla de implementar y hay
-multitud de aplicaciones de ejemplo y de demos... el problema está, en que ésta
+realmente se diseño WebRTC. En esta arquitectura se establece una conexión entre
+los dos clientes, generalmente llamados _peers_, y es la mas optima en cuanto a
+consumo de ancho de banda, calidad y de latencia, ya que ambos peers se conectan
+directamente, así que los únicos límites son los de la conexión y la CPU de
+ambos peers. Esta es la arquitectura más sencilla de implementar y hay multitud
+de aplicaciones de ejemplo y de demos... el problema está, en que ésta
 arquitectura está limitada a conexiones uno-a-uno.
 
 ### Mesh
@@ -59,7 +59,8 @@ ventaja de que dichos Media Servers pueden tener funcionalidad extra, como por
 ejemplo grabar las sesiones en un archivo.
 
 A pesar de que por diseño todas las comunicaciones basadas en WebRTC están
-cifradas, el hecho que el servidor tenga que descifrarlas para procesarlas y redirigirlas puede representar un problema de seguridad en caso de que quede
+cifradas, el hecho que el servidor tenga que descifrarlas para procesarlas y
+redirigirlas puede representar un problema de seguridad en caso de que quede
 comprometido, por ese motivo no se pueden usar en algunos sectores como son las
 aplicaciones bancarias, aunque se esta trabajando en una especificacion para
 [añadir soporte de encriptacion end-to-end](https://www.callstats.io/blog/2018/06/01/examining-srtp-double-encryption-procedures-for-selective-forwarding-perc)
@@ -67,7 +68,7 @@ para solucionar este problema.
 
 ### MCU
 
-Las arquitecturas basadas en *Multipoint Conferencing Unit* fueron las primeras
+Las arquitecturas basadas en _Multipoint Conferencing Unit_ fueron las primeras
 en tratar de solucionar el problema del ancho de banda en las videoconferencias
 múltiples. Desde el punto de vista de los peers, es como si estuvieran
 conectados contra otro único peer (un stream de subida y uno de bajada)... solo
@@ -117,7 +118,7 @@ domésticos han aumentado considerablemente. Además, se ha visto que la mayorí
 de casos de uso han sido aplicaciones de videoconferencia, sin necesidad de un
 procesamiento de los streams en el lado del servidor más allá de grabar las
 sesiones. Todo esto junto con la búsqueda de reducir costes de servidor ha hecho
-que hayan ido adquirido popularidad los *Selective Forwarding Unit*, los cuales
+que hayan ido adquirido popularidad los _Selective Forwarding Unit_, los cuales
 reciben un único stream desde los peers pero envían varios streams de vuelta,
 correspondientes a los demás peers. Esto obviamente implica un mayor consumo de
 ancho de banda y de CPU de los clientes, pero tiene la ventaja de que estos

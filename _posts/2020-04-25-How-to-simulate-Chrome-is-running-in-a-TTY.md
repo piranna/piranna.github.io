@@ -6,7 +6,7 @@ image_alt: >-
 layout: post
 tags: blog, github, jekyll, tutorial
 title: How to simulate Chrome is running in a TTY
-twitter: '1254123327683248129'
+twitter: "1254123327683248129"
 ---
 
 I've always loved terminals and retro-computing. I find they were a technology
@@ -37,8 +37,8 @@ printed in paper or using a screen reader for visually imparied persons, so
 doing the adaptation for a terminal output using CSS stylesheets made totally
 sense (and it's the correct way to do it, and yes, text-mode web browsers
 support CSS too). The key here to make the text-mode detection work was the
-[`tty` media type](https://drafts.csswg.org/mediaqueries/#media-types),
-but it got deprecated in benefict of using
+[`tty` media type](https://drafts.csswg.org/mediaqueries/#media-types), but it
+got deprecated in benefict of using
 [media features](https://drafts.csswg.org/mediaqueries/#mq-features), that offer
 a more fine-grained control of the representation features of web browsers, in
 our case the [grid](https://drafts.csswg.org/mediaqueries/#grid) media feature.
@@ -67,8 +67,8 @@ can send emulation commands to the web browser. To do so, we use the
 command, so in the devtools-on-devtools console we write:
 
 ```js
-let Main = await import('./main/main.js');
-await Main.MainImpl.sendOverProtocol('Emulation.canEmulate');
+let Main = await import("./main/main.js");
+await Main.MainImpl.sendOverProtocol("Emulation.canEmulate");
 ```
 
 This will get us a reference to the DevTools Protocol client in `Main.MainImpl`
@@ -76,7 +76,7 @@ and return us an array with result objects (seems the protocol allow to send
 several commands in batch) like this:
 
 ```javascript
-[{result: true}]
+[{ result: true }];
 ```
 
 If it returns `true`, then we can send emulation commands. The one we are
@@ -88,8 +88,8 @@ the `grid` media feature. We open the MDN example page for the
 and call the `Emulation.setEmulatedMedia` in the console to enable it...
 
 ```javascript
-await Main.MainImpl.sendOverProtocol('Emulation.setEmulatedMedia', {
-  features: [{name: 'grid', value: '1'}],
+await Main.MainImpl.sendOverProtocol("Emulation.setEmulatedMedia", {
+  features: [{ name: "grid", value: "1" }],
 });
 ```
 
@@ -109,7 +109,7 @@ Now the tricky part, how to check that it worked? One could think about using
 the (maybe undocumented?) `Emulation.getEmulatedMedia` command...
 
 ```javascript
-await Main.MainImpl.sendOverProtocol('Emulation.getEmulatedMedia');
+await Main.MainImpl.sendOverProtocol("Emulation.getEmulatedMedia");
 ```
 
 but it didn't exist at all:
@@ -122,7 +122,7 @@ On the other hand, `CSS.getMediaQueries` allow to get the actual state of all
 the web page CSS queries...
 
 ```javascript
-await Main.MainImpl.sendOverProtocol('CSS.getMediaQueries');
+await Main.MainImpl.sendOverProtocol("CSS.getMediaQueries");
 ```
 
 ...but it shows us that the query for the `grid` media feature is still disabled
@@ -132,30 +132,38 @@ await Main.MainImpl.sendOverProtocol('CSS.getMediaQueries');
 [
   {
     medias: [
-      {text: "print", source: "mediaRule", styleSheetId: "30394.6"},
+      { text: "print", source: "mediaRule", styleSheetId: "30394.6" },
       {
         mediaList: [
-          {expressions: [{value: 0, unit: "", feature: "grid"}], active: true}
+          {
+            expressions: [{ value: 0, unit: "", feature: "grid" }],
+            active: true,
+          },
         ],
-        range: {startLine: 5, startColumn: 7, endLine: 5, endColumn: 16},
+        range: { startLine: 5, startColumn: 7, endLine: 5, endColumn: 16 },
         source: "mediaRule",
-        sourceURL: "https://mdn.mozillademos.org/en-US/docs/Web/CSS/@media/grid$samples/Example?revision=1506717",
+        sourceURL:
+          "https://mdn.mozillademos.org/en-US/docs/Web/CSS/@media/grid$samples/Example?revision=1506717",
         styleSheetId: "30394.5",
-        text: "(grid: 0)"
+        text: "(grid: 0)",
       },
       {
         mediaList: [
-          {expressions: [{value: 1, unit: "", feature: "grid"}], active: false}
+          {
+            expressions: [{ value: 1, unit: "", feature: "grid" }],
+            active: false,
+          },
         ],
-        range: {startLine: 16, startColumn: 7, endLine: 16, endColumn: 16},
+        range: { startLine: 16, startColumn: 7, endLine: 16, endColumn: 16 },
         source: "mediaRule",
-        sourceURL: "https://mdn.mozillademos.org/en-US/docs/Web/CSS/@media/grid$samples/Example?revision=1506717",
+        sourceURL:
+          "https://mdn.mozillademos.org/en-US/docs/Web/CSS/@media/grid$samples/Example?revision=1506717",
         styleSheetId: "30394.5",
-        text: "(grid: 1)"
-        }
-    ]
-  }
-]
+        text: "(grid: 1)",
+      },
+    ],
+  },
+];
 ```
 
 Reloading the page didn't work (being a device feature that usually doesn't
@@ -163,13 +171,13 @@ change in runtime, it made sense that would be evaluated only at page load...),
 so I checked for the
 [`monochrome` media feature](https://www.w3.org/TR/mediaqueries-4/#monochrome),
 since it use an integer value in case the problem was with the `mq-boolean`
-type, but it didn't work too. Just to be sure, I decided to check with a
-feature that's currently possible to emulate on Chrome DevTools,
+type, but it didn't work too. Just to be sure, I decided to check with a feature
+that's currently possible to emulate on Chrome DevTools,
 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme):
 
 ```javascript
-await Main.MainImpl.sendOverProtocol('Emulation.setEmulatedMedia', {
-  features: [{name: 'prefers-color-scheme', value: 'light'}],
+await Main.MainImpl.sendOverProtocol("Emulation.setEmulatedMedia", {
+  features: [{ name: "prefers-color-scheme", value: "light" }],
 });
 ```
 
@@ -197,8 +205,8 @@ page...
 ...and tried it...
 
 ```javascript
-await Main.MainImpl.sendOverProtocol('Emulation.setEmulatedMedia', {
-  media: 'tty'
+await Main.MainImpl.sendOverProtocol("Emulation.setEmulatedMedia", {
+  media: "tty",
 });
 ```
 
@@ -208,7 +216,9 @@ thing because there's almost no grid web devices out there, but being capable of
 properly support them in a standard way has removed me an ich in the back of my
 head. At least, now this blog is one of the few sites that support them... :-D
 
-![Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled]({{ site.baseurl }}/images/2020-04-25-How-to-simulate-Chrome-is-running-in-a-TTY.png "Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled")
+![Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS stylesheet enabled]({{ site.baseurl }}/images/2020-04-25-How-to-simulate-Chrome-is-running-in-a-TTY.png
+"Screenshot of the blog with `tty` media rule and a custom terminal inspired CSS
+stylesheet enabled")
 
 Next step, create a terminal inspired CSS stylesheet to use as base one when
 designing terminal compatible websites... and find a way to override some of the

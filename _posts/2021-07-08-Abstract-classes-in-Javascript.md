@@ -3,7 +3,7 @@ lang: en
 layout: post
 tags: javascript, programming, oop, abstract
 title: Abstract classes in Javascript
-twitter: '1413030769308704768'
+twitter: "1413030769308704768"
 ---
 
 Javascript don't have the concept of abstract classes, but it's fairly easy to
@@ -14,23 +14,20 @@ childrens, and don't throw an error if it is:
 <!--more-->
 
 ```js
-class A
-{
-  constructor()
-  {
-    if(this.constructor === A) throw new Error('`A` is an abstract class')
+class A {
+  constructor() {
+    if (this.constructor === A) throw new Error("`A` is an abstract class");
   }
 }
 
 class B extends A {}
 
+const a = new A(); // Uncaught Error: `A` is an abstract class
+const b = new B(); // success
 
-const a = new A  // Uncaught Error: `A` is an abstract class
-const b = new B  // success
-
-a               // Uncaught ReferenceError: a is not defined
-b instanceof A  // true
-b instanceof B  // true
+a; // Uncaught ReferenceError: a is not defined
+b instanceof A; // true
+b instanceof B; // true
 ```
 
 Take in account that since we are checking the `this` object, in case the
@@ -43,43 +40,33 @@ child class: similar to how it's done in Python, just throw an `Exception` in
 the abstract parent base class:
 
 ```js
-class NotImplementedError extends Error
-{
-  constructor()
-  {
-    super('Method not implemented')
+class NotImplementedError extends Error {
+  constructor() {
+    super("Method not implemented");
   }
 }
 
-
-function notImplemented()
-{
-  throw new NotImplementedError()
+function notImplemented() {
+  throw new NotImplementedError();
 }
 
-
-class A
-{
-  foo()
-  {
-    notImplemented()
+class A {
+  foo() {
+    notImplemented();
   }
 }
 
-class B extends A
-{
-  foo()
-  {
-    return 'bar'
+class B extends A {
+  foo() {
+    return "bar";
   }
 }
 
+const a = new A();
+const b = new B();
 
-const a = new A
-const b = new B
-
-a.foo()  // Uncaught NotImplementedError: Method not implemented
-b.foo()  // 'bar'
+a.foo(); // Uncaught NotImplementedError: Method not implemented
+b.foo(); // 'bar'
 ```
 
 Now you would be saying, "why don't just set `A.foo = notImplemented` instead of

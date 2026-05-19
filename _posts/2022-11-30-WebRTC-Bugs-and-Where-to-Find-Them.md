@@ -3,7 +3,7 @@ lang: en
 layout: post
 tags: webrtc, bugs, troubleshooting, stun, turn, connectivity, codecs
 title: WebRTC Bugs and Where to Find Them
-twitter: '1607096593831821313'
+twitter: "1607096593831821313"
 ---
 
 Also for the most basic use cases, WebRTC is a complex technology, with lots of
@@ -59,8 +59,8 @@ issues in the connection itself, starting by checking if we can connect at all.
 
 The first point to look for is about clients discoverability, it's say, if we
 can announce ourselves to the others where we are, so they can be able call us.
-This requires us to be able to connect to the *discovery server* itself (not to
-confuse with the *signaling server*, although they are related, and usually they
+This requires us to be able to connect to the _discovery server_ itself (not to
+confuse with the _signaling server_, although they are related, and usually they
 are the same one), that can not be reachable if it's down, or the server is not
 accesible, or networks are not properly configured, or there's a DNSs resolution
 problem... or just simply, there's a bug in the server code that prevent to
@@ -79,7 +79,7 @@ through multiple networks crossing firewalls and routers and NATs until both
 arrive to a common place. Later, they need to exchange the information about how
 connection can "go up" to the other peer from the common public network over the
 different private networks. This exchange of information is responsability of
-the *signaling server*, and exchanged info is provided by
+the _signaling server_, and exchanged info is provided by
 [STUN and TURN servers](https://blog.ivrpowers.com/post/technologies/what-is-stun-turn-server/).
 
 ![STUN vs TURN]({{ site.baseurl }}/images/2022-11-30-WebRTC-Bugs-and-Where-to-Find-Them/stun-vs-turn.jpeg)
@@ -160,14 +160,14 @@ happens more specially in the Answer SDPs if they don't make use of
 collect all their ICE candidates before sending them back to the Offer sender.
 
 One possible solution to reduce handshake time (not incompatible with using
-Trickle ICE) is to use a *two-stages signaling*, it's said, use a regular
+Trickle ICE) is to use a _two-stages signaling_, it's said, use a regular
 signaling channel (for example, a
 [WebSockets](https://en.wikipedia.org/wiki/WebSocket) connection with
 [JSON-RPC](https://www.jsonrpc.org/) messages as transport protocol, or
 [XMPP](https://xmpp.org/)/[Jingle](https://xmpp.org/extensions/xep-0166.html)
 protocol, or [pigeons](https://www.rfc-editor.org/rfc/rfc2549)...) as
-*first-stage* signaling channel to create a minimal WebRTC connection with just
-a single WebRTC DataChannel transport, and later use it as a *second-stage*
+_first-stage_ signaling channel to create a minimal WebRTC connection with just
+a single WebRTC DataChannel transport, and later use it as a _second-stage_
 signaling channel specific between these two peers to extend the connection with
 any other media track we would like to use, and
 [renegotiate](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event)
@@ -179,7 +179,7 @@ will be direct between the peers. The point here is that it will also work on
 this use case because generation of the ICE Candidates to create a DataChannels
 are simpler and faster than for the full connection from the beginning.
 
-An example of simple WebSockets based server that can be used as *first-stage*
+An example of simple WebSockets based server that can be used as _first-stage_
 signaling channel is [Schuko](https://github.com/piranna/Schuko). I created it
 in 2012, and have beenusing it on several of the companies and projects I have
 been working during all these years, improving it from being just a application
@@ -232,7 +232,8 @@ solutions are to use APIs like
 to detect the actual constraints supported by the device being used, or to add
 error handlers to detect both media device selection misconfigurations, and when
 all ICE candidates has been consumed without an agreement, and in that case, ask
-to the user to try again with some less restrictive constraints, if that's possible.
+to the user to try again with some less restrictive constraints, if that's
+possible.
 
 ### Hardware failures
 
@@ -279,15 +280,14 @@ If capture devices are working properly, maybe they are muted and we didn't know
 it. This can happen in both ends, sender and receiver. Maybe sender has his
 microphone muted or its volume input level very low, or their webcam can be
 disabled (not only by the user or the operating system security policies, but it
-can also be disabled by the computer
-[BIOS](https://en.wikipedia.org/wiki/BIOS) or
-[UEFI](https://en.wikipedia.org/wiki/UEFI), but also at hardware level!), or it
-has a webcam cover or a sticker, or just simply user is covering the camera with
-his own hand (that happened me A LOT on a speed-dating app I developed, where
-users were doing it to cheat the system to see their date first and flag the
-connection as failed if they didn't like their partner, so they could move to
-another one quickier...). One way to detect these situations, besides checking
-if the tracks are `muted`, is to inspect them to see if they are
+can also be disabled by the computer [BIOS](https://en.wikipedia.org/wiki/BIOS)
+or [UEFI](https://en.wikipedia.org/wiki/UEFI), but also at hardware level!), or
+it has a webcam cover or a sticker, or just simply user is covering the camera
+with his own hand (that happened me A LOT on a speed-dating app I developed,
+where users were doing it to cheat the system to see their date first and flag
+the connection as failed if they didn't like their partner, so they could move
+to another one quickier...). One way to detect these situations, besides
+checking if the tracks are `muted`, is to inspect them to see if they are
 sending just only silence or close-to-silence values, or in the case of video
 check if they are sending black or very dark frames (or very saturated ones, in
 case they blocked the camera by putting a direct light pointing to it if trying
@@ -379,7 +379,8 @@ party processes or services, where they can "steal" the resources and make the
 operating system (specially on Android) to kill our call process, forcing our
 app to try to reconnect. This can happens specially when an app doesn't make use
 of the operating system
-[CallKit](https://developer.apple.com/documentation/callkit), [ConnectionService](https://developer.android.com/reference/android/telecom/ConnectionService),
+[CallKit](https://developer.apple.com/documentation/callkit),
+[ConnectionService](https://developer.android.com/reference/android/telecom/ConnectionService),
 or other similar calls integration or "do not disturb" APIs, or some other
 similar ones to let to know to the operating system and the other apps that we
 are currently in a call, so they can get and steal the access to the microphone
@@ -400,7 +401,7 @@ clients bandwidth and CPU usage but increasing server costs.
 In some cases, this kind of interruptions and other ones can lead to some delays
 on the streams too. They are not happening due to the streams networking
 themselves but due to the clients buffering, both in the receiver trying to play
-everything it receives at realtime pace without discarding *outatime* data, but
+everything it receives at realtime pace without discarding _outatime_ data, but
 mostly on the sender side by not discarding it and sending already outdated
 streaming info once the connection is restablished. This mostly can happens due
 to having the streams configured giving priority to quality over speed of
@@ -514,11 +515,11 @@ WebRTC connection issues are:
   - Does the network requires us to register ourselves to access internet?
   - Does the network itself have internet access at all?
   - [Discoverability](#discoverability)
-    - Is the *discovery server* up and running?
+    - Is the _discovery server_ up and running?
     - Is it accesible by the client? Are networks, ports and DNSs properly
       configured?
-    - Are both the *discovery server* and its client bugs free?
-    - Is the client trying to connect to the *discovery server* at all?
+    - Are both the _discovery server_ and its client bugs free?
+    - Is the client trying to connect to the _discovery server_ at all?
   - [STUN and TURN servers](#stun-and-turn-servers)
     - Does we have some STUN / TURN servers? Are they properly configured? Are
       they up and running? Are they accesible?
@@ -526,7 +527,7 @@ WebRTC connection issues are:
       including the access credentials? Are they accesible by some other client
       tools?
   - [Network infraestructure](#network-infraestructure)
-    - Are *simetric NATs*, or properly misconfigured NATs, being used by both
+    - Are _simetric NATs_, or properly misconfigured NATs, being used by both
       parties?
     - Is there any firewall configured for any of the peers, both in their
       devices or networks?

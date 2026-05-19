@@ -3,7 +3,7 @@ lang: en
 layout: post
 tags: Mafalda SFU, webrtc, mediasoup, sfu, video, streaming, scalability
 title: WebRTC horizontal scaling
-twitter: '1442020997159211011'
+twitter: "1442020997159211011"
 ---
 
 When aproaching the horizontal scaling of WebRTC servers, we have two main
@@ -65,13 +65,13 @@ solutions for each one of the use cases, the centralized and decentralized one.
 
 ### Mafalda-horizontal
 
-`Mafalda-horizontal` package is build on top of *Remote Mafalda*, and the same
-than this one or the original *Mafalda* one, it follows the same Mafalda API, so
+`Mafalda-horizontal` package is build on top of _Remote Mafalda_, and the same
+than this one or the original _Mafalda_ one, it follows the same Mafalda API, so
 it's intercambiable with them and allow easily to upgrade from the vertical
 scalability aproach to the horizontal one without modifying the code. It works
-as a client to multiple *Remote Mafalda* instances, managing the balancing of
+as a client to multiple _Remote Mafalda_ instances, managing the balancing of
 the resources, and also the routing between the servers. Also, since it follows
-the Mafalda API, it can be used as a *Remote Mafalda* instance, so it's possible
+the Mafalda API, it can be used as a _Remote Mafalda_ instance, so it's possible
 to implement an hierarchical architecture with multiple layers of servers, all
 of them accesible from a single endpoint, while at the same time not wasting
 resources to propagate the clients media between the servers since these ones

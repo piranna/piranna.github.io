@@ -3,7 +3,7 @@ lang: en
 layout: post
 tags: nodejs, deployment, npm, typescript, server, devops
 title: How to (properly) deploy Node.js applications
-twitter: '1607096592946941952'
+twitter: "1607096592946941952"
 ---
 
 Recently I've been involved in a new Typescript project all of my own where I
@@ -66,7 +66,7 @@ be later uploaded to a static HTTP server and use its URL as dependency, or
 install it directly from the filesystem, we can use it however we want. In my
 case, it's a server app instead of a library, so for the upload, I'm just only
 using `scp` to copy the generated tarfile to the server, no more. Before that, I
-needed  to set up my private key on the server, and whitelist my public IP to be
+needed to set up my private key on the server, and whitelist my public IP to be
 able to access to the server. Due to that, as a nice extra, I've also add a
 `ssh` script that opens me a SSH session on the server, just as a convenience
 :-) :

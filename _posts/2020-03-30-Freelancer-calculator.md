@@ -2,7 +2,7 @@
 layout: post
 tags: calculator, freelance, taxes, spain
 title: Freelancer calculator
-twitter: '1244683827173380096'
+twitter: "1244683827173380096"
 ---
 
 At the same time I work as employee, sometimes I get offers for freelance

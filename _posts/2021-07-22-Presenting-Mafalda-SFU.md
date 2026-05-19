@@ -3,7 +3,7 @@ lang: en
 layout: post
 tags: Mafalda SFU, webrtc, mediasoup, sfu, video, streaming, scalability
 title: Presenting Mafalda SFU
-twitter: '1417988668082442240'
+twitter: "1417988668082442240"
 ---
 
 [Mafalda SFU](https://github.com/Mafalda-SFU) is a massively vertical and
@@ -47,8 +47,8 @@ The main features of Mafalda are:
   restart the whole cluster. It also can make use automatically of new added CPU
   cores in a server (if it has support) without needing to restart the process
 
-- API heavily influenced by [Mediasoup](https://mediasoup.org/), so it's easy
-  to understand, use and migrate from your existing code
+- API heavily influenced by [Mediasoup](https://mediasoup.org/), so it's easy to
+  understand, use and migrate from your existing code
 
 - 100% acceptance tests code coverage for both lines, branches statements and
   functions. This has shown to be very useful to find bugs until the

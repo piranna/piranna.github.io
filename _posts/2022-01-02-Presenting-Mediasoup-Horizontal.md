@@ -3,7 +3,7 @@ lang: en
 layout: post
 tags: Mafalda SFU, webrtc, mediasoup, sfu, video, streaming, scalability
 title: Presenting Mediasoup Horizontal
-twitter: '1477742653383008261'
+twitter: "1477742653383008261"
 ---
 
 Although [Mafalda SFU](https://mafalda.io) is mainly focused on vertical scaling
@@ -20,10 +20,10 @@ provide transparent vertical and horizontal scaling, so let's see how it works.
 instances of Mediasoup, providing a simple and easy to use API based on the one
 from the Javascript
 [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
-object. It allows to add and remove Remote Mediasoup `Client` objects and
-manage them, although is not directly tied to them so you can provide your own
-objects following that same API, for example to also control a local Mediasoup
-instance in addition to the remote ones.
+object. It allows to add and remove Remote Mediasoup `Client` objects and manage
+them, although is not directly tied to them so you can provide your own objects
+following that same API, for example to also control a local Mediasoup instance
+in addition to the remote ones.
 
 When adding a Remote Mediasoup `Client` object to the `Mediasoup-Horizontal`
 instance, it checks that all the Remote Mediasoup instances are compatible
@@ -33,15 +33,15 @@ and also does it with the `Client` current objects in case they are later
 destroyed.
 
 `Mediasoup-Horizontal` also provides a Mediasoup compatible API, so by using it
-you can *auto-magically* enable your application to scale horizontally without
+you can _auto-magically_ enable your application to scale horizontally without
 needing to change your current code. The "magic" happens by using objects that
 provides the same API of Mediasoup
 [Worker](https://mediasoup.org/documentation/v3/mediasoup/api/#worker) and
 [Router](https://mediasoup.org/documentation/v3/mediasoup/api/#router) classes,
-but internally proxying the method calls to their internal `Connection`
-objects, shared by all the `Client` instances currently connected to the same
-server. This is done this way to be transparent to the actual objects
-references being done at `Mediasoup-Horizontal` level.
+but internally proxying the method calls to their internal `Connection` objects,
+shared by all the `Client` instances currently connected to the same server.
+This is done this way to be transparent to the actual objects references being
+done at `Mediasoup-Horizontal` level.
 
 After that, implementation of `pipeToRouter()` method is fairly trivial. Code is
 an optimized version of original Mediasoup one, just only with fine-grain errors

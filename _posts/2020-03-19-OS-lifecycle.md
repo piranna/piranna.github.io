@@ -2,7 +2,7 @@
 layout: post
 tags: os, lifecycle, npm, automation, github-actions
 title: OS lifecycle
-twitter: '1240749381231484928'
+twitter: "1240749381231484928"
 ---
 
 [projectlint](https://github.com/projectlint) is a projects-wide linter and

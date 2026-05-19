@@ -40,7 +40,8 @@ dependency and adding the support for inline snapshots, but lack of
 documentation makes it difficult. Maybe I'll try again in the future (anybody
 interested on sponsors me? :-) ).
 
-Having now the elements, doing the migration is surprisingly pretty straighforward:
+Having now the elements, doing the migration is surprisingly pretty
+straighforward:
 
 1. Add `chai` and `chai-jest-snapshot` as dev dependencies, and remove any Jest
    related dependency and configuration.
@@ -50,23 +51,27 @@ Having now the elements, doing the migration is surprisingly pretty straighforwa
 
    ```js
    import {
-     afterEach, before, beforeEach, describe, mock, test, throws
-   } from 'node:test'
+     afterEach,
+     before,
+     beforeEach,
+     describe,
+     mock,
+     test,
+     throws,
+   } from "node:test";
    ```
 
 5. Enable the snapshot support, and the replacement of the `expect()` function:
 
    ```js
-   import chai, {expect} from 'chai'
-   import chaiJestSnapshot from 'chai-jest-snapshot'
+   import chai, { expect } from "chai";
+   import chaiJestSnapshot from "chai-jest-snapshot";
 
+   chai.use(chaiJestSnapshot);
 
-   chai.use(chaiJestSnapshot)
-
-   before(function()
-   {
-     chaiJestSnapshot.resetSnapshotRegistry()
-   })
+   before(function () {
+     chaiJestSnapshot.resetSnapshotRegistry();
+   });
    ```
 
    Since `node:test` run each test in a different process, we need to add the

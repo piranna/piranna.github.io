@@ -2,15 +2,15 @@
 layout: post
 tags: web, html, canvas, video, webrtc, webvtt, webm, metadata
 title: How to paint over a video with HTML
-twitter: '1332171837019709441'
+twitter: "1332171837019709441"
 ---
 
 I recently got to work on a project where I need to capture a camera, sendback
 some drawed feedback, exchange commands and chat messages (and voice comments),
 and record everything. I've always been interested on using non-mainstream
-features of the Web Platform, and after taking a look of the current
-*state of the art*, I've found a way to implement this particular use case using
-ONLY open and readily available web standards.
+features of the Web Platform, and after taking a look of the current _state of
+the art_, I've found a way to implement this particular use case using ONLY open
+and readily available web standards.
 
 Sometimes, when you left out social networks and embrace back the Internet 90's
 spirit, you find yourself rediscovering that the Web is still an amazing place
@@ -97,11 +97,11 @@ from the `MediaStream` and include them in new ad-hoc `MediaStream` objects,
 mostly replicating by hand the `Video` element `videotracks` functionality (in
 fact, it could be possible to write a polyfill, creating and returning a fixed
 [VideoTrackList](https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList)
-object). That would probably be the same
-process needed to be done with Android or iOS clients, in case they don't
-support selecting the video track. Once videos are extracted, it would be just a
-matter of layout the `Video` elements with the `Canvas` alpha channel videos on
-top of the other original one since they already support
+object). That would probably be the same process needed to be done with Android
+or iOS clients, in case they don't support selecting the video track. Once
+videos are extracted, it would be just a matter of layout the `Video` elements
+with the `Canvas` alpha channel videos on top of the other original one since
+they already support
 [transparent videos](https://ataylor32.github.io/demo-html5-transparent-video/),
 but alpha videos support for native Android and iOS APIs would need to be
 investigated, or if not, then each frame would need to be painted by hand.
@@ -118,12 +118,12 @@ multiple container formats (including WebM).
 
 ## Other links
 
-- https://jakearchibald.com/scratch/alphavid/
-- https://developers.google.com/web/updates/2013/07/Alpha-transparency-in-Chrome-video
-- https://caniuse.com/audiotracks
-- https://blog.addpipe.com/10-advanced-features-in-html5-video-player/
-- https://groups.google.com/a/webmproject.org/g/webm-discuss/c/v6ojc0Uu7wo/m/AG_0jwXZj2IJ
-- https://www.anerbarrena.com/atributo-mediagroup-html5-5410/
-- https://www.w3.org/WAI/PF/HTML/wiki/Media_Multitrack_Media_API
-- https://www.webmproject.org/docs/container/
-- http://wiki.webmproject.org/webm-metadata/temporal-metadata/webvtt-in-webm
+- <https://jakearchibald.com/scratch/alphavid/>
+- <https://developers.google.com/web/updates/2013/07/Alpha-transparency-in-Chrome-video>
+- <https://caniuse.com/audiotracks>
+- <https://blog.addpipe.com/10-advanced-features-in-html5-video-player/>
+- <https://groups.google.com/a/webmproject.org/g/webm-discuss/c/v6ojc0Uu7wo/m/AG_0jwXZj2IJ>
+- <https://www.anerbarrena.com/atributo-mediagroup-html5-5410/>
+- <https://www.w3.org/WAI/PF/HTML/wiki/Media_Multitrack_Media_API>
+- <https://www.webmproject.org/docs/container/>
+- <http://wiki.webmproject.org/webm-metadata/temporal-metadata/webvtt-in-webm>

@@ -3,7 +3,7 @@ lang: en
 layout: post
 tags: webrtc, streaming, video, architecture
 title: Types of WebRTC networks
-twitter: '1344349398789214212'
+twitter: "1344349398789214212"
 ---
 
 When it comes to WebRTC architectures, there is no silver bullet. Depending on
@@ -22,7 +22,7 @@ video), and what are the pros and cons of each one of them.
 
 This is the most basic of them all, and the only use case to whom WebRTC was
 designed for. In this architecture a connection is established between the two
-clients, generally called *peers*, and it'ss the most optimal regarding
+clients, generally called _peers_, and it'ss the most optimal regarding
 bandwidth consumption, quality and latency, since both peers are connected
 directly, so the only limits are the connection and CPU of both peers. This is
 the simplest architecture to implement and there are multitude of sample and
@@ -43,9 +43,9 @@ implies that videos have to be encoded multiple times, so the CPU and memory
 consumption of the peers is also high. This is why this architecture is only
 practical in simple projects with a number of very peers low (usually 3-4 peers,
 depending on the quality of the videos and the type of network up to 10,
-although in practice it is not usually used for more than 6), or in very
-sparse networks where the number of connections of each peer with the others is
-equally low.
+although in practice it is not usually used for more than 6), or in very sparse
+networks where the number of connections of each peer with the others is equally
+low.
 
 ## Server-based architectures
 
@@ -66,7 +66,7 @@ is being worked on to solve this problem.
 
 ### MCU
 
-*Multipoint Conferencing Unit* based architectures were the first in trying to
+_Multipoint Conferencing Unit_ based architectures were the first in trying to
 solve the problem of bandwidth in video conferencing multiple. From the peers
 point of view, it is as if they are connected against another single peer (an
 upstream and a downstream stream)... just that in this case the other peer is
@@ -113,7 +113,7 @@ homes and offices, and the power and memory of personal computers have increased
 considerably. Furthermore, it has been seen that most of use cases have been
 videoconferencing applications, without need of processing streams on the server
 side beyond recording the sessions. All this together, with the search to reduce
-server costs, has made that the *Selective Forwarding Unit*, which receive a
+server costs, has made that the _Selective Forwarding Unit_, which receive a
 single stream from the peers but send multiple streams back, corresponding to
 the other peers. This obviously implies a higher consumption of bandwidth and
 CPU of the clients, but has the advantage that they can display them however

@@ -2,14 +2,16 @@
 layout: post
 tags: javascript, nodejs, redux, redux-offline
 title: redux-offline in Node.js
-twitter: '1232057416415621128'
+twitter: "1232057416415621128"
 ---
 
-Experimenting with [redux-offline](https://github.com/redux-offline/redux-offline),
-I've done a Proof-of-Concept about how to use
+Experimenting with
+[redux-offline](https://github.com/redux-offline/redux-offline), I've done a
+Proof-of-Concept about how to use
 [`redux-offline` in a Node.js environment](https://github.com/piranna/redux-offline-Node.js-PoC),
 like a CLI command. This is useful for example when it's needed to do an offline
-aware application that needs to queue some operations until it's connected again.
+aware application that needs to queue some operations until it's connected
+again.
 
 <!--more-->
 
@@ -30,11 +32,12 @@ used too to store application configuration or services connection credentials,
 for example.
 
 The key point of the proof of concept is about network detection. For that, I'm
-using the [internet-available](https://github.com/ourcodeworld/internet-available)
-module, that does a DNS request to a domain (`google.com` by default), by doing
-requests indefinitely and notifying when the network status has changed from
-online to offline or viceversa. You can change that to use your own domain, or
-also doing a heartbeat pinging to be sure the server is up and running.
+using the
+[internet-available](https://github.com/ourcodeworld/internet-available) module,
+that does a DNS request to a domain (`google.com` by default), by doing requests
+indefinitely and notifying when the network status has changed from online to
+offline or viceversa. You can change that to use your own domain, or also doing
+a heartbeat pinging to be sure the server is up and running.
 
 In addition to that, operations queue is being modified on the fly each time a
 new operation is being added, so in case we are offline and there are operations

@@ -4,7 +4,9 @@ layout: post
 redirect_from:
   - /2021/04/23/How-to-build-WebRTC-for-Android-in-Ubuntu-21.04/
   - /2023/02/27/How-to-build-WebRTC-for-Android-in-Ubuntu-22.04/
-tags: webrtc, android, ubuntu, build, libwebrtc, aar, mediasoup, sfu, video, streaming
+tags:
+  webrtc, android, ubuntu, build, libwebrtc, aar, mediasoup, sfu, video,
+  streaming
 title: How to build WebRTC for Android in Ubuntu 25.04
 ---
 
@@ -34,11 +36,11 @@ on May 1st 2021, and they were not be available after February 1st 2022, so the
 binary mobile libraries are not available when using Maven itself.
 
 Due to both problems (no new libraries versions, and not sure about future
-availability  of current ones), and since I've been not able to find other
-online providers for the binary libraries, best option seems to waste some hard
-disk space (16GB... it downloads all the Chrome source code and the build
-environment tools) and compile them myself. The automated build script that
-generates the binary mobile library `.aar` file was published and
+availability of current ones), and since I've been not able to find other online
+providers for the binary libraries, best option seems to waste some hard disk
+space (16GB... it downloads all the Chrome source code and the build environment
+tools) and compile them myself. The automated build script that generates the
+binary mobile library `.aar` file was published and
 [there are instructions to build it yourself](https://medium.com/@abdularis/how-to-compile-native-webrtc-from-source-for-android-d0bac8e4c933),
 that's a huge advantage over needing to compile and build the libraries yourself
 by hand. But while I was using it, I found some issues and errors in the
@@ -63,12 +65,11 @@ so here are the fixed instructions with some additional comments:
    ```
 
 3. **Install the `python` command**. `depot_tools` makes use of the `python`
-   executable, because it's compatible with both Python 2 and 3. On Ubuntu
-   25.04 it's not available since it was traditionally linked to the now
-   deprecated Python 2, and to differentiate from it, it was being used the
-   `python3` executable, so in a clean slate install, `depot_tools` will fail
-   because it's not found. To fix that, we can install the `python-is-python3`
-   package:
+   executable, because it's compatible with both Python 2 and 3. On Ubuntu 25.04
+   it's not available since it was traditionally linked to the now deprecated
+   Python 2, and to differentiate from it, it was being used the `python3`
+   executable, so in a clean slate install, `depot_tools` will fail because it's
+   not found. To fix that, we can install the `python-is-python3` package:
 
    ```sh
    sudo apt install python-is-python3
@@ -78,7 +79,7 @@ so here are the fixed instructions with some additional comments:
    now, it doesn't hurt.
 
 4. **Install [snap](https://snapcraft.io/)**. I hate it (I'm old school, and an
-   [APT](https://en.wikipedia.org/wiki/APT_(software)) fan), but now Chromium
+   [APT](<https://en.wikipedia.org/wiki/APT_(software)>) fan), but now Chromium
    build tools make use of [bazel](https://bazel.build/), and it's only
    available as snap packages, at least for recent versions. I will need to
    review this in the future, but for now, just install it:
@@ -139,8 +140,8 @@ so here are the fixed instructions with some additional comments:
    ./build/install-build-deps.sh
    ```
 
-   In case you are not using one of the Ubuntu LTS versions, you may need to
-   use the `--unsupported` flag to by-pass the version checks and install the
+   In case you are not using one of the Ubuntu LTS versions, you may need to use
+   the `--unsupported` flag to by-pass the version checks and install the
    dependencies, but it didn't worked for me. Your mileage may vary.
 
 9. **Select the release to build**. Until WebRTC M80 release, there were
@@ -155,7 +156,7 @@ so here are the fixed instructions with some additional comments:
    (they are synced and always point to the same commit) is totally fine, but if
    you want to build the exact copy of the library of a particular release or
    daily branch, we need to recover them. To do it, we need to configure the
-   *refspec* to fetch the `branch-heads` references too...
+   _refspec_ to fetch the `branch-heads` references too...
 
    ```sh
    git config --add remote.origin.fetch \
@@ -172,7 +173,7 @@ so here are the fixed instructions with some additional comments:
 
    After that, you can search for your desired Milestone at
    [Chromium data website](https://chromiumdash.appspot.com/branches), and match
-   it with the *WebRTC* column to find the daily branch number. For example, to
+   it with the _WebRTC_ column to find the daily branch number. For example, to
    build the `libWebrtc` library version used by latest stable Chrome 140 (build
    number `7339`) you would just need to change to the `branch-heads/7339`:
 
@@ -231,11 +232,11 @@ An important topic I've not covered before: how to use the compiled `.aar` file.
 [Android documentation](https://developer.android.com/studio/projects/android-library#AddDependency)
 has full info about how to create and use libraries as dependencies with
 [Android Studio](https://developer.android.com/studio), but the important steps
-to [use our compiled `libwebrtc.aar` file](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
+to
+[use our compiled `libwebrtc.aar` file](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
 for our use case are:
 
 1. Add the `libwebrtc.aar` file:
-
    1. Click **File > Project Structure > Dependencies**.
    2. Click **➕**, and select **Jar Dependency** in the menu.
    3. Enter the location of the `libwebrtc.aar` file, and select

@@ -2,15 +2,17 @@
 lang: en
 layout: post
 tags: Mafalda SFU, github actions, npm, packages, registry, workflow
-title: How to install npm packages stored at GitHub Packages Registry as dependencies in a GitHub Actions workflow
+title:
+  How to install npm packages stored at GitHub Packages Registry as dependencies
+  in a GitHub Actions workflow
 ---
 
 When working on `npm` projects with multiple subprojects as dependencies,
 there's a problem when you need to do frequent updates. Ideally, that
 dependencies should have their own tests and versioning, but that's not always
 possible (for example, private packages) and sometimes we would need to publish
-multiple development versions while trying to debug some obscure issues. This
-is tedious and nasty, so that's why so much people like monorepos.
+multiple development versions while trying to debug some obscure issues. This is
+tedious and nasty, so that's why so much people like monorepos.
 
 <!--more-->
 
@@ -38,8 +40,8 @@ and using
 to make it work, and understand why that configs are needed.
 
 There are two places were we need to configure the access to the registry: on
-the workflow that's going to install the packages, and on the access
-permissions of the package itself.
+the workflow that's going to install the packages, and on the access permissions
+of the package itself.
 
 On the workflow, we need to do the next configurations:
 
@@ -73,10 +75,10 @@ On the workflow, we need to do the next configurations:
    would be enough, but the fact is that the
    [setup-node](https://github.com/actions/setup-node) overwrites its content,
    so any config there will be lost. If possible, it's better to publish
-   packages in both [npmjs](http://npmjs.org/) and Github Packages Registry,
-   add the `.npmrc` file to the `.npmignore`file, and left it as a per-user
-   config just only to use the Github Packages Registry for development
-   purposes, as it's intended for.
+   packages in both [npmjs](http://npmjs.org/) and Github Packages Registry, add
+   the `.npmrc` file to the `.npmignore`file, and left it as a per-user config
+   just only to use the Github Packages Registry for development purposes, as
+   it's intended for.
 
 3. Use `GITHUB_TOKEN` as `NODE_AUTH_TOKEN` environment variable when installing
    the dependencies:

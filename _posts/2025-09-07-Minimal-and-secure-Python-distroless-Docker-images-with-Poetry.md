@@ -165,9 +165,9 @@ alternative maybe could be to move them out to a separate directory).
 
 To increase the security, we use the `--chown` flag to set the group of the
 files to the `nonroot` group, and use the `--chmod` flag to set the permissions
-to `050` for the `uvicorn` binary. This way, only the group (`nonroot`) can
-read and execute it. We also use the `--chmod` flag so only the `nonroot` group
-can read and access the `lib/` folder.
+to `050` for the `uvicorn` binary. This way, only the group (`nonroot`) can read
+and execute it. We also use the `--chmod` flag so only the `nonroot` group can
+read and access the `lib/` folder.
 
 Final step is to run the application. For this, we set the `PYTHONPATH`
 environment variable to include the path to the `site-packages` folder in the

@@ -1,11 +1,14 @@
 ---
 lang: en
 layout: post
-tags: coauthored-with-chatgpt, fastify, typescript, nodejs, django, webdev, programming, cbv, class-based-views, architecture, design-patterns, api, http, web-frameworks
+tags:
+  coauthored-with-chatgpt, fastify, typescript, nodejs, django, webdev,
+  programming, cbv, class-based-views, architecture, design-patterns, api, http,
+  web-frameworks
 title: Bringing Class-Based Views to Fastify (Inspired by Django)
 ---
 
-> *Why doesn’t Node.js have something like Django’s Class-Based Views (CBVs)?*
+> _Why doesn’t Node.js have something like Django’s Class-Based Views (CBVs)?_
 
 I love Django key features like its **class-based views** or ORM, and I usually
 miss them when working with Node.js. So yesterday night, in the middle of my
@@ -32,20 +35,20 @@ automatically registers those with the correct HTTP verbs and routes.
 
 The benefits are clear:
 
-* **Organization:** keep related logic together.
-* **Inheritance & Mixins:** factor out reusable behavior.
-* **Consistency:** no need to wire up handlers manually.
+- **Organization:** keep related logic together.
+- **Inheritance & Mixins:** factor out reusable behavior.
+- **Consistency:** no need to wire up handlers manually.
 
 ## The Challenges in Node.js
 
-* Most Node frameworks ([Express](https://expressjs.com/),
+- Most Node frameworks ([Express](https://expressjs.com/),
   [Fastify](https://fastify.dev/), [Koa](https://koajs.com/)) assume
   **functions** as handlers (at least it feels natural to use closures to
   provide some structure, in contrast to most Python frameworks).
-* For that reason, there’s little to no **out-of-the-box CBV support**.
-* TypeScript typing gets tricky: how do we connect the schemas (runtime) to have
+- For that reason, there’s little to no **out-of-the-box CBV support**.
+- TypeScript typing gets tricky: how do we connect the schemas (runtime) to have
   strict request/response types (compile-time)?
-* HTTP has subtle rules to respect (e.g. `HEAD` vs `GET`, `204 No Content` never
+- HTTP has subtle rules to respect (e.g. `HEAD` vs `GET`, `204 No Content` never
   having a body).
 
 ## Building Blocks
@@ -58,7 +61,7 @@ Here are the main building blocks:
 1. **BaseView**: a class that defines an `as_plugin()` static method, similar to
    Django's `View.as_view()`, returning a Fastify plugin with routes registered
    automatically for any methods you implement (`get`, `post`, `delete`, etc.).
-2. **`replyWith()` helper**: to handle *shortcuts* (errors, 404s, 204s) in a
+2. **`replyWith()` helper**: to handle _shortcuts_ (errors, 404s, 204s) in a
    type-safe way, cutting the control flow.
 3. **Error handling**: done globally via `fastify.setErrorHandler()`, not inside
    the view itself.
@@ -72,23 +75,24 @@ Here are the main building blocks:
 
 ```ts
 // cbv.mts
-import { METHODS } from 'node:http';
+import { METHODS } from "node:http";
 
 import type {
-  FastifyInstance, FastifyReply, FastifyRequest, RouteShorthandOptions
-} from 'fastify';
-import fastifyAllow from 'fastify-allow';
-import fp from 'fastify-plugin';
-
+  FastifyInstance,
+  FastifyReply,
+  FastifyRequest,
+  RouteShorthandOptions,
+} from "fastify";
+import fastifyAllow from "fastify-allow";
+import fp from "fastify-plugin";
 
 export class HTTPError extends Error {
   constructor(statusCode: number, message?: string, payload?: unknown) {
     super(message);
 
     this.statusCode = statusCode;
-    this.message = message ?? (
-      statusCode === 500 ? 'Internal Server Error' : 'Error'
-    );
+    this.message =
+      message ?? (statusCode === 500 ? "Internal Server Error" : "Error");
     this.payload = payload;
   }
 }
@@ -98,17 +102,22 @@ export class HTTPError extends Error {
  *  If you *do* define your own head(), we need to register it first.
  */
 function orderedNodeMethods(): string[] {
-  const all = Array.from(new Set(METHODS.map(m => m.toLowerCase())));
-  const i = all.indexOf('head');
-  if (i > -1) { all.splice(i, 1); all.unshift('head'); }
+  const all = Array.from(new Set(METHODS.map((m) => m.toLowerCase())));
+  const i = all.indexOf("head");
+  if (i > -1) {
+    all.splice(i, 1);
+    all.unshift("head");
+  }
   return all;
 }
 
 export class BaseView<D extends object = Record<string, unknown>> {
   constructor(
     ctx: {
-      req: FastifyRequest; reply: FastifyReply; fastify: FastifyInstance
-    } & D
+      req: FastifyRequest;
+      reply: FastifyReply;
+      fastify: FastifyInstance;
+    } & D,
   ) {
     this.ctx = ctx;
   }
@@ -117,10 +126,10 @@ export class BaseView<D extends object = Record<string, unknown>> {
     deps?: TDeps;
     common?: RouteShorthandOptions;
   }) {
-    const ViewClass = (
-      this as unknown as new (ctx: any) => BaseView<TDeps> & Record<string, any>
-    );
-    const deps   = opts?.deps   ?? ({} as TDeps);
+    const ViewClass = this as unknown as new (
+      ctx: any,
+    ) => BaseView<TDeps> & Record<string, any>;
+    const deps = opts?.deps ?? ({} as TDeps);
     const common = opts?.common ?? {};
 
     return fp(async function viewPlugin(fastify) {
@@ -128,30 +137,31 @@ export class BaseView<D extends object = Record<string, unknown>> {
       await fastify.register(fastifyAllow);
 
       const staticSchemas: Record<string, any> =
-        (
-          (ViewClass as any).schemas &&
-          typeof (ViewClass as any).schemas === 'object'
-        )
+        (ViewClass as any).schemas &&
+        typeof (ViewClass as any).schemas === "object"
           ? (ViewClass as any).schemas
           : {};
 
       for (const m of orderedNodeMethods()) {
-        if (typeof (ViewClass as any).prototype[m] !== 'function') continue;
+        if (typeof (ViewClass as any).prototype[m] !== "function") continue;
 
         fastify.route({
           method: m.toUpperCase(),
-          url: '/',                 // combined with prefix at register time
+          url: "/", // combined with prefix at register time
           ...common,
           schema: staticSchemas[m] ?? common.schema,
 
           // minimal handler: return the method result; Fastify sends or
           // forwards errors
           handler: (req, reply) => {
-            const view = new ViewClass(
-              { req, reply, fastify: req.server, ...deps }
-            );
+            const view = new ViewClass({
+              req,
+              reply,
+              fastify: req.server,
+              ...deps,
+            });
             return (view as any)[m](req, reply);
-          }
+          },
         });
       }
     });
@@ -166,14 +176,15 @@ shortcuts (errors, 404, 204), we use `replyWith()` to ensure type safety.
 
 ```ts
 // reply-with.mts
-import type { FastifyReply } from 'fastify';
-import type { FromSchema } from 'json-schema-to-ts';
+import type { FastifyReply } from "fastify";
+import type { FromSchema } from "json-schema-to-ts";
 
 export type ResponseMap = Record<number, unknown>;
 export type StatusOf<R extends ResponseMap> = keyof R & number;
 
-type BodyArg<R extends ResponseMap, S extends StatusOf<R>> =
-  S extends 204 ? [] : [body: FromSchema<R[S]>];
+type BodyArg<R extends ResponseMap, S extends StatusOf<R>> = S extends 204
+  ? []
+  : [body: FromSchema<R[S]>];
 
 /**
  * Sends a response with code+body, and marks this branch as terminal (`never`).
@@ -204,61 +215,61 @@ types using `json-schema-to-ts`.
 
 ```ts
 // users-schemas.mts
-import type { FromSchema } from 'json-schema-to-ts';
+import type { FromSchema } from "json-schema-to-ts";
 
 const User = {
-  type: 'object',
-  properties: { id: { type: 'number' }, name: { type: 'string' } },
-  required: ['id','name'],
-  additionalProperties: false
+  type: "object",
+  properties: { id: { type: "number" }, name: { type: "string" } },
+  required: ["id", "name"],
+  additionalProperties: false,
 } as const;
 
 const ErrorPayload = {
-  type: 'object',
-  properties: { error: { type: 'string' } },
-  required: ['error'],
-  additionalProperties: false
+  type: "object",
+  properties: { error: { type: "string" } },
+  required: ["error"],
+  additionalProperties: false,
 } as const;
 
 export const UsersSchemas = {
   get: {
     params: {
-      type: 'object',
-      properties: { id: { type: 'integer', minimum: 1 } },
-      required: ['id'],
-      additionalProperties: false
+      type: "object",
+      properties: { id: { type: "integer", minimum: 1 } },
+      required: ["id"],
+      additionalProperties: false,
     },
     response: {
       200: User,
-      404: ErrorPayload
-    }
+      404: ErrorPayload,
+    },
   } as const,
   post: {
     body: {
-      type: 'object',
-      properties: { name: { type: 'string', minLength: 1 } },
-      required: ['name'],
-      additionalProperties: false
+      type: "object",
+      properties: { name: { type: "string", minLength: 1 } },
+      required: ["name"],
+      additionalProperties: false,
     },
     response: {
       201: User,
-      400: ErrorPayload
-    }
+      400: ErrorPayload,
+    },
   } as const,
   del: {
     // According to the HTTP spec, 204 No Content must *never* have a body.
-    response: { 204: { type: 'null' } }
-  } as const
+    response: { 204: { type: "null" } },
+  } as const,
 } as const;
 
 // Derived types
-export type GetParams     = FromSchema<typeof UsersSchemas.get.params>;
-export type Get200        = FromSchema<typeof UsersSchemas.get.response[200]>;
-export type GetResponses  = typeof UsersSchemas.get.response;
-export type PostBody      = FromSchema<typeof UsersSchemas.post.body>;
-export type Post201       = FromSchema<typeof UsersSchemas.post.response[201]>;
+export type GetParams = FromSchema<typeof UsersSchemas.get.params>;
+export type Get200 = FromSchema<(typeof UsersSchemas.get.response)[200]>;
+export type GetResponses = typeof UsersSchemas.get.response;
+export type PostBody = FromSchema<typeof UsersSchemas.post.body>;
+export type Post201 = FromSchema<(typeof UsersSchemas.post.response)[201]>;
 export type PostResponses = typeof UsersSchemas.post.response;
-export type DelResponses  = typeof UsersSchemas.del.response;
+export type DelResponses = typeof UsersSchemas.del.response;
 ```
 
 ## The `UsersView`
@@ -268,45 +279,51 @@ As an example, here’s a simple `UsersView` with `get()`, `post()`, and
 
 ```ts
 // users-view.mts
-import type { FastifyRequest, FastifyReply } from 'fastify';
-import { BaseView } from './cbv.mjs';
-import { replyWith } from './reply-with.mjs';
+import type { FastifyRequest, FastifyReply } from "fastify";
+import { BaseView } from "./cbv.mjs";
+import { replyWith } from "./reply-with.mjs";
 import {
   UsersSchemas,
-  type GetParams, type Get200, type GetResponses,
-  type PostBody,  type Post201, type PostResponses,
-  type DelResponses
-} from './users-schemas.mjs';
+  type GetParams,
+  type Get200,
+  type GetResponses,
+  type PostBody,
+  type Post201,
+  type PostResponses,
+  type DelResponses,
+} from "./users-schemas.mjs";
 
 export class UsersView extends BaseView<{
   usersRepo: {
     get(id: number): Promise<Get200 | null>;
     create(d: { name: string }): Promise<Post201>;
     del(id: number): Promise<void>;
-  }
+  };
 }> {
   static schemas = UsersSchemas;
 
   // GET /users/:id
   async get(
-    req: FastifyRequest<{ Params: GetParams }>, reply: FastifyReply
+    req: FastifyRequest<{ Params: GetParams }>,
+    reply: FastifyReply,
   ): Promise<Get200> {
     const user = await this.ctx.usersRepo.get(req.params.id);
     if (!user) {
-      return replyWith<GetResponses>(reply, 404, { error: 'User not found' });
+      return replyWith<GetResponses>(reply, 404, { error: "User not found" });
     }
     return user; // happy path
   }
 
   // POST /users
   async post(
-    req: FastifyRequest<{ Body: PostBody }>, reply: FastifyReply
+    req: FastifyRequest<{ Body: PostBody }>,
+    reply: FastifyReply,
   ): Promise<Post201> {
     const name = req.body.name?.trim();
     if (!name) {
-      return replyWith<PostResponses>(
-        reply, 400, { error: 'name is required' }
-      );
+      return replyWith<PostResponses>(reply, 400, {
+        error: "name is required",
+      });
     }
     const created = await this.ctx.usersRepo.create({ name });
     reply.code(201);
@@ -315,7 +332,8 @@ export class UsersView extends BaseView<{
 
   // DELETE /users/:id
   async delete(
-    req: FastifyRequest<{ Params: GetParams }>, reply: FastifyReply
+    req: FastifyRequest<{ Params: GetParams }>,
+    reply: FastifyReply,
   ): Promise<never> {
     await this.ctx.usersRepo.del(req.params.id);
     return replyWith<DelResponses>(reply, 204);
@@ -330,31 +348,33 @@ server level:
 
 ```ts
 // server.mts
-import Fastify from 'fastify';
-import {
-  JSONSchemaToTSProvider
-} from 'fastify-type-provider-json-schema-to-ts';
-import { UsersView } from './users-view.mjs';
+import Fastify from "fastify";
+import { JSONSchemaToTSProvider } from "fastify-type-provider-json-schema-to-ts";
+import { UsersView } from "./users-view.mjs";
 
-const app = Fastify(
-  { logger: true }
-).withTypeProvider<JSONSchemaToTSProvider>();
+const app = Fastify({
+  logger: true,
+}).withTypeProvider<JSONSchemaToTSProvider>();
 
 const defaultErrorHandler = app.errorHandler;
 
 app.setErrorHandler((err, req, reply) => {
-  try { defaultErrorHandler(err, req, reply); } catch { /* noop */ }
+  try {
+    defaultErrorHandler(err, req, reply);
+  } catch {
+    /* noop */
+  }
   if (reply.sent) return;
 
-  const status = (
-    typeof (err as any)?.statusCode === 'number' ? (err as any).statusCode : 500
-  );
-  const payload = (err as any)?.payload
-    ?? {
-      error: (err as any)?.message ?? (
-        status === 500 ? 'Internal Server Error' : 'Error'
-      )
-    };
+  const status =
+    typeof (err as any)?.statusCode === "number"
+      ? (err as any).statusCode
+      : 500;
+  const payload = (err as any)?.payload ?? {
+    error:
+      (err as any)?.message ??
+      (status === 500 ? "Internal Server Error" : "Error"),
+  };
 
   reply.code(status).send(payload);
 });
@@ -363,22 +383,24 @@ app.setErrorHandler((err, req, reply) => {
 const usersRepo = {
   async get(id: number) {
     const all = [
-      { id: 1, name: 'Ada'   },
-      { id: 2, name: 'Grace' },
-      { id: 3, name: 'Hedy'  },
-      { id: 4, name: 'Radia' }
+      { id: 1, name: "Ada" },
+      { id: 2, name: "Grace" },
+      { id: 3, name: "Hedy" },
+      { id: 4, name: "Radia" },
     ];
-    return all.find(u => u.id === id) ?? null;
+    return all.find((u) => u.id === id) ?? null;
   },
   async create({ name }: { name: string }) {
     return { id: Date.now(), name };
   },
-  async del(_id: number) { /* ... */ }
+  async del(_id: number) {
+    /* ... */
+  },
 };
 
-await app.register(
-  UsersView.as_plugin({ deps: { usersRepo } }), { prefix: '/users' }
-);
+await app.register(UsersView.as_plugin({ deps: { usersRepo } }), {
+  prefix: "/users",
+});
 await app.listen({ port: 3000 });
 ```
 
@@ -401,7 +423,7 @@ function LoggingMixin<TBase extends Constructor>(Base: TBase) {
 
 class MyView extends LoggingMixin(BaseView) {
   async get() {
-    this.log('Handling GET');
+    this.log("Handling GET");
     return { ok: true };
   }
 }
@@ -414,14 +436,14 @@ correctly.
 
 This whole design leans heavily on **contract-first schemas**:
 
-* **Source of truth**: JSON Schema.
-* **Compile-time types**: derived via `json-schema-to-ts`.
-* **Runtime validation/serialization**: Fastify + AJV.
-* **Type-provider (JSTT)**: glues the schemas into `req.query`, `req.body`, and
+- **Source of truth**: JSON Schema.
+- **Compile-time types**: derived via `json-schema-to-ts`.
+- **Runtime validation/serialization**: Fastify + AJV.
+- **Type-provider (JSTT)**: glues the schemas into `req.query`, `req.body`, and
   `reply.send()` signatures.
 
-That means if you update the schema, TypeScript will
-**force you to update your code**, or it won’t compile.
+That means if you update the schema, TypeScript will **force you to update your
+code**, or it won’t compile.
 
 ## Conclusion
 
@@ -429,14 +451,14 @@ Starting from a bout of insomnia, I ended up building a Django-like CBV system
 for Fastify, with a few additional goodies to make it production-ready and
 TypeScript-friendly:
 
-* **Automatic method routing** with `as_plugin()`.
-* **HEAD registered before GET** to align with Fastify’s behavior.
-* **405 Method Not Allowed** handled by `fastify-405`.
-* **`replyWith()`** helper for type-safe shortcuts (404, 400, 204).
-* **204 No Content** strictly without body, enforced by types.
-* **Global error handler** consistent with Fastify’s default.
-* **Contract-first schemas** with strict TypeScript typing.
-* **Mixins via class factories** for flexible composition.
+- **Automatic method routing** with `as_plugin()`.
+- **HEAD registered before GET** to align with Fastify’s behavior.
+- **405 Method Not Allowed** handled by `fastify-405`.
+- **`replyWith()`** helper for type-safe shortcuts (404, 400, 204).
+- **204 No Content** strictly without body, enforced by types.
+- **Global error handler** consistent with Fastify’s default.
+- **Contract-first schemas** with strict TypeScript typing.
+- **Mixins via class factories** for flexible composition.
 
 It’s not a full-blown library (yet), but it shows how powerful the combination
 of **Fastify**, **TypeScript**, and a few design patterns can be. If you miss

@@ -14,7 +14,6 @@ naming convention and syncing branches between your repository and an upstream
 one.
 
 <!--more-->
----
 
 ## **The Problem: Syncing with Upstream Repositories**
 
@@ -32,8 +31,6 @@ things can get messy when:
 
 The goal is to **safely and clearly sync branches** from the upstream repository
 into your own repository without creating confusion or conflicts.
-
----
 
 ## **1. Key Challenges to Address**
 
@@ -55,8 +52,6 @@ own. For example:
 
 Having a robust system for identifying where each branch originates from will
 keep things organized.
-
----
 
 ## **2. Approach to Solving the Problem**
 
@@ -89,8 +84,8 @@ We discussed two key alternatives for naming upstream branches:
 2. **Hashing encoding:**
    - An alternative to the prefix method involves using **hashing** to guarantee
      uniqueness for each upstream repository. This encoding ensures that no
-     matter how complex the upstream URL or branch name, you have a
-     **unique identifier**.
+     matter how complex the upstream URL or branch name, you have a **unique
+     identifier**.
    - **Pros:**
      - Guarantees uniqueness across different upstream repositories.
      - Compact and avoids the need to use human-readable prefixes.
@@ -123,9 +118,9 @@ the branch name.
      `awesome-project-name`).
 
 3. **Dot (`.`)**:
-   - After considering the pros and cons of dashes, we chose to use
-     **dots (`.`)** as separators. The main reason for this is that **dots** do
-     not have any special meaning in Git and do not conflict with other naming
+   - After considering the pros and cons of dashes, we chose to use **dots
+     (`.`)** as separators. The main reason for this is that **dots** do not
+     have any special meaning in Git and do not conflict with other naming
      conventions.
    - **Pros**:
      - **Clarity**: Dots separate each component clearly (e.g.,
@@ -135,8 +130,6 @@ the branch name.
      - **Professional appearance**.
    - **Cons**:
      - None significant — dots work well in practice.
-
----
 
 ## **3. The Final Solution**
 
@@ -205,8 +198,6 @@ done
 - The branches are pushed to `origin`, making it easy to track changes from
   upstream while keeping everything organized.
 
----
-
 ## **4. Conclusion**
 
 This strategy provides a clear and **safe system** for syncing upstream branches
@@ -218,10 +209,8 @@ convention, you can avoid conflicts and keep things simple. The solution:
 - Guarantees **clarity** and **future-proofing**.
 
 While other strategies, like **hashing**, might offer uniqueness, they add
-unnecessary complexity for most use cases. Stick with **dots** and
-**clear prefixes** for the best results.
-
----
+unnecessary complexity for most use cases. Stick with **dots** and **clear
+prefixes** for the best results.
 
 ## **Final Thoughts**
 

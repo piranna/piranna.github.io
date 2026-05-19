@@ -2,14 +2,14 @@
 layout: post
 tags: proposals, rest, api, design
 title: Confirm deletion in RESTful APIs
-twitter: '1234189351241867265'
+twitter: "1234189351241867265"
 ---
 
 When designing web services, it's normal to include an option to delete an
 user's account. Since this is an important action (the user and its data will
 dissapear from the platform), usually this is done by asking him to confirm the
 operation, with several endpoints one for each operation step. Navigating
-between different pages is *so* 2010-style, and there's no direct mapping at
+between different pages is _so_ 2010-style, and there's no direct mapping at
 this point between REST APIs and CRUD operations, that I've been thinking in a
 REST compatible alternative: use a token.
 
@@ -18,22 +18,22 @@ REST compatible alternative: use a token.
 The idea is, when you want to remove an user or resource, call to the
 corresponding endpoint (ideally the resource path using the `DELETE` method),
 but instead of doing inmediatly the removal operation, return an unique token
-that needs to send back again to the same endpoint to confirm the operation.
-The behaviour is similar to how HTTP authorization works, where a
-`401 Unauthorized` error code should be returned with a challenge, so you
-authenticate yourself and try the request again. I think JSON Web Tokens can be
-a good fit for this, since they are signed and server can check it's issued by
-itself and there's no need to store it anywhere, and also can store a timeout to
-make them shortlived (since it's an user interacted operation, 5 minutes would
-be more than enought). Also there's no problem by sending the token twice to the
-server because it's a deletion operation, so the second time it would be already
-deleted... that was exactly what we were asking for :-) To increase security,
-the token should host the user (or better, the session) and resource IDs, and
-the operation itself in case this mechanism is used for other operations in the
-future.
+that needs to send back again to the same endpoint to confirm the operation. The
+behaviour is similar to how HTTP authorization works, where a `401 Unauthorized`
+error code should be returned with a challenge, so you authenticate yourself and
+try the request again. I think JSON Web Tokens can be a good fit for this, since
+they are signed and server can check it's issued by itself and there's no need
+to store it anywhere, and also can store a timeout to make them shortlived
+(since it's an user interacted operation, 5 minutes would be more than enought).
+Also there's no problem by sending the token twice to the server because it's a
+deletion operation, so the second time it would be already deleted... that was
+exactly what we were asking for :-) To increase security, the token should host
+the user (or better, the session) and resource IDs, and the operation itself in
+case this mechanism is used for other operations in the future.
 
 Returned HTTP status codes could be a bit tricky, since the token is introducing
-some kind of state. For the first request it should return `401 Unauthorized` with the deletion token (so clients must diferenciate between this operation and
+some kind of state. For the first request it should return `401 Unauthorized`
+with the deletion token (so clients must diferenciate between this operation and
 a global unauthorized error), or `404 Not Found` if the resource doesn't exists.
 And what should be returned in the second request? On success, according to
 [RFC 7231](https://tools.ietf.org/html/rfc7231#section-4.3.5), if deletion
@@ -69,10 +69,10 @@ Finally, as a side note: **don't delete the actual data**. Remind the rule-0 of
 databases design: deleted data is lost data. It's ok to allow users to delete
 their data, but instead design and implement your system to add a new entry
 instead of modify your currently stored data, or make use of a flag to indicate
-that it has been removed. Your *you* of the future will thanks both us of having
+that it has been removed. Your _you_ of the future will thanks both us of having
 done it :-) This could have some conflicts with GDPR since it would mostly be
-seen as a *disable account* more like an actual user deletion, but this problem
+seen as a _disable account_ more like an actual user deletion, but this problem
 can be fixed up to some extend by having isolated databases for your user
 accounts and credentials and their actual profiles in your application. Because
-you have already designed your database that way... haven't you, eh?
-**Haven't you?**
+you have already designed your database that way... haven't you, eh? **Haven't
+you?**

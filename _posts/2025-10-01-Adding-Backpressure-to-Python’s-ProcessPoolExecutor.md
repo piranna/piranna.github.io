@@ -1,7 +1,9 @@
 ---
 lang: en
 layout: post
-tags: coauthored-with-chatgpt, python, concurrency, programming, backpressure, processpoolexecutor, threading
+tags:
+  coauthored-with-chatgpt, python, concurrency, programming, backpressure,
+  processpoolexecutor, threading
 title: Adding Backpressure to Python’s ProcessPoolExecutor
 ---
 
@@ -12,10 +14,10 @@ latency increased, and eventually the whole system became unstable.
 
 <!--more-->
 
-The root issue: by default, `ProcessPoolExecutor` accepts
-**an unbounded number of submissions**. The internal queue of work IDs grows
-without limit, and since every `submit()` creates a `Future`, you can easily
-flood memory if your producers are much faster than the pool can drain tasks.
+The root issue: by default, `ProcessPoolExecutor` accepts **an unbounded number
+of submissions**. The internal queue of work IDs grows without limit, and since
+every `submit()` creates a `Future`, you can easily flood memory if your
+producers are much faster than the pool can drain tasks.
 
 I needed **backpressure**: a way to make `submit()` block when the executor is
 saturated, so producers naturally pause until capacity frees up.
@@ -24,24 +26,21 @@ saturated, so producers naturally pause until capacity frees up.
 
 Several strategies came up during exploration:
 
-1. **Monkey-patching internals**
-   Replace the executor’s private `_work_ids` queue with a bounded one.
-   Technically possible (the last field initialized in the constructor), but
-   fragile across Python versions.
+1. **Monkey-patching internals** Replace the executor’s private `_work_ids`
+   queue with a bounded one. Technically possible (the last field initialized in
+   the constructor), but fragile across Python versions.
 
-2. **External semaphore**
-   Wrap the executor in a class that holds a `Semaphore`. Each `submit()`
-   acquires a slot; each task completion releases it. This approach is stable
-   and easy to customize.
+2. **External semaphore** Wrap the executor in a class that holds a `Semaphore`.
+   Each `submit()` acquires a slot; each task completion releases it. This
+   approach is stable and easy to customize.
 
-3. **Bounded queue feeder**
-   Insert a `Queue(maxsize=N)` between producers and a dedicated feeder thread
-   that calls `submit()`. Producers block on `put()` when the queue is full.
+3. **Bounded queue feeder** Insert a `Queue(maxsize=N)` between producers and a
+   dedicated feeder thread that calls `submit()`. Producers block on `put()`
+   when the queue is full.
 
-4. **Batching**
-   Increase the task granularity (using `chunksize` in `map()` or by grouping
-   tasks manually). This reduces overhead but doesn’t directly solve the memory
-   growth problem.
+4. **Batching** Increase the task granularity (using `chunksize` in `map()` or
+   by grouping tasks manually). This reduces overhead but doesn’t directly solve
+   the memory growth problem.
 
 Ultimately, I wanted something **drop-in compatible** with the existing executor
 API. That meant subclassing with a simple extension.
@@ -51,9 +50,9 @@ API. That meant subclassing with a simple extension.
 The key design choice is how large the backlog of pending tasks should be before
 producers block. The number should be proportional to the number of workers:
 
-* **2 × workers**: a balanced default for CPU-bound tasks of ~1s duration.
-* **3 × workers**: useful when task durations vary a lot.
-* **4 × workers**: a practical upper bound; beyond that, memory and latency
+- **2 × workers**: a balanced default for CPU-bound tasks of ~1s duration.
+- **3 × workers**: useful when task durations vary a lot.
+- **4 × workers**: a practical upper bound; beyond that, memory and latency
   increase without improving throughput.
 
 Example: with 8 CPU workers and tasks taking around one second,
@@ -134,12 +133,12 @@ class BoundedProcessPoolExecutor(ProcessPoolExecutor):
 
 With this subclass in place:
 
-* **Producers pause** automatically when the pool is full, instead of flooding
+- **Producers pause** automatically when the pool is full, instead of flooding
   memory.
-* **Memory stays flat**, no runaway growth from thousands of pending `Future`
+- **Memory stays flat**, no runaway growth from thousands of pending `Future`
   objects.
-* **Latency stabilizes**, since tasks no longer wait behind massive queues.
-* **Throughput remains consistent**, limited only by the number of workers.
+- **Latency stabilizes**, since tasks no longer wait behind massive queues.
+- **Throughput remains consistent**, limited only by the number of workers.
 
 There are visible pauses in producer threads and even some “gaps” in disk
 activity, but that’s expected: it’s the backpressure mechanism working as
