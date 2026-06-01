@@ -21,7 +21,7 @@ body {
   background: $white;
   color: $darkGray;
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
   font: 18px/1.4 $helvetica;
 }
 
@@ -86,7 +86,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   &:hover,
-    &:active {
+  &:active {
     color: $blue;
   }
 }
@@ -156,7 +156,7 @@ img {
 .clearfix:before,
 .clearfix:after {
   content: " ";
-    display: table;
+  display: table;
 }
 
 .clearfix:after {
@@ -285,7 +285,8 @@ nav {
 
   img {
     display: block;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     border-radius: 4px;
   }
@@ -307,13 +308,14 @@ nav {
 
   .post-list-hero-bg {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 50%;
+    width: auto;
+    max-width: 100%;
+    height: auto;
     z-index: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    transform: translateX(-50%);
     opacity: 0.55;
-    transform: scale(1.01);
   }
 
   .post-list-hero-fade {
@@ -385,7 +387,7 @@ nav {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
   flex-shrink: 0;
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 footer {

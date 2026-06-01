@@ -10,9 +10,8 @@ title: Blog
   {% for post in paginator.posts %}
   <article class="post {% if post.image %}post-with-image{% endif %}">
     {% if post.image %}
-    <div class="post-list-hero-bg"
-         style="background-image: url('{{ site.baseurl }}/images/{{ post.image }}');">
-    </div>
+      <img class="post-list-hero-bg" src="{{ site.baseurl }}/images/{{ post.image }}"
+           alt="{{ post.image_alt | default: post.title }}" />
     <div class="post-list-hero-fade" aria-hidden="true"></div>
     {% endif %}
 
