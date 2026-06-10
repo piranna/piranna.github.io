@@ -1,4 +1,9 @@
 ---
+categories:
+  - WebRTC
+  - Mediasoup
+  - Research
+  - Streaming
 code: https://github.com/piranna/Content-Mediasoup-bandwidth
 DOI: 10.5281/zenodo.19988776
 lang: en

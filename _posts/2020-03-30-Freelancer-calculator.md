@@ -1,4 +1,6 @@
 ---
+categories:
+  - Personal development
 layout: post
 tags: calculator, freelance, taxes, spain
 title: Freelancer calculator

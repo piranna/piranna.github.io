@@ -1,4 +1,8 @@
 ---
+categories:
+  - JavaScript
+  - Engineering
+  - Signature Post
 lang: en
 layout: post
 tags: nodejs, deployment, npm, typescript, server, devops

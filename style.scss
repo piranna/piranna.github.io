@@ -318,6 +318,69 @@ nav {
     opacity: 0.55;
   }
 
+
+.post-taxonomy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.taxonomy-label {
+  color: $gray;
+  font-size: 0.9em;
+}
+
+.taxonomy-pill {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid $lightGray;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.88em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.taxonomy-pill-category {
+  color: #0a5f8e;
+  background: #e8f4fb;
+}
+
+.taxonomy-pill-tag {
+  color: #1f5f3a;
+  background: #e9f8ef;
+}
+
+.taxonomy-context {
+  margin: 0 0 1rem;
+  color: $gray;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-cloud-xs {
+  font-size: 0.8rem;
+}
+
+.tag-cloud-sm {
+  font-size: 0.9rem;
+}
+
+.tag-cloud-md {
+  font-size: 1rem;
+}
+
+.tag-cloud-lg {
+  font-size: 1.1rem;
+}
+
+.tag-cloud-xl {
+  font-size: 1.25rem;
+}
   .post-list-hero-fade {
     position: absolute;
     left: 0;

@@ -1,0 +1,46 @@
+---
+layout: page
+---
+
+{% if page.autopages %}
+<p class="taxonomy-context">Collection: <strong>{{ page.autopages.display_name }}</strong></p>
+{% endif %}
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post {% if post.image %}post-with-image{% endif %}">
+    {% if post.image %}
+      <img class="post-list-hero-bg" src="{{ site.baseurl }}/images/{{ post.image }}"
+           alt="{{ post.image_alt | default: post.title }}" />
+      <div class="post-list-hero-fade" aria-hidden="true"></div>
+    {% endif %}
+
+    <h2>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </h2>
+    <div class="date">
+      {{ post.date | date: "%B %e, %Y" }}
+    </div>
+
+    <div class="entry">
+      {{ post.excerpt }}
+    </div>
+
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+  </article>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      <a {% if page.url != trail.path %}
+         href="{{ trail.path | prepend: site.baseurl }}" {% endif %}
+        title="{{trail.title}}"
+      >
+        {{ trail.num }}
+      </a>
+      {% if trail.next %} | {% endif %}
+    {% endfor %}
+  {% endif %}
+</div>

@@ -1,4 +1,7 @@
 ---
+categories:
+  - Personal development
+  - Engineering
 lang: en
 layout: post
 tags: perfectionism, programming, software, architecture, quality

@@ -1,4 +1,8 @@
 ---
+categories:
+  - WebRTC
+  - Engineering
+  - Signature Post
 lang: en
 layout: post
 redirect_from:

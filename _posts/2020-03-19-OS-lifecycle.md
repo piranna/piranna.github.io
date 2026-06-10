@@ -1,4 +1,8 @@
 ---
+categories:
+  - JavaScript
+  - Engineering
+  - Operating Systems
 layout: post
 tags: os, lifecycle, npm, automation, github-actions
 title: OS lifecycle

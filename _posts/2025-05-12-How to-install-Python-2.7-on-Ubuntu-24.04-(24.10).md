@@ -1,4 +1,7 @@
 ---
+categories:
+  - Python
+  - Systems
 lang: en
 layout: post
 tags: python, ubuntu, howto, mediasoup

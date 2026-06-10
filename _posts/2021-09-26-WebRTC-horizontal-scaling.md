@@ -1,4 +1,8 @@
 ---
+categories:
+  - Mafalda SFU
+  - Research
+  - WebRTC
 lang: en
 layout: post
 tags: Mafalda SFU, webrtc, mediasoup, sfu, video, streaming, scalability

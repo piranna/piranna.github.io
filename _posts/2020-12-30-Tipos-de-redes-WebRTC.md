@@ -1,4 +1,8 @@
 ---
+categories:
+  - WebRTC
+  - Engineering
+  - Streaming
 lang: es
 layout: post
 tags: webrtc, streaming, video, architecture

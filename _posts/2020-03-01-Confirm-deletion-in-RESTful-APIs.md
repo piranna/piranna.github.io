@@ -1,4 +1,6 @@
 ---
+categories:
+  - Engineering
 layout: post
 tags: proposals, rest, api, design
 title: Confirm deletion in RESTful APIs

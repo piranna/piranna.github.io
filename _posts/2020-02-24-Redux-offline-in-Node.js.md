@@ -1,4 +1,6 @@
 ---
+categories:
+  - JavaScript
 layout: post
 tags: javascript, nodejs, redux, redux-offline
 title: redux-offline in Node.js

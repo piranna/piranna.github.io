@@ -1,4 +1,6 @@
 ---
+categories:
+  - Crazy Projects
 image: 2020-04-25-How-to-simulate-Chrome-is-running-in-a-TTY.png
 image_alt: >-
   Screenshot of the blog with `tty` media rule and a custom terminal inspired

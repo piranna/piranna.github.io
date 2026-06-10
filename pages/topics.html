@@ -1,0 +1,76 @@
+---
+layout: page
+title: Topics
+permalink: /topics/
+---
+
+<p>This page groups the site taxonomy in one place: tags, categories, and collections.</p>
+
+<h2>Tag Cloud</h2>
+
+{% assign max_count = 0 %}
+{% assign min_count = 999999 %}
+{% for tag in site.tags %}
+  {% assign count = tag[1] | size %}
+  {% if count > max_count %}{% assign max_count = count %}{% endif %}
+  {% if count < min_count %}{% assign min_count = count %}{% endif %}
+{% endfor %}
+{% assign range = max_count | minus: min_count %}
+
+<div class="tag-cloud">
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_count = tag[1] | size %}
+
+    {% assign scaled = 50 %}
+    {% if range > 0 %}
+      {% assign scaled = tag_count | minus: min_count | times: 100 | divided_by: range %}
+    {% endif %}
+
+    {% assign cloud_class = 'tag-cloud-md' %}
+    {% if scaled <= 20 %}
+      {% assign cloud_class = 'tag-cloud-xs' %}
+    {% elsif scaled <= 40 %}
+      {% assign cloud_class = 'tag-cloud-sm' %}
+    {% elsif scaled <= 60 %}
+      {% assign cloud_class = 'tag-cloud-md' %}
+    {% elsif scaled <= 80 %}
+      {% assign cloud_class = 'tag-cloud-lg' %}
+    {% else %}
+      {% assign cloud_class = 'tag-cloud-xl' %}
+    {% endif %}
+
+    <a class="taxonomy-pill taxonomy-pill-tag {{ cloud_class }}"
+       href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
+      #{{ tag_name }} <small>({{ tag_count }})</small>
+    </a>
+  {% endfor %}
+</div>
+
+<h2>Categories</h2>
+
+{% if site.categories and site.categories.size > 0 %}
+<ul>
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    <li>
+      <a href="{{ site.baseurl }}/category/{{ category[0] | slugify: 'pretty' }}/">{{ category[0] }}</a>
+      ({{ category[1] | size }})
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No categories in posts yet.</p>
+{% endif %}
+
+<h2>Collections</h2>
+
+<ul>
+  {% for coll in site.collections %}
+    <li>
+      <a href="{{ site.baseurl }}/collection/{{ coll.label | slugify: 'pretty' }}/">{{ coll.label }}</a>
+      ({{ coll.docs | size }})
+    </li>
+  {% endfor %}
+</ul>

@@ -1,4 +1,7 @@
 ---
+categories:
+  - JavaScript
+  - Engineering
 lang: en
 layout: post
 tags: Mafalda SFU, npm, performance, profiling, gnomon

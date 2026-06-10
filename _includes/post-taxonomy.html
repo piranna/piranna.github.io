@@ -1,0 +1,31 @@
+{% assign item = include.post | default: page %}
+
+{% assign has_categories = false %}
+{% if item.categories and item.categories.size > 0 %}
+  {% assign has_categories = true %}
+{% endif %}
+
+{% assign has_tags = false %}
+{% if item.tags and item.tags.size > 0 %}
+  {% assign has_tags = true %}
+{% endif %}
+
+{% if has_categories or has_tags %}
+  <div class="post-taxonomy" aria-label="Post metadata">
+    {% if has_categories %}
+      <span class="taxonomy-label">Categories:</span>
+      {% for category in item.categories %}
+        <a class="taxonomy-pill taxonomy-pill-category"
+           href="{{ site.baseurl }}/category/{{ category | slugify: 'pretty' }}/">{{ category }}</a>
+      {% endfor %}
+    {% endif %}
+
+    {% if has_tags %}
+      <span class="taxonomy-label">Tags:</span>
+      {% for tag in item.tags %}
+        <a class="taxonomy-pill taxonomy-pill-tag"
+           href="{{ site.baseurl }}/tag/{{ tag | slugify: 'pretty' }}/">#{{ tag }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endif %}

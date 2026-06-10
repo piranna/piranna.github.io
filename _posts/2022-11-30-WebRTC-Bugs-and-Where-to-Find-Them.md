@@ -1,4 +1,8 @@
 ---
+categories:
+  - WebRTC
+  - Research
+  - Signature Post
 lang: en
 layout: post
 tags: webrtc, bugs, troubleshooting, stun, turn, connectivity, codecs

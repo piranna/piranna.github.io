@@ -1,4 +1,9 @@
 ---
+categories:
+  - WebRTC
+  - Research
+  - Signature Post
+  - Streaming
 code: https://github.com/piranna/Content-PeerConnection-bandwidth
 DOI: 10.5281/zenodo.19961278
 lang: en
@@ -24,6 +29,9 @@ I built something slightly different:
 This is what came out of it.
 
 <!--more-->
+
+(Post second part at
+[WebRTC bitrate is not what you think, Part II (Mediasoup edition)](../2026-05-05-WebRTC-bitrate-is-not-what-you-think,-Part-II-(Mediasoup-edition).md).)
 
 ## The key idea: stop tweaking, start measuring
 

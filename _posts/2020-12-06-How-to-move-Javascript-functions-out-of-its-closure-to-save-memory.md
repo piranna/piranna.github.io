@@ -1,4 +1,7 @@
 ---
+categories:
+  - JavaScript
+  - Engineering
 layout: post
 tags: javascript, performance, programming
 title: How to move Javascript functions out of its closure to save memory

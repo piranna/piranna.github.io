@@ -6,6 +6,37 @@ permalink: /blog/
 title: Blog
 ---
 
+{% assign max_tag_count = 0 %}
+{% for tag in site.tags %}
+  {% assign tag_count = tag[1] | size %}
+  {% if tag_count > max_tag_count %}
+    {% assign max_tag_count = tag_count %}
+  {% endif %}
+{% endfor %}
+
+<section>
+  <h2>Top Tags</h2>
+  <div class="tag-cloud">
+    {% assign shown_tags = 0 %}
+    {% for count in (1..max_tag_count) reversed %}
+      {% for tag in site.tags %}
+        {% assign tag_name = tag[0] %}
+        {% assign tag_size = tag[1] | size %}
+        {% if tag_size == count and shown_tags < 24 %}
+          <a class="taxonomy-pill taxonomy-pill-tag"
+             href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
+            #{{ tag_name }} <small>({{ tag_size }})</small>
+          </a>
+          {% assign shown_tags = shown_tags | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+  <p>
+    <a href="{{ site.baseurl }}/topics">See full tags, categories, and collections</a>
+  </p>
+</section>
+
 <div class="posts">
   {% for post in paginator.posts %}
   <article class="post {% if post.image %}post-with-image{% endif %}">
@@ -21,6 +52,8 @@ title: Blog
     <div class="date">
       {{ post.date | date: "%B %e, %Y" }}
     </div>
+
+    {% include post-taxonomy.html post=post %}
 
     <div class="entry">
       {{ post.excerpt }}

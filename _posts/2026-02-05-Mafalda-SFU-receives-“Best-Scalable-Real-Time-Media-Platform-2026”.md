@@ -1,4 +1,8 @@
 ---
+categories:
+  - Mafalda SFU
+  - Mediasoup
+  - WebRTC
 lang: en
 layout: post
 tags: mafalda-sfu, awards, real-time-media, webrtc, scaling, distributed-systems

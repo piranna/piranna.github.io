@@ -1,4 +1,8 @@
 ---
+categories:
+  - Engineering
+  - Streaming
+  - WebRTC
 layout: post
 tags: web, html, canvas, video, webrtc, webvtt, webm, metadata
 title: How to paint over a video with HTML

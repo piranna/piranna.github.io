@@ -1,4 +1,8 @@
 ---
+categories:
+  - Personal development
+  - Engineering
+lang: en
 layout: post
 tags: blog, github, jekyll, tutorial
 title: How to have a blog on Github

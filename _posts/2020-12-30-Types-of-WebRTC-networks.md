@@ -1,4 +1,6 @@
 ---
+categories:
+  - WebRTC
 lang: en
 layout: post
 tags: webrtc, streaming, video, architecture

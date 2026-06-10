@@ -1,4 +1,6 @@
 ---
+categories:
+  - AI
 lang: en
 layout: post
 tags:

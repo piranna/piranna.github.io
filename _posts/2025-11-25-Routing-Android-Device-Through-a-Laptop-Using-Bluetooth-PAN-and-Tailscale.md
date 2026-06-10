@@ -1,4 +1,8 @@
 ---
+categories:
+  - Crazy Projects
+  - Engineering
+  - Systems
 lang: en
 layout: post
 tags:

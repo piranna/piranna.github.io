@@ -1,4 +1,9 @@
 ---
+categories:
+  - Streaming
+  - Research
+  - Engineering
+  - Signature Post
 lang: en
 layout: post
 tags:

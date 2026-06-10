@@ -1,4 +1,6 @@
 ---
+categories:
+  - Engineering
 lang: en
 layout: post
 tags: exceptions, programming, python, javascript
