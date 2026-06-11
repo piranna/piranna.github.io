@@ -2,6 +2,7 @@
 categories:
   - JavaScript
   - Engineering
+  - Signature Post
 lang: en
 layout: post
 tags: javascript, programming, oop, abstract

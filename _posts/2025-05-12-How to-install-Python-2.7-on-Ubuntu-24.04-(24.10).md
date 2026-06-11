@@ -17,10 +17,10 @@ and totally outdated up to the point that the documentation for that version was
 > mediasoup v1 is no longer documented. Sorry. Anyway it's no longer maintained
 > so please move to the latest version.
 
+<!--more-->
+
 So being so much obsolete, to install the project and run it I needed to install
 a couple of things first:
-
-<!--more-->
 
 1. [Node.js 10.24.1](https://nodejs.org/es/blog/release/v10.24.1), the last
    Node.js version published of the 10.x family, because there was other
