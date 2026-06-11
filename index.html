@@ -81,6 +81,9 @@ layout: default
       <article class="post">
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          {% if post.categories contains 'Signature Post' %}
+          <span class="signature-badge">Signature Post</span>
+          {% endif %}
         </h3>
         <div class="date">
           {{ post.date | date: "%B %e, %Y" }}

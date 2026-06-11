@@ -17,6 +17,9 @@ layout: page
 
     <h2>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      {% if post.categories contains 'Signature Post' %}
+      <span class="signature-badge">Signature Post</span>
+      {% endif %}
     </h2>
     <div class="date">
       {{ post.date | date: "%B %e, %Y" }}
