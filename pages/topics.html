@@ -6,6 +6,59 @@ permalink: /topics/
 
 <p>This page groups the site taxonomy in one place: tags, categories, and collections.</p>
 
+<h2>Categories</h2>
+
+{% if site.categories and site.categories.size > 0 %}
+{% assign max_category_count = 0 %}
+{% for category in site.categories %}
+{% assign category_count = category[1] | size %}
+{% if category_count > max_category_count %}
+{% assign max_category_count = category_count %}
+{% endif %}
+{% endfor %}
+
+<div class="tag-cloud">
+  {% for count in (1..max_category_count) reversed %}
+  {% for category in site.categories %}
+  {% assign category_name = category[0] %}
+  {% assign category_count = category[1] | size %}
+  {% if category_count == count %}
+  <a class="taxonomy-pill taxonomy-pill-category{% if category_name == 'Signature Post' %} taxonomy-pill-signature{% endif %}"
+     href="{{ site.baseurl }}/category/{{ category_name | slugify: 'pretty' }}/">
+    {{ category_name }} <small>({{ category_count }})</small>
+  </a>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
+{% else %}
+<p>No categories in posts yet.</p>
+{% endif %}
+
+<h2>Collections</h2>
+
+{% assign max_collection_count = 0 %}
+{% for coll in site.collections %}
+{% assign coll_count = coll.docs | size %}
+{% if coll_count > max_collection_count %}
+{% assign max_collection_count = coll_count %}
+{% endif %}
+{% endfor %}
+
+<div class="tag-cloud">
+  {% for count in (1..max_collection_count) reversed %}
+  {% for coll in site.collections %}
+  {% assign coll_count = coll.docs | size %}
+  {% if coll_count == count %}
+  <a class="taxonomy-pill taxonomy-pill-collection"
+     href="{{ site.baseurl }}/collection/{{ coll.label | slugify: 'pretty' }}/">
+    {{ coll.label }} <small>({{ coll_count }})</small>
+  </a>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
+
 <h2>Tag Cloud</h2>
 
 {% assign max_count = 0 %}
@@ -19,58 +72,36 @@ permalink: /topics/
 
 <div class="tag-cloud">
   {% assign sorted_tags = site.tags | sort %}
-  {% for tag in sorted_tags %}
+  {% for count in (1..max_count) reversed %}
+    {% for tag in sorted_tags %}
     {% assign tag_name = tag[0] %}
     {% assign tag_count = tag[1] | size %}
+      {% if tag_count != count %}
+      {% continue %}
+      {% endif %}
 
-    {% assign scaled = 50 %}
-    {% if range > 0 %}
+      {% assign scaled = 50 %}
+      {% if range > 0 %}
       {% assign scaled = tag_count | minus: min_count | times: 100 | divided_by: range %}
-    {% endif %}
+      {% endif %}
 
-    {% assign cloud_class = 'tag-cloud-md' %}
-    {% if scaled <= 20 %}
-      {% assign cloud_class = 'tag-cloud-xs' %}
-    {% elsif scaled <= 40 %}
-      {% assign cloud_class = 'tag-cloud-sm' %}
-    {% elsif scaled <= 60 %}
       {% assign cloud_class = 'tag-cloud-md' %}
-    {% elsif scaled <= 80 %}
+      {% if scaled <= 20 %}
+      {% assign cloud_class = 'tag-cloud-xs' %}
+      {% elsif scaled <= 40 %}
+      {% assign cloud_class = 'tag-cloud-sm' %}
+      {% elsif scaled <= 60 %}
+      {% assign cloud_class = 'tag-cloud-md' %}
+      {% elsif scaled <= 80 %}
       {% assign cloud_class = 'tag-cloud-lg' %}
-    {% else %}
+      {% else %}
       {% assign cloud_class = 'tag-cloud-xl' %}
-    {% endif %}
+      {% endif %}
 
-    <a class="taxonomy-pill taxonomy-pill-tag {{ cloud_class }}"
-       href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
-      #{{ tag_name }} <small>({{ tag_count }})</small>
-    </a>
+      <a class="taxonomy-pill taxonomy-pill-tag {{ cloud_class }}"
+         href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
+        #{{ tag_name }} <small>({{ tag_count }})</small>
+      </a>
+    {% endfor %}
   {% endfor %}
 </div>
-
-<h2>Categories</h2>
-
-{% if site.categories and site.categories.size > 0 %}
-<ul>
-  {% assign sorted_categories = site.categories | sort %}
-  {% for category in sorted_categories %}
-    <li>
-      <a href="{{ site.baseurl }}/category/{{ category[0] | slugify: 'pretty' }}/">{{ category[0] }}</a>
-      ({{ category[1] | size }})
-    </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No categories in posts yet.</p>
-{% endif %}
-
-<h2>Collections</h2>
-
-<ul>
-  {% for coll in site.collections %}
-    <li>
-      <a href="{{ site.baseurl }}/collection/{{ coll.label | slugify: 'pretty' }}/">{{ coll.label }}</a>
-      ({{ coll.docs | size }})
-    </li>
-  {% endfor %}
-</ul>

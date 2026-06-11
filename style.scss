@@ -318,12 +318,47 @@ nav {
     opacity: 0.55;
   }
 
+  .post-list-hero-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 75%;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.55) 45%,
+      rgba(255, 255, 255, 0.9) 72%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    backdrop-filter: blur(2px);
+  }
+
+  @include mobile {
+    min-height: 240px;
+    padding-top: 110px;
+  }
+}
 
 .post-taxonomy {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.45rem;
   margin: 0.5rem 0 0.8rem;
+}
+
+.taxonomy-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.taxonomy-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .taxonomy-label {
@@ -349,6 +384,20 @@ nav {
 .taxonomy-pill-tag {
   color: #1f5f3a;
   background: #e9f8ef;
+}
+
+.taxonomy-pill-collection {
+  color: #5a2d84;
+  background: #f3eafd;
+}
+
+.taxonomy-pill-signature {
+  color: #6a4700;
+  background: linear-gradient(135deg, #fff5c2 0%, #ffe082 100%);
+  border-color: #d9a300;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.2), 0 2px 10px rgba(217, 163, 0, 0.22);
+  animation: signature-glow 2.6s ease-in-out infinite;
 }
 
 .taxonomy-context {
@@ -381,26 +430,37 @@ nav {
 .tag-cloud-xl {
   font-size: 1.25rem;
 }
-  .post-list-hero-fade {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 75%;
-    z-index: 1;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.55) 45%,
-      rgba(255, 255, 255, 0.9) 72%,
-      rgba(255, 255, 255, 1) 100%
-    );
-    backdrop-filter: blur(2px);
-  }
 
-  @include mobile {
-    min-height: 240px;
-    padding-top: 110px;
+.tag-cloud .taxonomy-pill-signature {
+  transform: scale(1.04);
+}
+
+.signature-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #d9a300;
+  background: linear-gradient(135deg, #fff5c2 0%, #ffe082 100%);
+  color: #6a4700;
+  font-size: 0.55em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.55rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.2), 0 2px 10px rgba(217, 163, 0, 0.22);
+  animation: signature-glow 2.6s ease-in-out infinite;
+}
+
+@keyframes signature-glow {
+  0% {
+    box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.18), 0 2px 8px rgba(217, 163, 0, 0.14);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.35), 0 4px 14px rgba(217, 163, 0, 0.28);
+  }
+  100% {
+    box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.18), 0 2px 8px rgba(217, 163, 0, 0.14);
   }
 }
 

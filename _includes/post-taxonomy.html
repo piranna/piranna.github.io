@@ -10,22 +10,35 @@
   {% assign has_tags = true %}
 {% endif %}
 
+{% assign has_signature = false %}
+{% if has_categories and item.categories contains 'Signature Post' %}
+  {% assign has_signature = true %}
+{% endif %}
+
 {% if has_categories or has_tags %}
   <div class="post-taxonomy" aria-label="Post metadata">
     {% if has_categories %}
-      <span class="taxonomy-label">Categories:</span>
-      {% for category in item.categories %}
-        <a class="taxonomy-pill taxonomy-pill-category"
-           href="{{ site.baseurl }}/category/{{ category | slugify: 'pretty' }}/">{{ category }}</a>
-      {% endfor %}
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Categories:</span>
+        <div class="taxonomy-values">
+          {% for category in item.categories %}
+            <a class="taxonomy-pill taxonomy-pill-category{% if category == 'Signature Post' %} taxonomy-pill-signature{% endif %}"
+               href="{{ site.baseurl }}/category/{{ category | slugify: 'pretty' }}/">{{ category }}</a>
+          {% endfor %}
+        </div>
+      </div>
     {% endif %}
 
     {% if has_tags %}
-      <span class="taxonomy-label">Tags:</span>
-      {% for tag in item.tags %}
-        <a class="taxonomy-pill taxonomy-pill-tag"
-           href="{{ site.baseurl }}/tag/{{ tag | slugify: 'pretty' }}/">#{{ tag }}</a>
-      {% endfor %}
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Tags:</span>
+        <div class="taxonomy-values">
+          {% for tag in item.tags %}
+            <a class="taxonomy-pill taxonomy-pill-tag"
+               href="{{ site.baseurl }}/tag/{{ tag | slugify: 'pretty' }}/">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+      </div>
     {% endif %}
   </div>
 {% endif %}
