@@ -18,7 +18,7 @@ also I wanted to do it for documentation publishing.
 [Mafalda](https://mafalda.io/) is split in a lot of packages (currently more
 than 30!), so I wanted to have a single place where to publish the documentation
 of all of them. [Github Pages](https://pages.github.com/) allows to host a
-website for your organization or username by free (this blog and personal site
+website for your organization or username for free (this blog and personal site
 [already makes use of it](https://github.com/piranna/piranna.github.io)), and it
 can also host automatically a website for each repository as sub-paths of your
 username/organization main website. Problem is, that it only works for open
@@ -78,7 +78,7 @@ jobs:
 
 ## Generate the documentation
 
-To automatically generate the documentation, we have two aproaches: generate it
+To automatically generate the documentation, we have two approaches: generate it
 as a [git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks), or do
 it on the CI servers. I use to prefer the first option, specially for complex
 projects where people of different levels are working on the code (like Juniors

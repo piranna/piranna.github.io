@@ -12,7 +12,7 @@ the terms and conditions. You can get more info about my past work experience at
 my [LinkedIn profile](https://www.linkedin.com/in/piranna/) or at my
 [Curriculum Vitae](https://www.dropbox.com/scl/fi/2jm58hm34rolqbn68v9t9/Leganes-Combarro-Jesus.pdf?rlkey=ugh4z78dytg7afvv3oca7cizy&st=51bfp0pv&dl=0)
 
-## My ideal job (AKA *Santa's letter*)
+## My ideal job (AKA _Santa's letter_)
 
 Note: this mostly target employee positions, that's what I aspire in the
 long-term, but most of the topics also apply to freelance projects.
@@ -30,14 +30,14 @@ long-term, but most of the topics also apply to freelance projects.
 - A responsibility position with decision on projects and company future, and
   with real possibilities to improve both of them, also in ways not directly job
   related but also oriented to work conditions and the company itself.
-- Travel frequently. I'm a *travel junkie*, so although I understand the
+- Travel frequently. I'm a _travel junkie_, so although I understand the
   concerns of others, for me it's a plus, so the more the merrier. If it's for
   assistance to conferences, double score :-)
 
-By the way, this points are a common factor of *the big guys*, like Google,
-Apple, Microsoft, Amazon... Salaries, labor conditions, prestige and the kind
-of projects they work with, give them a *fast past* in my priorities list, and
-you can get into it too if your offer seems to me as interesting as theirs
+By the way, this points are a common factor of _the big guys_, like Google,
+Apple, Microsoft, Amazon... Salaries, labor conditions, prestige and the kind of
+projects they work with, give them a _fast past_ in my priorities list, and you
+can get into it too if your offer seems to me as interesting as theirs
 
 ### What could it have or provide me?
 
@@ -47,8 +47,8 @@ you can get into it too if your offer seems to me as interesting as theirs
 - Research & Development projects, specially in academic contexts. Jobs with
   **real** possibilities of publishing academic papers will **always** be of my
   interest and have priority over others than don't.
-- Incentive workers to improve themselves and achieve technical excellence.
-  This includes (but not only just sticks to) that the company fulfills the
+- Incentive workers to improve themselves and achieve technical excellence. This
+  includes (but not only just sticks to) that the company fulfills the
   [Joel's test](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/)
 - All company code and intellectual property (at least the one not directly
   related with the company's business model) is published as Open Source and/or
@@ -85,7 +85,7 @@ you can get into it too if your offer seems to me as interesting as theirs
 - Frontend web development & web APIs
 - Mobile multi-platform apps (React Native, PWAs)
 
-And more specially, *to do what any others can't* :-)
+And more specially, _to do what any others can't_ :-)
 
 More in detail info about my knowledge areas and experience can be found in the
 [uses](uses.md) page.
@@ -191,7 +191,7 @@ hobbies.
 
 If you consider that's not enough and need to check yourself my work, you can
 contract me for some hours as a freelance to do an actual task in your code
-base, so you can evaluate my work on first hand. If you *still* insists that I
+base, so you can evaluate my work on first hand. If you _still_ insists that I
 need to do an unpaid code test or take-home code assignment, for me it's an
 almost instant discard of your offer, specially if I'm told so at the end of an
 interview instead of tell me how the full selection process is before hand.
@@ -199,10 +199,10 @@ That's rude, and I feel betrayed by you making waste my time, and it shows how
 low do you value your employees-to-be work-life balance if you don't respect it
 starting at the selection process.
 
-By the way, *big guys* like Google, Apple, Microsoft, IBM, Amazon, Facebook,
+By the way, _big guys_ like Google, Apple, Microsoft, IBM, Amazon, Facebook,
 Ebay... **don't** do code tests, but instead they do in-site technical
-interviews, paying flight tickets and hotel rooms if needed. They *value* their
-employees and candidates time and invest in them, so don't be more *picky* than
+interviews, paying flight tickets and hotel rooms if needed. They _value_ their
+employees and candidates time and invest in them, so don't be more _picky_ than
 them, and show that you are truly interested in your candidates too.
 
 #### Where are you located?
@@ -254,7 +254,7 @@ additionally:
 
 If it's not possible to meet these requirements, I'm also able to work 100% on
 remote and travel as frequently as required, as far as company pays flight /
-train tickets, diets and hotel room. In fact, I'm a *travel junkie*, and I would
+train tickets, diets and hotel room. In fact, I'm a _travel junkie_, and I would
 consider the requirement of need to travel frequently as an advantage of the job
 position :-)
 
@@ -284,10 +284,10 @@ favorites ones are:
     technology to each project, or availability of resources, allowed time or
     off-the-shelves libraries
   - **frontend**: [React Native](https://reactnative.dev/) (both for portable
-  mobile aps and [web](https://github.com/necolas/react-native-web)),
-  [React](https://es.reactjs.org/), and for performance and code compatibility
-  with desktop and server, combined with `Rust` compiled to
-  [WebAssembly](https://webassembly.org/)
+    mobile aps and [web](https://github.com/necolas/react-native-web)),
+    [React](https://es.reactjs.org/), and for performance and code compatibility
+    with desktop and server, combined with `Rust` compiled to
+    [WebAssembly](https://webassembly.org/)
 
 #### Are you interested in learning new technologies? Which ones and why?
 
@@ -301,9 +301,9 @@ streaming and network protocols.
 I'm a hands-on learner and a bit obssesed with technical details, so if I get
 some interesting project between my hands or find something that I think can be
 fixed or improved, I don't have problems learning new skills or knowledge that
-can be useful to me to do it, specially if they are stablished and future-proof
-industrial standards and not just some temporally fashioned or hyped libraries
-and frameworks.
+can be useful to me to do it, especially if they are established and
+future-proof industrial standards and not just some temporally fashioned or
+hyped libraries and frameworks.
 
 #### What are the three things you think are the most important to improve a software project?
 
@@ -331,7 +331,7 @@ proud of, both mine or from others, in the [projects](projects.md) page.
 - 3 times winner of [CUSL](https://www.concursosoftwarelibre.org/), spanish
   national Universitary Free Software Championship (PirannaFS, ShareIt! and
   NodeOS)
-- Worked on 2 adquired start-ups (Kurento and lingbe)
+- Worked at 2 acquired start-ups (Kurento and lingbe)
 - Referenced in the book
   [HTML5 for Masterminds](http://www.formasterminds.com/html5_for_masterminds_3rd_edition/)
   by J.D. Gauchat due to my pioneer work on WebRTC with
@@ -345,28 +345,30 @@ proud of, both mine or from others, in the [projects](projects.md) page.
 add grilled cheese as an extra. At the same time, they also offer a grilled
 cheese sandwich. You can add to the sandwiches all the toppings that you want by
 free... and they have available as toppings all the same ingredients that are
-part of the veggie sandwich, minus the grilled cheese. So, the hack is, by
-taking as basis a grilled cheese hamburguer and adding as toppings all the
-ingredients of the veggie sandwich, you can have a cheese veggie sandwich also
-cheaper than the original veggie sandwich alone. The first time I put in
-practice this hack, the cashier was not funny at all, as if she would be angry
-with me for discovering that loop-hole.
+part of the veggie sandwich, minus the grilled cheese. So, the hack is to take a
+grilled cheeseburger as the base and add as toppings all the ingredients of the
+veggie sandwich, you can have a cheese veggie sandwich also cheaper than the
+original veggie sandwich alone. The first time I put in practice this hack, the
+cashier was not funny at all, as if she would be angry with me for discovering
+that loop-hole.
 
 As a side note, I personally find Five Guys hamburguers to have too much fat,
 being in my opinion this "hack" or the original cheese veggie sandwich the only
 tasteful ones they have. That's how I found this loop-hole in the first place,
-and since then my "hack" sandwich is usually the only product I consume from them the few times I buy there.
+and since then my "hack" sandwich is usually the only product I consume from
+them the few times I buy there.
 
 #### What are your hobbies outside of work?
 
 Besides working on my own research side projects, I like running, travelling,
-dinner out, visit museums, going to cinema or reading, between others.
+going out for dinner, visiting museums, going to the cinema, and reading, among
+other things.
 
 #### What achievements are you more proud of, outside of technology?
 
 I'm mostly proud of the achievements with my personal side projects (technology
-is my hobby), but besides that, I'm also proud of have done the New Year's Eve
-10km run in 53 minutes, and that I've started learning chinese.
+is my hobby), but besides that, I'm also proud of having completed the New
+Year's Eve 10km run in 53 minutes, and that I've started learning chinese.
 
 #### If you could be able to organize an intelectual dinner, what three people (live or dead) would you invite?
 
@@ -401,17 +403,17 @@ open knowledge and culture are something I totally feel identified myself with.
 
 #### What things do you have in your personal "life's to-do" list?
 
-My major dream since I was a child was to became an astronaut, since I had the
-idea that as a scientist, it was not possible to get higher, both literal or
-metaphorically. The main reason was to feel ingravity, so since now I've lost
-almost any oportunity to became an astronaut, now on absolut top of my list is
-to do a [zero G fligth](https://en.wikipedia.org/wiki/Reduced-gravity_aircraft)
-🙂.
+My biggest dream since I was a child was to become an astronaut, since I had the
+idea that, as a scientist, it was not possible to go any higher, both literally
+and metaphorically. The main reason was to experience zero gravity, so now that
+I've lost almost any opportunity to become an astronaut, the absolute top item
+on my list is to take a
+[zero-G flight](https://en.wikipedia.org/wiki/Reduced-gravity_aircraft) 🙂.
 
 In second place, it's to do a travel around the world. I don't have a particular
 destination or route, just only to visit as most countries as possible... and
-return to my journey's origin from the other side :-D Relate to that, a recent
-incorporation to the list is to became myself a member of
+return to my journey's origin from the other side :-D Related to that, a recent
+addition to the list is to become a member of
 [the Travelers' Century Club](https://travelerscenturyclub.org/), that represent
 travelers who have visited 100 or more of the world's countries and territories
 (by the moment I've visited 13 and counting). Also related to this is to visit
@@ -420,16 +422,16 @@ Antartica and join the [300 Club](https://en.wikipedia.org/wiki/300_Club) 😀.
 #### How do you expect your boss should be?
 
 The most important things, it has a technical background, so it can understand
-when i explain what problems does we have or why something can't be done.
+when I explain what problems we have or why something can't be done.
 
-The second one, *make money* is not its priority, and it's managing the company
+The second one, _make money_ is not its priority, and it's managing the company
 because really love what it's doing and believe in the company itself, also when
-it's in losses. It must not take decissions just only based on economics, no
-matter the consecuences.
+it's in losses. It must not take decisions just only based on economics, no
+matter the consequences.
 
 I truly believe that work must be done by some reasons besides money itself
-(it's acceptable to work focused on *what can we get* with that money, though),
-and *make money* must be just a side effect of working, not its main reason to
+(it's acceptable to work focused on _what can we get_ with that money, though),
+and _make money_ must be just a side effect of working, not its main reason to
 be. I have already changed jobs in the past just for that single reason, where
 nobody cared by the company and everybody was there only for the (huge) monthly
 payment, including me. When I got myself that I was not behaving according to my
@@ -439,13 +441,14 @@ ethic principles, I left the company.
 
 #### What types of companies have you worked in? e.g.: startups, consulting, enterprise, agencies, etc
 
-I've worked for some stablished enterprises like
+I've worked for some established enterprises like
 [Telefónica](https://www.telefonica.com), and a couple of times for consulting
-firms or freelance agencies, but the ones I've worked more times and enojed the
-most has always been freelance projects on my own and startups, some of them
-later adquired by bigger companies like [Kurento](https://www.kurento.org/)
-(adquired by [Twilio](https://www.twilio.com/)) or [lingbe](https://lingbe.com/)
-(adquired by [italki](https://www.italki.com/)).
+firms or freelance agencies, but the ones I've worked with most often and
+enjoyed the most have always been my own freelance projects and startups, some
+of them later acquired by bigger companies like
+[Kurento](https://www.kurento.org/) (acquired by
+[Twilio](https://www.twilio.com/)) or [lingbe](https://lingbe.com/) (acquired by
+[italki](https://www.italki.com/)).
 
 #### What type of company would you like to work for and why?
 
@@ -462,44 +465,45 @@ one.
 
 - Engineering companies, not technology ones.
 - Innovation, design of new technologies, and usage and development of open and
-  standard specifications. I totally identify myself with the motto of my
-  *alma mater*, the [Rey Juan Carlos University](https://www.urjc.es/):
-  *non nova, sed nove* ("not a new one, but in a new way").
+  standard specifications. I totally identify myself with the motto of my _alma
+  mater_, the [Rey Juan Carlos University](https://www.urjc.es/): _non nova, sed
+  nove_ ("not a new one, but in a new way").
 
 In a similar way, I consider myself a practical person but with ethical
 principles, and hope the ones of clients and companies I work with are aligned
 to mines:
 
-- "*Make money*" is **not** one of the company main priorities (both directly or
-  indirectly), nor it's of their clients, or at least it's not the main purposse
-  of the project I'm going to work with. I work mostly for the project and the
-  technology themselves and what I can learn from them, not for their revenues.
-  Acording to my *ethos*, money and beneficts must always be a collateral effect
-  of work and a medium to achieve experiences, not a main objective by itself.
-- If *money* is a direct or indirect core concept of the project up to the point
+- "_Make money_" is **not** one of the company main priorities (both directly or
+  indirectly), nor is it one of their clients', or at least it's not the main
+  purpose of the project I'm going to work with. I work mostly for the project
+  and the technology themselves and what I can learn from them, not for their
+  revenues. According to my _ethos_, money and benefits must always be a
+  collateral effect of work and a medium to achieve experiences, not a main
+  objective by itself.
+- If _money_ is a direct or indirect core concept of the project up to the point
   that removing it makes the project pointless, probably I would not be so much
   interested on working on it. Other elements like the technologies being used
-  or the project concept or the oportunities that it can provide me can help,
+  or the project concept or the opportunities that it can provide me can help,
   but definitely not by the project itself alone.
 
 #### Do you prefer to work alone, or as part of a group?
 
-I like to work in a group, specially on small ones focused on a single project
+I like to work in a group, especially on small ones focused on a single project
 where there's a clear roadmap on what to do, or where technical expertise of
 co-workers is high and everybody is trying to do their best. This open the door
-to the posibility of discuss the different approachs to the problems and learn
-ones from the others. In the same way, when I have a lead or expert role, I
-like to surround me of co-workers with good technical skils so I can take in
-account their points of view too when defining the project architecture, the
-development guidelines or the project quality bar that other have to follow. In
-other cases where that's not possible, I usualy like to work as part of a group
-where people can be focused each one on an area of the code that they can master
-and know in detail and manage it on their own, so everybody can be able to focus
-on their knowledge area.
+to the possibility of discussing the different approaches to the problems and
+learning from the others. In the same way, when I have a lead or expert role, I
+like to surround myself with co-workers with good technical skills so I can take
+into account their points of view too when defining the project architecture,
+the development guidelines or the project quality bar that others have to
+follow. In other cases where that's not possible, I usually like to work as part
+of a group where people can be focused each one on an area of the code that they
+can master and know in detail and manage it on their own, so everybody can be
+able to focus on their knowledge area.
 
 #### What do you value the most about a team?
 
-- Team lead is somebody I can learn from, or somebody humble that know its
+- Team lead is somebody I can learn from, or somebody humble that knows their
   limits and when it's better to trust in the experts knowledge, also when they
   are lower on the company hierarchy
 - Team members are motivated, distressed, and working together for the same goal
@@ -509,21 +513,21 @@ on their knowledge area.
   from them, or they have initiative and are eager to learn and improve
   themselves
 
-As cleary explained at <https://mailchi.mp/bonillaware/sabotear-tu-empresa>,
+As clearly explained at <https://mailchi.mp/bonillaware/sabotear-tu-empresa>,
 these points are a direct result of having a motivated team, and that's a
-responsability of the company itself:
+responsibility of the company itself:
 
 > To motivate our team members -beyond a correct retribution- we only need to
 > create an environment where they can do their work well, where each time they
-> can do it better and, in addition, they contribute to a purposse whom they
-> believe, beyond earn more and more money.
+> can do it better and, in addition, they contribute to a purpose they believe,
+> beyond earn more and more money.
 
 #### Do you currently have a job? What do you like and dislike about it?
 
-Currently I'm working as *WebRTC Architect* for [Dyte](https://www.dyte.io/) as
-my main job and as part-time freelance developer, consultor and auditor. In that
-way, I'm always actively looking for freelance projects to work on remote in my
-spare time (maybe yours! :-D ).
+Currently I'm working as _WebRTC Architect_ for [Dyte](https://www.dyte.io/) as
+my main job and as part-time freelance developer, consultant and auditor. In
+that way, I'm always actively looking for freelance projects to work on remote
+in my spare time (maybe yours! :-D ).
 
 ##### 👍 Likes
 
@@ -536,43 +540,43 @@ spare time (maybe yours! :-D ).
 
 ##### 👎 Dislikes
 
-- legacy code and design decissions, and almost no time sloted to fix them
-- architecture complex and very cohexionated, with lots of inter-dependencies
+- legacy code and design decisions, and almost no time slotted to fix them
+- complex and highly cohesive architecture, with lots of inter-dependencies
   between projects
 
 #### What would motivate you to change job?
 
 1. The most important, an interesting project that caught my attention and
    motivates me to do the change by itself, no matter any other things like
-   salary, relocation or social beneficts. This can be the project topic,
-   technologies being used, the profesional or academic career oportunities that
-   it can offer me...
+   salary, relocation or social benefits. This can be the project topic,
+   technologies being used, the professional or academic career opportunities
+   that it can offer me...
 2. A salary according to my expectations.
-3. Quantity and quality of social beneficts provided in addition to the salary,
+3. Quantity and quality of social benefits provided in addition to the salary,
    specially restaurant card, public transport card, gym subscription, remote
    work, flexible schedule...
 
 #### What would motivate you to join a new project?
 
-- Higher salary maintaining or improving all my perks and social beneficts
+- Higher salary maintaining or improving all my perks and social benefits
 - Work on a research project, ideally somewhat related to own research areas
-- Position with responsability that could help me to improve my career both
-  profesional and academically, with publishing of papers
+- Position with responsibility that could help me to improve my career both
+  professionally and academically, with publishing of papers
 
 #### What you are looking for in your next job?
 
-A project I can feel my own and get involved on it, helping to define its shape.
-Also a project that can make me proud of and help to learn new things and
-improve my career, ideally both profesionally and in academic areas.
+A project I can feel is my own and get involved in, helping to define its shape.
+Also a project that can make me proud and help me learn new things and improve
+my career, ideally both professionally and in academic areas.
 
 #### If I made you an offer, what would make you to reject it?
 
-If we get up to this point, probably I would have already consider the pros &
-cons regarding changing my current job, so only I would reject a job offer if
-the tasks I would be involved are not motivational enought, or the final salary
+If we get up to this point, probably I would have already considered the pros &
+cons regarding changing my current job, so I would reject a job offer only if
+the tasks I would be involved in are not motivating enough, or the final salary
 difference with my current job would not compensate the change (this is
 specially important in the case when relocation is required and it makes me a
 drop in my buying level and/or life quality), so it's better that we discuss
-these topics in the first interview to don't waste everybody time.
+these topics in the first interview so we don't waste everybody's time.
 
 </details>

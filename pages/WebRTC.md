@@ -4,44 +4,45 @@ title: WebRTC
 permalink: /webrtc/
 ---
 
-I've been working with [WebRTC](https://webrtc.org/) since 2012, less than one
-year after they were started the discussions about design and develop its
-specifications, being one of the pioneers of this technology in Spain.
+I've been working with [WebRTC](https://webrtc.org/) since 2012, less than a
+year after discussions started around designing and developing its
+specifications, which made me one of the pioneers of this technology in Spain.
 
-I got involved on it while developing [ShareIt!](projects.md#shareit), the first
-serverless P2P filesharing application written fully in client side JavaScript,
-and with whom I won the "Most Innovative Project" award at the spanish national
+I got involved with it while developing [ShareIt!](projects.md#shareit), the
+first serverless P2P file-sharing application written entirely in client-side
+JavaScript, which won the "Most Innovative Project" award at the Spanish
+national
 [VII Free Software Universitary Championship](http://www.concursosoftwarelibre.org/1213/premiados-vii-cusl.html).
 To develop it, I also needed to create
 [DataChannel-polyfill](https://github.com/ShareIt-project/DataChannel-polyfill),
 the first working implementation of WebRTC
 [RTCDataChannel](https://w3c.github.io/webrtc-pc/#rtcdatachannel) API, four
 months before it was available in experimental versions of both Chrome and
-Firefox browsers, using for it
+Firefox, using
 [WebSocket](https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface)
 connections instead of a
 [SCTP](https://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol)
-connection as transport layer.
+connection as the transport layer.
 
 Thanks to both projects, I was invited to do a keynote in the first Spain WebRTC
 summit, hosted at
 [Madrid Polytechnic University](http://www.upm.es/internacional) in November
-2012, and got a paragraph talking about my work at
-[HTML5 for Masterminds](http://www.formasterminds.com/html5_for_masterminds_3rd_edition/) book, written by
-[John D. Gauchat](http://www.jdgauchat.com/). After that, I was invited to work
-at [eFace2Face](https://github.com/eface2face), and later I joined the
-[Kurento](projects.md#kurento) team for two years, where I was responsible for
-design and develop the Node.js, Javascript and HTML5 APIs for Kurento media
-server.
+2012, and my work was mentioned in the
+[HTML5 for Masterminds](http://www.formasterminds.com/html5_for_masterminds_3rd_edition/)
+book, written by [John D. Gauchat](http://www.jdgauchat.com/). After that, I was
+invited to work at [eFace2Face](https://github.com/eface2face), and later I
+joined the [Kurento](projects.md#kurento) team for two years, where I was
+responsible for designing and developing the Node.js, JavaScript, and HTML5 APIs
+for the Kurento media server.
 
-In the next years, I've been working as WebRTC Expert for multiple projects,
+In the following years, I worked as a WebRTC expert on multiple projects,
 including the two start-ups where I've also been working as CTO,
 [UnifyMe](https://twitter.com/unify_me) and [lingbe](https://www.lingbe.com/).
-But since short before it started the Covid-19 pandemic, I got contracted each
-time by more companies to work as freelance WebRTC Expert, so in December 2020,
-I decided to work full-time offering my services as WebRTC Architect and
-consultor, and as [Mediasoup](https://mediasoup.org/) Expert, in addition to
-develop my own WebRTC and streaming projects.
+But shortly before the COVID-19 pandemic started, more and more companies began
+to hire me as a freelance WebRTC expert, so in December 2020 I decided to work
+full-time offering my services as a WebRTC architect and consultant, and as a
+[Mediasoup](https://mediasoup.org/) expert, while also developing my own WebRTC
+and streaming projects.
 
 ## Chronology
 
@@ -49,7 +50,7 @@ develop my own WebRTC and streaming projects.
 
 - [ShareIt!](projects.md#shareit) (July 2012 - 2014)
   - Personal project
-  - first serverless P2P filesharing application fully written in broser
+  - First serverless P2P file-sharing application fully written in browser
     client-side JavaScript, based on
     [Gnutella](https://en.wikipedia.org/wiki/Gnutella) protocol and architecture
 - [DataChannel-polyfill](https://github.com/ShareIt-project/DataChannel-polyfill)
@@ -59,7 +60,7 @@ develop my own WebRTC and streaming projects.
     [RTCDataChannel](https://w3c.github.io/webrtc-pc/#rtcdatachannel) API using
     [WebSocket](https://html.spec.whatwg.org/multipage/web-sockets.html#the-websocket-interface)s
     as transport layer
-- [RealTimeWeb summit](http://realtimeweb.dit.upm.es/) (23th November 2012)
+- [RealTimeWeb summit](http://realtimeweb.dit.upm.es/) (23rd November 2012)
   - Invited as speaker in the first Spain WebRTC summit
 - [eFace2Face](https://github.com/eface2face) (November 2012 - December 2013)
   - Design and development of web Operating System for WebRTC-based notary app
@@ -74,9 +75,9 @@ develop my own WebRTC and streaming projects.
 ### 2013 to 2015
 
 - [Kurento](projects.md#kurento) (July 2013 - June 2015)
-  - Design and development of HTML5, Node.js and Javascript APIs for Kurento
+  - Design and development of HTML5, Node.js, and JavaScript APIs for Kurento
     media server, based on [GStreamer](https://gstreamer.freedesktop.org/)
-  - Company adquired by [Twilio](https://www.twilio.com/) in September 2016
+  - Company acquired by [Twilio](https://www.twilio.com/) in September 2016
 
 ### 2015
 
@@ -100,8 +101,8 @@ develop my own WebRTC and streaming projects.
 
 ### 2019
 
-- [IE Bussiness School](https://www.ie.edu/) (November 2019 - March 2020)
-  - Consultory of
+- [IE Business School](https://www.ie.edu/) (November 2019 - March 2020)
+  - Consulting for the
     [WOW Room](https://www.ie.edu/es/universidad/noticias-eventos/noticias/ie-presenta-wow-room-un-nuevo-impulso-en-la-apuesta-de-inmersion-tecnologica-de-la-institucion/)
     project
 
@@ -117,31 +118,31 @@ develop my own WebRTC and streaming projects.
   - Improvement of Google `libwebrtc` library
     [Java bindings](https://webrtc-review.googlesource.com/c/src/+/218847)
 - [Zerintia](https://zerintia.com/) (October 2020 - January 2021)
-  - R&D of video streaming and recording platform based on
-    Mediasoup and [ffmpeg](https://www.ffmpeg.org/)
+  - R&D of video streaming and recording platform based on Mediasoup and
+    [ffmpeg](https://www.ffmpeg.org/)
 
 ### 2021
 
 Started working as full-time WebRTC Architect, in addition to my own projects.
 
 - [Councilbox](https://www.councilbox.com/) (January 2021 - June 2021)
-  - Mediasoup consultory and performance improvements of massive videocalls,
+  - Mediasoup consulting and performance improvements for massive video calls,
     receiving up to 30 videos at the same time in a browser in a regular laptop
 - [Mafalda SFU](https://github.com/Mafalda-SFU) (March 2021 - Present)
   - Personal project
-  - Massively parallel vertical and horizontal scalable SFU build on top of
+  - Massively parallel vertically and horizontally scalable SFU built on top of
     Mediasoup
 - [Dyte](https://www.dyte.io/) (June 2021 - March 2023)
   - Design and development of Mediasoup horizontal scaling, project quality
-    consultory, and performance improvements for modular WebRTC platform
+    consulting, and performance improvements for a modular WebRTC platform
 - [Tegus medical](https://www.tegusmedical.com/) (July 2021 - January 2022)
-  - WebRTC consultory and design of new WebRTC architecture for recording and
-    streaming of hospitals operating rooms
+  - WebRTC consulting and design of a new WebRTC architecture for recording and
+    streaming hospital operating rooms
 - [Virbela](https://www.virbela.com/) (August 2021 - February 2022)
   - Mediasoup and performance improvements of [FrameVR](https://framevr.io/)
     platform
 - [Fermax](https://www.fermax.com/) (October 2021 - Present)
-  - Mediasoup and WebRTC architecture consultory, and design of new WebRTC
+  - Mediasoup and WebRTC architecture consulting, and design of a new WebRTC
     architecture for remote control of video intercoms
 
 ### 2022
@@ -149,14 +150,46 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
 - [Pulse](https://pulse.ooo/) (February 2022 - March 2022)
   - WebRTC auditor for social streaming browser extension
 - [GUD](https://gud.social/) (June 2022 - September 2022)
-  - WebRTC architect and consultor for mental health startup
+  - WebRTC architect and consultant for a mental health startup
 - [Comera](https://mycomera.com/) (September 2022 - March 2023)
-  - WebRTC architect and consultor for UAE based startup, building a local
-    market oriented app competitor of Whatsapp and Telegram
+  - WebRTC architect and consultant for a UAE-based startup, building a
+    local-market app to compete with WhatsApp and Telegram
 - [Soundstage](https://www.soundstage.fm/) (December 2022 - January 2023)
   - WebRTC scalability auditor
 
 ### 2023
 
-- [Engageli]([https://pulse.ooo/](https://www.engageli.com/)) (March 2023 - May 2023)
+- [Engageli](https://www.engageli.com/) (March 2023 - May 2023)
   - WebRTC architect for online educational platform
+- [TRC](https://trc.es/) (November 2023 - November 2024)
+  - Streaming expert and Lead Software Architect for Spain army contractor,
+    designing and developing and anti-drone system based on WebRTC and AI for
+    real-time video processing and analysis
+
+### 2024
+
+- [Level Ex](https://www.levelex.com/) (July 2024 - September 2024)
+  - Audit WebRTC architecture for a medical video games company, focused on
+    reducing latency and improving connection quality and performance of their
+    streaming platform
+
+### 2025
+
+- [CosmosGroup](https://cosmosgroup.ae/) (January 2025 - August 2025)
+  - WebRTC architect and deputy CTO for a UAE-based startup, building AI-based
+    3D avatars
+- [WebRTC.ventures](https://webrtc.ventures/) (September 2025 - Present)
+  - Senior WebRTC architect for multiple projects and companies, including
+    [Terrestar](https://www.terrestar.net/) with a custom designed narrow-band
+    low-latency protocol for BLE audio streaming and satellite-based VoIP calls,
+    and [Teladoc Health](https://www.teladochealth.com/) for a patients remote
+    monitoring system based on [Mediasoup](https://mediasoup.org/)
+
+### 2026
+
+- [Viamo](https://viamo.guide/) (January 2026 - Present)
+  - WebRTC architect and consultant for a startup building a WebRTC-based system
+    for city guides
+- [Mozilla](https://www.mozilla.org/) (May 2026 - Present)
+  - Senior WebRTC architect designing automated tools to upgrade `libwebrtc`
+    library to the latest versions in corporate and legacy versions of Firefox

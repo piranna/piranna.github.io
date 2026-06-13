@@ -40,7 +40,7 @@ doing the adaptation for a terminal output using CSS stylesheets made totally
 sense (and it's the correct way to do it, and yes, text-mode web browsers
 support CSS too). The key here to make the text-mode detection work was the
 [`tty` media type](https://drafts.csswg.org/mediaqueries/#media-types), but it
-got deprecated in benefict of using
+got deprecated in benefit of using
 [media features](https://drafts.csswg.org/mediaqueries/#mq-features), that offer
 a more fine-grained control of the representation features of web browsers, in
 our case the [grid](https://drafts.csswg.org/mediaqueries/#grid) media feature.

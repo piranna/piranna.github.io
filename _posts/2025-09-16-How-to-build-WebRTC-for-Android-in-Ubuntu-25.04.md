@@ -151,7 +151,7 @@ so here are the fixed instructions with some additional comments:
 9. **Select the release to build**. Until WebRTC M80 release, there were
    branches for each one of the Chromium releases, so it was easy to know what
    version matched each one, but after that, Google started to create branches
-   in a daily basis.
+   on a daily basis.
 
    Additionally, some time later they moved out of using regular branches heads
    (referenced at `.git/refs/heads` folder) to use their own `branch-heads`

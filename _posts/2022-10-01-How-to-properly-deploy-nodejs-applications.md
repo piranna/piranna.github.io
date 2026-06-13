@@ -19,7 +19,7 @@ dev friendly PaaSs environments, as I usually prefer to work.
 I always disagreed with the idea of uploading the code directly to the server or
 Docker image both by hand or with `git clone` and transpile it on the server the
 same way I do in my development machine, both due to security issues (**NEVER**
-have a compiler on a publicly accesible server, you are just only making it
+have a compiler on a publicly accessible server, you are just only making it
 easier to run an exploit and install a backdoor to your machine... or worse),
 and because none of them are standard procedures. On the other hand, I've always
 found the [npm pack](https://docs.npmjs.com/cli/v8/commands/npm-pack) command
@@ -27,7 +27,7 @@ like it's being missused, people relying just only on
 [npm publish](https://docs.npmjs.com/cli/v8/commands/npm-publish) (that uses
 `npm pack` internally), while it's being in fact designed to prepare and pack
 ready to use Node.js packages, and people usually ends up doing any other more
-convoluted and insecure aproaches just because they are not willing to publish
+convoluted and insecure approaches just because they are not willing to publish
 their server code in the [npm registry](https://www.npmjs.com/) or
 [Github Packages Registry](https://github.com/features/packages) thinking it
 will make them be available to anybody (maybe they don't know it's possible to

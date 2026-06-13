@@ -52,11 +52,11 @@ Regarding state persistence, default persistor objects for `redux-persist` are
 focused on the browser, so a custom persistor is needed. In this case
 [redux-persist-node-storage](https://github.com/pellejacobs/redux-persist-node-storage)
 is being used, that store the status in JSON files. That's not the most optimal
-solution and I would have preffer to use a [LevelDB](http://leveldb.org/)-backed
+solution and I would have preferred to use a [LevelDB](http://leveldb.org/)-backed
 one, but for the proof of concept it just does the job. It's important to take
-in account that by
-[design decissions](https://github.com/redux-offline/redux-offline/issues/119#issuecomment-343656725)
-`redux-offline` by default use `redux-persist` in its `4.x.x` version instead of
+into account that by
+[design decisions](https://github.com/redux-offline/redux-offline/issues/119#issuecomment-343656725)
+`redux-offline` by default uses `redux-persist` in its `4.x.x` version instead of
 the current (and ironically `redux-offline` oriented) `5.x.x` version. One of
 the changes between both version families is that persistor objects API in
 `4.x.x` make use of callbacks while newer `5.x.x` one make use of Promise

@@ -17,6 +17,50 @@ layout: default
     padding-bottom: 0px;
   }
 
+  .contact-cta {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .contact-cta a {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #0a7a50 0%, #14b87a 100%);
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(10, 122, 80, 0.35);
+    transition: transform 180ms ease, box-shadow 180ms ease,
+      filter 180ms ease;
+    animation: cta-pulse 2.4s ease-in-out infinite;
+  }
+
+  .contact-cta a:hover,
+  .contact-cta a:focus-visible {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(10, 122, 80, 0.42);
+    filter: saturate(1.1);
+    outline: none;
+  }
+
+  .contact-cta p {
+    margin: 0.65rem 0 0;
+    font-size: 0.95rem;
+    opacity: 0.82;
+  }
+
+  @keyframes cta-pulse {
+    0%,
+    100% {
+      box-shadow: 0 10px 24px rgba(10, 122, 80, 0.35);
+    }
+    50% {
+      box-shadow: 0 12px 30px rgba(10, 122, 80, 0.5);
+    }
+  }
+
   @media (min-width: 768px) {
     .main-content {
       flex-direction: row;
@@ -40,39 +84,42 @@ layout: default
     <p style="text-align: center;">Polymath Software Engineer & Architect</p>
     <p>
       Specialized in WebRTC, Streaming, Backend & Systems. CTO experience in
-      startups and international projects across UAE, US, and Europe. Always
+      startups and international projects across UAE, USA, and Europe. Always
       curious, always building.
     </p>
     <ul>
-      <li>Real-time communications & low-latency streaming</li>
+      <li>Real-time communications & narrow-band low-latency streaming</li>
       <li>Software architecture & scalable backend systems</li>
       <li>CTO & team leadership in multicultural environments</li>
-      <li>Multidisciplinary R&D: from AI to operating systems</li>
+      <li>Multidisciplinary R&D: from AI to operating systems and Deep Tech</li>
     </ul>
     <p>
-      I <i>✨shine✨</i> at the intersection of disciplines: designing
-      architectures, leading teams, and building systems that just work. With 22
-      years of experience, I’ve delivered high-impact projects worldwide, always
-      balancing quality, scalability, and innovation.
+      I <i>✨shine✨</i> the most at the intersection of disciplines and
+      impossible technical problems: designing architectures, leading teams, and
+      building systems that just work. With 22 years of experience, I’ve
+      delivered high-impact projects worldwide, always balancing quality,
+      scalability, and innovation.
     </p>
     <p>
-      I write about WebRTC, programming, open source projects, best practices,
-      and other tech topics on this <a href="{{ site.baseurl }}/blog">blog</a>.
-      You can also find me on
-      <a href="https://www.linkedin.com/in/piranna/" target="_blank"
-         rel="noopener">LinkedIn</a>, and
-      <a href="https://github.com/piranna" target="_blank"
-         rel="noopener">GitHub</a>.
+      I write about WebRTC, programming, engineering, AI, open source projects,
+      best practices, and other tech topics on this
+      <a href="{{ site.baseurl }}/blog">blog</a>. You can also find me on
+      <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"
+         rel="noopener" target="_blank">LinkedIn</a>, and
+      <a href="https://github.com/{{ site.footer-links.github }}" rel="noopener"
+         target="_blank">GitHub</a>.
     </p>
-    <p style="text-align: center; margin-top: 1rem;">
-      <a href="{{ site.baseurl }}/about">About Me</a> |
-      <a href="{{ site.baseurl }}/projects">Projects</a> |
-      <a href="{{ site.baseurl }}/contributions">Open Source</a> |
-      <a href="{{ site.baseurl }}/webrtc">WebRTC</a> |
-      <span style="white-space: nowrap;">
-        👉<a href="{{ site.baseurl }}/hire-me"><b>Hire Me</b></a>
-      </span>
-    </p>
+    <div class="contact-cta">
+      <a href="mailto:{{ site.footer-links.email }}">
+        Contact Me To Build Together
+      </a>
+      <p>
+        Available for WebRTC, real-time media, backend architecture, automation,
+        and high-impact delivery and complex systems consulting. I help
+        companies audit, scale, debug and evolve WebRTC/streaming platforms and
+        Deep Tech projects.
+      </p>
+    </div>
   </div>
 
   <div class="container posts">

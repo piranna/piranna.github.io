@@ -24,14 +24,14 @@ instances are limited to a single CPU core and a reduced number of participants.
 During to the Covid pandemic, I've been working extensively in WebRTC projects
 in the last year and a half, and one of the topics that most times surfaced was
 how to use Mediasoup with big video rooms in both an easy to use and performant
-way. So, after finding some issues in the way other projects were aproaching
+way. So, after finding some issues in the way other projects were approaching
 this problem, I started to think about my own solution.
 
-Mafalda aproach is simple: just create a `MafaldaRouter` instance, and it will
+Mafalda approach is simple: just create a `MafaldaRouter` instance, and it will
 scale itself to use all the server CPU cores and create the connections to other
 servers. From both developers and users PoV, it's like using a single Mediasoup
 `Router` instance, but running in a server with an humongous big CPU. Not only
-that, but since Mafalda schedule algorythm try to minimize the number of used
+that, but since Mafalda schedule algorithm tries to minimize the number of used
 connections and CPUs, you can run multiple `MafaldaRouter` instances in the same
 server, and Mafalda will balance the resources between them. And when they are
 not needed anymore, connections get closed and the CPU cores are freed, so you

@@ -30,12 +30,12 @@ client company, or a higher relationship if we take same net salary as
 reference, being as high as `1:300` with the bare minimum costs. That's a huge
 difference, so I've tried to close the gap by adding some not-so-superfluous
 costs that could be covered by companies for an equal position as employee and a
-freelance needs to pay by himself, like mortages, civil responsabilities,
+freelance needs to pay by himself, like mortgages, civil responsibilities,
 co-working space, laptop (some USA or Japan companies gift the work laptop to
 their employees and provides them a newer one each year), internet access,
 public transport card, daily meals, or also gym membership pass. After all these
 monthly fixed freelance costs (more than 1300€ in total...) that includes a
-self-assigned social beneficts VIP package, the relationship is still as high as
+self-assigned social benefits VIP package, the relationship is still as high as
 `1:260`.
 
 This shows that due to Spain per-employee taxes, in all cases working as
@@ -46,13 +46,13 @@ freelancer instead of employee and administer yourself your own costs, but I'm
 not advocating for that since these calcs are done in the ideal case of working
 full-time in long-term projects in both cases (that's not the usual for
 freelance contracts), and the increased margins are at expenses of unemployment
-and retirement mortages and other social beneficts (both provided by goberment
+and retirement mortgages and other social benefits (both provided by government
 taxes or by companies themselves). Instead, this calculator shows how much is a
 safe range to ask for as a freelance, since for a worker with the same net
 salary a company could be saving up to a 20% of costs than contracting an
 employee, so don't be afraid of asking for high bucks, and in the case of a
 freelancer not working at the same time as employee, it shows that he should pay
 a higher freelance quota (in Spain, currently you decide your own social
-security compensation and 80% of freelancers pay the minimum exigible by law due
+security compensation and 80% of freelancers pay the minimum required by law due
 to the small ROI we usually get for it, and so this calculator use that number),
-pay for a retirement mortage... or more probably, do both things.
+pay for a retirement mortgage... or more probably, do both things.

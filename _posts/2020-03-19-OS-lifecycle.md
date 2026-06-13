@@ -18,10 +18,10 @@ the operating systems lifecycles? Nope... enter `OS lifecycle`.
 
 <!--more-->
 
-[OS lifecycle](https://github.com/projectlint/OS-lifecycle) offer a functions
-whom to query for the info of diferent operating systems on a specific date,
+[OS lifecycle](https://github.com/projectlint/OS-lifecycle) offers functions
+to query the info of different operating systems on a specific date,
 inspired on [@pkgjs/nv](https://github.com/pkgjs/nv) package to query info about
-maintence of Node.js versions. In addition to that, info is provided in a raw
+maintenance of Node.js versions. In addition to that, info is provided in a raw
 form in a json file. So far this is a simple package... What's interesting is
 how the json file is generated.
 
@@ -49,7 +49,7 @@ registry also when there was no updates in the data), so `git-auto-commit`
 [needed to notify it](https://github.com/stefanzweifel/git-auto-commit-action/issues/46)
 so next steps could be skipped. I would have prefer to fully stop the workflow
 instead of doing that hack, but Github Actions v2 removed neutral output
-[on purposse](https://twitter.com/ethomson/status/1163899559279497217):
+[on purpose](https://twitter.com/ethomson/status/1163899559279497217):
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We did, we&#39;ll have a different neutral exit strategy. `exit 78` seems unique, but isn&#39;t. (eg, `git merge` exits with the number of conflicts encountered.)</p>&mdash; Edward Thomson (@ethomson) <a href="https://twitter.com/ethomson/status/1163899559279497217?ref_src=twsrc%5Etfw">August 20, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

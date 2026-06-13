@@ -35,7 +35,7 @@ applying their own project specific ones, although we’ve adjusted the common
 rules to be used without needing to do any extra customizations.
 
 Shareable config is defined in the `.eslint.js` file, being it the package main
-export. It can feels extrange to use a hidden file, but that’s on purposse since
+export. It can feel strange to use a hidden file, but that’s on purpose since
 it’s one of the filenames that eslint uses when looking for a project config, so
 this way we can reuse it to lint the shareable config project itself. That’s the
 reason why we are exporting it as a Javascript file instead of as a static JSON
@@ -185,7 +185,7 @@ providing a custom `NPM_TOKEN` environment variable (that in fact host a Github
 and use it as `authToken` for the Github Packages Registry entry in the project
 [.npmrc](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)
 file used to define that project dependencies need to be fetch from the Github
-Packages Registry. Problem with this aproach is that it requires a token with
+Packages Registry. Problem with this approach is that it requires a token with
 elevated permissions (including write packages) for all the operations related
 to npm packages also when they are not needed (more specifically, install
 packages), not allowing a fine grain access control opening a security threat.
@@ -198,7 +198,7 @@ also to install packages inside
 needed to be provided read access by hand for all the repos that would need to
 be used from.
 
-For that reasons, we decided to take an aproach more aligned on how
+For that reasons, we decided to take an approach more aligned on how
 [Github Actions](https://github.com/features/actions) works, allowing us to
 simplify the process by removing the addition of useless environment variables,
 and make it more secure. The first step was obviously remove the usage of the
@@ -248,7 +248,7 @@ RUN echo //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN >> .npmrc
 
 Github Action detects when you want to print a secret on the console, so it
 prevents to get them logged by replacing the secret strings with `***`.
-Sometimes we need to get them printed for debugging purposses, so we need to
+Sometimes we need to get them printed for debugging purposes, so we need to
 trick it. The most simple way is to just concatenate the output with the secret
 using the unix [sed](https://en.wikipedia.org/wiki/Sed) command to
 [split the secret string using spaces](https://zellwk.com/blog/debug-github-actions-secret/):
@@ -258,10 +258,10 @@ run: echo ${{secrets.YOUR_SECRET }} | sed 's/./& /g'
 ```
 
 This way, Github Action could not match the output with any of the stored
-secrets, and would print the string verbatin.
+secrets, and would print the string verbatim.
 
 **Disclaimer**: please don’t do that with your production secrets, just use some
-ones deditated for testing purposses, and ideally one-use-only throw away ones.
+ones dedicated for testing purposes, and ideally one-use-only throw away ones.
 
 _Corporate version previously published at
 <https://dyte.io/blog/linting-at-dyte>_

@@ -43,7 +43,7 @@ permalink: /uses
 
 ## Code editor
 
-- VisualStudio Code
+- Visual Studio Code
 - GEdit / Pluma
 - nano
 
@@ -72,7 +72,7 @@ permalink: /uses
 ## Libraries & frameworks
 
 - WebRTC
-- React & ReactNative
+- React & React Native
 - Fastify
 - Django
 
@@ -91,7 +91,7 @@ permalink: /uses
 - Chinese (beginner)
 - Arabic (beginner)
 
-## Books readed
+## Books read
 
 - **Operating Systems: Design and Implementation**, Andrew S. Tanenbaum
 - **Programmer's Guide to the IBM PC**, Peter Norton

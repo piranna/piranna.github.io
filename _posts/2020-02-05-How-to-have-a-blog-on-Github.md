@@ -35,29 +35,29 @@ what I was working on. I had one in Blogger due to my participation in the
 [CUSL](https://concursosoftwarelibre.org) and created a new one just for
 [NodeOS](https://node-os.com/) with an own engine that used Github issues as
 [blog entries](https://github.com/NodeOS/GitBlog). I started a new one in Medium
-because "all people is there now", and although it's nice for writters, it's not
+because "everyone is there now", and although it's nice for writers, it's not
 for coders like me. I need a place where to put code samples easily and where I
 could be able to just drop some quick one-liner notes with links, random ideas
-or little paragraphs small enough for a blog post but bigger enough to don't get
+or little paragraphs small enough for a blog post but big enough to not get
 into a tweet. A plus would be to support markdown and easily have a copy of if
 both wherever I go and online. [Dev.io](https://dev.to) is really interesting
-(and I should be reading it A LOT more...) and should consider to use it as
+(and I should be reading it A LOT more...) and I should consider using it as
 blog, but as I've just said I'm not into the blogging scene, and also I would
-like both to have control and not lost my blog posts, and have some greater
+like both to have control and not lose my blog posts, and have some greater
 visibility on social networks. So, I needed to find an alternative using what I
-get more use to. And what are the pages I'm connected in an almost daily basis?
+got more used to. And what are the pages I connect to on an almost daily basis?
 [Github](https://github.com/piranna) and
 [Twitter](https://twitter.com/el_piranna).
 
-Github not only works as my online portafolio by having a single place where all
+Github not only works as my online portfolio by having a single place where all
 my open source projects are published, but also has support to publish web sites
 using [Github Pages](https://pages.github.com/), so it makes sense to have the
-blog near to my projects. It also allows me to have an easily accesible copy of
+blog close to my projects. It also allows me to have an easily accessible copy of
 the blog sources so I can edit and move them wherever I want, and since it's
 heavily integrated with Github, I can edit them with markdown the same way as
-all my other documentation (more preciselly
-[Github Flavourse Markdown](https://github.github.com/gfm/), one of the most
-complete markdown syntaxes), and have syntax highlight support by free. This
+all my other documentation (more precisely
+[Github Flavored Markdown](https://github.github.com/gfm/), one of the most
+complete markdown syntaxes), and have syntax highlighting support for free. This
 integration also includes the ability to show project pages as sub-paths of your
 personal domain, so it seems to be the perfect place to host a (techie geekie)
 blog :-)
@@ -69,20 +69,20 @@ The first step is to create the blog itself. Github Pages has been used for a
 site is enough (also as a cheap CDN...). Since it will be used as my main blog
 and website, I'm going to generate it as a "user site". This means that it will
 be available under a domain like <http://piranna.github.io> (you can be able
-later to config a custom domain to redirect to it, if you want), and for doing
+later to configure a custom domain to redirect to it, if you want), and for doing
 so, it's just enough by creating a Github repo with the name
 `piranna.github.io`.
 
 Github Pages are powered by [Jekyll](https://jekyllrb.com/), a generator of
 static web sites. It could be possible to create it from scratch (an
-`index.html` or a `README.md` file are just enought), but to make it easier and
+`index.html` or a `README.md` file are just enough), but to make it easier and
 faster, I'm going to use [Jekyll Now](https://github.com/barryclark/jekyll-now).
 It provides an already configured Jekyll site ready to be used as a blog by
 default and enabled to make use of [Disqus](https://disqus.com/) comments and
 [Google Analytics](https://analytics.google.com/), and since it's a plain Jekyll
 site, you can later customize it yourself.
 
-Jekyll Now has the problem than the original project owner is missing with no
+Jekyll Now has the problem that the original project owner is missing with no
 activity in two years and the project seems to be unmaintained, so things like
 changing the theme using the Github own
 [Jekyll Theme Chooser](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser/)
@@ -93,26 +93,26 @@ the bug by
 [deleting](https://github.com/barryclark/jekyll-now/issues/745#issuecomment-364339715)
 the `_layouts/default.html` so it doesn't overwrites the one in the selected
 theme (since now it's possible to use external templates, it should be moved to
-one of them). Due to this things, that's why I've proposed to
+one of them). Due to these things, that's why I've proposed to
 [fork the project](https://github.com/barryclark/jekyll-now/issues/1352) and
-maintain it collaboratelly (in-real-life problems of project developers and
-maintainers or also their death are by far, with the burn-out of not being payed
+maintain it collaboratively (in-real-life problems of project developers and
+maintainers or also their death are by far, with the burn-out of not being paid
 nor recognized for our work while corps make a bucket of money, the main problem
 of Open Source...).
 
 After forking Jekyll Now, the first thing you need to do is to edit the
-`_config.yml` file. This is needed for two purposses. The first one is to set
+`_config.yml` file. This is needed for two purposes. The first one is to set
 your own information in the blog, like name, email, or online accounts. The
 second one is because by forking Jekyll Now you have only got a copy of the blog
 code, and by editing the file (and due to this, adding a commit in the repo),
-you are forcing Github to exec Jekyll on your repo and generate the static files
+you are forcing Github to execute Jekyll on your repo and generate the static files
 and publish your blog online. The most quick and simple way to edit the file is
 doing it directly in the browser as it's shown in the instruction of the Jekyll
 Now `README.md` file. Alternatively, you can clone your blog repo in your local
 machine so you can edit the config and blog posts from your favorite text or
-code editor, with the additional benefict of being able to edit your posts
-offline. I must to admit I was reticent to use Jekyll due to this (I wanted to
-do it online from anywhere), but it's more confortable and I'm still able to do
+code editor, with the additional benefit of being able to edit your posts
+offline. I must admit I was reluctant to use Jekyll due to this (I wanted to
+do it online from anywhere), but it's more comfortable and I'm still able to do
 it online with the Github online code editor :-) Finally, after submitting the
 changes, in some seconds you'll have your blog online.
 
@@ -139,7 +139,7 @@ have comments in a static blog like Jekyll, some of them really interesting like
 (so this way they could be stored in the same repo than the blog itself) or in
 Google Spreadsheets, and also there are tools like
 [staticman](https://staticman.net/) that can be able to automate the process.
-For a standalone blog, probably I would have choosen that last option, so this
+For a standalone blog, I would probably have chosen that last option, so this
 way I could be able to have both posts and comments on a single place ready to
 be moved elsewhere, but since I wanted to use my blog as a promotion tool too, I
 found it better to use Twitter threads instead, so they can be used both to

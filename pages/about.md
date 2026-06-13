@@ -4,20 +4,20 @@ title: About
 permalink: /about/
 ---
 
-Passionate computers engineer and ex-PhD. candidate in Computers Engineering.
+Passionate computer engineer and former Ph.D. candidate in Computer Engineering.
 Proud advocate of Open Source, standards, specifications, and best practices.
 
 With more than 22 years of professional experience in software development, and
-being involved in Open Source scene and wireless communities since I was 17
-years old, I have been working both professionally or in personal side projects
-in almost all computer engineering areas, including web development, robotics,
-operating systems design, videogames, networking, drivers programming, or AI. My
-profile is purely technical, with a great interest in hard-to-solve problems,
-quality of code, performance optimizations, high-edge technologies, and design
-of clean APIs and architectures focused on minimal designs, modularity and
+having been involved in the Open Source scene and wireless communities since I
+was 17 years old, I have worked both professionally and on personal projects
+across almost every area of computer engineering, including web development,
+robotics, operating system design, video games, networking, driver development,
+and AI. My profile is purely technical, with a strong interest in hard-to-solve
+problems, code quality, performance optimizations, cutting-edge technologies,
+and the design of clean APIs and architectures focused on minimalism, modularity, and
 reusability.
 
-I'm fullstack with preference for backend, R&D and academic projects. Thanks to
+I'm a full-stack engineer with a preference for backend, R&D, and academic projects. Thanks to
 that, I have more than 14 years of experience with Node.js (since v0.8), 19
 years with Python (since 2.4), and 20 years with C++, between other languages
 like Rust, Java or Go. Regarding mobile apps, I have 8 years of experience with
@@ -26,14 +26,15 @@ React Native, being also speaker at [Meta F8](/contributions#re-start).
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
 and been CTO of several start-ups (and co-founder of two of them). In my spare
-time I like to read books, go to cinema or travelling, go running or cycling, or
-work on my own side projects to improve my skills and craft things with cool
-high-edge technologies.
+time I like to read, go to the cinema, travel, run or cycle, or work on my own
+side projects to improve my skills and build things with cool cutting-edge
+technologies.
 
 ## Academic experience
 
-I have a _Licenciature in Computers Engineering_, convalidated to the equivalent
-_Master in Computers Engineering_. My Licenciature (and Master) thesis was
+I have a _Licenciature in Computer Engineering_, officially recognized as the
+equivalent of a _Master in Computer Engineering_. My Licenciature (and Master)
+thesis was
 _[NodeOS](projects.md#nodeos), a minimal operating system for Node.js based
 applications_, with more than 7000 stargazers on GitHub, winner on the Systems
 category at the
@@ -41,7 +42,7 @@ category at the
 graduated with distinction. My Licenciature thesis director was
 [Prof. Enrique Soriano-Salvador](https://gsyc.urjc.es/~esoriano/).
 
-I started my Ph.D., but currently is on-hold. My PhD thesis was _Co-focal
+I started a Ph.D., but it is currently on hold. My PhD thesis was _Co-focal
 microscope techniques applied to neurology_, where I was compositing
 multi-gigabyte high resolution multi-layer microscope scan images of neurons to
 generate 3D models. My Ph.D. thesis director was
@@ -97,13 +98,13 @@ generate 3D models. My Ph.D. thesis director was
     were connected to at least another peer and being part of the P2P network,
     the discovery and signaling with new peers was done directly between peers
     over the P2P network itself, leaving the connection with the external server
-    as a fallback mechanims.
+    as a fallback mechanism.
 
 </details>
 
 ### Certificates
 
-- College Degre
+- College Degree
   - [Título universitario](../certificates/Título universitario/Título
     universitario.pdf)
   - [Progreso académico](../certificates/Título universitario/Progreso
@@ -119,7 +120,7 @@ generate 3D models. My Ph.D. thesis director was
     software con Scrum.pdf)
 - [Introduction to Chinese - participation](../certificates/Chino -
   participación.pdf)
-- [Psicotechnic - fligh pilot](../certificates/Psicotécnico piloto.pdf)
+- [Psychotechnical test - flight pilot](../certificates/Psicotécnico piloto.pdf)
 - [Introduction to Machine Learning](../certificates/certificates/Introducción
   Aprendizaje Automático.pdf)
 
@@ -173,12 +174,12 @@ a total of 18 countries and 3 continents:
 - **Asia**
   - 🇮🇳 **India**: Bangalore
 
-## Recomendations, testimonies & quotes
+## Recommendations, testimonies & quotes
 
-Recomendations from co-workers and managers of my previous job companies, and
+Recommendations from co-workers and managers at my previous companies, and
 testimonies from clients about my freelance projects.
 
-### Co-workers recomendations
+### Co-worker recommendations
 
 - [Juan Francisco Gato Luis](https://www.linkedin.com/in/jfcogato), Android R+D
   & Singer, May 2014:
@@ -196,7 +197,7 @@ testimonies from clients about my freelance projects.
   > also with engagement and passion. Jesus is that kind of guy that can launch
   > a project to the top. I strongly recommend him.
 
-### CTOs, CEOs & direct responsibles recomendations
+### Recommendations from CTOs, CEOs & direct managers
 
 - [Exe Zulliger](https://www.linkedin.com/in/mzulliger/), CTO at Kibitech, March
   2025:
@@ -263,7 +264,7 @@ testimonies from clients about my freelance projects.
   > interest for learning and improve himself each day, and I recommend him
   > specially for his technical expertise and aptitudes.
 
-### Clients recomendations
+### Client recommendations
 
 - [Sol Rengifo Calderón](https://www.linkedin.com/in/sol-rengifo-calder%C3%B3n-5ba96514a/),
   founder of [Gud](https://gud.social/), July 2022:
@@ -277,7 +278,7 @@ testimonies from clients about my freelance projects.
   [Councilbox](https://www.councilbox.com/), June 2021:
 
   > Jesus was working with us at Councilbox in a very ambitious project to
-  > replace our video conferencing server. His experience at webrtc helped us
+  > replace our video conferencing server. His experience with WebRTC helped us
   > complete the migration of our video infrastructure to Mediasoup.
 
 - [Juan Searle](https://www.linkedin.com/in/juansearle), CTO at
@@ -288,7 +289,7 @@ testimonies from clients about my freelance projects.
   > mentoring from our side. Cool!
   >
   > This afternoon we'll have a call with the client and let's see if we get
-  > their aproval for the testing/refactoring, I'll keep you updated. We're
+  > their approval for the testing/refactoring, I'll keep you updated. We're
   > going to propose it as a critical action to be done."
 
   > "Tell you that it has been a pleasure to count on you for this job: serious,
@@ -311,23 +312,23 @@ testimonies from clients about my freelance projects.
 - [Isabel Dorado](https://www.linkedin.com/in/isabeldoradomoreno/), Remote
   Talent Advocate at [Circular](https://trycircular.com/), December 2020:
 
-  > Senior developer with experience leading teams and really hands on.
-  > Background in both back and frontend development. His expertise is related
+  > Senior developer with experience leading teams and a very hands-on mindset.
+  > Background in both backend and frontend development. His expertise is related
   > to Python, Node and C++. Spanish and English!
 
 - [Miguel Muñoz Royo](https://www.linkedin.com/in/miguelmunoz/), Business and
   Technical Lead at [UST Global](https://ustglobal.es/), December 2020:
 
   > The truth is that the conversation with Jesús has been very good. He's a
-  > Node.js super architect with experience more than enough for the profile we
+  > Node.js super architect with more than enough experience for the profile we
   > are looking for.
 
 - [Judith Aranda Rubio](https://www.linkedin.com/in/juditharanda/), Talent
   Management at [Ferrovial](https://www.ferrovial.com/), December 2020:
 
-  > Wide development experiences and skills.
+  > Broad development experience and skills.
 
-### Alumns recomendations
+### Alumni recommendations
 
 - [Guillermo Hernandez](https://www.linkedin.com/in/guillermo-hernandez-github-guille62r/),
   streamer, and student at

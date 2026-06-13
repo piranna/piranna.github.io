@@ -14,7 +14,7 @@ Also for the most basic use cases, WebRTC is a complex technology, with lots of
 moving parts and involved elements and parties working together at the same
 time, so when a WebRTC connection is not working properly, or directly it can
 not be created, there's a series of not-so-obvious usual reasons that can make
-it fail. We are going to analize some of the most common ones, and when
+it fail. We are going to analyze some of the most common ones, and when
 possible, see how we can fix them or find some alternatives solutions to
 minimize their impact.
 
@@ -22,7 +22,7 @@ minimize their impact.
 
 ![Zoom meetings are just modern seances]({{ site.baseurl }}/images/2022-11-30-WebRTC-Bugs-and-Where-to-Find-Them/Zoom-meetings-are-just-modern-seances.jpeg)
 
-Here we are assuming code is (mostly) well writting, so failure points have not
+Here we are assuming code is (mostly) well written, so failure points have not
 been previously considered nor taken measures against them. If that would be the
 case, they should be addressed to make the code more robust, of if that's not
 possible, you can try to recover from them making the code more resilient, or at
@@ -62,27 +62,27 @@ issues in the connection itself, starting by checking if we can connect at all.
 ### Discoverability
 
 The first point to look for is about clients discoverability, it's say, if we
-can announce ourselves to the others where we are, so they can be able call us.
-This requires us to be able to connect to the _discovery server_ itself (not to
-confuse with the _signaling server_, although they are related, and usually they
-are the same one), that can not be reachable if it's down, or the server is not
-accesible, or networks are not properly configured, or there's a DNSs resolution
-problem... or just simply, there's a bug in the server code that prevent to
-reply back to the client about their requests.
+can announce ourselves to the others where we are, so they can be able to call
+us. This requires us to be able to connect to the _discovery server_ itself (not
+to confuse with the _signaling server_, although they are related, and usually
+they are the same one), that can not be reachable if it's down, or the server is
+not accessible, or networks are not properly configured, or there's a DNS
+resolution problem... or just simply, there's a bug in the server code that
+prevent to reply back to the client about their requests.
 
 ### STUN and TURN servers
 
 Once that we can discover other peers and they can discover us, connections can
 be established, just only usually they can't be done directly. When both peers
 are in the same network (same wireless router, or LAN/Ethernet network, or
-directly accesible from the wide Internet by having our device a public IP -
+directly accessible from the wide Internet by having our device a public IP -
 very uncommon and dangerous, by the way) that's possible, but usually they are
 connected on different networks, for example from a domestic wifi network to
 another one at the other side of the world. This means their connection goes
 through multiple networks crossing firewalls and routers and NATs until both
 arrive to a common place. Later, they need to exchange the information about how
 connection can "go up" to the other peer from the common public network over the
-different private networks. This exchange of information is responsability of
+different private networks. This exchange of information is responsibility of
 the _signaling server_, and exchanged info is provided by
 [STUN and TURN servers](https://blog.ivrpowers.com/post/technologies/what-is-stun-turn-server/).
 
@@ -321,7 +321,7 @@ If that's not the case, then the connectivity issues are part of the connection
 itself. Some very good tool in browsers to identify them (browsers are the
 canonical target platform for WebRTC, so you should always first test your
 connectivity issues with it, both with your official web client, or create an
-internal one for development purposses) are
+internal one for development purposes) are
 [webrtc stats internals](https://bloggeek.me/webrtcglossary/webrtc-internals/).
 This tool provides a set of graphs and statistics that shows all the current
 WebRTC connections in the browser and how are they behaving, regarding bandwidth
@@ -391,10 +391,10 @@ are currently in a call, so they can get and steal the access to the microphone
 and speaker when they receive an incoming call without the user allowing it, or
 on resources constrained systems they can also force the termination of our app.
 
-Other way where low-end devices can be severely afected is by the number of
+Other way where low-end devices can be severely affected is by the number of
 participants, since the bigger a session is, the more streams they need to
-decode and more bandwidth they use. This can be somewhat aliviated in these
-cases by taking a more aggresive aproach when reducing the number of streams
+decode and more bandwidth they use. This can be somewhat alleviated in these
+cases by taking a more aggressive approach when reducing the number of streams
 that clients will receive and decode or about their qualities, or maybe using
 [a different architecture for them like a MCU or an hybrid system like a XDN](https://www.red5pro.com/blog/3-key-approaches-for-scaling-webrtc-sfu-mcu-and-xdn/),
 so decoding and combined layout is being done on server side, reducing the
@@ -520,15 +520,15 @@ WebRTC connection issues are:
   - Does the network itself have internet access at all?
   - [Discoverability](#discoverability)
     - Is the _discovery server_ up and running?
-    - Is it accesible by the client? Are networks, ports and DNSs properly
+    - Is it accessible by the client? Are networks, ports and DNS properly
       configured?
     - Are both the _discovery server_ and its client bugs free?
     - Is the client trying to connect to the _discovery server_ at all?
   - [STUN and TURN servers](#stun-and-turn-servers)
     - Does we have some STUN / TURN servers? Are they properly configured? Are
-      they up and running? Are they accesible?
+      they up and running? Are they accessible?
     - Have we properly configured the STUN and TURN serves in our clients,
-      including the access credentials? Are they accesible by some other client
+      including the access credentials? Are they accessible by some other client
       tools?
   - [Network infraestructure](#network-infraestructure)
     - Are _simetric NATs_, or properly misconfigured NATs, being used by both
@@ -587,7 +587,7 @@ WebRTC connection issues are:
         running?
       "} -- Yes --> D2{"
         Is it
-        accesible by
+        accessible by
         the client? Are
         networks, ports and
         DNSs properly
@@ -620,7 +620,7 @@ WebRTC connection issues are:
         configured? Are they
         up and running?
         Are they
-        accesible?
+        accessible?
       "} -- Yes --> S2{"
         Have we
         properly
@@ -628,7 +628,7 @@ WebRTC connection issues are:
         STUN and TURN serves
         in our clients, including
         the access credentials?
-        Are they accesible
+        Are they accessible
         by some other
         client
         tools?
@@ -810,7 +810,7 @@ WebRTC connection issues are:
       room administrator?
     - Are sender capturing volume levels very low?
     - Has the sender disabled the camera or microphone? Has it blocked them,
-      maybe on purposse?
+      maybe on purpose?
   - [Receiver](#receiver)
     - Are audio or video tracks muted? Are playing volume levels very low?
     - Is it being used the correct output device? Is it correctly plugged?
@@ -825,18 +825,18 @@ WebRTC connection issues are:
       requiring too much unneeded resources for itself?
     - Are we using operating system APIs to notify our app is in an active call?
     - Does have our call more streams than our device can manage and decode in
-      realtime? Does our device has enought bandwidth to receive them?
+      realtime? Does our device have enough bandwidth to receive them?
     - Are we using the
       [network architecture](../2020-12-30-Types-of-WebRTC-networks.md) most
-      apropiate to our use case?
+      appropriate to our use case?
   - [Delays](#delays)
-    - Are sender or receiver buffering excesive data instead of discarding
+    - Are sender or receiver buffering excessive data instead of discarding
       outdated one?
     - Does streams transmission configuration prioritizes quality over delays?
     - Are we using TCP sockets instead of UDP to send realtime streams data?
   - [Connection itself](#connection-itself)
     - Is the network connection getting cuts or temporal drops? Are we having
-      packets losses and resends?
+      packet losses and resends?
     - Does have our networks changed during our app operation?
 
   ```mermaid
@@ -850,7 +850,7 @@ WebRTC connection issues are:
         Are sender capturing volume levels very low?
       "} -- No --> S3{"
         Has the sender disabled the camera or microphone? Has it blocked them,
-      maybe on purposse?
+        maybe on purpose?
       "}
     end
 
@@ -868,15 +868,15 @@ WebRTC connection issues are:
       C1{"
         Is the connection bandwidth lower beyond practical limits?
       "} -- No --> C2{"
-      Is it a stable
-      connection?
+        Is it a stable
+        connection?
       "} -- Yes --> C3{"
         Is bandwidth enough for the desired quality?
       "} -- Yes --> C4{"
         Is a stream needed at all?
       "} -- Yes --> C5{"
-      Maybe is it better to use a lower-bandwidth
-      alternative? Maybe use some non-standard optimized codecs?
+        Maybe is it better to use a lower-bandwidth
+        alternative? Maybe use some non-standard optimized codecs?
       "}
     end
 
@@ -884,24 +884,25 @@ WebRTC connection issues are:
       direction TB
       L1{"
         Is the device very constrained on CPU and RAM resources? Is our app
-      requiring too much unneeded resources for itself?
+        requiring too much unneeded resources for itself?
       "} -- No --> L2{"
-        Are we using operating system APIs to notify our app is in an active call?
+        Are we using operating system APIs to notify our app is in an active
+        call?
       "} -- Yes --> L3{"
         Does have our call more streams than our device can manage and decode in
-      realtime? Does our device has enought bandwidth to receive them?
+        realtime? Does our device have enough bandwidth to receive them?
       "} -- No --> L4{"
         Are we using the
-      [network architecture](../2020-12-30-Types-of-WebRTC-networks.md) most
-      apropiate to our use case?
+        [network architecture](../2020-12-30-Types-of-WebRTC-networks.md) most
+        appropriate to our use case?
       "}
     end
 
     subgraph Delays
       direction TB
       D1{"
-        Are sender or receiver buffering excesive data instead of discarding
-      outdated one?
+        Are sender or receiver buffering excessive data instead of discarding
+        outdated one?
       "} -- No --> D2{"
         Does streams transmission configuration prioritizes quality over delays?
       "} -- No --> D3{"
@@ -913,7 +914,7 @@ WebRTC connection issues are:
       direction TB
       Ci1{"
         Is the network connection getting cuts or temporal drops? Are we having
-      packets losses and resends?
+        packet losses and resends?
       "} -- No --> Ci2{"
         Does have our networks changed during our app operation?
       "}

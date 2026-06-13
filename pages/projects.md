@@ -4,81 +4,89 @@ title: Projects
 permalink: /projects/
 ---
 
-Most important projects I've conceived, designed and developed from scratch,
-both personal or for third-party organizations in a professional basis. Most of
-them are open-source, and I'm always looking for new ideas and collaborations.
+Most important projects I've conceived, designed, and developed from scratch,
+both personal projects and projects for third-party organizations on a
+professional basis. Most of them are open-source, and I'm always looking for new
+ideas and collaborations.
 
 ## Personal projects
 
 ### [Mafalda SFU](https://mafalda.io)
 
-Massively vertical and horizontal scalable SFU built on top of
+Massively vertically and horizontally scalable SFU built on top of
 [Mediasoup](https://mediasoup.org/), automatically managing the resources based
-on their capacity, so in theory with the enough resources it could be possible
-to host videoconference rooms with unlimited number of participants in a
-transparent way for both users and developers, and API compatible with
-`Mediasoup` so it's possible to upgrade current code bases to use it and scale
-in a matter of minutes. Initially a personal proof of concept, in the first
-month of development (March 2021) it got interest from several companies, so I
-decided to develop it as a commercial product. It's still a work-in-progress,
-but it already supports vertical scalability with multi-CPU Mediasoup routers,
+on their capacity, so in theory, with enough resources, it should be possible to
+host videoconference rooms with an unlimited number of participants in a
+transparent way for both users and developers. It is also API-compatible with
+`Mediasoup`, so current codebases can be upgraded to use it and scale in a
+matter of minutes. Initially a personal proof of concept, in the first month of
+development (March 2021) it got interest from several companies, so I decided to
+develop it as a commercial product. It's still a work-in-progress, but it
+already supports vertical scalability with multi-CPU Mediasoup routers,
 horizontal scalability with routers over several servers, and easy integration
-with current code bases, being mostly missing just only the support for routers
-distributed across multiple CPUs over several servers. In addition to that, long
-term roadmap includes support for transparent decentralized P2P video streaming.
+with current codebases. The main missing piece is support for routers
+distributed across multiple CPUs over several servers. In addition to that, the
+long-term roadmap includes support for transparent decentralized P2P video
+streaming.
 
 ### [projectlint](https://github.com/projectlint)
 
-Linter to check global quality of projects, based on my experience doing code
-auditories. Not only checks for code quality or best practices, but also has
+Linter to check the overall quality of projects, based on my experience doing
+code audits. It not only checks code quality and best practices, but also has
 rules to validate project structure, file names conventions, complexity,
 documentation, tests...
 
-This project also involved the development from scratch a project-level rules
-async engine and of a tasks runner with support for parallel execution and
+This project also involved developing from scratch an async engine for
+project-level rules and a task runner with support for parallel execution and
 multiple optional alternatives, since none of them was available at that time.
 
 ### [WasMachine](https://github.com/piranna/wasmachine)
 
-Proof-of-Concetp implementation of WebAssembly on FPGAs. Binary WebAssembly
-bytecode is more optimized for reduced size than direct execution, but still was
-able to run some basic instructions, and implement on-the-fly translation for
-some of the more complex ones. Usage was intended as a "hardware accelerator of
-web pages" before WebAssembly compilers instead of interpreters became the main
-strength, but later was sugested to promote it as an alternative to JVM in SIM
-cards.
+Proof-of-Concept implementation of WebAssembly on FPGAs. Binary WebAssembly
+bytecode is more optimized for reduced size than direct execution, but it was
+still able to run some basic instructions and implement on-the-fly translation
+for some of the more complex ones. Its intended usage was as a "hardware
+accelerator for web pages" before WebAssembly compilers, instead of
+interpreters, became the main strength, but it was later suggested as an
+alternative to the JVM in SIM cards.
 
-[Web Assembly workshop by Dan Callahan](https://www.todojs.com/web-assembly-workshop-by-dan-callahan/), NodeJS Madrid meetup, 2017 (my keynote starts at 1:40:36):
+[Web Assembly workshop by Dan Callahan](https://www.todojs.com/web-assembly-workshop-by-dan-callahan/),
+NodeJS Madrid meetup, 2017 (my keynote starts at 1:40:36):
+
 <iframe src="https://player.vimeo.com/video/207967535?t=1h40m36s" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
 ### [NodeOS](https://node-os.com/)
 
-Minimal operating system build on top of [Linux kernel](https://www.kernel.org/)
-usingo [Node.js](https://nodejs.org/) as its user space and fully managed with
-[npm](https://www.npmjs.com/). It's mostly focused for Cloud and Fog computing,
-at the same time for education and embeded systems, and has some unique
-features like isolated filesystems for each user (it was planned to isolate each
-one on its own [LXC container](https://linuxcontainers.org/)) to allow full
-customization of the system by their users, or multiple flavors depending of the
-user needs (also as a single-process OS or bootable USB, and was planned support
-for networked GUI).
+Minimal operating system built on top of the
+[Linux kernel](https://www.kernel.org/) using [Node.js](https://nodejs.org/) as
+its user space and fully managed with [npm](https://www.npmjs.com/). It's mostly
+focused for Cloud and Fog computing, as well as education and embedded systems,
+and has some unique features like isolated filesystems for each user (it was
+planned to isolate each one on its own
+[LXC container](https://linuxcontainers.org/)) to allow full customization of
+the system by their users, or multiple flavors depending on the user needs (also
+as a single-process OS or bootable USB, and was planned support for networked
+GUI).
 
 This project won the spanish national
 [IX Free Software Universitary Championship](http://concursosoftwarelibre.us.es/1415/node/34.html),
 was my [bachelor thesis](https://github.com/piranna/pfc) (graduated with
-distinction), and I was also invited to give some keynotes at
-*OpenExpoDay 2015* and *JsDayEs 2017* conferences.
+distinction), and I was also invited to give some keynotes at _OpenExpoDay 2015_
+and _JsDayEs 2017_ conferences.
 
 IX Concurso Universitario de Software, Zaragoza 7th & 8th May 2015:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qV74zRTzhMo?si=mgXYuW2br1HEbDtb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ![Jesús Leganés Combarro presenting his NodeOS project in the Final Phase of the IX Free Software University Contest](../images/Jesús_Leganés_Combarro_en_la_Fase_Final_del_IX_CUSL.jpeg)
 ![Enrique Teruel Doñate (Delegate of the Rector for SICUZ) presents the diploma to Jesús Leganés Combarro for his NodeOS project](../images/Jesús_Leganés_Combarro_recibe_su_diploma_en_el_IX_CUSL.jpeg)
 
 XXVIII Jornadas Técnicas del GUL UC3M, Leganés 10th November 2016 (spanish):
+
 <iframe src="https://www.youtube.com/embed/aK9ixiOE2Hs" width="100%" height="360" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 JsDayEs 2017, Madrid (english):
+
 <iframe src="https://player.vimeo.com/video/220960658" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
 
 <details>
@@ -95,11 +103,11 @@ JsDayEs 2017, Madrid (english):
   <details>
     <summary>Original (spanish)</summary>
 
-    > Se entregaron también menciones especiales para los proyectos:
-    >
-    > [...]
-    >
-    > **NodeOS** de **Jesús Leganés Combarro** (Universidad Rey Juan Carlos).
+  > Se entregaron también menciones especiales para los proyectos:
+  >
+  > [...]
+  >
+  > **NodeOS** de **Jesús Leganés Combarro** (Universidad Rey Juan Carlos).
 
   </details>
 
@@ -116,21 +124,21 @@ JsDayEs 2017, Madrid (english):
 
 ### [ShareIt!](https://github.com/ShareIt-project)
 
-First P2P filesharing webapp based on client-side Javascript and HTML5, build
+First P2P file-sharing web app based on client-side JavaScript and HTML5, built
 using [WebRTC](https://webrtc.org/) DataChannels, with an architecture inspired
 by [Gnutella](https://www.gnu.org/philosophy/gnutella.html). Since DataChannels
-were not available in web browsers, I needed previosly to create
+were not available in web browsers, I first needed to create
 [DataChannels-polyfill](http://github.com/ShareIt-project/DataChannel-polyfill),
 the first working implementation of WebRTC DataChannels API, available 4 months
-before of experimental versions of Chrome and Firefox browsers, and build using
+before experimental versions of Chrome and Firefox browsers, and built using
 WebSockets as transport layer.
 
 This project won the "Most Innovative Project" award in the spanish national
 [VII Free Software Universitary Championship](http://www.concursosoftwarelibre.org/1213/premiados-vii-cusl.html)
-and was invited to give a keynote at first spanish WebRTC summit at Politechnic
-University of Madrid, November 2012.
+and I was invited to give a keynote at the first Spanish WebRTC summit at the
+Polytechnic University of Madrid, November 2012.
 
-VII Concurso Universitario de Software, Granada 23th & 24th May 2013:
+VII Concurso Universitario de Software, Granada 23rd & 24th May 2013:
 ![Winners of VII Free Software University Championship](../images/VII_CUSL.jpg)
 
 <details>
@@ -153,7 +161,7 @@ VII Concurso Universitario de Software, Granada 23th & 24th May 2013:
   to at least another peer and being part of the P2P network, the discovery and
   signaling with new peers was done directly between peers over the P2P network
   itself, leaving the connection with the external server as a fallback
-  mechanims.
+  mechanism.
 
 </details>
 
@@ -169,20 +177,20 @@ plugins, and inspired by other new generation filesystems like
 This was my first open source project with some public repercussion, and won the
 Madrid local edition of the spanish national
 [V Free Software Universitary Championship](http://www.concursosoftwarelibre.org)
-and was *Honorable Mention* in the national edition, both in 2011.
+and was _Honorable Mention_ in the national edition, both in 2011.
 
 ## Third parties
 
 ### [TransFast](https://github.com/Takeafile)
 
-Initially designed as a one-to-one high performance files transfer protocol
-based on WebRTC DataChannels, it evolved into a transport-agnostic
-streams-oriented communications protocol for general purpose heavily influenced
-and based by [Node.js streams](https://nodejs.org/api/stream.html). Taking
-ideas from P2P architectures (conceptually, I consider it myself
-[ShareIt!](#ShareIt!) 2.0), it implements advanced features like asynchronous
-send and reception, flow control with backpressure, use multiple transports in
-parallel, or auto-recovering.
+Initially designed as a one-to-one high-performance file transfer protocol based
+on WebRTC DataChannels, it evolved into a transport-agnostic streams-oriented
+communications protocol for general-purpose use, heavily influenced by
+[Node.js streams](https://nodejs.org/api/stream.html). Taking ideas from P2P
+architectures (conceptually, I consider it myself [ShareIt!](#ShareIt!) 2.0), it
+implements advanced features like asynchronous sending and receiving, flow
+control with backpressure, use of multiple transports in parallel, or
+auto-recovering.
 
 This project was sponsored by [Takeafile Labs](https://takeafile.com) with funds
 from European Union [Horizon 2020](https://ec.europa.eu/programmes/horizon2020)
@@ -192,17 +200,16 @@ program.
 
 Node.js bindings for [Orion IoT server](https://fiware-orion.readthedocs.io/).
 
-Although it was initially requested to develop just only a one-to-one proxy
-server between the `Orion IoT Server` and other APIs like Google Spreadsheets or
-Amazon DynamoDB, I took the initiative to a bottom-to-up development focused on
+Although I was initially asked to develop just a one-to-one proxy server between
+the `Orion IoT Server` and other APIs like Google Spreadsheets or Amazon
+DynamoDB, I took the initiative with a bottom-up development focused on
 following Node.js best practices and standard protocols, and building an
-expansible system based on reusable modules (the initially requested server
-ended being just only 70 lines of code) with one-to-many publishing support in
-half the initially estimated time. This is one of the projects I'm
-professionally more proud of at various levels, but this would have not been
-possible without a good in-detail documentation of the `Orion IoT Server`, clear
-requirements and objectives, and giving me creative liberty from their side.
-Kudos.
+expandable system based on reusable modules (the initially requested server
+ended up being only 70 lines of code) with one-to-many publishing support in
+half the initially estimated time. This is one of the projects I'm most proud of
+professionally at various levels, but it would not have been possible without
+detailed documentation of the `Orion IoT Server`, clear requirements and
+objectives, and giving me creative liberty from their side. Kudos.
 
 This project was sponsored by [Telefónica R&D](http://www.tid.es/) division.
 
@@ -211,16 +218,17 @@ This project was sponsored by [Telefónica R&D](http://www.tid.es/) division.
 Kurento is the lead WebRTC media server, powering [Skype](https://www.skype.com)
 web conferences or [Facebook](https://www.facebook.com/) and
 [WhatsApp](https://www.whatsapp.com/) multi-user videochats, thanks to its
-flexibility and performance. In contrast to other ones, it's focused on provide
-a thin low-level layer on top of [GStreamer](https://gstreamer.freedesktop.org/)
-with an easy to use API instead of a high-level aproach that does everything
-that's needed to create a videoconference aplication. Kurento team was acquired
-by [Twilio](https://www.twilio.com/) in 2016.
+flexibility and performance. In contrast to other ones, it's focused on
+providing a thin low-level layer on top of
+[GStreamer](https://gstreamer.freedesktop.org/) with an easy-to-use API instead
+of a high-level approach that does everything that's needed to create a
+videoconference application. Kurento team was acquired by
+[Twilio](https://www.twilio.com/) in 2016.
 
-In Kurento I was responsable of design and develop its Javascript and Node.js
-[client APIs](https://github.com/Kurento/kurento-client-js) and its WebRTC
-[browser utilities](https://github.com/Kurento/kurento-utils), based on my
-previous experience from developing [ShareIt!](#shareit). After that, in 2020 I
-was sponsored by [Veedeo.me](https://veedeo.me) to update `kurento-utils`
+In Kurento I was responsible for designing and developing its JavaScript and
+Node.js [client APIs](https://github.com/Kurento/kurento-client-js) and its
+WebRTC [browser utilities](https://github.com/Kurento/kurento-utils), based on
+my previous experience from developing [ShareIt!](#shareit). After that, in 2020
+I was sponsored by [Veedeo.me](https://veedeo.me) to update `kurento-utils`
 browser utilities package to make use of current WebRTC APIs and to follow newer
-Javascript standards and best practices.
+JavaScript standards and best practices.

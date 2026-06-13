@@ -6,7 +6,9 @@ categories:
 lang: en
 layout: post
 tags: Mafalda SFU, github actions, npm, packages, registry, workflow
-title: How to install npm packages stored at GitHub Packages Registry as dependencies in a GitHub Actions workflow
+title:
+  How to install npm packages stored at GitHub Packages Registry as dependencies
+  in a GitHub Actions workflow
 ---
 
 When working on `npm` projects with multiple subprojects as dependencies,
@@ -23,20 +25,20 @@ to enforce the "one package, one repo" identity. That's why native support for
 monorepos and workspaces has been delayed for so much time. I personally agree
 with that original `npm` concept, so a simple solution that I usually use are
 [git dependencies](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#git-urls-as-dependencies),
-and fetch them directly from git repositories. Problem with that aproach is that
-their own `devDependencies` are being installed too, making the install process
-longer, specially when some of them need to be transpiled or compiled. This can
-be a problem on Github Actions, since it seems there's a timeout of 10-15
-minutes for each workflow step.
+and fetch them directly from git repositories. Problem with that approach is
+that their own `devDependencies` are being installed too, making the install
+process longer, especially when some of them need to be transpiled or compiled.
+This can be a problem on Github Actions, since it seems there's a timeout of
+10-15 minutes for each workflow step.
 
 So, the solution for that would be to create new standalone packages, and
 install them. For private ones, one of the best options is to publish them on
 [Github Packages Registry](https://github.com/features/packages). Problem with
 that is that it requires authentication also for public packages, so we need to
 configure its access on our workflow, and it's not so easy as it should be, nor
-documentation is fully clear about that. So after trying several aproachs and
-reading a lot of posts and comments, I was able to understand how they works,
-and get the minimal needed config with the less permissions (no need of creating
+documentation is fully clear about that. So after trying several approaches and
+reading a lot of posts and comments, I was able to understand how they work, and
+get the minimal needed config with the least permissions (no need of creating
 and using
 [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
 to make it work, and understand why that configs are needed.

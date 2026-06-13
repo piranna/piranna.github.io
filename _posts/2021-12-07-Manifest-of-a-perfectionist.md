@@ -19,5 +19,5 @@ about if there's a better way to do it, both to improve their work quality or
 processes, or for learning and improve themselves, they just move on... So it's
 better to do things right from the beginning, since later they are more
 difficult to fix, or simply you forget to do it. And at the end, just by doing
-things right on a first aproach, you get used to it and does them that way by
+things right on a first approach, you get used to it and do them that way by
 default :-)

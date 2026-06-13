@@ -26,7 +26,7 @@ error code should be returned with a challenge, so you authenticate yourself and
 try the request again. I think JSON Web Tokens can be a good fit for this, since
 they are signed and server can check it's issued by itself and there's no need
 to store it anywhere, and also can store a timeout to make them shortlived
-(since it's an user interacted operation, 5 minutes would be more than enought).
+(since it's a user-interacted operation, 5 minutes would be more than enough).
 Also there's no problem by sending the token twice to the server because it's a
 deletion operation, so the second time it would be already deleted... that was
 exactly what we were asking for :-) To increase security, the token should host

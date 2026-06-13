@@ -45,7 +45,7 @@ valuable time.
 
 But this acceleration also introduces a structural challenge: **we are producing
 code faster than we can reasonably understand and validate it**. Some years ago,
-AI systems started to be so much complex that we started to lose track to
+AI systems started to be so much more complex that we started to lose track of
 understand how they _think_, becoming increasingly opaque. And now that they are
 starting to write our code, we are in a situation where we start to don't
 understand how our code works too, nor how well it does.
