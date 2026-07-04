@@ -8,7 +8,7 @@
 {% assign raw_tags = item.tags %}
 {% assign normalized_tags = '' | split: ',' %}
 {% if raw_tags %}
-{% assign normalized_tags = raw_tags | join: ',' | split: ',' %}
+  {% assign normalized_tags = raw_tags | join: ',' | split: ',' %}
 {% endif %}
 
 {% assign has_tags = false %}
@@ -35,9 +35,9 @@
         <span class="taxonomy-label">Tags:</span>
         <div class="taxonomy-values">
           {% for tag in normalized_tags %}
-          {% assign cleaned_tag = tag | strip %}
-          {% if cleaned_tag != '' %}
-          <a class="taxonomy-pill taxonomy-pill-tag"
+            {% assign cleaned_tag = tag | strip %}
+            {% if cleaned_tag != '' %}
+              <a class="taxonomy-pill taxonomy-pill-tag"
                  href="{{ site.baseurl }}/tag/{{ cleaned_tag | slugify: 'pretty' }}/">#{{ cleaned_tag }}</a>
             {% endif %}
           {% endfor %}
