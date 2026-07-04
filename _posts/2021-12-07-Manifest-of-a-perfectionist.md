@@ -8,7 +8,7 @@ tags:
   - perfectionism
   - programming
   - software
-  - architecture
+  - software-architecture
   - quality
 title: Manifest of a perfectionist
 twitter: "1468320408260669445"

@@ -2,11 +2,11 @@
 categories:
   - JavaScript
   - Engineering
+  - Mafalda SFU
 lang: en
 layout: post
 tags:
-  - Mafalda SFU
-  - github actions
+  - github-actions
   - npm
   - packages
   - registry

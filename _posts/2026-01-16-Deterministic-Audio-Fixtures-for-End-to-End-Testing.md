@@ -13,7 +13,7 @@ tags:
   - fft
   - fixtures
   - end-to-end-testing
-  - ci
+  - ci/cd
   - validation
   - lossy-codecs
   - spectral-analysis

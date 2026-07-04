@@ -2,10 +2,10 @@
 categories:
   - JavaScript
   - Engineering
+  - Mafalda SFU
 lang: en
 layout: post
 tags:
-  - Mafalda SFU
   - npm
   - performance
   - profiling

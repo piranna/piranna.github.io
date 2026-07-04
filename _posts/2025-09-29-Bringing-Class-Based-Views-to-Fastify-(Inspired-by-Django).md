@@ -6,7 +6,7 @@ categories:
 lang: en
 layout: post
 tags:
-  - coauthored-with-chatgpt
+  - ai-coauthored
   - fastify
   - typescript
   - nodejs
@@ -15,7 +15,7 @@ tags:
   - programming
   - cbv
   - class-based-views
-  - architecture
+  - software-architecture
   - design-patterns
   - api
   - http

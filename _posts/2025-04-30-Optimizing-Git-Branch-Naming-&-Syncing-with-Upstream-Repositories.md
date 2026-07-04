@@ -5,7 +5,7 @@ lang: en
 layout: post
 tags:
   - git
-  - coauthored-with-chatgpt
+  - ai-coauthored
   - version-control
   - upstream
   - branches

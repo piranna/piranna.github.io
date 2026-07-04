@@ -6,7 +6,7 @@ lang: en
 layout: post
 tags:
   - video
-  - architecture
+  - software-architecture
 title: Types of WebRTC networks
 twitter: "1344349398789214212"
 ---

@@ -5,7 +5,7 @@ lang: en
 layout: post
 tags:
   - prebuilds
-  - github actions
+  - github-actions
   - npm
   - package
 title: Mediasoup prebuilds

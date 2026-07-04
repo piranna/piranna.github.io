@@ -6,7 +6,7 @@ layout: post
 tags:
   - automation
   - chatgpt
-  - coauthored-with-chatgpt
+  - ai-coauthored
   - openai
   - productivity
   - reminders

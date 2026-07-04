@@ -2,16 +2,16 @@
 categories:
   - Engineering
   - JavaScript
+  - Dyte
 lang: en
 layout: post
 tags:
   - eslint
   - linting
   - semantic-release
-  - github actions
+  - github-actions
   - npm
   - package
-  - Dyte
 title: Linting @ Dyte
 twitter: "1607096592103866369"
 ---

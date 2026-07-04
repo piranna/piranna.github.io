@@ -1,10 +1,10 @@
 ---
 categories:
   - JavaScript
+  - Mafalda SFU
 lang: en
 layout: post
 tags:
-  - Mafalda SFU
   - nodejs
   - testing
   - jest

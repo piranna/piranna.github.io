@@ -6,7 +6,7 @@ categories:
 lang: en
 layout: post
 tags:
-  - coauthored-with-chatgpt
+  - ai-coauthored
   - android
   - bluetooth
   - networking
