@@ -15,14 +15,14 @@ title: Blog
 {% endfor %}
 
 <section>
-  <h2>Top Tags</h2>
+  <h2>10 Top Tags</h2>
   <div class="tag-cloud">
     {% assign shown_tags = 0 %}
     {% for count in (1..max_tag_count) reversed %}
       {% for tag in site.tags %}
         {% assign tag_name = tag[0] %}
         {% assign tag_size = tag[1] | size %}
-        {% if tag_size == count and shown_tags < 24 %}
+        {% if tag_size == count and shown_tags < 10 %}
           <a class="taxonomy-pill taxonomy-pill-tag"
              href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
             #{{ tag_name }} <small>({{ tag_size }})</small>
