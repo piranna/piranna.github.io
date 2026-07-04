@@ -5,14 +5,15 @@
   {% assign has_categories = true %}
 {% endif %}
 
-{% assign has_tags = false %}
-{% if item.tags and item.tags.size > 0 %}
-  {% assign has_tags = true %}
+{% assign raw_tags = item.tags %}
+{% assign normalized_tags = '' | split: ',' %}
+{% if raw_tags %}
+{% assign normalized_tags = raw_tags | join: ',' | split: ',' %}
 {% endif %}
 
-{% assign has_signature = false %}
-{% if has_categories and item.categories contains 'Signature Post' %}
-  {% assign has_signature = true %}
+{% assign has_tags = false %}
+{% if normalized_tags.size > 0 and normalized_tags[0] != '' %}
+  {% assign has_tags = true %}
 {% endif %}
 
 {% if has_categories or has_tags %}
@@ -33,9 +34,12 @@
       <div class="taxonomy-row">
         <span class="taxonomy-label">Tags:</span>
         <div class="taxonomy-values">
-          {% for tag in item.tags %}
-            <a class="taxonomy-pill taxonomy-pill-tag"
-               href="{{ site.baseurl }}/tag/{{ tag | slugify: 'pretty' }}/">#{{ tag }}</a>
+          {% for tag in normalized_tags %}
+          {% assign cleaned_tag = tag | strip %}
+          {% if cleaned_tag != '' %}
+          <a class="taxonomy-pill taxonomy-pill-tag"
+                 href="{{ site.baseurl }}/tag/{{ cleaned_tag | slugify: 'pretty' }}/">#{{ cleaned_tag }}</a>
+            {% endif %}
           {% endfor %}
         </div>
       </div>

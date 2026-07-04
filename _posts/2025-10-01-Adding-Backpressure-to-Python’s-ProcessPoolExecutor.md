@@ -6,8 +6,13 @@ categories:
 lang: en
 layout: post
 tags:
-  coauthored-with-chatgpt, python, concurrency, programming, backpressure,
-  processpoolexecutor, threading
+  - coauthored-with-chatgpt
+  - python
+  - concurrency
+  - programming
+  - backpressure
+  - processpoolexecutor
+  - threading
 title: Adding Backpressure to Python’s ProcessPoolExecutor
 ---
 

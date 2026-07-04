@@ -6,9 +6,19 @@ categories:
 lang: en
 layout: post
 tags:
-  Mafalda SFU, npm, github actions, git dependencies, private repositories,
-  documentation, jsdoc-to-markdown, ssh, ssh keys, deploy keys, automation,
-  ci/cd, publishing
+  - Mafalda SFU
+  - npm
+  - github actions
+  - git dependencies
+  - private repositories
+  - documentation
+  - jsdoc-to-markdown
+  - ssh
+  - ssh keys
+  - deploy keys
+  - automation
+  - ci/cd
+  - publishing
 title: How to use private repositories as npm git dependencies on Github Actions
 twitter: "1607096594700140544"
 ---

@@ -7,8 +7,18 @@ categories:
 lang: en
 layout: post
 tags:
-  ai-coauthored, audio, testing, fft, fixtures, end-to-end-testing, ci,
-  validation, lossy-codecs, spectral-analysis, deterministic, audio-pipelines
+  - ai-coauthored
+  - audio
+  - testing
+  - fft
+  - fixtures
+  - end-to-end-testing
+  - ci
+  - validation
+  - lossy-codecs
+  - spectral-analysis
+  - deterministic
+  - audio-pipelines
 title: Deterministic Audio Fixtures for End-to-End Testing
 ---
 

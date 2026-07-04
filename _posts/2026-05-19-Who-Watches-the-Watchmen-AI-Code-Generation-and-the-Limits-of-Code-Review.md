@@ -10,9 +10,15 @@ image_alt: >-
 lang: en
 layout: post
 tags:
-  ai, code-generation, code-review, technical-debt, software-development,
-  software-architecture, software-quality, software-maintenance,
-  software-evolution
+  - ai
+  - code-generation
+  - code-review
+  - technical-debt
+  - software-development
+  - software-architecture
+  - software-quality
+  - software-maintenance
+  - software-evolution
 title:
   Who Watches the Watchmen? AI Code Generation and the Limits of Code Review
 ---
