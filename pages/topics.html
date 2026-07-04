@@ -70,6 +70,8 @@ permalink: /topics/
 {% endfor %}
 {% assign range = max_count | minus: min_count %}
 
+{% assign has_hidden_tags = false %}
+
 <div class="tag-cloud">
   {% assign sorted_tags = site.tags | sort %}
   {% for count in (1..max_count) reversed %}
@@ -86,22 +88,56 @@ permalink: /topics/
       {% endif %}
 
       {% assign cloud_class = 'tag-cloud-md' %}
+
       {% if scaled <= 20 %}
-      {% assign cloud_class = 'tag-cloud-xs' %}
+        {% assign cloud_class = 'tag-cloud-xs' %}
       {% elsif scaled <= 40 %}
-      {% assign cloud_class = 'tag-cloud-sm' %}
+        {% assign cloud_class = 'tag-cloud-sm' %}
       {% elsif scaled <= 60 %}
-      {% assign cloud_class = 'tag-cloud-md' %}
+        {% assign cloud_class = 'tag-cloud-md' %}
       {% elsif scaled <= 80 %}
-      {% assign cloud_class = 'tag-cloud-lg' %}
+        {% assign cloud_class = 'tag-cloud-lg' %}
       {% else %}
-      {% assign cloud_class = 'tag-cloud-xl' %}
+        {% assign cloud_class = 'tag-cloud-xl' %}
       {% endif %}
 
-      <a class="taxonomy-pill taxonomy-pill-tag {{ cloud_class }}"
-         href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
-        #{{ tag_name }} <small>({{ tag_count }})</small>
-      </a>
-    {% endfor %}
-  {% endfor %}
-</div>
+      {% if cloud_class == 'tag-cloud-xs' %}
+        {% assign has_hidden_tags = true %}
+      {% else %}
+        <a class="taxonomy-pill taxonomy-pill-tag {{ cloud_class }}"
+          href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
+          #{{ tag_name }} <small>({{ tag_count }})</small>
+        </a>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+      </div>
+      
+      {% if has_hidden_tags %}
+      <details class="tag-cloud-details">
+        <summary>Show smaller tags</summary>
+        <div class="tag-cloud">
+          {% for count in (1..max_count) reversed %}
+          {% for tag in sorted_tags %}
+          {% assign tag_name = tag[0] %}
+          {% assign tag_count = tag[1] | size %}
+          {% if tag_count != count %}
+          {% continue %}
+          {% endif %}
+      
+          {% assign scaled = 50 %}
+          {% if range > 0 %}
+          {% assign scaled = tag_count | minus: min_count | times: 100 | divided_by: range %}
+          {% endif %}
+      
+          {% if scaled <= 20 %}
+          <a class="taxonomy-pill taxonomy-pill-tag tag-cloud-xs"
+             href="{{ site.baseurl }}/tag/{{ tag_name | slugify: 'pretty' }}/">
+            #{{ tag_name }} <small>({{ tag_count }})</small>
+          </a>
+          {% endif %}
+        {% endfor %}
+        {% endfor %}
+        </div>
+  </details>
+  {% endif %}
