@@ -76,7 +76,7 @@ permalink: /topics/
   {% assign sorted_tags = site.tags | sort %}
   {% for count in (1..max_count) reversed %}
     {% for tag in sorted_tags %}
-    {% assign tag_name = tag[0] %}
+    {% assign tag_name = tag[0] | strip %}
     {% assign tag_count = tag[1] | size %}
       {% if tag_count != count %}
       {% continue %}
@@ -119,7 +119,7 @@ permalink: /topics/
         <div class="tag-cloud">
           {% for count in (1..max_count) reversed %}
           {% for tag in sorted_tags %}
-          {% assign tag_name = tag[0] %}
+          {% assign tag_name = tag[0] | strip %}
           {% assign tag_count = tag[1] | size %}
           {% if tag_count != count %}
           {% continue %}
