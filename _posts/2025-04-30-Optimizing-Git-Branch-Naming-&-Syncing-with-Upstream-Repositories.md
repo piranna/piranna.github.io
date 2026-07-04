@@ -3,7 +3,13 @@ categories:
   - Engineering
 lang: en
 layout: post
-tags: git, coauthored-with-chatgpt, version-control, upstream, branches, naming
+tags:
+  - git
+  - coauthored-with-chatgpt
+  - version-control
+  - upstream
+  - branches
+  - naming
 title: Optimizing Git Branch Naming & Syncing with Upstream Repositories
 ---
 

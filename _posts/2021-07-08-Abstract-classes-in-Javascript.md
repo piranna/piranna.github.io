@@ -5,7 +5,11 @@ categories:
   - Signature Post
 lang: en
 layout: post
-tags: javascript, programming, oop, abstract
+tags:
+  - javascript
+  - programming
+  - oop
+  - abstract
 title: Abstract classes in Javascript
 twitter: "1413030769308704768"
 ---

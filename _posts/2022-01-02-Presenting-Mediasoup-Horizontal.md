@@ -5,7 +5,14 @@ categories:
   - WebRTC
 lang: en
 layout: post
-tags: Mafalda SFU, webrtc, mediasoup, sfu, video, streaming, scalability
+tags:
+  - Mafalda SFU
+  - webrtc
+  - mediasoup
+  - sfu
+  - video
+  - streaming
+  - scalability
 title: Presenting Mediasoup Horizontal
 twitter: "1477742653383008261"
 ---

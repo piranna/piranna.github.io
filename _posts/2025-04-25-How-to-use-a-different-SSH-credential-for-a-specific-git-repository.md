@@ -3,7 +3,12 @@ categories:
   - Engineering
 lang: en
 layout: post
-tags: git, ssh, configuration, credentials, repository
+tags:
+  - git
+  - ssh
+  - configuration
+  - credentials
+  - repository
 title: How to use a different SSH credential for a specific git repository
 ---
 

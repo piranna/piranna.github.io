@@ -3,7 +3,14 @@ categories:
   - JavaScript
 lang: en
 layout: post
-tags: Mafalda SFU, nodejs, testing, jest, node-test, chai, snapshots
+tags:
+  - Mafalda SFU
+  - nodejs
+  - testing
+  - jest
+  - node-test
+  - chai
+  - snapshots
 title: How to migrate from Jest to node:test
 ---
 

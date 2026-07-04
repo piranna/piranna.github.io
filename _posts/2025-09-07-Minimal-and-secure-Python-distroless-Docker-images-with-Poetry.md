@@ -4,7 +4,13 @@ categories:
   - Python
 lang: en
 layout: post
-tags: docker, python, poetry, distroless, security, devops
+tags:
+  - docker
+  - python
+  - poetry
+  - distroless
+  - security
+  - devops
 title: Minimal and secure Python distroless Docker images with Poetry
 ---
 

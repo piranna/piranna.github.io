@@ -2,7 +2,9 @@
 lang: en
 layout: note
 title: How to get all branches from a git remote and push them to a new remote
-tags: git, howto
+tags:
+  - git
+  - howto
 ---
 
 ```sh

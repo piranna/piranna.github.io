@@ -5,7 +5,13 @@ categories:
   - WebRTC
 lang: en
 layout: post
-tags: mafalda-sfu, awards, real-time-media, webrtc, scaling, distributed-systems
+tags:
+  - mafalda-sfu
+  - awards
+  - real-time-media
+  - webrtc
+  - scaling
+  - distributed-systems
 title: Mafalda SFU receives “Best Scalable Real-Time Media Platform 2026”
 ---
 

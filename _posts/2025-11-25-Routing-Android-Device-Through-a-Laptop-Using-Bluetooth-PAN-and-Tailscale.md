@@ -6,7 +6,13 @@ categories:
 lang: en
 layout: post
 tags:
-  coauthored-with-chatgpt, android, bluetooth, networking, tailscale, vpn, pan
+  - coauthored-with-chatgpt
+  - android
+  - bluetooth
+  - networking
+  - tailscale
+  - vpn
+  - pan
 title: Routing Android Device Through a Laptop Using Bluetooth PAN and Tailscale
 ---
 

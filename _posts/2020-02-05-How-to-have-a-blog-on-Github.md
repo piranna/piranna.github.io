@@ -4,7 +4,11 @@ categories:
   - Engineering
 lang: en
 layout: post
-tags: blog, github, jekyll, tutorial
+tags:
+  - blog
+  - github
+  - jekyll
+  - tutorial
 title: How to have a blog on Github
 twitter: "1225206478035963905"
 ---

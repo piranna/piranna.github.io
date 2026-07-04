@@ -6,7 +6,11 @@ image_alt: >-
   Screenshot of the blog with `tty` media rule and a custom terminal inspired
   CSS stylesheet enabled
 layout: post
-tags: blog, github, jekyll, tutorial
+tags:
+  - blog
+  - github
+  - jekyll
+  - tutorial
 title: How to simulate Chrome is running in a TTY
 twitter: "1254123327683248129"
 ---

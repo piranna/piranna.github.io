@@ -5,7 +5,15 @@ categories:
   - Streaming
   - WebRTC
 layout: post
-tags: web, html, canvas, video, webrtc, webvtt, webm, metadata
+tags:
+  - web
+  - html
+  - canvas
+  - video
+  - webrtc
+  - webvtt
+  - webm
+  - metadata
 title: How to paint over a video with HTML
 twitter: "1332171837019709441"
 ---

@@ -2,7 +2,11 @@
 categories:
   - Personal development
 layout: post
-tags: calculator, freelance, taxes, spain
+tags:
+  - calculator
+  - freelance
+  - taxes
+  - spain
 title: Updates on the freelancer calculator
 twitter: "1248936943431364608"
 ---

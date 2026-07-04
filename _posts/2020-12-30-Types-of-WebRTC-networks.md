@@ -3,7 +3,11 @@ categories:
   - WebRTC
 lang: en
 layout: post
-tags: webrtc, streaming, video, architecture
+tags:
+  - webrtc
+  - streaming
+  - video
+  - architecture
 title: Types of WebRTC networks
 twitter: "1344349398789214212"
 ---

@@ -4,7 +4,12 @@ categories:
   - Engineering
   - Operating Systems
 layout: post
-tags: os, lifecycle, npm, automation, github-actions
+tags:
+  - os
+  - lifecycle
+  - npm
+  - automation
+  - github-actions
 title: OS lifecycle
 twitter: "1240749381231484928"
 ---

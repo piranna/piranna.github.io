@@ -3,7 +3,11 @@ categories:
   - Engineering
 lang: en
 layout: post
-tags: exceptions, programming, python, javascript
+tags:
+  - exceptions
+  - programming
+  - python
+  - javascript
 title: How to do proper exceptions handling
 twitter: "1488788775526453253"
 ---

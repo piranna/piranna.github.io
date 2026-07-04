@@ -3,7 +3,12 @@ categories:
   - Mediasoup
 lang: en
 layout: post
-tags: mediasoup, prebuilds, github actions, npm, package
+tags:
+  - mediasoup
+  - prebuilds
+  - github actions
+  - npm
+  - package
 title: Mediasoup prebuilds
 twitter: "1548423326359375873"
 ---

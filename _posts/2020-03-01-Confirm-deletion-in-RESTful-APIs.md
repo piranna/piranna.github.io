@@ -2,7 +2,11 @@
 categories:
   - Engineering
 layout: post
-tags: proposals, rest, api, design
+tags:
+  - proposals
+  - rest
+  - api
+  - design
 title: Confirm deletion in RESTful APIs
 twitter: "1234189351241867265"
 ---

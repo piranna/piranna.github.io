@@ -4,7 +4,12 @@ categories:
   - Engineering
 lang: en
 layout: post
-tags: Mafalda SFU, npm, performance, profiling, gnomon
+tags:
+  - Mafalda SFU
+  - npm
+  - performance
+  - profiling
+  - gnomon
 title: Profiling `npm install` times
 ---
 

@@ -8,7 +8,14 @@ code: https://github.com/piranna/Content-PeerConnection-bandwidth
 DOI: 10.5281/zenodo.19961278
 lang: en
 layout: post
-tags: webrtc, video, codec, bitrate, benchmark, measurement, reproducibility
+tags:
+  - webrtc
+  - video
+  - codec
+  - bitrate
+  - benchmark
+  - measurement
+  - reproducibility
 title: WebRTC bitrate is not what you think
 ---
 

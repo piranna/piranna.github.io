@@ -5,7 +5,11 @@ categories:
   - Streaming
 lang: es
 layout: post
-tags: webrtc, streaming, video, architecture
+tags:
+  - webrtc
+  - streaming
+  - video
+  - architecture
 title: Tipos de redes WebRTC
 twitter: "1344349398004858880"
 ---
