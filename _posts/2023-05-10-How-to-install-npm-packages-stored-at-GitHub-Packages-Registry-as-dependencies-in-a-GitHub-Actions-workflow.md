@@ -2,7 +2,6 @@
 categories:
   - JavaScript
   - Engineering
-  - GitHub Actions
 lang: en
 layout: post
 tags:

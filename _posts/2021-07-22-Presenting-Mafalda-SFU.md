@@ -3,15 +3,12 @@ categories:
   - Mafalda SFU
   - Mediasoup
   - WebRTC
+  - Streaming
 lang: en
 layout: post
 tags:
-  - Mafalda SFU
-  - webrtc
-  - mediasoup
   - sfu
   - video
-  - streaming
   - scalability
 title: Presenting Mafalda SFU
 twitter: "1417988668082442240"

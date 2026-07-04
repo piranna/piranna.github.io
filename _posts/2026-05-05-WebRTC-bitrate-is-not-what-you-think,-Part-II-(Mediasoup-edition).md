@@ -9,7 +9,6 @@ DOI: 10.5281/zenodo.19988776
 lang: en
 layout: post
 tags:
-  - webrtc
   - video
   - codec
   - bitrate

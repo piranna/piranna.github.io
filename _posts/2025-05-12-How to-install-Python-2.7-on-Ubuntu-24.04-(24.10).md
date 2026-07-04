@@ -2,13 +2,12 @@
 categories:
   - Python
   - Systems
+  - Mediasoup
 lang: en
 layout: post
 tags:
-  - python
   - ubuntu
   - howto
-  - mediasoup
 title: How to install Python 2.7 on Ubuntu 24.04 (24.10)
 ---
 

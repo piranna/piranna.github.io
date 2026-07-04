@@ -3,22 +3,21 @@ categories:
   - WebRTC
   - Engineering
   - Signature Post
+  - Mediasoup
+  - Streaming
 lang: en
 layout: post
 redirect_from:
   - /2021/04/23/How-to-build-WebRTC-for-Android-in-Ubuntu-21.04/
   - /2023/02/27/How-to-build-WebRTC-for-Android-in-Ubuntu-22.04/
 tags:
-  - webrtc
   - android
   - ubuntu
   - build
   - libwebrtc
   - aar
-  - mediasoup
   - sfu
   - video
-  - streaming
 title: How to build WebRTC for Android in Ubuntu 25.04
 ---
 

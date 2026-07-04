@@ -6,7 +6,6 @@ categories:
 lang: en
 layout: post
 tags:
-  - javascript
   - programming
   - oop
   - abstract

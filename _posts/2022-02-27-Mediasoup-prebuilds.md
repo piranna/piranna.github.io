@@ -4,7 +4,6 @@ categories:
 lang: en
 layout: post
 tags:
-  - mediasoup
   - prebuilds
   - github actions
   - npm

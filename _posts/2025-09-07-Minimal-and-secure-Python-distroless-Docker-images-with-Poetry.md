@@ -6,7 +6,6 @@ lang: en
 layout: post
 tags:
   - docker
-  - python
   - poetry
   - distroless
   - security

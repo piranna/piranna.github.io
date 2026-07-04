@@ -3,7 +3,6 @@ categories:
   - JavaScript
 layout: post
 tags:
-  - javascript
   - nodejs
   - redux
   - redux-offline

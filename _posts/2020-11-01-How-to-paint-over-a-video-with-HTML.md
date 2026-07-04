@@ -10,7 +10,6 @@ tags:
   - html
   - canvas
   - video
-  - webrtc
   - webvtt
   - webm
   - metadata

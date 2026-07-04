@@ -7,7 +7,6 @@ lang: en
 layout: post
 tags:
   - coauthored-with-chatgpt
-  - python
   - concurrency
   - programming
   - backpressure

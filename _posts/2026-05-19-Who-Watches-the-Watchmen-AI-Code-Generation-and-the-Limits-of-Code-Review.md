@@ -10,7 +10,6 @@ image_alt: >-
 lang: en
 layout: post
 tags:
-  - ai
   - code-generation
   - code-review
   - technical-debt

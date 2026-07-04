@@ -4,7 +4,6 @@ categories:
 lang: en
 layout: post
 tags:
-  - ai
   - automation
   - chatgpt
   - coauthored-with-chatgpt

@@ -1,11 +1,10 @@
 ---
 categories:
   - WebRTC
+  - Streaming
 lang: en
 layout: post
 tags:
-  - webrtc
-  - streaming
   - video
   - architecture
 title: Types of WebRTC networks

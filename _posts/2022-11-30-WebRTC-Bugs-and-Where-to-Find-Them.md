@@ -6,7 +6,6 @@ categories:
 lang: en
 layout: post
 tags:
-  - webrtc
   - bugs
   - troubleshooting
   - stun

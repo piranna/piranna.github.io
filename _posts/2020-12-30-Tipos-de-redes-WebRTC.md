@@ -6,8 +6,6 @@ categories:
 lang: es
 layout: post
 tags:
-  - webrtc
-  - streaming
   - video
   - architecture
 title: Tipos de redes WebRTC
