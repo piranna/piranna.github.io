@@ -15,7 +15,7 @@ title: How to migrate from Jest to node:test
 ---
 
 [Jest](https://jestjs.io/) is one of the most populars testing frameworks for
-Javascript and Node.js. Originally developed by Facebook, it's a one-stop-shop
+JavaScript and Node.js. Originally developed by Facebook, it's a one-stop-shop
 with testing, assertions, code coverage... but this implies some critics, like
 requiring more than 50mb of dependencies. Also, somewhat recently was shown to
 [be maintained mostly by a single person](https://twitter.com/mafalda_sfu/status/1488600128680341517),

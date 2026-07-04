@@ -234,6 +234,6 @@ values (more specifically, the font sizes) over the ones defined by the web site
 **BONUS**: adding a CSS stylesheet in Chrome DevTools by editing the elements
 panel as HTML doesn't works (or at least it didn't worked to me) because by
 doing so it seems you are modifying the `text` attribute, while it's needed to
-modify the `textContent` one instead. It's possible to do it in Javascript by
+modify the `textContent` one instead. It's possible to do it in JavaScript by
 [creating an `script` element](https://stackoverflow.com/a/15506705/586382) and
 appending it to the document `HEAD` :-)

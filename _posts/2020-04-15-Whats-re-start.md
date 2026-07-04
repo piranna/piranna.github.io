@@ -14,7 +14,7 @@ twitter: "1250499542698594304"
 
 [React Native](https://facebook.github.io/react-native/) is a framework derived
 from [React](https://reactjs.org/) that allow to program mobile native apps
-using Javascript. It's only focused on Android and iOS, but its popularity has
+using JavaScript. It's only focused on Android and iOS, but its popularity has
 lead to other implementations of its API for other platforms like Windows, macOS
 or also web. Thing is, although they share the same APIs and source code is
 (almost) compatible between them, they are not integrated so it would surface
@@ -55,14 +55,14 @@ most React Native components that include native code are targeted only for
 Android or iOS, not taking in account other platforms like web or Windows. This
 requires to search for alternatives that include support for the additional
 platforms or add them ourselves, or if possible, find alternatives written in
-vanilla Javascript and using the React Native standard components, that have the
-advantage of being more secure by running inside the Javascript virtual machine
+vanilla JavaScript and using the React Native standard components, that have the
+advantage of being more secure by running inside the JavaScript virtual machine
 instead of executing platform native code. In this aspect, the safest bet to
 solve these problems is to define the web platform as the "canonical" one and
 develop your project targeting it first. This platform don't also makes the
 development and debug cycle easier and faster (you can use your web browser to
 debug your app instead of an Android or iOS devices or an emulator), but also
-force you to find this "pure Javascript" components that will make you sure your
+force you to find this "pure JavaScript" components that will make you sure your
 project work on all the platforms.
 
 ## Update process

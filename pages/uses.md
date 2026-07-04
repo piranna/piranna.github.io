@@ -55,7 +55,7 @@ permalink: /uses
 ## Programming languages
 
 - Node.js (since 0.8)
-- Javascript
+- JavaScript
 - Python
 - C/C++
 - Rust

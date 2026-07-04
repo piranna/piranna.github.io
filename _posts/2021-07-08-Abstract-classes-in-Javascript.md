@@ -9,11 +9,11 @@ tags:
   - programming
   - oop
   - abstract
-title: Abstract classes in Javascript
+title: Abstract classes in JavaScript
 twitter: "1413030769308704768"
 ---
 
-Javascript don't have the concept of abstract classes, but it's fairly easy to
+JavaScript don't have the concept of abstract classes, but it's fairly easy to
 implement: don't allow to instanciate them :-) Just check if the `constructor`
 of the instance we are creating is the own class instead of one of its
 childrens, and don't throw an error if it is:

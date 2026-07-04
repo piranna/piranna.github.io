@@ -421,7 +421,7 @@ await app.listen({ port: 3000 });
 
 ## About Mixins
 
-One of the nice parts of Django CBVs is inheritance and mixins. Javascript (and
+One of the nice parts of Django CBVs is inheritance and mixins. JavaScript (and
 by extension TypeScript) doesn’t allow multiple inheritance, but you can achieve
 similar results on ES6 classes with **class factories**:
 

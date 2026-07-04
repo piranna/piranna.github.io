@@ -33,7 +33,7 @@ don’t just simply apply a linter to our source code.
 ## Linting
 
 As linting engine we’ll make use of [eslint](https://eslint.org/), that’s one of
-the current most popular and configurable linting engines for Javascript and
+the current most popular and configurable linting engines for JavaScript and
 Typescript. In that way, `@dyte-in/eslint-config` package is the central element
 for our unified linting scheme, since it host the
 [shareable config](https://eslint.org/docs/developer-guide/shareable-configs)
@@ -45,7 +45,7 @@ Shareable config is defined in the `.eslint.js` file, being it the package main
 export. It can feel strange to use a hidden file, but that’s on purpose since
 it’s one of the filenames that eslint uses when looking for a project config, so
 this way we can reuse it to lint the shareable config project itself. That’s the
-reason why we are exporting it as a Javascript file instead of as a static JSON
+reason why we are exporting it as a JavaScript file instead of as a static JSON
 one, too.
 
 The shareable config extends and enable rules from
@@ -88,7 +88,7 @@ And for Typescript specific rules, the most interesting ones are:
 - Multiple rules to notify of usage of unsafe `any` type.
 - [no-restricted-syntax](https://eslint.org/docs/rules/no-restricted-syntax):
   configured to prevent usage of Typescript `private` keyword instead of
-  Javascript `#[private]` class members.
+  JavaScript `#[private]` class members.
 
 To use the `eslint-config` package is just like using any other `eslint` shared
 config, and you only need two steps:

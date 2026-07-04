@@ -73,7 +73,7 @@ for example for each one of the participants in a conversation, and includes
 support for `metadata` cues that can be used to store information like
 [GeoJSON info about the location of the streamer](http://wiki.webmproject.org/webm-metadata/temporal-metadata/webvtt-metadata)
 or operations that are being done. Drawback is that there's no current
-Javascript APIs to add the WebVTT tracks in the browser in the `MediaStream`
+JavaScript APIs to add the WebVTT tracks in the browser in the `MediaStream`
 itself, although it has been considered as
 [a future use case of WebRTC](https://stackoverflow.com/a/39581358/586382), so
 currently they can not be send inline from the source and would need to be
@@ -125,7 +125,7 @@ and included by the `Video` element itself or if it would be needed to be send
 out-of-band and included by using a
 [Track element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
 but there's a [spec](https://dev.w3.org/html5/html-sourcing-inband-tracks/) with
-the intention to provide a common Javascript mapping API between inline cues in
+the intention to provide a common JavaScript mapping API between inline cues in
 multiple container formats (including WebM).
 
 ## Other links

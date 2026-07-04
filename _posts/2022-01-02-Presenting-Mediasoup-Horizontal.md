@@ -26,7 +26,7 @@ provide transparent vertical and horizontal scaling, so let's see how it works.
 
 `Mediasoup-Horizontal` is a manager that allows to remotely control multiple
 instances of Mediasoup, providing a simple and easy to use API based on the one
-from the Javascript
+from the JavaScript
 [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 object. It allows to add and remove Remote Mediasoup `Client` objects and manage
 them, although is not directly tied to them so you can provide your own objects
