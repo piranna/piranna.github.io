@@ -285,7 +285,7 @@ nav {
 
   img {
     display: block;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 4px;
@@ -293,8 +293,11 @@ nav {
 }
 
 .post-with-image {
+  display: block;
+  width: 100%;
   min-height: 280px;
   padding-top: 130px;
+  box-sizing: border-box;
 
   > * {
     position: relative;
@@ -308,13 +311,14 @@ nav {
 
   .post-list-hero-bg {
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: auto;
-    max-width: 100%;
-    height: auto;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: block;
     z-index: 0;
-    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: center;
     opacity: 0.55;
   }
 
@@ -396,7 +400,9 @@ nav {
   background: linear-gradient(135deg, #fff5c2 0%, #ffe082 100%);
   border-color: #d9a300;
   font-weight: 700;
-  box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.2), 0 2px 10px rgba(217, 163, 0, 0.22);
+  box-shadow:
+      0 0 0 1px rgba(217, 163, 0, 0.2),
+      0 2px 10px rgba(217, 163, 0, 0.22);
   animation: signature-glow 2.6s ease-in-out infinite;
 }
 
@@ -448,19 +454,27 @@ nav {
   padding: 0.2rem 0.55rem;
   vertical-align: middle;
   text-transform: uppercase;
-  box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.2), 0 2px 10px rgba(217, 163, 0, 0.22);
+  box-shadow:
+      0 0 0 1px rgba(217, 163, 0, 0.2),
+      0 2px 10px rgba(217, 163, 0, 0.22);
   animation: signature-glow 2.6s ease-in-out infinite;
 }
 
 @keyframes signature-glow {
   0% {
-    box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.18), 0 2px 8px rgba(217, 163, 0, 0.14);
+    box-shadow:
+        0 0 0 1px rgba(217, 163, 0, 0.18),
+        0 2px 8px rgba(217, 163, 0, 0.14);
   }
   50% {
-    box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.35), 0 4px 14px rgba(217, 163, 0, 0.28);
+    box-shadow:
+        0 0 0 1px rgba(217, 163, 0, 0.35),
+        0 4px 14px rgba(217, 163, 0, 0.28);
   }
   100% {
-    box-shadow: 0 0 0 1px rgba(217, 163, 0, 0.18), 0 2px 8px rgba(217, 163, 0, 0.14);
+    box-shadow:
+        0 0 0 1px rgba(217, 163, 0, 0.18),
+        0 2px 8px rgba(217, 163, 0, 0.14);
   }
 }
 
