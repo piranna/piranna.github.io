@@ -272,9 +272,7 @@ nav {
 .github-corner {
   border: 0;
   clip-path: polygon(0 0, 100% 0, 100% 100%);
-  color: $white;
   display: block;
-  fill: #151513;
   height: 80px;
   position: fixed;
   right: 0;
@@ -295,6 +293,10 @@ nav {
       animation: octocat-wave 560ms ease-in-out;
     }
   }
+}
+
+.github-corner-bg {
+  fill: #151513;
 }
 
 .octo-arm {
@@ -335,6 +337,10 @@ nav {
 
 .container-wide {
   max-width: none;
+
+  .container {
+    max-width: none;
+  }
 }
 
 .main-content {
