@@ -1,5 +1,6 @@
 ---
 categories:
+  - Crazy Projects
   - WebRTC
   - Mediasoup
 image: 2026-07-08-Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense.gif
