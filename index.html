@@ -2,79 +2,10 @@
 layout: default
 ---
 
-<style>
-  #main.container {
-    max-width: none;
-  }
-
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .posts > .post {
-    padding-bottom: 0px;
-  }
-
-  .contact-cta {
-    text-align: center;
-  }
-
-  .contact-cta a {
-    display: inline-block;
-    padding: 0.9rem 1.8rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #0a7a50 0%, #14b87a 100%);
-    color: #ffffff;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    box-shadow: 0 10px 24px rgba(10, 122, 80, 0.35);
-    transition: transform 180ms ease, box-shadow 180ms ease,
-      filter 180ms ease;
-    animation: cta-pulse 2.4s ease-in-out infinite;
-  }
-
-  .contact-cta a:hover,
-  .contact-cta a:focus-visible {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 14px 28px rgba(10, 122, 80, 0.42);
-    filter: saturate(1.1);
-    outline: none;
-  }
-
-  @keyframes cta-pulse {
-    0%,
-    100% {
-      box-shadow: 0 10px 24px rgba(10, 122, 80, 0.35);
-    }
-    50% {
-      box-shadow: 0 12px 30px rgba(10, 122, 80, 0.5);
-    }
-  }
-
-  @media (min-width: 768px) {
-    .main-content {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-
-    .container.intro {
-      flex: 1;
-      margin-right: 2rem;
-    }
-
-    .container.posts {
-      flex: 1;
-    }
-  }
-</style>
-
 <div class="main-content">
   <div class="container intro">
-    <h2 style="text-align: center;">Jesús Leganés-Combarro</h2>
-    <p style="text-align: center;">Polymath Software Engineer & Architect</p>
+    <h2 class="intro-heading">Jesús Leganés-Combarro</h2>
+    <p class="intro-tagline">Polymath Software Engineer & Architect</p>
     <p>
       Specialized in WebRTC, Streaming, Backend & Systems. CTO experience in
       startups and international projects across UAE, USA, and Europe. Always
@@ -121,7 +52,7 @@ layout: default
         </div>
       </article>
     {% endfor %}
-    <p style="text-align: center; margin-top: 1rem;">
+    <p class="more-posts">
       <a href="{{ site.baseurl }}/blog">More Posts ({{ site.posts | size }})</a>
     </p>
   </div>
