@@ -299,6 +299,10 @@ nav {
   fill: #151513;
 }
 
+.github-corner-mask {
+  mask-type: luminance;
+}
+
 .octo-arm {
   transform-origin: 130px 106px;
 }
