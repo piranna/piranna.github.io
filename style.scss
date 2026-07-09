@@ -284,6 +284,9 @@ nav {
 
   svg {
     display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   &:hover,
@@ -330,7 +333,7 @@ nav {
   }
 }
 
-#main.container {
+.container-wide {
   max-width: none;
 }
 
