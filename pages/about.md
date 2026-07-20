@@ -14,14 +14,15 @@ across almost every area of computer engineering, including web development,
 robotics, operating system design, video games, networking, driver development,
 and AI. My profile is purely technical, with a strong interest in hard-to-solve
 problems, code quality, performance optimizations, cutting-edge technologies,
-and the design of clean APIs and architectures focused on minimalism, modularity, and
-reusability.
+and the design of clean APIs and architectures focused on minimalism,
+modularity, and reusability.
 
-I'm a full-stack engineer with a preference for backend, R&D, and academic projects. Thanks to
-that, I have more than 14 years of experience with Node.js (since v0.8), 19
-years with Python (since 2.4), and 20 years with C++, between other languages
-like Rust, Java or Go. Regarding mobile apps, I have 8 years of experience with
-React Native, being also speaker at [Meta F8](/contributions#re-start).
+I'm a full-stack engineer with a preference for backend, R&D, and academic
+projects. Thanks to that, I have more than 14 years of experience with Node.js
+(since v0.8), 19 years with Python (since 2.4), and 20 years with C++, between
+other languages like Rust, Java or Go. Regarding mobile apps, I have 8 years of
+experience with React Native, being also speaker at
+[Meta F8](/contributions#re-start).
 
 I have won three times the spanish national
 [Universitary Free Software Championship](https://www.concursosoftwarelibre.org)
@@ -34,10 +35,9 @@ technologies.
 
 I have a _Licenciature in Computer Engineering_, officially recognized as the
 equivalent of a _Master in Computer Engineering_. My Licenciature (and Master)
-thesis was
-_[NodeOS](projects.md#nodeos), a minimal operating system for Node.js based
-applications_, with more than 7000 stargazers on GitHub, winner on the Systems
-category at the
+thesis was _[NodeOS](projects.md#nodeos), a minimal operating system for Node.js
+based applications_, with more than 7000 stargazers on GitHub, winner on the
+Systems category at the
 [11th CUSL national championship](https://www.concursosoftwarelibre.org), and
 graduated with distinction. My Licenciature thesis director was
 [Prof. Enrique Soriano-Salvador](https://gsyc.urjc.es/~esoriano/).
@@ -313,8 +313,8 @@ testimonies from clients about my freelance projects.
   Talent Advocate at [Circular](https://trycircular.com/), December 2020:
 
   > Senior developer with experience leading teams and a very hands-on mindset.
-  > Background in both backend and frontend development. His expertise is related
-  > to Python, Node and C++. Spanish and English!
+  > Background in both backend and frontend development. His expertise is
+  > related to Python, Node and C++. Spanish and English!
 
 - [Miguel Muñoz Royo](https://www.linkedin.com/in/miguelmunoz/), Business and
   Technical Lead at [UST Global](https://ustglobal.es/), December 2020:
