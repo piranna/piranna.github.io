@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+bin/generate-category-redirects
+bin/generate-case-redirects
+bin/generate-internal-backlinks
 bundle exec jekyll build

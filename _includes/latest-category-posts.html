@@ -1,0 +1,29 @@
+{% assign category_name = include.category %}
+{% assign post_limit = include.limit | default: 4 %}
+{% assign category_posts = site.posts | where_exp: "post", "post.categories contains category_name" %}
+
+{% if category_posts.size > 0 %}
+<section class="related-section topic-posts">
+  <h2>Latest {{ category_name }} posts</h2>
+  <div class="posts posts-compact">
+    {% for post in category_posts limit: post_limit %}
+    <article class="post">
+      <h3>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        {% if post.categories contains 'Signature Post' %}
+        <span class="signature-badge">Signature Post</span>
+        {% endif %}
+      </h3>
+      <div class="date">
+        {{ post.date | date: "%B %e, %Y" }}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="more-posts">
+    <a href="{{ site.baseurl }}/category/{{ category_name | slugify: 'pretty' }}/">
+      See all {{ category_name }} posts
+    </a>
+  </p>
+</section>
+{% endif %}

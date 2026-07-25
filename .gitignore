@@ -10,3 +10,6 @@ node_modules
 package.json
 .env
 vendor/
+generated_category_redirects/
+generated_case_redirects/
+_data/internal_backlinks.yml

@@ -563,6 +563,45 @@ nav {
   color: $gray;
 }
 
+.related-section {
+  border-top: 1px solid $lightGray;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.category-page-summary {
+  margin-bottom: 1.5rem;
+}
+
+.posts-compact > .post {
+  h3 {
+    margin-bottom: 0.2rem;
+  }
+
+  .date {
+    font-size: 0.9em;
+  }
+}
+
+.backlink-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin: 0.45rem 0;
+  }
+}
+
+.backlink-count {
+  color: $gray;
+  font-size: 0.85em;
+  margin-left: 0.35rem;
+}
+
 .tag-cloud {
   display: flex;
   flex-wrap: wrap;

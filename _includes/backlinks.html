@@ -1,0 +1,17 @@
+{% assign backlinks = site.data.internal_backlinks[page.url] %}
+
+{% if backlinks and backlinks.size > 0 %}
+<section class="related-section backlinks">
+  <h2>Read more</h2>
+  <ul class="backlink-list">
+    {% for backlink in backlinks %}
+    <li>
+      <a href="{{ site.baseurl }}{{ backlink.url }}">{{ backlink.title }}</a>
+      {% if backlink.count > 1 %}
+      <span class="backlink-count">{{ backlink.count }} links</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

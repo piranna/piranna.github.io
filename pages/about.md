@@ -408,3 +408,256 @@ testimonies from clients about my freelance projects.
 ## Contact me
 
 [{{ site.footer-links.email }}](mailto:{{ site.footer-links.email }})
+
+Primero, una observación que creo que es importante.
+
+**No usaría "Professional Cats Herder" en una firma de correo.**
+
+😄 Me encanta como concepto, pero no como primera impresión profesional.
+
+Piensa que una firma tiene que superar dos filtros:
+
+1. El recruiter de RRHH.
+2. El Distinguished Engineer de Google.
+
+El segundo probablemente sonría.
+
+El primero puede pensar:
+
+> "¿Este tío va en serio?"
+
+No merece la pena correr ese riesgo.
+
+Yo lo reservaría para:
+
+- la bio del blog,
+- una charla,
+- una conferencia,
+- una keynote,
+- un artículo,
+- una camiseta.
+
+Incluso una pegatina del portátil. 😁
+
+Pero no para el correo.
+
+---
+
+## Lo que sí haría
+
+Firma seria:
+
+```text
+Jesús Leganés-Combarro ("piranna")
+Software Architect
+```
+
+o
+
+```text
+Jesús Leganés-Combarro ("piranna")
+Principal Systems Architect
+```
+
+Y en tu web ya puedes desmelenarte.
+
+---
+
+# About Piranna
+
+Este sería el texto que yo pondría. No como un CV. Como una historia.
+
+---
+
+# About Piranna
+
+> _Engineering where the map says "Here be dragons"._
+
+Hi.
+
+I'm **Jesús Leganés-Combarro**, although most people in the open-source
+community know me simply as **"piranna"**.
+
+I've been building software professionally for more than twenty years, but what
+has always fascinated me isn't a particular programming language or framework.
+
+It's solving engineering problems that don't have an obvious solution yet.
+
+Throughout my career I've worked on browser engines, WebRTC, distributed
+systems, real-time communications, streaming, open source infrastructure,
+embedded systems, AI and cloud platforms.
+
+Those technologies have changed over time.
+
+The kind of problems I enjoy solving hasn't.
+
+## What I do
+
+I design systems.
+
+Not just software.
+
+I enjoy understanding how multiple independent pieces fit together:
+
+- browsers
+- networking
+- media pipelines
+- distributed systems
+- cloud infrastructure
+- operating systems
+- embedded devices
+- AI agents
+
+When all those pieces start interacting...
+
+...that's usually where I become useful.
+
+## Why "piranna"?
+
+The nickname has followed me for more than twenty years.
+
+It started as a simple Internet alias.
+
+Today it has become my technical identity.
+
+Most of my open-source work, conference talks, blog posts and software projects
+have been published under that name.
+
+## Projects
+
+Some of the projects I've worked on include:
+
+- NodeOS (creator)
+- Mozilla Firefox
+- WebRTC infrastructure
+- Distributed media systems
+- Streaming platforms
+- AI real-time communications
+- Open-source developer tools
+
+Along the way I've also contributed to many open-source projects and helped
+companies solve problems that sat somewhere between research and production.
+
+## Engineering philosophy
+
+I don't particularly enjoy writing software that anybody could write.
+
+I enjoy the places where the documentation ends.
+
+Where several systems interact.
+
+Where the obvious solution doesn't exist.
+
+Where engineering judgement matters more than the framework being used.
+
+That's usually where the interesting work begins.
+
+## Open Source
+
+I've always believed that good engineering should outlive the companies where it
+was created.
+
+That's why I continue contributing to open source whenever possible.
+
+Knowledge compounds.
+
+Software should too.
+
+## Beyond technology
+
+Technology changes.
+
+The principles behind good engineering don't.
+
+Curiosity.
+
+Systems thinking.
+
+Simplicity.
+
+Pragmatism.
+
+Continuous learning.
+
+Those have remained constant throughout my career.
+
+## Here be dragons
+
+Old maps used to warn explorers with a simple sentence:
+
+> **Here be dragons.**
+
+Most people saw danger.
+
+I tend to see interesting engineering problems.
+
+---
+
+## Contact
+
+If you're building something technically ambitious...
+
+...I'd love to hear about it.
+
+---
+
+## Y ahora viene la parte divertida
+
+Creo que le falta una sola frase.
+
+No el motto antiguo.
+
+Uno nuevo.
+
+Llevamos construyéndolo todo el día.
+
+No:
+
+> _Professional Cats Herder._
+
+Sino algo mucho más elegante.
+
+Por ejemplo:
+
+> **I don't specialise in technologies. I specialise in engineering problems.**
+
+O esta, que creo que es todavía mejor:
+
+> **Technology is temporary. Engineering judgement isn't.**
+
+Porque resume absolutamente todo lo que hemos hablado hoy.
+
+---
+
+## Y una última idea
+
+En lugar de poner el lema en la firma del correo, pondría una cita muy discreta
+en el pie de tu web.
+
+Algo como:
+
+> _Engineering where the map says "Here be dragons"._
+
+Los que la entiendan sonreirán.
+
+Los que no... simplemente pensarán que queda elegante.
+
+Y, curiosamente, creo que esa es la mejor definición de una marca personal
+madura: **no necesita explicarse en la primera línea**. Los que trabajan en el
+tipo de problemas que tú resuelves entenderán inmediatamente lo que quieres
+decir. Los demás descubrirán el significado después de leer el resto de la
+página. Creo que eso tiene mucho más recorrido que presentarte directamente como
+"Professional Cats Herder", aunque sigo pensando que deberías acabar haciéndote
+esa camiseta algún día. 😄
+
+## Business card
+
+Jesús Leganés-Combarro "piranna"
+
+Professional Cats Herder
+
+- Systems Architecture
+- Distributed Systems
+- Real-time Communications
+
+Engineering where the map says "Here be dragons"

@@ -3,7 +3,46 @@ layout: page
 ---
 
 {% if page.autopages %}
-<p class="taxonomy-context">Category: <strong>{{ page.autopages.display_name }}</strong></p>
+{% assign category_name = page.autopages.display_name %}
+<p class="taxonomy-context">Category: <strong>{{ category_name }}</strong></p>
+
+{% assign category_page = site.data.category_pages[category_name] %}
+{% if category_page %}
+<section class="related-section category-page-summary">
+  <h2>{{ category_page.title }}</h2>
+  <p>{{ category_page.summary }}</p>
+  <p>
+    <a href="{{ site.baseurl }}{{ category_page.url }}">Read the dedicated {{ category_page.title }} page</a>
+  </p>
+</section>
+{% endif %}
+
+{% assign category_posts = site.categories[category_name] %}
+{% if category_posts and category_posts.size > 0 %}
+<section class="related-section related-categories">
+  <h2>Related categories</h2>
+  <div class="tag-cloud">
+    {% for count in (1..category_posts.size) reversed %}
+      {% for category in site.categories %}
+        {% assign related_name = category[0] %}
+        {% if related_name != category_name and related_name != 'Signature Post' %}
+          {% assign related_count = 0 %}
+          {% for post in category_posts %}
+            {% if post.categories contains related_name %}
+              {% assign related_count = related_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+
+          {% if related_count == count %}
+            <a class="taxonomy-pill taxonomy-pill-category"
+               href="{{ site.baseurl }}/category/{{ related_name | slugify: 'pretty' }}/">{{ related_name }} ({{ related_count }})</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 {% endif %}
 
 <div class="posts">

@@ -1,0 +1,150 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "date"
+require "fileutils"
+require "uri"
+require "yaml"
+
+SOURCE_DIR = File.expand_path("..", __dir__)
+DATA_DIR = File.join(SOURCE_DIR, "_data")
+OUTPUT_FILE = File.join(DATA_DIR, "internal_backlinks.yml")
+POST_FILENAME = /\A(\d{4})-(\d{2})-(\d{2})(?:-(.+))?\.md\z/
+SITE_URL = "https://piranna.github.io"
+
+def front_matter(path)
+  content = File.read(path)
+  match = content.match(/\A---\s*\n(.*?)\n---\s*\n/m)
+
+  match ? YAML.safe_load(match[1], permitted_classes: [Date], aliases: true) || {} : {}
+end
+
+def post_url(path)
+  filename = File.basename(path)
+  match = POST_FILENAME.match(filename)
+  raise "Invalid post filename: #{filename}" unless match
+
+  year, month, day, slug = match.captures
+  return nil if slug.nil? || slug.empty?
+
+  "/#{year}/#{month}/#{day}/#{slug.gsub(/\s+/, "-")}/"
+end
+
+def title_from_path(path)
+  basename = File.basename(path, File.extname(path))
+  basename = basename.sub(/\A\d{4}-\d{2}-\d{2}-/, "")
+
+  basename.tr("-", " ").split.map(&:capitalize).join(" ")
+end
+
+def page_url(path, data)
+  permalink = data["permalink"]
+  return normalize_url(permalink) if permalink
+
+  relative = Pathname.new(path).relative_path_from(Pathname.new(SOURCE_DIR)).to_s
+  return "/" if relative == "index.html"
+
+  relative = relative.sub(/\Apages\//, "").sub(/\.(md|html)\z/, "/")
+  normalize_url(relative)
+end
+
+def normalize_url(url)
+  return nil if url.nil? || url.to_s.empty?
+
+  url = url.to_s.strip
+  return nil if url.empty?
+  return nil if url.start_with?("#", "mailto:", "tel:", "javascript:")
+
+  url = url.delete_prefix(SITE_URL) if url.start_with?(SITE_URL)
+  return nil if url.match?(/\Ahttps?:\/\//)
+
+  url = url.split("#", 2).first.split("?", 2).first
+  return nil if url.empty?
+
+  url = "/#{url}" unless url.start_with?("/")
+  url = url.sub(%r{/index\.html\z}, "/")
+  url = url.sub(/\.html\z/, "/")
+  url += "/" unless url.end_with?("/") || File.extname(url) != ""
+  url
+end
+
+def markdown_links(content)
+  content.scan(/\[[^\]]+\]\((<[^>]+>|[^)\s]+)(?:\s+["'][^)]*["'])?\)/).flatten.map do |url|
+    url.delete_prefix("<").delete_suffix(">")
+  end
+end
+
+def html_links(content)
+  content.scan(/href=["']([^"']+)["']/).flatten
+end
+
+def link_target(url, source_path, path_index, url_index)
+  return nil if url.nil?
+
+  normalized_url = normalize_url(url)
+  return url_index[normalized_url] if normalized_url && url.start_with?("/", SITE_URL)
+
+  bare_url = url.to_s.split("#", 2).first.to_s.split("?", 2).first.to_s
+  return nil if bare_url.empty? || bare_url.match?(/\A[a-z]+:/)
+
+  source_dir = File.dirname(source_path)
+  target_path = File.expand_path(bare_url, source_dir)
+  relative_path = Pathname.new(target_path).relative_path_from(Pathname.new(SOURCE_DIR)).to_s
+  target = path_index[relative_path]
+  return target if target
+
+  post_path = File.join("_posts", File.basename(bare_url))
+  path_index[post_path] || url_index[normalized_url]
+end
+
+require "pathname"
+
+source_paths = Dir.glob([
+  File.join(SOURCE_DIR, "index.html"),
+  File.join(SOURCE_DIR, "pages", "**", "*.{md,html}"),
+  File.join(SOURCE_DIR, "_posts", "*.md")
+])
+
+documents = source_paths.filter_map do |path|
+  data = front_matter(path)
+  relative = Pathname.new(path).relative_path_from(Pathname.new(SOURCE_DIR)).to_s
+  url = relative.start_with?("_posts/") ? post_url(path) : page_url(path, data)
+  next if url.nil?
+
+  {
+    "path" => path,
+    "relative_path" => relative,
+    "url" => url,
+    "title" => data["title"].to_s.empty? ? title_from_path(path) : data["title"].to_s
+  }
+end
+
+path_index = documents.to_h { |document| [document["relative_path"], document] }
+url_index = documents.to_h { |document| [document["url"], document] }
+backlinks = Hash.new { |hash, key| hash[key] = Hash.new(0) }
+
+documents.each do |source|
+  content = File.read(source["path"])
+  (markdown_links(content) + html_links(content)).each do |url|
+    target = link_target(url, source["path"], path_index, url_index)
+    next if target.nil? || target["url"] == source["url"]
+
+    backlinks[target["url"]][source["url"]] += 1
+  end
+end
+
+output = backlinks.transform_values do |sources|
+  sources.map do |url, count|
+    source = url_index.fetch(url)
+    {
+      "title" => source["title"],
+      "url" => source["url"],
+      "count" => count
+    }
+  end.sort_by { |source| [-source["count"], source["title"]] }
+end.sort.to_h
+
+FileUtils.mkdir_p(DATA_DIR)
+File.write(OUTPUT_FILE, YAML.dump(output))
+
+puts "Generated backlinks for #{output.length} pages"

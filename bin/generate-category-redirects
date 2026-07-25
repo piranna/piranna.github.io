@@ -1,0 +1,95 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "cgi"
+require "date"
+require "digest/sha1"
+require "fileutils"
+require "yaml"
+
+SOURCE_DIR = File.expand_path("..", __dir__)
+POSTS_DIR = File.join(SOURCE_DIR, "_posts")
+OUTPUT_DIR = File.join(SOURCE_DIR, "generated_category_redirects")
+POST_FILENAME = /\A(\d{4})-(\d{2})-(\d{2})(?:-(.+))?\.md\z/
+
+def front_matter(path)
+  content = File.read(path)
+  match = content.match(/\A---\s*\n(.*?)\n---\s*\n/m)
+
+  match ? YAML.safe_load(match[1], permitted_classes: [Date], aliases: true) || {} : {}
+end
+
+def category_combinations(categories)
+  (1..categories.length).flat_map { |size| categories.combination(size).to_a }
+end
+
+def post_url(path)
+  filename = File.basename(path)
+  match = POST_FILENAME.match(filename)
+  raise "Invalid post filename: #{filename}" unless match
+
+  year, month, day, slug = match.captures
+  return nil if slug.nil? || slug.empty?
+
+  slug = slug.gsub(/\s+/, "-")
+
+  "/#{year}/#{month}/#{day}/#{slug}/"
+end
+
+def category_redirect_path(categories, canonical_url)
+  category_path = categories.map { |category| category.downcase }.join("/")
+
+  "/#{category_path}#{canonical_url}"
+end
+
+def absolute_url(path)
+  "https://piranna.github.io#{path}"
+end
+
+def redirect_content(from, to)
+  escaped_to = CGI.escapeHTML(absolute_url(to))
+
+  <<~HTML
+    ---
+    permalink: "#{from}"
+    sitemap: false
+    ---
+    <!DOCTYPE html>
+    <html lang="en-US">
+      <meta charset="utf-8">
+      <title>Redirecting&hellip;</title>
+      <link rel="canonical" href="#{escaped_to}">
+      <script>location="#{escaped_to}"</script>
+      <meta http-equiv="refresh" content="0; url=#{escaped_to}">
+      <meta name="robots" content="noindex">
+      <h1>Redirecting&hellip;</h1>
+      <a href="#{escaped_to}">Click here if you are not redirected.</a>
+    </html>
+  HTML
+end
+
+FileUtils.rm_rf(OUTPUT_DIR)
+FileUtils.mkdir_p(OUTPUT_DIR)
+
+redirects = {}
+
+Dir.glob(File.join(POSTS_DIR, "*.md")).each do |path|
+  data = front_matter(path)
+  categories = Array(data["categories"]).map(&:to_s).reject(&:empty?)
+  next if categories.empty?
+
+  canonical_url = post_url(path)
+  next if canonical_url.nil?
+
+  category_combinations(categories).each do |combination|
+    from = category_redirect_path(combination, canonical_url)
+    redirects[from] = canonical_url unless from == canonical_url
+  end
+end
+
+redirects.each do |from, to|
+  filename = "#{Digest::SHA1.hexdigest(from)}.html"
+  File.write(File.join(OUTPUT_DIR, filename), redirect_content(from, to))
+end
+
+puts "Generated #{redirects.length} category redirect pages"

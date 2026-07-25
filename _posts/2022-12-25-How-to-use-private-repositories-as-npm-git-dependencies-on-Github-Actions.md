@@ -40,7 +40,7 @@ well... doing it in an automated way :-)
 
 <!--more-->
 
-The task can be splitted in two halves:
+The task can be split in two halves:
 [generate the documentation](#generate-the-documentation), and
 [publish it](#publish-the-documentation).
 
@@ -63,9 +63,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - uses: webfactory/ssh-agent@v0.7.0
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+      - uses: webfactory/ssh-agent@v0.10.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 

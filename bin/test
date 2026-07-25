@@ -1,11 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+bin/generate-category-redirects
+bin/generate-case-redirects
+bin/generate-internal-backlinks
 bundle exec jekyll build --config _config.yml,_config.test.yml
 
 test -f _site/feed.xml
 test -f _site/sitemap.xml
 test -f _site/blog/page/2/index.html
 test -f _site/category/webrtc/index.html
+test -f _site/2026/07/08/Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense/index.html
+test -f "_site/crazy projects/webrtc/mediasoup/2026/07/08/Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense/index.html"
+grep -q "Latest WebRTC posts" _site/webrtc/index.html
+grep -q "Read the dedicated WebRTC page" _site/category/webrtc/index.html
+
+if test -f _site/WebRTC/index.html && ! cmp -s _site/WebRTC/index.html _site/webrtc/index.html; then
+  grep -q "https://piranna.github.io/webrtc/" _site/WebRTC/index.html
+fi
 
 echo "Smoke tests passed"

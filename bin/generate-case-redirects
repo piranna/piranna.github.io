@@ -1,0 +1,72 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "cgi"
+require "digest/sha1"
+require "fileutils"
+require "yaml"
+
+SOURCE_DIR = File.expand_path("..", __dir__)
+OUTPUT_DIR = File.join(SOURCE_DIR, "generated_case_redirects")
+REDIRECTS_FILE = File.join(SOURCE_DIR, "_data", "case_redirects.yml")
+SITE_URL = "https://piranna.github.io"
+
+def case_sensitive_filesystem?
+  probe_dir = File.join(SOURCE_DIR, ".case-sensitivity-probe")
+  FileUtils.rm_rf(probe_dir)
+  FileUtils.mkdir_p(probe_dir)
+
+  lower = File.join(probe_dir, "case")
+  upper = File.join(probe_dir, "CASE")
+  File.write(lower, "test")
+
+  !File.exist?(upper)
+ensure
+  FileUtils.rm_rf(probe_dir) if probe_dir
+end
+
+def absolute_url(path)
+  "#{SITE_URL}#{path}"
+end
+
+def redirect_content(from, to)
+  escaped_to = CGI.escapeHTML(absolute_url(to))
+
+  <<~HTML
+    ---
+    permalink: "#{from}"
+    sitemap: false
+    ---
+    <!DOCTYPE html>
+    <html lang="en-US">
+      <meta charset="utf-8">
+      <title>Redirecting&hellip;</title>
+      <link rel="canonical" href="#{escaped_to}">
+      <script>location="#{escaped_to}"</script>
+      <meta http-equiv="refresh" content="0; url=#{escaped_to}">
+      <meta name="robots" content="noindex">
+      <h1>Redirecting&hellip;</h1>
+      <a href="#{escaped_to}">Click here if you are not redirected.</a>
+    </html>
+  HTML
+end
+
+FileUtils.rm_rf(OUTPUT_DIR)
+
+unless case_sensitive_filesystem?
+  puts "Skipped case redirects on case-insensitive filesystem"
+  exit
+end
+
+redirects = YAML.safe_load(File.read(REDIRECTS_FILE), aliases: true) || []
+FileUtils.mkdir_p(OUTPUT_DIR)
+
+redirects.each do |redirect|
+  from = redirect.fetch("from")
+  to = redirect.fetch("to")
+  filename = "#{Digest::SHA1.hexdigest(from)}.html"
+
+  File.write(File.join(OUTPUT_DIR, filename), redirect_content(from, to))
+end
+
+puts "Generated #{redirects.length} case redirect pages"

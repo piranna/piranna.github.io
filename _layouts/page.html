@@ -8,4 +8,10 @@ layout: default
   <div class="entry">
     {{ content }}
   </div>
+
+  {% if page.topic_category %}
+    {% include latest-category-posts.html category=page.topic_category %}
+  {% endif %}
+
+  {% include backlinks.html %}
 </article>

@@ -2,6 +2,7 @@
 layout: page
 title: WebRTC
 permalink: /webrtc/
+topic_category: WebRTC
 ---
 
 I've been working with [WebRTC](https://webrtc.org/) since 2012, less than a
@@ -179,11 +180,14 @@ Started working as full-time WebRTC Architect, in addition to my own projects.
   - WebRTC architect and deputy CTO for a UAE-based startup, building AI-based
     3D avatars
 - [WebRTC.ventures](https://webrtc.ventures/) (September 2025 - Present)
-  - Senior WebRTC architect for multiple projects and companies, including
-    [Terrestar](https://www.terrestar.net/) with a custom designed narrow-band
-    low-latency protocol for BLE audio streaming and satellite-based VoIP calls,
-    and [Teladoc Health](https://www.teladochealth.com/) for a patients remote
-    monitoring system based on [Mediasoup](https://mediasoup.org/)
+  - Senior WebRTC architect for multiple projects and companies, including:
+    - [Terrestar](https://www.terrestar.net/) with a custom designed narrow-band
+      low-latency protocol for BLE audio streaming and satellite-based VoIP
+      calls
+    - [Teladoc Health](https://www.teladochealth.com/) for a patients remote
+      monitoring system based on [Mediasoup](https://mediasoup.org/)
+    - [WayloAI](https://wayloai.com/) designing a SDK for voice AI agents over
+      SIP and PSTN
 
 ### 2026
 

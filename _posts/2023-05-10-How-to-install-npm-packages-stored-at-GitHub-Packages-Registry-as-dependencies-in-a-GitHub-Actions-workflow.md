@@ -73,7 +73,7 @@ On the workflow, we need to do the next configurations:
    Github Packages Registry:
 
    ```yaml
-   - uses: actions/setup-node@v3
+   - uses: actions/setup-node@v7
      with:
        registry-url: https://npm.pkg.github.com
    ```
