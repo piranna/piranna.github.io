@@ -5,9 +5,10 @@
 // IMPORTS
 //
 
-@import "reset";
-@import "variables";
-// Syntax highlighting @import is at the bottom of this file
+@use "sass:color";
+@use "sass:meta";
+@use "reset";
+@use "variables" as *;
 
 /**************/
 /* BASE RULES */
@@ -392,7 +393,7 @@ nav {
   display: inline-block;
   padding: 0.9rem 1.8rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, darken($blue, 10%) 0%, $blue 100%);
+  background: linear-gradient(135deg, color.adjust($blue, $lightness: -10%) 0%, $blue 100%);
   color: $white;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -723,7 +724,7 @@ footer {
   text-align: center;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
+// Settled on loading syntax highlighting at the bottom of the CSS.
+// Otherwise it bloats up the top of the CSS file and hides the base styles.
+@include meta.load-css("highlights");
+@include meta.load-css("svg-icons");

@@ -34,16 +34,44 @@ jobs:
   #         token: ${{ secrets.GITHUB_TOKEN }}
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+      - name: Install Mermaid rendering system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgbm1 \
+            libasound2t64 \
+            libatk1.0-0 \
+            libatk-bridge2.0-0 \
+            libcups2 \
+            libdrm2 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxfixes3 \
+            libxrandr2 \
+            libxkbcommon0 \
+            libpango-1.0-0 \
+            libcairo2 \
+            libnss3 \
+            libnspr4
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0' # Not needed with a .ruby-version file
+          ruby-version: '3.3'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install Mermaid CLI
+        run: |
+          npm ci
+          npx puppeteer browsers install chrome
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
@@ -53,6 +81,7 @@ jobs:
           bin/generate-category-redirects
           bin/generate-case-redirects
           bin/generate-internal-backlinks
+          export PATH="$PWD/node_modules/.bin:$PATH"
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production

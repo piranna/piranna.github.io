@@ -60,11 +60,7 @@ excerpt_separator: "<!--more-->"
 # The release of Jekyll Now that you're using
 version: v1.2.0
 
-markdown: CommonMarkGhPages
-commonmark:
-  options: ["UNSAFE", "SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table"]
-# Jekyll 3 now only supports Kramdown for Markdown
+markdown: kramdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
@@ -90,7 +86,7 @@ exclude:
 
 jekyll-spaceship:
   mermaid-processor:
-    mode: pre-fetch # fetch image at building stage
+    mode: pre-build # render Mermaid SVGs locally at build time
     syntax:
       code: mermaid
 
