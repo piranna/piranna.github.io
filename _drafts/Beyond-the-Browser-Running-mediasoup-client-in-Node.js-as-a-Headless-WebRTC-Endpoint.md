@@ -4,6 +4,7 @@ categories:
   - Engineering
   - Open Source
   - WebRTC
+  - Signature Post
 lang: en
 layout: post
 tags:
@@ -23,13 +24,13 @@ title:
 
 > _How [mediasoup-client-wrtc](https://github.com/piranna/Mediasoup-client-wrtc)
 > turns Node.js into a first-class programmable
-> [Mediasoup](https://github.com/versatica/mediasoup) endpoint_
+> [mediasoup](https://github.com/versatica/mediasoup) endpoint_
 
 <!--more-->
 
 ## Historical Background
 
-[Mediasoup](https://mediasoup.org/) has long established itself as one of the
+[mediasoup](https://mediasoup.org/) has long established itself as one of the
 most flexible
 [Selective Forwarding Unit (SFU)](https://bloggeek.me/webrtcglossary/sfu/)
 implementations for building real-time communication systems. Its low-level
@@ -103,8 +104,8 @@ exactly the same client-side logic used by browser applications.
 
 The goal of this project is therefore not to replace mediasoup's existing
 server-side APIs. Instead, it enables Node.js applications to become
-**first-class mediasoup participants** by implementing the missing handler
-required by `mediasoup-client`.
+**[first-class mediasoup participants](#nodejs-as-a-first-class-mediasoup-participant)**
+by implementing the missing handler required by `mediasoup-client`.
 
 The result is a reusable Open Source component that allows Node.js processes to
 join mediasoup applications exactly as any browser client would, while remaining
@@ -113,9 +114,9 @@ architecture.
 
 ## The Browser Is No Longer the Only Execution Environment
 
-Historically, the execution model of `mediasoup-client` (and in general,
-high-level
-[WebRTC API](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)s) has
+Historically, the execution model commonly associated with `mediasoup-client`
+and other high-level
+[WebRTC APIs](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API) has
 looked something like this:
 
 ```mermaid
@@ -133,16 +134,10 @@ This association is understandable. Most mediasoup applications are web
 applications, and browsers already provide complete WebRTC implementations. Over
 time, however, this mental model became stronger than the actual architecture.
 
-In reality, `mediasoup-client` is not designed as a browser-only library. It is
-a library whose only platform-dependent component are their
-**HandlerInterface**s, responsible for translating mediasoup operations into the
-native WebRTC APIs provided by the underlying runtime.
-
-React Native demonstrated this years ago by implementing its own handler,
-already included with `mediasoup-client`. Node.js, on the other hand, simply
-lacked one.
-
-Once that missing pieces exists, the picture changes completely:
+`mediasoup-client` is designed so that its platform-dependent behavior is
+isolated behind a **HandlerInterface**, responsible for translating mediasoup
+operations into the native WebRTC APIs exposed by the underlying runtime. Once a
+proper runtime handler exists, the architectural picture changes:
 
 ```mermaid
 flowchart LR
@@ -162,15 +157,10 @@ subgraph After
 end
 ```
 
-The browser is no longer the architecture. It becomes one possible runtime among
-several.
-
-This shift is subtle, but important.
-
-It means that the application logic built on top of `mediasoup-client` can
-potentially be reused across browsers, Node.js services, automated tests and
-other execution environments, provided that each runtime supplies a compatible
-handler.
+This shift is subtle, but important: it means that the application logic built
+on top of `mediasoup-client` can potentially be reused across browsers, Node.js
+services, automated tests and other execution environments, provided that each
+runtime supplies a compatible handler.
 
 That is precisely the role of `mediasoup-client-wrtc`.
 
@@ -189,7 +179,7 @@ Most videoconferencing applications expose concepts such as:
 
 Those concepts belong to the application.
 
-Mediasoup intentionally exposes lower-level media primitives instead:
+mediasoup intentionally exposes lower-level media primitives instead:
 
 - Workers
 - Routers
@@ -201,19 +191,11 @@ Mediasoup intentionally exposes lower-level media primitives instead:
 
 This distinction is one of mediasoup's greatest strengths.
 
-Rather than imposing a particular conferencing model, it provides flexible
-building blocks upon which applications define their own semantics.
-
-The same distinction also applies to clients: a browser application usually
-wraps `mediasoup-client` inside higher-level abstractions such as "join room",
-"publish camera" or "mute microphone".
-
-Node.js applications should be able to do exactly the same. Not because Node.js
-needs browser features, but because it should be able to participate in the same
-media architecture using exactly the same abstractions.
-
-In other words, the goal is not simply to just exchange RTP packets, it's to
-become another mediasoup endpoint.
+The project does not introduce another WebRTC abstraction, the WebRTC API
+already exists. Its purpose is to implement the runtime contract expected by
+`mediasoup-client`, giving Node.js the same low-level endpoint capabilities as
+browser clients while leaving application semantics entirely outside the
+library.
 
 ## Why This Is Not Already Trivial
 
@@ -227,20 +209,19 @@ The reality is considerably more complex.
 as `HandlerInterface`, where each supported platform provides its own
 implementation responsible for translating mediasoup operations into native
 WebRTC primitives. That handler is responsible for much more than exposing a
-`RTCPeerConnection`, and It manages capability discovery, SDP negotiation,
-transport creation, RTP parameter translation, SCTP negotiation, transceiver
-lifecycle, statistics, ICE restarts and numerous platform-specific details that
-allow `mediasoup-client` to present a consistent programming model independently
-of the underlying runtime. Without that layer, every Node.js project would need
-to solve those problems independently.
+`RTCPeerConnection`. It manages capability discovery, SDP negotiation, transport
+creation, RTP parameter translation, SCTP negotiation, transceiver lifecycle,
+statistics, ICE restarts, and other platform-specific details that allow
+`mediasoup-client` to present a consistent programming model independently of
+the underlying runtime. Without that layer, every Node.js project would need to
+solve those problems independently.
 
 There is another reason why this gap remained relatively unexplored: server-side
 integrations traditionally rely on RTP transports, FFmpeg, GStreamer or similar
 pipelines. Those solutions are excellent whenever the goal is media ingestion,
-recording or transcoding, but they are considerably less suitable when the
-objective is to create a **real mediasoup participant** capable of exercising
-exactly the same logic implemented by browser clients, because they by-pass all
-the WebRTC media negotiation lifecycle logic.
+recording or transcoding, but they are less suitable when the objective is to
+reproduce the complete behaviour of a WebRTC client, because they bypass the
+client-side negotiation and media lifecycle managed by `mediasoup-client`.
 
 Automated integration tests are a perfect example: testing the complete
 lifecycle of producers, consumers, transports, DataChannels and media
@@ -270,15 +251,13 @@ await device.load({
 });
 ```
 
-This small code snippet hides a surprisingly large codebase, because internally,
-the handler bridges two fundamentally different models:
+Internally, the handler bridges two fundamentally different models:
 
 - mediasoup's transport-oriented abstractions.
 - the native WebRTC implementation exposed by the selected runtime.
 
 The concrete WebRTC runtime is injected into the handler rather than imported by
-the library. The handler depends on a WebRTC contract, not on a specific
-implementation.
+the library.
 
 The complete architecture is illustrated below:
 
@@ -325,19 +304,19 @@ TransportB <-->|ICE • DTLS • SRTP / SCTP| RuntimeB
 ```
 
 Notice that the application-level concepts intentionally do not appear anywhere
-in this diagram. There are no rooms, participants or meetings. Those belong to
-the application. The diagram only contains mediasoup primitives.
+in this diagram. There are no rooms, participants or meetings. Everything above
+the `Device` abstraction remains the application's responsibility. The diagram
+only contains mediasoup primitives.
 
-This separation is one of the reasons mediasoup remains such a flexible
-foundation for building realtime systems (not talking about its beastly
-performance).
+That flexibility complements mediasoup's already well-known performance
+characteristics.
 
 ## Headless Browser vs Headless mediasoup Endpoint
 
 When discussing automated testing of frontend libraries, browser automation is
 often the first solution that comes to mind. Headless browsers are incredibly
 valuable tools, but they solve a different problem: they are heavyweight
-end-2-end solutions.
+end-to-end solutions.
 
 `mediasoup-client-wrtc`, on the other hand, creates programmable mediasoup
 endpoints that _could_ be used as a lightweight alternative for automated
@@ -371,9 +350,14 @@ Perhaps more importantly, it also encourages a healthier software architecture:
 > If your mediasoup client logic can only run inside a rendered browser page,
 > your media architecture may be coupled too tightly to the UI.
 
+A browser _may_ be one deployment environment for a mediasoup client, but it
+**should not** have to define the architecture of the client itself.
+
 Separating media orchestration from presentation improves reusability,
 testability, debugging and long-term maintainability, regardless of whether the
-final application runs inside a browser or not.
+final application runs inside a browser or not, and makes the same session and
+transport logic usable from browser applications, Node.js integration tests and
+backend participants.
 
 ## Handler Architecture
 
@@ -387,19 +371,26 @@ expected by `HandlerInterface`. This means acting as the bridge between
 mediasoup's transport model and the WebRTC primitives exposed by the selected
 runtime.
 
+| Area      | Supported operations                                             |
+| --------- | ---------------------------------------------------------------- |
+| Transport | connect, restart ICE, update ICE servers                         |
+| Sender    | send, stop, pause/resume, replace track, encoding updates, stats |
+| Receiver  | receive, stop, pause/resume, stats                               |
+| Data      | send and receive negotiated SCTP DataChannels                    |
+
 Internally, the handler is responsible for tasks such as:
 
-- discovering the runtime's native RTP capabilities;
-- creating and managing `RTCPeerConnection` instances;
-- negotiating ICE, DTLS and SCTP sessions;
-- translating mediasoup RTP parameters into SDP;
-- managing transceivers and MIDs;
-- creating Producers and Consumers;
-- creating DataProducers and DataConsumers;
-- handling ICE restarts;
-- replacing tracks;
-- updating RTP encodings;
-- exposing sender and receiver statistics.
+- discovering the runtime's native RTP capabilities
+- creating and managing `RTCPeerConnection` instances
+- negotiating ICE, DTLS and SCTP sessions
+- translating mediasoup RTP parameters into SDP
+- managing transceivers and MIDs
+- creating Producers and Consumers
+- creating DataProducers and DataConsumers
+- handling ICE restarts
+- replacing tracks
+- updating RTP encodings
+- and exposing sender and receiver statistics
 
 The objective is not to expose another WebRTC API. Instead, it allows existing
 `mediasoup-client` code to execute unchanged inside a Node.js process.
@@ -438,27 +429,31 @@ The handler continuously translates between both worlds:
 flowchart LR
 
 subgraph Mediasoup["mediasoup-client model"]
-  A["RTP capabilities"]
-  B["Transport parameters"]
-  C["RTP parameters"]
-  D["SCTP parameters"]
-  E["Producers / Consumers"]
+  Capabilities["RTP capabilities"]
+  Transport["Transport parameters"]
+  RTP["RTP parameters"]
+  SCTP["SCTP parameters"]
+  Entities["Producer / Consumer"]
 end
 
 subgraph WebRTC["WebRTC runtime model"]
-  F["RTCPeerConnection"]
-  G["SDP"]
-  H["RTCRtpTransceiver"]
-  I["RTCRtpSender / Receiver"]
-  J["MediaStreamTrack"]
-  K["RTCDataChannel"]
+  PC["RTCPeerConnection"]
+  SDP["SDP offer / answer"]
+  Transceiver["RTCRtpTransceiver"]
+  SenderReceiver["RTCRtpSender / RTCRtpReceiver"]
+  Track["MediaStreamTrack"]
+  DC["RTCDataChannel"]
 end
 
-A --> G
-B --> G
-C --> H
-D --> K
-E --> I
+Capabilities --> SDP
+Transport --> SDP
+SDP --> PC
+RTP --> Transceiver
+Entities --> Transceiver
+Transceiver --> SenderReceiver
+SenderReceiver --> Track
+SCTP --> DC
+DC --> PC
 ```
 
 This translation layer is the actual value provided by `mediasoup-client-wrtc`.
@@ -506,15 +501,15 @@ deactivate Handler
 
 This approach has an important advantage: the handler does not need to know
 anything about supported codecs in advance. Instead, it simply asks the runtime.
-This makes the implementation naturally compatible with different
-`node-webrtc`-compatible runtimes, regardless of the specific libwebrtc version
-they are built upon.
+This avoids hardcoding codec capabilities and makes the design portable across
+`node-webrtc`-compatible runtimes. Behavioral compatibility must still be
+validated for each implementation and libwebrtc version.
 
 ## Translating mediasoup Parameters into WebRTC
 
 The opposite operation happens every time mediasoup creates a transport.
 
-Mediasoup exposes transport information using its own data structures:
+mediasoup exposes transport information using its own data structures:
 
 - ICE parameters
 - ICE candidates
@@ -562,12 +557,12 @@ Producer --> MID --> Transceiver --> Sender
 
 Keeping this mapping alive allows later operations such as:
 
-- pausing Producers;
-- resuming Consumers;
-- replacing tracks;
-- updating encoding parameters;
-- gathering sender and receiver statistics;
-- stopping transports cleanly.
+- pausing Producers
+- resuming Consumers
+- replacing tracks
+- updating encoding parameters
+- gathering sender and receiver statistics
+- or stopping transports cleanly
 
 Without this bookkeeping, the connection could be established, but its lifecycle
 could not be managed correctly.
@@ -585,17 +580,22 @@ through the normal `mediasoup-client` APIs:
 sequenceDiagram
 
 participant App
-participant Device
-participant Handler
+participant Device as mediasoup-client
+participant Handler as WrtcHandler
 participant PC as RTCPeerConnection
-participant MS as mediasoup
+participant Signaling as Application signaling
+participant MS as mediasoup server
 
-App->>Device: produceData()
+App->>Device: transport.produceData()
 Device->>Handler: sendDataChannel()
-Handler->>PC: createDataChannel()
-Handler->>MS: Exchange SCTP parameters
-MS-->>Handler: DataProducer
-Handler-->>App: DataProducer
+Handler->>PC: createDataChannel(negotiated)
+Handler-->>Device: RTCDataChannel + SCTP stream parameters
+Device-->>App: "producedata" event
+App->>Signaling: Send SCTP stream parameters
+Signaling->>MS: serverTransport.produceData()
+MS-->>Signaling: DataProducer id
+Signaling-->>App: DataProducer id
+App-->>Device: callback({ id })
 ```
 
 This becomes particularly interesting when combined with server-side
@@ -603,41 +603,44 @@ participants: a Node.js process can now participate in exactly the same SCTP
 infrastructure as browser clients, opening the door to backend-controlled
 DataChannels, service-to-service communication and programmable media workflows.
 
-I previously explored one possible application of this idea in my article
-[Mediasoup DataChannels: When Replacing WebSockets Actually Makes Sense](2026-07-08-Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense.md).
-That article itself caused an interesting discussion in the mediasoup Discourse
-community forum at
-[Mediasoup DataChannels vs WebSockets: An Architectural Experiment](https://mediasoup.discourse.group/t/mediasoup-datachannels-vs-websockets-an-architectural-experiment/6986).
-But while that article focused on architectural considerations,
-`mediasoup-client-wrtc` provides the missing runtime that makes those
-experiments equally possible from Node.js.
+Just to be clear: server-centered DataChannels should not automatically replace
+WebSockets. I previously explored one possible application of this idea and its
+trade-off in more detail in my article
+[Mediasoup DataChannels: When Replacing WebSockets Actually Makes Sense](2026-07-08-Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense.md),
+including the additional complexity that appears when SCTP is used as a generic
+server-centered messaging layer, which also led to an interesting
+[community discussion](https://mediasoup.discourse.group/t/mediasoup-datachannels-vs-websockets-an-architectural-experiment/6986).
+The narrower point here is that `mediasoup-client-wrtc` makes the same
+DataProducer and DataConsumer APIs available to Node.js participants.
 
 ## Runtime Injection Instead of Runtime Lock-In
 
 Although the examples in this article use
 [@roamhq/wrtc](https://www.npmjs.com/package/@roamhq/wrtc), the project is
-intentionally **not** tied to a specific implementation. Instead, the runtime is
-injected through a small factory:
+intentionally **not** tied to a specific implementation. Instead, it targets the
+API family originally established by
+[node-webrtc](https://github.com/node-webrtc/node-webrtc), allowing compatible
+implementations to be injected without changing the handler itself. So, the
+runtime is injected through a small factory:
 
 ```ts
+interface WrtcLike {
+  RTCPeerConnection: new (
+    configuration?: RTCConfiguration,
+  ) => RTCPeerConnection;
+
+  MediaStream: new () => MediaStream;
+}
+
+const wrtc: WrtcLike = ...;
+
 const handlerFactory = WrtcHandler.createFactory(wrtc);
 ```
 
-This decision may appear minor, but it has important architectural consequences:
-rather than depending on one package, the handler depends on a **WebRTC
-contract**.
-
-The runtime itself is intentionally injected instead of hardcoded. Although the
-examples currently use
-[@roamhq/wrtc](https://www.npmjs.com/package/@roamhq/wrtc), the project targets
-the API family originally established by
-[node-webrtc](https://github.com/node-webrtc/node-webrtc) and
-[its compatible forks](https://github.com/node-webrtc/node-webrtc/forks),
-allowing different implementations to be substituted without changing the
-handler itself.
-
-This design keeps the project independent from any particular runtime while
-allowing consumers to select whichever implementation best fits their platform:
+The testing helpers (more on this later) require additional non-standard source
+and sink APIs, but the core handler is built around this smaller contract. This
+design keeps the project independent from any particular runtime, allowing
+consumers to select whichever one best fits their platform:
 
 ```mermaid
 flowchart TB
@@ -645,15 +648,18 @@ flowchart TB
 Handler["mediasoup-client-wrtc"]
 
 Handler --> Roam["@roamhq/wrtc"]
-Handler --> Cubicle["@cubicleai/wrtc"]
-Handler --> Future["Any compatible runtime"]
+Handler --> Compatible["Compatible node-webrtc fork"]
+Handler --> Future["Future compatible runtime"]
 ```
 
-The handler depends on a WebRTC contract, not on a particular implementation.
-This design keeps the project flexible while avoiding unnecessary coupling with
-any single runtime.
-
 ## Public API
+
+Until the package is published on npm, it can be installed directly from the
+repository:
+
+```sh
+npm install github:piranna/Mediasoup-client-wrtc mediasoup-client @roamhq/wrtc
+```
 
 The public API intentionally remains extremely small, it requires little more
 than injecting the desired runtime:
@@ -661,8 +667,13 @@ than injecting the desired runtime:
 ```ts
 import { WrtcHandler } from "mediasoup-client-wrtc";
 
-const handlerFactory = WrtcHandler.createFactory(wrtc);
+const handlerFactory = WrtcHandler.createFactory(wrtc, loggerSink);
 ```
+
+It's also possible to add a `loggerSink` argument to the factory, which will
+receive all internal debug logs from the handler. This is useful for debugging
+and understanding the internal state of the handler during development or
+testing. When omitted, the logger sink defaults to `console`.
 
 For automated testing, the project also exposes a separate `testing` entrypoint
 containing reusable helpers for creating synthetic media sources and inspecting
@@ -676,29 +687,23 @@ import {
 } from "mediasoup-client-wrtc/testing";
 ```
 
-Keeping the testing utilities isolated from the handler itself makes the core
-library remain focused while providing practical building blocks for integration
-tests and examples. Due to that, I'm also thinking on moving them out to their
-own `mediasoup-client-wrtc-helpers` package.
-
-### Why the Public API Is So Small
+Keeping the testing utilities behind a separate subpath keeps the core API
+focused while providing practical building blocks for integration tests and
+examples. These helpers depend on the non-standard source and sink APIs commonly
+provided by the `node-webrtc` runtime family.
 
 One of the design goals of the project was to expose the smallest possible API
 surface. Most of the complexity belongs inside the handler, not in user code.
-
 From the application's perspective, the resulting programming model remains
 identical to every other mediasoup client. There are no new abstractions to
-learn.
+learn:
 
 - No custom transport layer.
 - No proprietary signaling protocol.
 - No mediasoup-specific wrapper replacing `Device`.
 
-Instead, existing mediasoup applications simply gain a new execution
-environment.
-
-The browser is no longer the only place where `mediasoup-client` can run.
-Node.js becomes another first-class runtime.
+Existing mediasoup applications gain a new runtime without adopting a new client
+abstraction.
 
 ## End-to-End Media, Not Just API Compatibility
 
@@ -709,18 +714,21 @@ It does not yet prove that media can travel through a complete WebRTC pipeline.
 
 A useful Node.js endpoint must be able to do much more:
 
-1. create a `mediasoup-client` Device;
-2. negotiate a sending `WebRtcTransport`;
-3. produce a real `MediaStreamTrack`;
-4. transmit encoded media over ICE, DTLS and SRTP;
-5. route that media through mediasoup;
-6. negotiate a receiving transport;
-7. create a Consumer;
-8. receive and decode the media through another WebRTC endpoint;
-9. expose the resulting frames to application code.
+1. create a `mediasoup-client` Device
+2. negotiate a sending `WebRtcTransport`
+3. produce a real `MediaStreamTrack`
+4. transmit encoded media over ICE, DTLS and SRTP
+5. route that media through mediasoup
+6. negotiate a receiving transport
+7. create a Consumer
+8. receive and decode the media through another WebRTC endpoint
+9. and expose the resulting frames to application code
 
 `mediasoup-client-wrtc` includes a complete example exercising that path with
-two independent Node.js clients and a real local mediasoup Worker:
+two independent Node.js clients and a real local mediasoup Worker. They run in
+the same process for convenience, but they use independent Devices,
+PeerConnections and WebRTC transports. Nothing in the handler requires the
+endpoints or mediasoup server to share a process:
 
 ```mermaid
 flowchart LR
@@ -832,27 +840,29 @@ that media actually survives a complete WebRTC exchange.
 
 The real example exercises:
 
-- native RTP capability detection;
-- ICE negotiation;
-- DTLS establishment;
-- SRTP transmission;
-- Opus encoding and decoding;
-- mediasoup routing;
-- Producer and Consumer creation;
-- track delivery;
-- decoded audio-frame reception.
+- native RTP capability detection
+- ICE negotiation
+- DTLS establishment
+- SRTP transmission
+- Opus encoding and decoding
+- mediasoup routing
+- Producer and Consumer creation
+- track delivery
+- and decoded audio-frame reception
 
 The example currently verifies that decoded frames arrive at the destination.
 Later in this article, I will describe how this can be extended to validate not
-only the presence of media, but also its actual content and quality.
+only the presence of media, but also its actual content and quality. This is
+end-to-end at the media-transport level, not at the application level: the
+example uses local orchestration rather than a product-specific signaling
+server.
 
 ## Node.js as a First-Class mediasoup Participant
 
 Testing was the original motivation for the project, but it is not the boundary
-of what the handler enables.
-
-Once Node.js can execute `mediasoup-client` through a real WebRTC runtime, it
-can become a programmable participant in any mediasoup-based system:
+of what the handler enables. Once Node.js can execute `mediasoup-client` through
+a real WebRTC runtime, it can become a programmable participant in any
+mediasoup-based system:
 
 ```mermaid
 flowchart TB
@@ -881,15 +891,15 @@ A Node.js process is not limited to controlling the mediasoup server or
 injecting raw RTP into a `PlainTransport`. It can now behave like the client
 side of the system:
 
-- loading Router RTP capabilities;
-- creating sending and receiving transports;
-- producing and consuming tracks;
-- opening DataChannels;
-- reacting to transport state changes;
-- replacing tracks;
-- pausing and resuming media;
-- collecting sender and receiver statistics;
-- restarting ICE when needed.
+- loading Router RTP capabilities
+- creating sending and receiving transports
+- producing and consuming tracks
+- opening DataChannels
+- reacting to transport state changes
+- replacing tracks
+- pausing and resuming media
+- collecting sender and receiver statistics
+- and restarting ICE when needed
 
 This makes Node.js suitable for workloads that need the full WebRTC endpoint
 lifecycle rather than only access to RTP packets.
@@ -927,26 +937,26 @@ confronted with a real client.
 
 Unit tests are excellent for validating isolated server behavior:
 
-- Router and transport creation;
-- Producer and Consumer registries;
-- authorization;
-- signaling requests;
-- state transitions;
-- error handling;
-- application-level coordination.
+- Router and transport creation
+- Producer and Consumer registries
+- authorization
+- signaling requests
+- state transitions
+- error handling
+- and application-level coordination
 
 But many failures only appear when those components interact with an actual
 WebRTC implementation. Examples include:
 
-- invalid or incomplete DTLS parameters;
-- mismatched RTP capabilities;
-- incorrect codec negotiation;
-- broken header-extension mapping;
-- Consumer resume errors;
-- transport direction mistakes;
-- malformed SCTP parameters;
-- incorrect lifecycle ordering;
-- regressions in ICE restart handling.
+- invalid or incomplete DTLS parameters
+- mismatched RTP capabilities
+- incorrect codec negotiation
+- broken header-extension mapping
+- Consumer resume errors
+- transport direction mistakes
+- malformed SCTP parameters
+- incorrect lifecycle ordering
+- or regressions in ICE restart handling
 
 A Node.js mediasoup endpoint provides a useful testing layer between server unit
 tests and full browser automation:
@@ -973,8 +983,7 @@ Each layer answers a different question:
 `mediasoup-client-wrtc` does not make Playwright, Puppeteer or browser-based
 testing (end-to-end tests) obsolete. Instead, it provides a more focused layer
 for tests where the subject is the mediasoup and WebRTC behavior rather than the
-UI, closer to the integration tests or also acceptance tests layers. A typical
-test scenario can create two programmable endpoints:
+UI. A typical test scenario can create two programmable endpoints:
 
 ```mermaid
 sequenceDiagram
@@ -1024,14 +1033,13 @@ MS-->>Receiver: Routed audio
 Receiver->>Receiver: Verify decoded frames
 ```
 
-All of this, without needing to access a DOM, nor needing a browser at all.
 Also, this can run against:
 
-- a locally running development server;
-- a media service inside Docker;
-- an ephemeral CI environment;
-- a staging deployment;
-- a remote integration environment.
+- a locally running development server
+- a media service inside Docker
+- an ephemeral CI environment
+- a staging deployment
+- or a remote integration environment
 
 Just like integration tests, the test does not need to know how the server
 process was started, only that it did. It only needs access to the same
@@ -1041,25 +1049,16 @@ That separation is desirable: an integration test should validate the externally
 observable behavior of the media system, not become coupled to the
 implementation details of the server bootstrap process.
 
-At the same time, the ability to run client logic directly in Node.js encourages
-a better separation inside the application itself. Signaling, transport
-management and media lifecycle code, all of them can live outside DOM components
-and be tested independently from rendering. Just remember:
+Running client logic directly in Node.js also encourages signaling, transport
+management and media lifecycle code to remain outside DOM components. These
+components can then be tested independently from rendering, improving:
 
-> If your media(soup) client logic can only run inside a rendered browser page,
-> your media architecture may be coupled too tightly to the UI.
-
-This does not only improve testing, it improves:
-
-- modularity;
-- code reuse;
-- debugging;
-- observability;
-- portability;
-- maintainability.
-
-A browser _may_ be one deployment environment for a media(soup) client, but it
-**should not** have to define the architecture of the client itself.
+- modularity
+- code reuse
+- debugging
+- observability
+- portability
+- and maintainability
 
 ## Programmable Media Bots
 
@@ -1075,13 +1074,13 @@ A Node.js process can generate or decode PCM audio, push it into an
 `RTCAudioSource`, and publish the resulting track as a regular mediasoup
 Producer. Possible sources include:
 
-- WAV files;
-- generated tones;
-- text-to-speech output;
-- music;
-- announcements;
-- prerecorded prompts;
-- dynamically generated audio.
+- WAV files
+- generated tones
+- text-to-speech output
+- music
+- announcements
+- prerecorded prompts
+- or dynamically generated audio
 
 ```mermaid
 flowchart LR
@@ -1097,22 +1096,21 @@ File --> Decoder --> Source --> Device --> MS --> Participants
 ```
 
 From the perspective of the mediasoup server and the remote Consumers, this is
-an ordinary audio Producer. The application does not need a special “bot
-transport” or a separate media-delivery mechanism, and it's application
-dependent if developer wants to show any difference to the actual users.
+an ordinary audio Producer. Whether the application presents the bot differently
+from a human participant remains an application-level decision.
 
 ### Video generation
 
 The same model applies to video through compatible runtime extensions such as
 `RTCVideoSource`. A programmable endpoint can produce:
 
-- synthetic frames;
-- generated overlays;
-- image sequences;
-- rendered dashboards;
-- virtual participants;
-- [test patterns](https://github.com/piranna/Mediasoup-test-card);
-- preprocessed frames from an external pipeline.
+- synthetic frames
+- generated overlays
+- image sequences
+- rendered dashboards
+- virtual participants
+- [test patterns](https://github.com/piranna/Mediasoup-test-card)
+- or preprocessed frames from an external pipeline
 
 ### Monitoring and recording bots
 
@@ -1135,10 +1133,10 @@ This is not necessarily the most efficient architecture for every recording
 system. A `PlainTransport` and direct RTP processing may be preferable when
 WebRTC endpoint semantics are unnecessary.
 
-But, the Node.js client approach becomes especially valuable when the bot must
-behave like a real participant, share client-side code, exercise WebRTC
-negotiation, or interact through both media and DataChannels. That's where the
-"lack of especialization" paid off.
+The Node.js client approach becomes especially valuable when the bot must behave
+like a real participant, share client-side code, exercise WebRTC negotiation, or
+interact through both media and DataChannels. That is where the deliberately
+generic endpoint model pays off.
 
 ## AI Media Services as Real Participants
 
@@ -1171,25 +1169,25 @@ User --> MS --> Consumer --> STT --> Agent --> TTS --> Producer --> MS --> User
 Using a Node.js `mediasoup-client` endpoint allows the AI service to participate
 through the same WebRTC model as the other clients. The service can:
 
-- consume selected Producers;
-- publish one or more generated tracks;
-- pause or resume dynamically;
-- replace tracks;
-- collect WebRTC statistics;
-- exchange metadata through DataChannels;
-- react to transport failures;
-- reconnect through the same client lifecycle.
+- consume selected Producers
+- publish one or more generated tracks
+- pause or resume dynamically
+- replace tracks
+- collect WebRTC statistics
+- exchange metadata through DataChannels
+- react to transport failures
+- and reconnect through the same client lifecycle
 
 This can be useful for:
 
-- conversational voice agents;
-- live transcription;
-- translation;
-- meeting assistants;
-- moderation systems;
-- audio classification;
-- sentiment or event detection;
-- real-time media transformation.
+- conversational voice agents
+- live transcription
+- translation
+- meeting assistants
+- moderation systems
+- audio classification
+- sentiment or event detection
+- or real-time media transformation
 
 Again, raw RTP may be the better choice for some high-throughput processing
 pipelines. The advantage here is not that WebRTC should replace every backend
@@ -1205,12 +1203,12 @@ systems.
 
 The outgoing side may consume data from:
 
-- FFmpeg;
-- GStreamer;
-- a file decoder;
-- a hardware source;
-- another network transport;
-- a custom DSP pipeline.
+- FFmpeg
+- GStreamer
+- a file decoder
+- a hardware source
+- another network transport
+- or a custom DSP pipeline
 
 The incoming side may deliver decoded media to the same kinds of systems.
 
@@ -1271,20 +1269,15 @@ Service --> Node --> MS --> Browser
 
 This enables backend participants to exchange:
 
-- synchronized metadata;
-- control commands;
-- telemetry;
-- reactions;
-- moderation events;
-- AI-agent state;
-- media-processing results;
-- application-specific protocol messages.
-
-Just to be clean: DataChannels should not automatically replace WebSockets. I
-explored that trade-off in more detail in
-[Mediasoup DataChannels: When Replacing WebSockets Actually Makes Sense](2026-07-08-Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense.md),
-including the additional complexity that appears when SCTP is used as a generic
-server-centered messaging layer.
+- synchronized metadata
+- control commands
+- telemetry
+- reactions
+- moderation events
+- AI-agent state
+- media-processing results
+- server-to-server coordination
+- and application-specific protocol messages
 
 The relevance here is narrower: when a Node.js process already participates in
 the mediasoup session, DataChannels become another first-class capability of
@@ -1322,33 +1315,18 @@ consuming the corresponding audio track.
 
 The current real-media example verifies that decoded audio frames arrive at the
 receiving endpoint. That is already enough to prove that the complete path is
-operational:
+operational. But receiving frames does not necessarily mean receiving the
+**correct** media, a broken pipeline might still produce frames while
+introducing:
 
-```mermaid
-flowchart LR
-    source["Source"]
-    sender["WebRTC sender"]
-    mediasoup["mediasoup"]
-    receiver["WebRTC receiver"]
-    sink["Sink"]
-
-    source --> sender
-    sender --> mediasoup
-    mediasoup --> receiver
-    receiver --> sink
-```
-
-But receiving frames does not necessarily mean receiving the **correct** media,
-a broken pipeline might still produce frames while introducing:
-
-- severe distortion;
-- silence;
-- unexpected resampling;
-- dropped segments;
-- timing errors;
-- codec configuration mistakes;
-- channel-layout problems;
-- corrupted or substituted content.
+- severe distortion
+- silence
+- unexpected resampling
+- dropped segments
+- timing errors
+- codec configuration mistakes
+- channel-layout problems
+- corrupted or substituted content
 
 The logical next step is to validate the information carried by those frames.
 This connects directly with my previous work on
@@ -1357,12 +1335,12 @@ a deterministic, FFT-based methodology for verifying that known audio content
 survives lossy and time-sensitive media pipelines through known tone sequences
 and spectral analysis. The principle is straightforward:
 
-1. generate a deterministic audio fixture;
-2. inject it into the sending WebRTC endpoint;
-3. transmit it through mediasoup;
-4. capture the decoded PCM at the receiving endpoint;
-5. analyze the result;
-6. compare it against known spectral expectations.
+1. generate a deterministic audio fixture
+2. inject it into the sending WebRTC endpoint
+3. transmit it through mediasoup
+4. capture the decoded PCM at the receiving endpoint
+5. analyze the result
+6. and compare it against known spectral expectations
 
 ```mermaid
 flowchart LR
@@ -1374,21 +1352,22 @@ MS["mediasoup"]
 Receiver["Node.js receiver"]
 Sink["RTCAudioSink"]
 Capture["Captured PCM"]
-FFT["Spectral validation"]
+FFT["Spectral validator"]
 Result{"Pass / Fail"}
 
 Fixture --> Source --> Sender --> MS --> Receiver --> Sink --> Capture --> FFT
+Fixture -. "Expected spectrum" .-> FFT
 FFT --> Result
 ```
 
 Unlike waveform equality, spectral validation can tolerate many changes that are
 normal in real media systems:
 
-- lossy encoding;
-- small phase shifts;
-- gain changes;
-- minor timing drift;
-- codec artifacts.
+- lossy encoding
+- small phase shifts
+- gain changes
+- minor timing drift
+- codec artifacts
 
 The test can ask a more meaningful question:
 
@@ -1399,12 +1378,14 @@ A deterministic fixture could contain a known sequence of tones, for example
 across the vocal range. The validator would detect the dominant frequency in
 each expected segment and calculate metrics such as:
 
-- detected frequency;
-- frequency error;
-- percentage of correct tones;
-- missing segments;
-- signal-to-noise ratio;
-- timing deviation.
+- detected frequency
+- frequency error
+- percentage of correct tones
+- missing segments
+- signal-to-noise ratio
+- timing deviation
+- distortion
+- and regressions caused by codec or transport changes
 
 ```mermaid
 sequenceDiagram
@@ -1431,12 +1412,11 @@ This would provide a real content-aware integration test:
 - But:
   > "Did the correct audio survive encoding, transport, routing and decoding?"
 
-My existing deterministic fixture tooling is currently implemented in Python and
-works with WAV files rather than live Node.js tracks. It has not yet been ported
-or integrated with `mediasoup-client-wrtc`, and that work remains a future step,
-but I'm willing to port it to Typescript and add support for live streams (not
-only fixed audio fixtures) if the opportunity arises in a future new contracting
-project.
+My existing deterministic fixture tooling currently works with WAV files rather
+than live Node.js tracks. It has not yet been ported or integrated with
+`mediasoup-client-wrtc`, and that work remains a future step. A native
+TypeScript implementation and support for live streams (not only fixed audio
+fixtures) remain possible follow-up work.
 
 A complete implementation would need to bridge two forms of data, reference WAV
 files and live PCM frames, but the principle is straightforward:
@@ -1462,13 +1442,18 @@ LiveSource -. "adapter required" .-> WAVIn
 LiveSink -. "capture / stream adapter required" .-> Validator
 ```
 
-There are several possible ways to complete that integration:
+The existing `audio-test-fixtures` implementation is written in Python, so
+integration could initially be achieved without a full port by:
 
-- port the generator and validator to TypeScript and transpile;
-- pre-generate the deterministic WAV fixture and stream it from Node.js;
-- capture received PCM to a WAV file and invoke the Python validator;
-- expose the validator as a separate process or service;
-- implement streaming spectral analysis directly in Node.js.
+1. generating or loading a pre-generated deterministic WAV fixture
+2. streaming its PCM samples into `RTCAudioSource`
+3. capturing decoded PCM through `RTCAudioSink`
+4. writing the result to WAV
+5. and invoking the existing validator
+
+A native TypeScript implementation could follow later if live streaming analysis
+or tighter Node.js integration becomes useful. Another alternative would be to
+expose the validator as a separate process or service.
 
 The final architecture is less important than the testing principle:
 `mediasoup-client-wrtc` provides control over both endpoints of the WebRTC
@@ -1498,22 +1483,23 @@ source, inspect the sink and expose every frame to the test harness.
 
 The result is a test environment that is:
 
-- deterministic;
-- automatable;
-- observable;
-- independent from physical devices;
-- suitable for CI;
-- capable of validating actual media content.
+- deterministic
+- automatable
+- observable
+- independent from physical devices
+- suitable for CI
+- and capable of validating actual media content
 
 At that point, mediasoup integration testing stops being limited to
 control-plane assertions: it can validate the media plane itself.
 
 ## Why Release It as Open Source?
 
-`mediasoup-client-wrtc` originated from a practical need: creating real
-integration tests for a mediasoup-based service without depending on browser
-automation. We wanted to deal with a lot of test cases, and using full browsers
-would make them expensive and slow.
+`mediasoup-client-wrtc` originated from a practical need for a production
+mediasoup service: creating real integration tests for a mediasoup-based service
+without depending on browser automation. The original use case required many
+media integration scenarios, and launching a full browser for every participant
+would have made the test suite slower and more expensive.
 
 The immediate requirement was specific, but the resulting implementation was
 not.
@@ -1531,15 +1517,15 @@ forcing other teams facing the same problem to rediscover and maintain the same
 translation layer independently. The reusable part is precisely the part that
 belongs in the open:
 
-- the `HandlerInterface` implementation;
-- runtime injection;
-- RTP capability discovery;
-- SDP and transceiver management;
-- sending and receiving media;
-- SCTP DataChannel support;
-- track lifecycle operations;
-- statistics and ICE management;
-- synthetic source and sink helpers for testing.
+- the `HandlerInterface` implementation
+- runtime injection
+- RTP capability discovery
+- SDP and transceiver management
+- sending and receiving media
+- SCTP DataChannel support
+- track lifecycle operations
+- statistics and ICE management
+- and synthetic source and sink helpers for testing
 
 Application-specific signaling remains outside the library, where it belongs.
 
@@ -1570,23 +1556,24 @@ Handler --> Testing
 Publishing the handler as Free Software also provides advantages that go beyond
 code reuse. It allows other developers to:
 
-- inspect the implementation;
-- validate its assumptions;
-- test it with different WebRTC runtimes;
-- report compatibility problems;
-- contribute missing functionality;
-- build integrations that the original use case never anticipated.
+- inspect the implementation
+- validate its assumptions
+- test it with different WebRTC runtimes
+- report compatibility problems
+- contribute missing functionality
+- or build integrations that the original use case never anticipated
 
 That external validation is particularly valuable for a compatibility layer: a
 handler can achieve complete coverage against its own tests and still encounter
 behaviour differences between runtime implementations, libwebrtc versions,
-operating systems or real mediasoup deployments. On the other hand, Open
+operating systems or real mediasoup deployments. On the other hand, open
 development increases the number and diversity of environments in which those
 assumptions can be exercised.
 
 The project is therefore not Open Source merely because the code happens to be
 generic: it is Open Source because openness is part of how a runtime adapter
-becomes **trustworthy**.
+becomes **trustworthy**. Reports from other runtimes, platforms and real
+mediasoup integrations are especially valuable.
 
 ## Design Philosophy
 
@@ -1609,114 +1596,41 @@ consume media using the normal `mediasoup-client` methods.
 
 This matters because the value of the project is not a new abstraction placed on
 top of mediasoup. The value is making an existing, mature abstraction available
-in another runtime. Code designed around `mediasoup-client` doesn't needs to be
+in another runtime. Code designed around `mediasoup-client` doesn't need to be
 rewritten merely because the endpoint happens to execute in Node.js rather than
 a browser.
 
 ### Keep runtime dependencies injectable
 
 The handler receives its WebRTC implementation at runtime. It does not import
-`@roamhq/wrtc`, `node-webrtc` or another native runtime internally. This
-preserves a clean separation:
+`@roamhq/wrtc`, `node-webrtc` or another native runtime internally. This allows
+the consumer to choose:
 
-```mermaid
-flowchart LR
-
-Application["Application"]
-Client["mediasoup-client"]
-Handler["mediasoup-client-wrtc"]
-Contract["WebRTC-compatible contract"]
-RuntimeA["@roamhq/wrtc"]
-RuntimeB["Another node-webrtc fork"]
-RuntimeC["Future implementation"]
-
-Application --> Client --> Handler --> Contract
-
-Contract --> RuntimeA
-Contract --> RuntimeB
-Contract --> RuntimeC
-```
-
-The handler depends on the common API contract established by the `node-webrtc`
-family, not on one specific package.
-
-This allows the consumer to choose:
-
-- which native module to install;
-- which libwebrtc version to depend upon;
-- which platforms must be supported;
-- which maintenance and release policy is acceptable.
+- which native module to install
+- which libwebrtc version to depend upon
+- which platforms must be supported
+- or which maintenance and release policy is acceptable
 
 ### Separate media orchestration from presentation
 
-A recurring problem in client-side WebRTC applications is the tendency to place
-media lifecycle logic directly inside UI components. Transport setup, signaling,
-device management, track replacement and Producer state become entangled with
-buttons, component state and DOM events.
-
-That coupling makes the application harder to:
-
-- reuse;
-- test;
-- debug;
-- observe;
-- migrate;
-- or run outside a browser.
-
-The ability to execute the same media logic in Node.js creates useful pressure
-to separate those concerns:
-
-```mermaid
-flowchart TB
-
-UI["UI / DOM layer"]
-Session["Application session logic"]
-Signaling["Signaling adapter"]
-Media["mediasoup-client lifecycle"]
-Handler["Runtime-specific handler"]
-
-UI --> Session
-Session --> Signaling
-Session --> Media
-Media --> Handler
-```
+Transport setup, signaling, device management and track lifecycle should remain
+outside UI components. Keeping these responsibilities separate makes the same
+client core reusable from browser interfaces, integration tests and backend
+services.
 
 The UI may request that a microphone be published or muted, but it should not
-need to own the mechanics of transport negotiation.
-
-> If your mediasoup client logic can only run inside a rendered browser page,
-> your media architecture may be coupled too tightly to the UI.
-
-A browser may be one deployment environment for a mediasoup client, but it
-should not have to be the architecture of the client itself.
-
-Thinking about this concept in advance could be seen in some contexts as
-overengineering, but thinking otherwise leads to poor architecture decissions,
-and in the long term, to technical debt. Maybe it's just a matter of getting
-used to have those concerns on mind when taking architecture decissions.
+own the mechanics of transport negotiation.
 
 ### Avoid application-level assumptions
 
-Mediasoup intentionally provides low-level media primitives.
+mediasoup intentionally provides low-level media primitives.
 `mediasoup-client-wrtc` follows the same philosophy.
 
-It does not define:
-
-- rooms;
-- participants;
-- calls;
-- meetings;
-- permissions;
-- signaling message formats;
-- reconnection policies;
-- server topology.
-
-Those concepts vary between applications. A library that attempted to
-standardize them would stop being a generic handler and become an opinionated
-framework.
-
-Instead, the package gives application code a programmable endpoint from which
-those abstractions can be built.
+Application semantics such as rooms, participants, permissions and reconnection
+policies remain intentionally outside the package. They vary between products;
+including them would turn a generic runtime handler into an opinionated
+application framework. Instead, the package provides the programmable endpoint
+on which those abstractions can be built.
 
 ### Keep the core and testing utilities distinct
 
@@ -1748,13 +1662,13 @@ structural similarity does not guarantee identical behavior.
 
 Different runtimes may depend on different:
 
-- libwebrtc revisions;
-- native build systems;
-- operating-system integrations;
-- supported architectures;
-- non-standard media APIs;
-- SDP behavior;
-- shutdown semantics.
+- libwebrtc revisions
+- native build systems
+- operating-system integrations
+- supported architectures
+- non-standard media APIs
+- SDP behavior
+- or shutdown semantics
 
 The examples currently use `@roamhq/wrtc`, but the injection model is
 specifically intended to support other compatible implementations. Validating
@@ -1764,20 +1678,20 @@ that portability requires real testing against multiple runtimes.
 
 The core WebRTC surface includes familiar APIs such as:
 
-- `RTCPeerConnection`;
-- `MediaStream`;
-- `MediaStreamTrack`;
-- `RTCRtpSender`;
-- `RTCRtpReceiver`;
-- `RTCDataChannel`.
+- `RTCPeerConnection`
+- `MediaStream`
+- `MediaStreamTrack`
+- `RTCRtpSender`
+- `RTCRtpReceiver`
+- and `RTCDataChannel`
 
 Programmable media generation and inspection, however, rely on extensions
 commonly exposed by the `node-webrtc` family:
 
-- `RTCAudioSource`;
-- `RTCAudioSink`;
-- `RTCVideoSource`;
-- `RTCVideoSink`.
+- `RTCAudioSource`
+- `RTCAudioSink`
+- `RTCVideoSource`
+- `RTCVideoSink`
 
 These extensions are extremely useful for bots, tests and media-processing
 services, but they are not browser Web standards. The handler itself does not
@@ -1790,82 +1704,68 @@ testing helpers may.
 with the application server. Every mediasoup application must still implement
 signaling for operations such as:
 
-- obtaining Router RTP capabilities;
-- creating transports;
-- connecting DTLS;
-- creating Producers;
-- requesting Consumers;
-- creating DataProducers and DataConsumers;
-- handling application state.
+- obtaining Router RTP capabilities
+- creating transports
+- connecting DTLS
+- creating Producers
+- requesting Consumers
+- creating DataProducers and DataConsumers
+- or handling application state
 
 That signaling may use:
 
-- WebSockets;
-- HTTP;
-- RPC;
-- DataChannels after bootstrap;
-- a custom protocol.
+- WebSockets
+- HTTP
+- RPC
+- DataChannels after bootstrap
+- or a custom protocol
 
 The library remains independent from that choice. This means that using
 `mediasoup-client-wrtc` is not a one-line replacement for a complete application
-client. But this is on purposse, since it provides the WebRTC endpoint layer
-upon which the application's signaling and session logic operate.
+client. This separation is intentional: the package provides the WebRTC endpoint
+layer on which application-specific signaling and session logic operate.
 
 ### It does not replace browser testing
 
-A Node.js endpoint executes a real WebRTC implementation, commonly backed by
-libwebrtc, but it is not Chromium, Firefox or Safari. It does not validate:
-
-- browser permission prompts;
-- device enumeration;
-- autoplay policies;
-- DOM integration;
-- browser-specific WebRTC behavior;
-- rendering;
-- UI state;
-- platform-specific browser regressions.
-
-Those concerns still require browser-based testing.
-
-The project creates a complementary integration layer focused on mediasoup
-negotiation and media behavior, but still, that's on purposse.
+Browser-specific behavior such as permissions, rendering and UI interactions
+still requires browser automation.
 
 ### It is not always preferable to raw RTP
 
 A full WebRTC endpoint introduces:
 
-- ICE;
-- DTLS;
-- SRTP;
-- SDP negotiation;
-- transceivers;
-- client lifecycle management.
+- ICE
+- DTLS
+- SRTP
+- SDP negotiation
+- transceivers
+- and client lifecycle management
 
 For recording, transcoding, broadcasting or high-throughput server-side
 processing, a `PlainTransport`, FFmpeg, GStreamer or direct RTP integration may
 be simpler and more efficient. `mediasoup-client-wrtc` is most useful when the
 process needs client semantics:
 
-- the same negotiation path as browser participants;
-- a `mediasoup-client` Device;
-- WebRTC transport behavior;
-- DataChannels;
-- reusable client logic;
-- realistic integration tests;
-- dynamic track lifecycle.
+- the same negotiation path as browser participants
+- a `mediasoup-client` Device
+- WebRTC transport behavior
+- DataChannels
+- reusable client logic
+- realistic integration tests
+- or dynamic track lifecycle
 
-It adds an option to simplify some new use cases, it does not invalidate the
-existing ones.
+It adds another option for workloads that need endpoint semantics; it does not
+invalidate simpler RTP-based integrations.
 
 ### Deterministic content validation is not implemented yet
 
 The current end-to-end example verifies that decoded frames arrive. It does not
 yet validate that their content matches the transmitted signal.
 
-The planned integration with deterministic audio fixtures remains future work,
-and probably it would be done in an independent project itself. Until that
-exists, the example proves transport and decoding functionality but not spectral
-fidelity or media quality.
+The planned integration with deterministic audio fixtures remains future work
+and may live in a separate companion project. Until then, the example proves
+transport and decoding functionality, but not spectral fidelity or media
+quality.
 
 ### It is not yet published on npm
 
@@ -1874,17 +1774,16 @@ repository, but the package has not yet been published to the npm registry.
 
 Publishing it should be straightforward, but the release should include:
 
-- a deliberate initial version;
-- validated package exports;
-- generated declaration files;
-- installation documentation;
-- runtime compatibility notes;
-- a minimal changelog;
-- a clear stability statement.
+- a deliberate initial version
+- validated package exports
+- generated declaration files
+- installation documentation
+- runtime compatibility notes
+- a minimal changelog
+- and a clear stability statement
 
-The project currently has complete automated coverage for its implemented test
-surface and relies on APIs that are well known within the `node-webrtc`
-ecosystem. That provides a strong basis for an initial public release.
+The current automated test suite reports full coverage for the code paths it
+exercises, providing a strong basis for an initial public release.
 
 However, code coverage alone does not define API stability. A stable `1.0.0`
 release should ideally follow validation across several compatible runtimes and
@@ -1900,7 +1799,7 @@ steps follow from that foundation.
 
 ### Publish an initial npm release
 
-The most immediate step is making installation independent from GitHub.
+The most immediate step is making installation independent from GitHub:
 
 ```sh
 npm install mediasoup-client-wrtc
@@ -1908,11 +1807,11 @@ npm install mediasoup-client-wrtc
 
 A registry release would improve:
 
-- discoverability;
-- dependency management;
-- reproducible installation;
-- semantic versioning;
-- integration with automated tooling.
+- discoverability
+- dependency management
+- reproducible installation
+- semantic versioning
+- and integration with automated tooling
 
 The WebRTC runtime should remain a separately installed dependency so
 applications retain control over the native implementation they use.
@@ -1920,131 +1819,77 @@ applications retain control over the native implementation they use.
 ### Validate multiple WebRTC runtimes
 
 Runtime injection only becomes fully valuable when compatibility is verified in
-practice.
-
-A useful compatibility matrix could include:
-
-| Runtime              | Platform    | Device loading |       Audio |       Video | DataChannels |
-| -------------------- | ----------- | -------------: | ----------: | ----------: | -----------: |
-| `@roamhq/wrtc`       | Linux/macOS |              ✓ |           ✓ |     Planned |            ✓ |
-| Compatible runtime B | Linux       |    To validate | To validate | To validate |  To validate |
-| Compatible runtime C | Other       |    To validate | To validate | To validate |  To validate |
-
-This would identify whether adaptations are needed for differences hidden behind
-superficially compatible APIs.
+practice. The current examples are validated with `@roamhq/wrtc`. Additional
+compatible runtimes will be added to a public compatibility matrix as they are
+tested. This would identify whether adaptations are needed for differences
+hidden behind superficially compatible APIs.
 
 ### Expand real-media testing
 
-The current real-server example focuses on audio delivery. Future scenarios
+The current real-server example focuses on audio delivery. The handler
+implements video operations, although the repository does not yet include a
+real-video integration example equivalent to the audio example. Future scenarios
 could cover:
 
-- video production and consumption;
-- simulcast;
-- SVC;
-- spatial-layer changes;
-- track replacement;
-- pause and resume behavior;
-- ICE restart;
-- network interruptions;
-- transport closure;
-- multiple Producers and Consumers;
-- negotiated DataChannels;
-- sustained media exchange.
+- video production and consumption
+- simulcast
+- SVC
+- spatial-layer changes
+- track replacement
+- pause and resume behavior
+- ICE restart
+- network interruptions
+- transport closure
+- multiple Producers and Consumers
+- negotiated DataChannels
+- or sustained media exchange
 
 These should remain integration examples rather than reimplementing a complete
 mediasoup application.
 
 ### Integrate deterministic audio fixtures
 
-The most compelling testing improvement is content-aware media validation.
-
-```mermaid
-flowchart LR
-
-Fixture["Known audio fixture"]
-Source["Programmable source"]
-Sender["Node.js endpoint"]
-MS["mediasoup pipeline"]
-Receiver["Node.js endpoint"]
-Sink["Decoded PCM"]
-Validator["Spectral validator"]
-
-Fixture --> Source --> Sender --> MS --> Receiver --> Sink --> Validator
-Fixture -. "Expected spectrum" .-> Validator
-```
-
-This could verify:
-
-- frequency preservation;
-- missing segments;
-- distortion;
-- timing drift;
-- signal-to-noise ratio;
-- regressions caused by codec or transport changes.
-
-The existing
-[audio-test-fixtures](2026-01-16-Deterministic-Audio-Fixtures-for-End-to-End-Testing.md)
-implementation is written in Python. Integration could initially be achieved
-without a full port by:
-
-1. generating or loading a deterministic WAV;
-2. streaming its PCM samples into `RTCAudioSource`;
-3. capturing decoded PCM through `RTCAudioSink`;
-4. writing the result to WAV;
-5. invoking the existing validator.
-
-A native TypeScript implementation could follow later if live streaming analysis
-or tighter Node.js integration becomes useful.
+Complete the content-aware validation pipeline described above by streaming the
+existing deterministic WAV fixture into RTCAudioSource, capturing the decoded
+PCM from RTCAudioSink, and running the existing Python spectral validator. A
+native TypeScript port can be considered later.
 
 ### Add reusable media adapters
 
 The handler intentionally stops at the `MediaStreamTrack` boundary, but
 companion packages or examples could demonstrate adapters for:
 
-- WAV files;
-- FFmpeg;
-- GStreamer;
-- Node.js streams;
-- speech-to-text services;
-- text-to-speech services;
-- hardware sources;
-- custom DSP pipelines.
+- WAV files
+- FFmpeg
+- GStreamer
+- Node.js streams
+- speech-to-text services
+- text-to-speech services
+- hardware sources
+- or custom DSP pipelines
 
 These should remain optional and modular. There is no universal media-pipeline
 abstraction that fits every application.
 
 ### Explore server-side DataChannel participants
 
-The handler already supports negotiated SCTP DataChannels.
-
-More examples could explore Node.js services acting as:
-
-- telemetry consumers;
-- moderation controllers;
-- synchronized metadata producers;
-- AI-agent coordinators;
-- media-processing status publishers;
-- server-to-server participants.
-
-This is related to my previous architectural experiment with
-[mediasoup DataChannels](Beyond-the-Browser-Running-mediasoup-client-in-Node.js-as-a-Headless-WebRTC-Endpoint.md),
-but the objective here is not to replace WebSockets universally. The interesting
-case is a Node.js service that already participates in the media session and can
-therefore use audio, video and synchronized data through a coherent endpoint
-model.
+The handler already supports negotiated SCTP DataChannels, but I can add
+complete examples combining media and DataChannels in the same programmable
+endpoint, including synchronized transcription metadata and backend control
+channels.
 
 ### Improve diagnostics and observability
 
 Programmable endpoints are valuable debugging tools. Future helpers could
 expose:
 
-- structured transport-state logs;
-- periodic `getStats()` snapshots;
-- ICE and DTLS timing;
-- packet-loss metrics;
-- jitter and round-trip time;
-- Producer and Consumer lifecycle traces;
-- machine-readable reports for CI.
+- structured transport-state logs
+- periodic `getStats()` snapshots
+- ICE and DTLS timing
+- packet-loss metrics
+- jitter and round-trip time
+- Producer and Consumer lifecycle traces
+- or machine-readable reports for CI
 
 The existing logger injection already provides a foundation for integrating
 diagnostics with an application's logging stack.
@@ -2054,32 +1899,17 @@ diagnostics with an application's logging stack.
 Once the first release is ready, GitHub releases could be archived through
 Zenodo. That would provide:
 
-- a permanent DOI for each release;
-- a conceptual DOI for the project;
-- citable historical versions;
-- reproducible references from technical articles.
+- a permanent DOI for each release
+- a conceptual DOI for the project
+- citable historical versions
+- and reproducible references from technical articles
 
 The project can continue evolving normally. Each archived release would
 represent a stable snapshot rather than freezing future development.
 
 ## What This Project Changes
 
-The implementation is useful because it fills a concrete technical gap. Its
-broader significance comes from the change in perspective it enables.
-
-The traditional mental model is:
-
-```mermaid
-flowchart LR
-    browser["Browser"]
-    client["mediasoup-client"]
-    mediasoup["mediasoup"]
-
-    browser --> client
-    client --> mediasoup
-```
-
-The more general model is:
+The broader significance of the implementation comes from the model it enables:
 
 ```mermaid
 flowchart LR
@@ -2088,49 +1918,15 @@ flowchart LR
     handler["Runtime-specific Handler"]
     webrtc["WebRTC implementation"]
 
-    app --> client
-    client --> handler
-    handler --> webrtc
+    app --> client --> handler --> webrtc
 ```
 
-In that architecture, the browser is not the definition of the client. It is one
-possible execution environment. Node.js can now become another.
+The browser is one possible execution environment for that model. Node.js can
+now become another, enabling programmable endpoints such as automated tests,
+media bots, AI services and media bridges.
 
-That matters because programmable endpoints make media systems composable:
-
-- A test runner can become a participant.
-- A bot can become a participant.
-- An AI service can become a participant.
-- A media bridge can become a participant.
-
-A backend process can consume a track, analyze it, produce another one and
-exchange synchronized state through DataChannels, all through the same
-client-side abstractions used by browser applications.
-
-```mermaid
-flowchart TB
-
-Client["mediasoup-client"]
-Browser["Browser endpoint"]
-Mobile["Mobile endpoint"]
-Test["Test endpoint"]
-Bot["Bot endpoint"]
-AI["AI endpoint"]
-Bridge["Media bridge"]
-Backend["Backend participant"]
-
-Client --> Browser
-Client --> Mobile
-Client --> Test
-Client --> Bot
-Client --> AI
-Client --> Bridge
-Client --> Backend
-```
-
-This does not mean that every service should use WebRTC: it means that services
-which need WebRTC endpoint semantics no longer have to pretend to be browsers or
-bypass `mediasoup-client` entirely.
+Services that need WebRTC endpoint semantics no longer need to pretend to be
+browsers.
 
 ## Final Thoughts
 
@@ -2150,34 +1946,14 @@ capable of translating between mediasoup's client model and a programmable
 WebRTC runtime. That translation makes Node.js a first-class execution
 environment for `mediasoup-client`.
 
-The immediate benefits include:
+But the most important result is architectural:
 
-- realistic integration tests;
-- synthetic media participants;
-- programmable bots;
-- backend DataChannels;
-- AI media services;
-- media-processing bridges;
-- reusable client logic outside the DOM.
-
-But the most important result is architectural.
-
-> The goal is not to bring mediasoup to Node.js. mediasoup has always run on
-> Node.js.
+> The goal is not to bring mediasoup to Node.js. mediasoup has always run there.
 >
 > The goal is to bring **mediasoup-client** to Node.js.
 
 The browser is no longer the only execution environment for `mediasoup-client`,
-and a headless browser is no longer the only way to create a headless mediasoup
-endpoint.
-
-> A browser may be one deployment environment for a mediasoup client, but it
-> should not have to be the architecture of the client itself.
->
-> If your mediasoup client logic can only run inside a rendered browser page,
-> your media architecture may be coupled too tightly to the UI.
->
-> The browser is no longer the boundary of a mediasoup application. It is just
-> one more endpoint.
+and launching a headless browser is no longer the only way to create a headless
+mediasoup endpoint: the browser becomes just one endpoint among many.
 
 Browsers made WebRTC ubiquitous. **Programmable endpoints make it composable.**
