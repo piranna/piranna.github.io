@@ -41,18 +41,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 
 {% if page.image %}
-  {% assign image_prefix = page.image | slice: 0, 8 %}
-  {% assign image_assets_prefix = page.image | slice: 0, 7 %}
-  {% assign image_protocol = page.image | slice: 0, 2 %}
-  {% if page.image contains "://" or image_protocol == "//" %}
-    {% assign social_image = page.image %}
-  {% elsif image_prefix == "/assets/" %}
-    {% assign social_image = page.image | absolute_url %}
-  {% elsif image_assets_prefix == "assets/" %}
-    {% assign social_image = "/" | append: page.image | absolute_url %}
-  {% else %}
-    {% assign social_image = "/images/" | append: page.image | absolute_url %}
-  {% endif %}
+  {% capture social_image %}{% include image-url.html image=page.image absolute=true %}{% endcapture %}
+  {% assign social_image = social_image | strip %}
   <meta property="og:image" content="{{ social_image }}" />
   <meta name="twitter:image" content="{{ social_image }}" />
 {% else %}

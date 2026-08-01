@@ -17,6 +17,8 @@ test -f "_site/crazy projects/webrtc/mediasoup/2026/07/08/Mediasoup-DataChannels
 grep -q "Latest WebRTC posts" _site/webrtc/index.html
 grep -q "Read the dedicated WebRTC page" _site/category/webrtc/index.html
 grep -q 'content="https://piranna.github.io/assets/svg/c1f39f56.svg"' "_site/2026/07/21/Understanding-npm-Lifecycle-Scripts-(Once-and-For-All)/index.html"
+grep -q 'src="https://piranna.github.io/assets/svg/c1f39f56.svg"' "_site/2026/07/21/Understanding-npm-Lifecycle-Scripts-(Once-and-For-All)/index.html"
+! grep -R --include='*.html' -q '/images/https://' _site
 test -n "$(find _site/assets/svg -name '*.svg' -print -quit)"
 grep -R --include='*.html' -q 'src="/assets/svg/' _site
 ! grep -R --include='*.html' -q "mermaid.ink" _site

@@ -49,7 +49,8 @@ layout: page
   {% for post in paginator.posts %}
   <article class="post {% if post.image %}post-with-image{% endif %}">
     {% if post.image %}
-      <img class="post-list-hero-bg" src="{{ site.baseurl }}/images/{{ post.image }}"
+      {% capture post_image_url %}{% include image-url.html image=post.image %}{% endcapture %}
+      <img class="post-list-hero-bg" src="{{ post_image_url | strip }}"
            alt="{{ post.image_alt | default: post.title }}" />
       <div class="post-list-hero-fade" aria-hidden="true"></div>
     {% endif %}

@@ -1,0 +1,11 @@
+{% assign image_url = include.image %}
+{% assign image_prefix = image_url | slice: 0, 8 %}
+{% assign image_assets_prefix = image_url | slice: 0, 7 %}
+{% assign image_protocol = image_url | slice: 0, 2 %}
+{% if image_url contains "://" or image_protocol == "//" %}
+{{ image_url }}{% elsif image_prefix == "/assets/" %}
+{% if include.absolute %}{{ image_url | absolute_url }}{% else %}{{ image_url | relative_url }}{% endif %}{% elsif image_assets_prefix == "assets/" %}
+{% assign image_path = "/" | append: image_url %}
+{% if include.absolute %}{{ image_path | absolute_url }}{% else %}{{ image_path | relative_url }}{% endif %}{% else %}
+{% assign image_path = "/images/" | append: image_url %}
+{% if include.absolute %}{{ image_path | absolute_url }}{% else %}{{ image_path | relative_url }}{% endif %}{% endif %}

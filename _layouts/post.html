@@ -4,8 +4,9 @@ layout: default
 
 <article class="post">
   {% if page.image %}
+  {% capture post_image_url %}{% include image-url.html image=page.image %}{% endcapture %}
   <figure class="post-hero">
-    <img src="{{ site.baseurl }}/images/{{ page.image }}"
+    <img src="{{ post_image_url | strip }}"
          alt="{{ page.image_alt | default: page.title }}" />
   </figure>
   {% endif %}
