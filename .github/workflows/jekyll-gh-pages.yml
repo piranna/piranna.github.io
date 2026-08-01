@@ -42,21 +42,45 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            libgbm1 \
+            ca-certificates \
+            fonts-liberation \
             libasound2t64 \
-            libatk1.0-0 \
             libatk-bridge2.0-0 \
-            libcups2 \
-            libdrm2 \
-            libxcomposite1 \
-            libxdamage1 \
-            libxfixes3 \
-            libxrandr2 \
-            libxkbcommon0 \
-            libpango-1.0-0 \
+            libatk1.0-0 \
+            libc6 \
             libcairo2 \
+            libcups2 \
+            libdbus-1-3 \
+            libdrm2 \
+            libexpat1 \
+            libfontconfig1 \
+            libgcc-s1 \
+            libgbm1 \
+            libgdk-pixbuf-2.0-0 \
+            libglib2.0-0 \
+            libgtk-3-0 \
+            libnspr4 \
             libnss3 \
-            libnspr4
+            libpango-1.0-0 \
+            libpangocairo-1.0-0 \
+            libstdc++6 \
+            libx11-6 \
+            libx11-xcb1 \
+            libxcb1 \
+            libxcomposite1 \
+            libxcursor1 \
+            libxdamage1 \
+            libxext6 \
+            libxfixes3 \
+            libxi6 \
+            libxrandr2 \
+            libxrender1 \
+            libxkbcommon0 \
+            libxss1 \
+            libxtst6 \
+            lsb-release \
+            wget \
+            xdg-utils
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -82,7 +106,9 @@ jobs:
           bin/generate-case-redirects
           bin/generate-internal-backlinks
           export PATH="$PWD/node_modules/.bin:$PATH"
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          bundle exec jekyll build \
+            --config _config.yml,_config.ci.yml \
+            --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
         # uses: actions/jekyll-build-pages@v1

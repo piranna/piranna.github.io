@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/piranna/jekyll-spaceship
-  revision: 28e0c4cba9137bc3440d3d56c6f601d333c2c077
+  revision: 07563d56dcbcc664e190e4c10d357e8cf0b9761f
   branch: master
   specs:
     jekyll-spaceship (0.10.2)
@@ -34,7 +34,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     colorator (1.1.0)
-    concurrent-ruby (1.3.6)
+    concurrent-ruby (1.3.8)
     connection_pool (3.0.2)
     csv (3.3.6)
     dnsruby (1.74.0)
@@ -99,7 +99,7 @@ GEM
       activesupport (>= 2)
       nokogiri (>= 1.4)
     http_parser.rb (0.8.1)
-    i18n (1.14.8)
+    i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     jekyll (4.3.4)
       addressable (~> 2.4)
@@ -280,7 +280,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
-    mercenary (0.3.6)
+    mercenary (0.4.0)
     minima (2.5.2)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)

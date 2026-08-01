@@ -6,7 +6,7 @@ export PATH="$PWD/node_modules/.bin:$PATH"
 bin/generate-category-redirects
 bin/generate-case-redirects
 bin/generate-internal-backlinks
-bundle exec jekyll build --config _config.yml,_config.test.yml
+bundle exec jekyll build --config _config.yml,_config.test.yml,_config.ci.yml
 
 test -f _site/feed.xml
 test -f _site/sitemap.xml
@@ -16,8 +16,8 @@ test -f _site/2026/07/08/Mediasoup-DataChannels-When-Replacing-WebSockets-Actual
 test -f "_site/crazy projects/webrtc/mediasoup/2026/07/08/Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense/index.html"
 grep -q "Latest WebRTC posts" _site/webrtc/index.html
 grep -q "Read the dedicated WebRTC page" _site/category/webrtc/index.html
-test -n "$(find _site/assets/svg -name '*.svg' -print -quit)"
-! grep -R -q "mermaid.ink" _site
+grep -R --include='*.html' -E -q '<svg class="(mermaid|flowchart)' _site
+! grep -R --include='*.html' -q "mermaid.ink" _site
 
 if test -f _site/WebRTC/index.html && ! cmp -s _site/WebRTC/index.html _site/webrtc/index.html; then
   grep -q "https://piranna.github.io/webrtc/" _site/WebRTC/index.html

@@ -1,0 +1,8 @@
+jekyll-spaceship:
+  mermaid-processor:
+    mode: pre-build
+    syntax:
+      code: mermaid
+    mmdc_args:
+      - --puppeteerConfigFile
+      - .github/puppeteer-config.json

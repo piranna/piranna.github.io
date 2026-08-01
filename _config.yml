@@ -81,6 +81,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - bin
   - vendor
   - bundle
 
