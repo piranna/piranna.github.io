@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/piranna/jekyll-spaceship
-  revision: c8adbd13c35b5eb480a124d3cf01797f814ba46a
+  revision: 8e615f10fe7b5849a9fef8c2f17e215a422f795e
   branch: master
   specs:
     jekyll-spaceship (0.10.2)
