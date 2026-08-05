@@ -2,6 +2,7 @@
 categories:
   - JavaScript
   - WebRTC.ventures / AgilityFeat
+  - Signature Post
 image: https://piranna.github.io/assets/svg/c1f39f56.svg
 image_alt:
   A diagram showing the npm lifecycle scripts as a graph of reusable flows, with
