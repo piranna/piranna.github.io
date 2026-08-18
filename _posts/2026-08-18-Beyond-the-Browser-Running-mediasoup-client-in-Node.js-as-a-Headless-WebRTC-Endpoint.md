@@ -5,6 +5,10 @@ categories:
   - Open Source
   - WebRTC
   - Signature Post
+image: 2026-08-18-Beyond-the-Browser-Running-mediasoup-client-in-Node.js-as-a-Headless-WebRTC-Endpoint.svg
+image_alt:
+  Diagram showing the architecture of mediasoup-client-wrtc, bridging
+  mediasoup-client and a node-webrtc compatible runtime
 lang: en
 layout: post
 tags:
