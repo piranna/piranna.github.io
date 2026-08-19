@@ -447,18 +447,12 @@ nav {
 }
 
 .post-hero:has(> img[src$=".svg" i]) {
-  aspect-ratio: 1128 / 616;
-  overflow: hidden;
-  position: relative;
+  aspect-ratio: 2 / 1;
   background: $white;
 
   img {
-    position: absolute;
-    top: -9.5%;
-    left: -32%;
-    width: 132%;
-    max-width: none;
-    height: 109.5%;
+    aspect-ratio: 2 / 1;
+    object-fit: contain;
   }
 }
 
@@ -516,11 +510,10 @@ nav {
 
 .post-with-image:has(> .post-list-hero-bg[src$=".svg" i]) {
   .post-list-hero-bg {
-    top: -9.5%;
-    left: -32%;
-    width: 132%;
-    max-width: none;
-    height: 109.5%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+    background: $white;
   }
 }
 
