@@ -1,0 +1,11 @@
+{% assign item = include.item | default: page %}
+{% assign words = item.content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 200 %}
+{% assign remainder = words | modulo: 200 %}
+{% if remainder > 0 %}
+  {% assign minutes = minutes | plus: 1 %}
+{% endif %}
+{% if minutes < 1 %}
+  {% assign minutes = 1 %}
+{% endif %}
+<span class="reading-stats" title="Estimated at 200 words per minute">{{ minutes }} min read · {{ words }} words</span>

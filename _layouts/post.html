@@ -13,6 +13,10 @@ layout: default
 
   <h1>{{ page.title }}</h1>
 
+  <div class="date">
+    {{ page.date | date: "%B %e, %Y" }} · {% include reading-stats.html item=page %}
+  </div>
+
   {% include post-taxonomy.html post=page %}
   {% unless site.disable_github_edit_link %}
   {% github_edit_link "Edit on GitHub" %}
@@ -20,10 +24,6 @@ layout: default
 
   <div class="entry">
     {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   {% include post-taxonomy.html post=page %}

@@ -142,6 +142,10 @@ img {
   color: $gray;
 }
 
+.reading-stats {
+  white-space: nowrap;
+}
+
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;

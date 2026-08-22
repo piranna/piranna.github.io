@@ -14,7 +14,7 @@
     {% endif %}
   </h2>
   <div class="date">
-    {{ post.date | date: "%B %e, %Y" }}
+    {{ post.date | date: "%B %e, %Y" }} · {% include reading-stats.html item=post %}
   </div>
 
   {% if include.show_taxonomy %}
