@@ -10,7 +10,7 @@ image_alt:
   Diagram showing the architecture of mediasoup-client-wrtc, bridging
   mediasoup-client and a node-webrtc compatible runtime
 image_height: 720
-image_crop_height: 650
+image_crop_height: 360
 image_crop_width: 1130
 image_offset_x: -350
 image_offset_y: -25
@@ -32,9 +32,9 @@ title:
   Endpoint"
 ---
 
-<!--
+{% comment %}
 Hero image Mermaid reference. Kept here for future edits, but intentionally
-inside an HTML comment so Jekyll Spaceship does not render it.
+inside a Liquid comment so Jekyll removes it before rendering.
 
 flowchart LR
 
@@ -73,7 +73,7 @@ class Wrtc project
 class Test,Bot,AI,Bridge usecase
 class MC,WebRTC core
 class MS server
--->
+{% endcomment %}
 
 > _How [mediasoup-client-wrtc](https://github.com/piranna/Mediasoup-client-wrtc)
 > turns Node.js into a first-class programmable
