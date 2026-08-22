@@ -26,6 +26,7 @@ layout: page
       {% for category in site.categories %}
         {% assign related_name = category[0] %}
         {% if related_name != category_name and related_name != 'Signature Post' %}
+          {% assign related_size = category[1] | size %}
           {% assign related_count = 0 %}
           {% for post in category_posts %}
             {% if post.categories contains related_name %}
@@ -35,7 +36,7 @@ layout: page
 
           {% if related_count == count %}
             <a class="taxonomy-pill taxonomy-pill-category"
-               href="{{ site.baseurl }}/category/{{ related_name | slugify: 'pretty' }}/">{{ related_name }} ({{ related_count }})</a>
+               href="{{ site.baseurl }}/category/{{ related_name | slugify: 'pretty' }}/">{{ related_name }} ({{ related_size }})</a>
           {% endif %}
         {% endif %}
       {% endfor %}
