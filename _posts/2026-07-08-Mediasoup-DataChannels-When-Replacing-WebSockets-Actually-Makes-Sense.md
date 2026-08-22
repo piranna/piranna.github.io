@@ -512,3 +512,15 @@ And more importantly,
 > abstractions
 
 which is often where the most interesting engineering lessons live.
+
+The interesting case is a Node.js service that already participates in the media
+session and can therefore use audio, video and synchronized data through a
+coherent endpoint model.
+
+Surprisingly, that article itself caused an interesting discussion in the
+mediasoup Discourse community forum at
+[Mediasoup DataChannels vs WebSockets: An Architectural Experiment](https://mediasoup.discourse.group/t/mediasoup-datachannels-vs-websockets-an-architectural-experiment/6986),
+showing that although unusual, it's a solution already being done in production
+environments. But while that article focused on architectural considerations,
+`mediasoup-client-wrtc` provides the missing runtime that makes those
+experiments equally possible from Node.js.

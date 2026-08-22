@@ -9,6 +9,12 @@ image: 2026-08-18-Beyond-the-Browser-Running-mediasoup-client-in-Node.js-as-a-He
 image_alt:
   Diagram showing the architecture of mediasoup-client-wrtc, bridging
   mediasoup-client and a node-webrtc compatible runtime
+image_height: 720
+image_crop_height: 650
+image_crop_width: 1130
+image_offset_x: -350
+image_offset_y: -25
+image_width: 1530
 lang: en
 layout: post
 tags:
@@ -25,6 +31,51 @@ title:
   "Beyond the Browser: Running mediasoup-client in Node.js as a Headless WebRTC
   Endpoint"
 ---
+
+<!--
+Hero image Mermaid reference. Kept here for future edits, but intentionally
+inside an HTML comment so Jekyll Spaceship does not render it.
+
+```text
+flowchart LR
+
+Browser["🌐 Browser"]
+RN["📱 React Native"]
+
+subgraph Node["Node.js"]
+  Wrtc["<b style='font-size:20px'>mediasoup-client-wrtc</b>"]
+
+  Test["🧪 Integration Tests"]
+  Bot["🤖 Media Bots"]
+  AI["🧠 AI Services"]
+  Bridge["🔀 Media Bridges"]
+
+  Test --> Wrtc
+  Bot --> Wrtc
+  AI --> Wrtc
+  Bridge --> Wrtc
+end
+
+Browser --> MC["mediasoup-client"]
+RN --> MC
+Wrtc --> MC
+
+MC --> WebRTC["WebRTC"]
+WebRTC --> MS["mediasoup"]
+
+classDef runtime fill:#3b82f6,stroke:#1d4ed8,color:#fff,stroke-width:2px
+classDef project fill:#8b5cf6,stroke:#6d28d9,color:#fff,stroke-width:3px
+classDef usecase fill:#10b981,stroke:#047857,color:#fff,stroke-width:2px
+classDef core fill:#f59e0b,stroke:#b45309,color:#111,stroke-width:2px
+classDef server fill:#ef4444,stroke:#b91c1c,color:#fff,stroke-width:2px
+
+class Browser,RN runtime
+class Wrtc project
+class Test,Bot,AI,Bridge usecase
+class MC,WebRTC core
+class MS server
+```
+-->
 
 > _How [mediasoup-client-wrtc](https://github.com/piranna/Mediasoup-client-wrtc)
 > turns Node.js into a first-class programmable

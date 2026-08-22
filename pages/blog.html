@@ -67,7 +67,10 @@ title: Blog
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <article class="post {% if post.image %}post-with-image{% endif %}">
+  <article class="post {% if post.image %}post-with-image{% endif %}{% if post.image_width and post.image_height %} post-with-sized-image{% endif %}"
+           {% if post.image_width and post.image_height %}
+           style="--post-image-width: {{ post.image_width }}px; --post-image-height: {{ post.image_height }}px; --post-image-aspect-ratio: {{ post.image_width }} / {{ post.image_height }};{% if post.image_crop_width and post.image_crop_height %} --post-image-crop-width: {{ post.image_crop_width }}px; --post-image-crop-height: {{ post.image_crop_height }}px; --post-image-crop-aspect-ratio: {{ post.image_crop_width }} / {{ post.image_crop_height }};{% endif %}{% if post.image_offset_x %} --post-image-offset-x: {{ post.image_offset_x }}px;{% endif %}{% if post.image_offset_y %} --post-image-offset-y: {{ post.image_offset_y }}px;{% endif %}"
+           {% endif %}>
     {% if post.image %}
       {% capture post_image_url %}{% include image-url.html image=post.image %}{% endcapture %}
       <img class="post-list-hero-bg" src="{{ post_image_url | strip }}"
