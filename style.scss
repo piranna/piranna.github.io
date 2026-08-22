@@ -446,38 +446,6 @@ nav {
   }
 }
 
-.post-hero:has(> img[src$=".svg" i]) {
-  aspect-ratio: 2 / 1;
-  background: $white;
-
-  img {
-    aspect-ratio: 2 / 1;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-
-.post-hero-sized:has(> img[src$=".svg" i]) {
-  aspect-ratio: var(--post-image-crop-aspect-ratio, var(--post-image-aspect-ratio));
-  overflow: hidden;
-  container-type: inline-size;
-
-  img {
-    aspect-ratio: auto;
-    width: var(--post-image-width);
-    max-width: none;
-    height: var(--post-image-height);
-    object-fit: fill;
-    transform:
-      scale(calc(100cqw / var(--post-image-crop-width, var(--post-image-width))))
-      translate(
-        var(--post-image-offset-x, 0),
-        var(--post-image-offset-y, 0)
-      );
-    transform-origin: top left;
-  }
-}
-
 .post-with-image {
   display: block;
   width: 100%;
@@ -536,24 +504,6 @@ nav {
     object-fit: contain;
     object-position: center top;
     background: $white;
-  }
-}
-
-.post-with-sized-image:has(> .post-list-hero-bg[src$=".svg" i]) {
-  container-type: inline-size;
-
-  .post-list-hero-bg {
-    width: var(--post-image-width);
-    max-width: none;
-    height: var(--post-image-height);
-    object-fit: fill;
-    transform:
-      scale(calc(100cqw / var(--post-image-crop-width, var(--post-image-width))))
-      translate(
-        var(--post-image-offset-x, 0),
-        var(--post-image-offset-y, 0)
-      );
-    transform-origin: top left;
   }
 }
 

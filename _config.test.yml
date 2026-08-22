@@ -1,3 +1,5 @@
 jekyll-spaceship:
   mermaid-processor:
     mode: default
+
+disable_github_edit_link: true

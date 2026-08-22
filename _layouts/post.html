@@ -5,8 +5,7 @@ layout: default
 <article class="post">
   {% if page.image %}
   {% capture post_image_url %}{% include image-url.html image=page.image %}{% endcapture %}
-  <figure class="post-hero{% if page.image_width and page.image_height %} post-hero-sized{% endif %}"
-          {% include post-image-style.html item=page %}>
+  <figure class="post-hero">
     <img src="{{ post_image_url | strip }}"
          alt="{{ page.image_alt | default: page.title }}" />
   </figure>
@@ -15,7 +14,9 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   {% include post-taxonomy.html post=page %}
+  {% unless site.disable_github_edit_link %}
   {% github_edit_link "Edit on GitHub" %}
+  {% endunless %}
 
   <div class="entry">
     {{ content }}

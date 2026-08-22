@@ -11,7 +11,9 @@ layout: default
     {% endif %}
   </h1>
 
+  {% unless site.disable_github_edit_link %}
   {% github_edit_link "Edit on GitHub" %}
+  {% endunless %}
 
   <div class="entry">
     {{ content }}
