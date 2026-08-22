@@ -1,0 +1,30 @@
+{% assign post = include.post %}
+<article class="post {% if post.image %}post-with-image{% endif %}{% if post.image_width and post.image_height %} post-with-sized-image{% endif %}"
+         {% include post-image-style.html item=post %}>
+  {% if post.image %}
+    {% capture post_image_url %}{% include image-url.html image=post.image %}{% endcapture %}
+    <img class="post-list-hero-bg" src="{{ post_image_url | strip }}"
+         alt="{{ post.image_alt | default: post.title }}" />
+    <div class="post-list-hero-fade" aria-hidden="true"></div>
+  {% endif %}
+
+  <h2>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% if include.show_signature_badge and post.categories contains 'Signature Post' %}
+    <span class="signature-badge">Signature Post</span>
+    {% endif %}
+  </h2>
+  <div class="date">
+    {{ post.date | date: "%B %e, %Y" }}
+  </div>
+
+  {% if include.show_taxonomy %}
+    {% include post-taxonomy.html post=post %}
+  {% endif %}
+
+  <div class="entry">
+    {{ post.excerpt }}
+  </div>
+
+  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+</article>

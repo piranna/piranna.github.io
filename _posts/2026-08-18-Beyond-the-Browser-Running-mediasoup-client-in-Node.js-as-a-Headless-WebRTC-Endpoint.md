@@ -36,7 +36,6 @@ title:
 Hero image Mermaid reference. Kept here for future edits, but intentionally
 inside an HTML comment so Jekyll Spaceship does not render it.
 
-```text
 flowchart LR
 
 Browser["🌐 Browser"]
@@ -74,7 +73,6 @@ class Wrtc project
 class Test,Bot,AI,Bridge usecase
 class MC,WebRTC core
 class MS server
-```
 -->
 
 > _How [mediasoup-client-wrtc](https://github.com/piranna/Mediasoup-client-wrtc)

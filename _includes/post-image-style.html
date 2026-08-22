@@ -1,0 +1,4 @@
+{% assign image_item = include.item %}
+{% if image_item.image_width and image_item.image_height %}
+style="--post-image-width: {{ image_item.image_width }}px; --post-image-height: {{ image_item.image_height }}px; --post-image-aspect-ratio: {{ image_item.image_width }} / {{ image_item.image_height }};{% if image_item.image_crop_width and image_item.image_crop_height %} --post-image-crop-width: {{ image_item.image_crop_width }}px; --post-image-crop-height: {{ image_item.image_crop_height }}px; --post-image-crop-aspect-ratio: {{ image_item.image_crop_width }} / {{ image_item.image_crop_height }};{% endif %}{% if image_item.image_offset_x %} --post-image-offset-x: {{ image_item.image_offset_x }}px;{% endif %}{% if image_item.image_offset_y %} --post-image-offset-y: {{ image_item.image_offset_y }}px;{% endif %}"
+{% endif %}

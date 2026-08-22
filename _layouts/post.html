@@ -6,9 +6,7 @@ layout: default
   {% if page.image %}
   {% capture post_image_url %}{% include image-url.html image=page.image %}{% endcapture %}
   <figure class="post-hero{% if page.image_width and page.image_height %} post-hero-sized{% endif %}"
-          {% if page.image_width and page.image_height %}
-          style="--post-image-width: {{ page.image_width }}px; --post-image-height: {{ page.image_height }}px; --post-image-aspect-ratio: {{ page.image_width }} / {{ page.image_height }};{% if page.image_crop_width and page.image_crop_height %} --post-image-crop-width: {{ page.image_crop_width }}px; --post-image-crop-height: {{ page.image_crop_height }}px; --post-image-crop-aspect-ratio: {{ page.image_crop_width }} / {{ page.image_crop_height }};{% endif %}{% if page.image_offset_x %} --post-image-offset-x: {{ page.image_offset_x }}px;{% endif %}{% if page.image_offset_y %} --post-image-offset-y: {{ page.image_offset_y }}px;{% endif %}"
-          {% endif %}>
+          {% include post-image-style.html item=page %}>
     <img src="{{ post_image_url | strip }}"
          alt="{{ page.image_alt | default: page.title }}" />
   </figure>

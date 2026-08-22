@@ -1,0 +1,13 @@
+<div class="pagination">
+  {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      <a {% if page.url != trail.path %}
+         href="{{ trail.path | prepend: site.baseurl }}" {% endif %}
+        title="{{trail.title}}"
+      >
+        {{ trail.num }}
+      </a>
+      {% if trail.next %} | {% endif %}
+    {% endfor %}
+  {% endif %}
+</div>
