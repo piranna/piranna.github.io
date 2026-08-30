@@ -438,6 +438,51 @@ nav {
   border-bottom: none;
 }
 
+.note-list-item {
+  background: color.adjust($lightGray, $lightness: 7%);
+  border: 1px solid $lightGray;
+  border-radius: 6px;
+  margin: 1.4rem 0 2rem;
+  padding: 1rem 1.1rem;
+
+  h2 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0.35rem 0;
+  }
+
+  .date {
+    font-size: 0.9em;
+  }
+
+  .post-taxonomy {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.note-kind {
+  color: $darkGray;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.note-permalink {
+  color: inherit;
+}
+
+.note-entry {
+  p:first-child {
+    margin-top: 0.6rem;
+  }
+
+  p:last-child,
+  pre:last-child,
+  ul:last-child,
+  ol:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .post-hero {
   margin: 0 0 1.2em;
 

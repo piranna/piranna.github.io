@@ -1,4 +1,29 @@
 {% assign post = include.post %}
+{% if post.layout == 'note' %}
+<article class="post note-list-item">
+  <div class="date">
+    <a href="{{ site.baseurl }}{{ post.url }}" class="note-permalink">
+      {{ post.date | date: "%B %e, %Y" }}
+    </a>
+    · <span class="note-kind">Note</span>
+    · {% include reading-stats.html item=post %}
+  </div>
+
+  {% if post.title %}
+  <h2>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+  </h2>
+  {% endif %}
+
+  {% if include.show_taxonomy %}
+    {% include post-taxonomy.html post=post %}
+  {% endif %}
+
+  <div class="entry note-entry">
+    {{ post.content | markdownify }}
+  </div>
+</article>
+{% else %}
 <article class="post {% if post.image %}post-with-image{% endif %}">
   {% if post.image %}
     {% capture post_image_url %}{% include image-url.html image=post.image %}{% endcapture %}
@@ -27,3 +52,4 @@
 
   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
 </article>
+{% endif %}

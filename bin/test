@@ -11,9 +11,13 @@ bundle exec jekyll build --config _config.yml,_config.test.yml,_config.ci.yml
 test -f _site/feed.xml
 test -f _site/sitemap.xml
 test -f _site/blog/page/2/index.html
+test -f _site/notes/index.html
 test -f _site/category/webrtc/index.html
+test -f _site/2022/02/16/use-ssh-for-github-https-urls/index.html
+test -f _site/2026/08/30/chatgpt-zero-width-space-in-copied-commands/index.html
 test -f _site/2026/07/08/Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense/index.html
 test -f "_site/crazy projects/webrtc/mediasoup/2026/07/08/Mediasoup-DataChannels-When-Replacing-WebSockets-Actually-Makes-Sense/index.html"
+test "$(grep -c 'class="post note-list-item"' _site/notes/index.html)" -ge 3
 grep -q "Latest WebRTC posts" _site/webrtc/index.html
 grep -q "Read the dedicated WebRTC page" _site/category/webrtc/index.html
 grep -q 'content="https://piranna.github.io/assets/svg/c1f39f56.svg"' "_site/2026/08/05/Understanding-npm-Lifecycle-Scripts-(Once-and-For-All)/index.html"
