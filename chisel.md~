@@ -1,0 +1,462 @@
+Voy a convertir toda la conversación en un inventario técnico completo, no en un artículo todavía: primero materia prima ordenada, con decisiones, alternativas, dudas y ejemplos de código.
+
+Pensó durante 8s
+
+Aquí tienes el recopilatorio exhaustivo de toda la conversación, desde el problema inicial de Docker --output hasta la evolución hacia sistemas Linux inmutables arrancables tipo appliance.
+
+0. Objetivo global que fue emergiendo
+
+La conversación empezó con una duda concreta:
+
+¿Cómo saber desde un Dockerfile si el build se ejecutó con --output?
+
+Y fue evolucionando hacia una idea mucho más potente:
+
+Construir una imagen mínima, inmutable y segura usando Docker + Chisel, extraer artefactos legales/licencias fuera de la imagen, y eventualmente convertir esa imagen/rootfs en un sistema Linux arrancable, read-only, tipo appliance, usando EROFS/SquashFS, UKI, init mínimo, partición de datos estilo volumen Docker y quizá LinuxBoot/Coreboot.
+
+El hilo mental fue:
+
+Docker multi-stage
+  ↓
+exportar un stage con --output
+  ↓
+imagen final mínima con Chisel
+  ↓
+licencias fuera de la imagen
+  ↓
+hardening: nonroot, sin shell, rootfs readonly
+  ↓
+Docker no permite readonly por defecto
+  ↓
+fail-fast sin shell
+  ↓
+¿y si el contenedor fuera el sistema operativo?
+  ↓
+EROFS / SquashFS / UKI / initramfs / kernel modules
+  ↓
+Coreboot / LinuxBoot
+  ↓
+artículo técnico / signature piece / posible paper
+1. Detectar --output dentro del Dockerfile
+1.1 Pregunta inicial
+
+Querías saber si desde un Dockerfile se podía comprobar si docker build se había ejecutado con:
+
+docker build --output ...
+
+y abortar si no.
+
+1.2 Conclusión
+
+No se puede saber directamente desde el Dockerfile.
+
+No existe:
+
+$DOCKER_OUTPUT
+$BUILD_OUTPUT
+$DOCKER_BUILD_COMMAND
+
+ni ninguna variable mágica que exponga los flags con los que se invocó Docker.
+
+El Dockerfile solo ve:
+
+- el contexto de build
+- los ARG explícitos
+- los archivos copiados
+- el entorno dentro de cada RUN
+
+Pero no ve:
+
+- --output
+- --load
+- --push
+- --platform
+- --progress
+- comando completo usado
+1.3 Workaround inicial
+
+Se propuso forzar un --build-arg:
+
+ARG REQUIRE_OUTPUT
+RUN test "$REQUIRE_OUTPUT" = "1" || \
+    (echo "ERROR: este build requiere --output"; exit 1)
+
+Ejemplo:
+
+docker build \
+  --output type=local,dest=out \
+  --build-arg REQUIRE_OUTPUT=1 \
+  .
+
+Pero quedó claro que eso no detecta --output; solo obliga a pasar una señal manual.
+
+2. Multi-stage Dockerfile: imagen normal + artefactos legales
+2.1 Caso real planteado
+
+Tienes un Dockerfile multi-stage donde quieres generar dos “finales”:
+
+1. app
+   → imagen Docker normal con el programa.
+
+2. copyrights / licenses
+   → no quieres crear una imagen.
+   → quieres exportar ficheros al host con --output.
+2.2 Decisión clave
+
+Usar --target.
+
+Ejemplo conceptual:
+
+FROM ... AS build
+# compila app
+
+FROM scratch AS copyrights
+COPY LICENSE /licenses/LICENSE
+COPY THIRD_PARTY_NOTICES.txt /licenses/THIRD_PARTY_NOTICES.txt
+
+FROM scratch AS app
+COPY --from=build /out/myapp /usr/local/bin/myapp
+ENTRYPOINT ["/usr/local/bin/myapp"]
+
+Construir app:
+
+docker buildx build \
+  --target app \
+  -t miapp:latest \
+  --load \
+  .
+
+Exportar licencias:
+
+docker buildx build \
+  --target copyrights \
+  --output type=local,dest=./legal \
+  .
+2.3 Qué pasa si no se usa --target
+
+Se aclaró que en un Dockerfile multi-stage:
+
+- si no usas --target, Docker construye el último stage.
+- los stages anteriores solo se construyen si el último depende de ellos.
+- si copyrights está antes que app y app no lo referencia, copyrights no se ejecuta.
+
+Ejemplo:
+
+FROM alpine AS copyrights
+RUN echo "Licencias" > /licenses.txt
+
+FROM alpine AS app
+COPY hello.sh /usr/local/bin/hello
+ENTRYPOINT ["/usr/local/bin/hello"]
+
+Si haces:
+
+docker build -t miapp .
+
+solo se construye app.
+
+copyrights no se ejecuta.
+
+2.4 Qué hace --load
+
+Se explicó:
+
+docker buildx build por defecto puede dejar el resultado solo en la cache de BuildKit.
+--load exporta la imagen al daemon Docker local.
+
+Ejemplo:
+
+docker buildx build -t miapp:latest --load .
+docker run --rm miapp:latest
+
+Alternativas:
+
+--load  → carga en Docker local.
+--push  → sube a registry.
+--output type=local → exporta filesystem al host.
+3. Licencias fuera de la imagen
+3.1 Motivación
+
+Querías reducir aún más el tamaño de la imagen final quitando archivos legales/licencias del rootfs, pero sin incumplir licencias.
+
+La duda era:
+
+¿Es legal quitar licencias de la imagen si las guardo aparte?
+3.2 Conclusión práctica
+
+Depende de las licencias, pero el patrón razonable es:
+
+- imagen mínima sin /usr/share/doc ni licencias si se quiere.
+- artefacto legal separado generado en CI.
+- distribuir imagen + THIRD_PARTY.md + licenses.tgz juntos.
+
+Se matizó:
+
+MIT/BSD/Apache suelen exigir conservar avisos.
+GPL/LGPL pueden exigir texto completo y/o código fuente.
+
+No es asesoría legal, pero la idea técnica es correcta si el artefacto legal acompaña a la distribución.
+
+3.3 Alternativas evaluadas
+A. Exportar árbol de licencias
+./legal/files/<package>/copyright
+
+Ventaja:
+
+máxima fidelidad.
+
+Desventaja:
+
+muchos archivos.
+B. Exportar un .tgz
+licenses.tgz
+
+Ventaja:
+
+cómodo de adjuntar y versionar.
+
+Desventaja:
+
+menos legible.
+C. Generar Markdown
+THIRD_PARTY.md
+
+Ventaja:
+
+legible para humanos.
+
+Desventaja:
+
+puede no contener todo el texto legal si solo es inventario.
+3.4 Decisión final
+
+Generar ambos:
+
+THIRD_PARTY.md
+licenses.tgz
+4. Introducción de Canonical Chisel
+4.1 Motivación
+
+Querías usar Chisel para crear una imagen Ubuntu mínima, distroless-like, sin arrastrar paquetes completos.
+
+4.2 Concepto
+
+Chisel:
+
+- corta rootfs mínimos a partir de Ubuntu.
+- usa slices.
+- evita apt/dpkg en la imagen final.
+- reduce tamaño y superficie de ataque.
+- los slices incluyen explícitamente archivos de licencia.
+
+Este punto corrigió una propuesta anterior: no hace falta descargar .deb para extraer /usr/share/doc/*/copyright, porque los slices ya incluyen lo necesario.
+
+4.3 Patrón oficial
+
+El patrón que enlazaste de Canonical era esencialmente:
+
+FROM ubuntu:24.04 AS chiseler
+RUN apt-get update && apt-get install -y chisel
+RUN chisel cut --release ubuntu-24.04 --root /rootfs libc6
+
+FROM scratch
+COPY --from=chiseler /rootfs /
+CMD [...]
+
+Conclusiones:
+
+- Chisel se ejecuta en stage Ubuntu.
+- La imagen final puede ser scratch.
+- El rootfs chiseado se copia tal cual.
+- No conviene mutar permisos masivamente.
+5. Dockerfile con Chisel + licencias + app
+5.1 Primer patrón
+
+Se propuso un Dockerfile con:
+
+tooling/chiseler
+licenses
+build
+app
+
+Idea:
+
+FROM ubuntu:24.04 AS tooling
+RUN apt-get update && apt-get install -y chisel
+ARG CHISEL_RELEASE=ubuntu-24.04
+ARG CHISEL_SLICES="..."
+RUN chisel cut --release ${CHISEL_RELEASE} --root /rootfs ${CHISEL_SLICES}
+
+FROM ubuntu:24.04 AS licenses
+COPY --from=tooling /rootfs /rootfs
+WORKDIR /out
+RUN generar THIRD_PARTY.md y licenses.tgz
+
+FROM ... AS build
+RUN compilar app
+
+FROM scratch AS app
+COPY --from=tooling /rootfs/ /
+COPY --from=build /out/myapp /usr/local/bin/myapp
+ENTRYPOINT ["/usr/local/bin/myapp"]
+5.2 Generación de THIRD_PARTY.md
+
+Se generaba recorriendo:
+
+/rootfs/usr/share/doc/*/copyright
+
+Ejemplo:
+
+RUN set -e; \
+  echo "# THIRD_PARTY (Chisel ${CHISEL_RELEASE})" > THIRD_PARTY.md; \
+  echo "" >> THIRD_PARTY.md; \
+  echo "Slices utilizados:" >> THIRD_PARTY.md; \
+  for s in ${CHISEL_SLICES}; do echo "- ${s}" >> THIRD_PARTY.md; done; \
+  echo "" >> THIRD_PARTY.md; \
+  echo "## Paquetes y licencias detectadas" >> THIRD_PARTY.md; \
+  echo "" >> THIRD_PARTY.md; \
+  mkdir -p /out/files; \
+  if [ -d /rootfs/usr/share/doc ]; then \
+    find /rootfs/usr/share/doc -maxdepth 2 -type f -name copyright \
+      | sort \
+      | while read -r f; do \
+          pkg="$(echo "$f" | sed -E 's#.*/usr/share/doc/([^/]+)/copyright#\1#')"; \
+          echo "### ${pkg}" >> THIRD_PARTY.md; \
+          echo "- Ruta: ${f#/rootfs}" >> THIRD_PARTY.md; \
+          echo "" >> THIRD_PARTY.md; \
+          mkdir -p "/out/files/${pkg}"; \
+          cp "$f" "/out/files/${pkg}/"; \
+        done; \
+  else \
+    echo "_No se encontraron metadatos de licencia en el rootfs chiseado._" >> THIRD_PARTY.md; \
+  fi \
+  && tar -C /out -czf /out/licenses.tgz files THIRD_PARTY.md
+5.3 Exportar licencias
+docker buildx build \
+  --target licenses \
+  --build-arg CHISEL_SLICES="base core ca-certificates tzdata libc6 minimal" \
+  --output type=local,dest=./legal \
+  .
+
+Resultado:
+
+./legal/THIRD_PARTY.md
+./legal/licenses.tgz
+./legal/files/<pkg>/copyright
+6. docker-bake.hcl
+6.1 Motivación
+
+Querías construir:
+
+- imagen app
+- artefactos legales
+
+en una sola orden.
+
+6.2 docker-bake.hcl
+
+Ejemplo:
+
+group "default" {
+  targets = ["app_image", "licenses"]
+}
+
+target "app_image" {
+  target = "app"
+  tags   = ["miapp:latest"]
+  output = ["type=docker"]
+}
+
+target "licenses" {
+  target = "licenses"
+  args = {
+    CHISEL_SLICES = "base core ca-certificates tzdata libc6 minimal"
+  }
+  output = ["type=local,dest=./legal"]
+}
+
+Ejecutar:
+
+docker buildx bake
+6.3 Qué es HCL
+
+HCL:
+
+HashiCorp Configuration Language.
+
+Se usa en Terraform, Packer, etc.
+
+En Buildx Bake sirve para declarar:
+
+- targets
+- stages
+- tags
+- args
+- outputs
+- grupos de build
+
+Ventajas:
+
+- una sola orden
+- salidas distintas
+- paralelismo
+- cache compartida
+- configuración declarativa
+7. Hardening de la imagen final
+7.1 Requisitos que planteaste
+
+Querías:
+
+- usar scratch o Ubuntu Slim siempre que sea posible.
+- no instalar paquetes innecesarios.
+- no usar Alpine, BusyBox ni Debian.
+- usar solo scratch o Ubuntu Slim.
+- usuario nonroot estilo distroless.
+- ejecutar por defecto como nonroot.
+- definir usuario/grupo por nombre, no solo UID/GID.
+- shell de root y nonroot: /sbin/nologin.
+- root con home /.
+- no copiar /root.
+- home de nonroot como volumen.
+- evitar escritura en todos los archivos salvo home.
+- usar COPY --chown para ownership final.
+- no cambiar permisos en stages intermedios.
+7.2 Diseño resultante
+
+Stages:
+
+chiseler / tooling → ubuntu:24.04
+licenses           → ubuntu:24.04
+build              → ubuntu:24.04
+etcfiles           → ubuntu:24.04
+app                → scratch
+7.3 /etc/passwd y /etc/group
+
+Ejemplo:
+
+FROM ubuntu:24.04 AS etcfiles
+
+RUN mkdir -p /etc /home/nonroot
+
+RUN bash -lc 'set -e; \
+  echo "root:x:0:0:root:/:/sbin/nologin" > /etc/passwd; \
+  echo "nonroot:x:65532:65532:nonroot:/home/nonroot:/sbin/nologin" >> /etc/passwd; \
+  echo "root:x:0:" > /etc/group; \
+  echo "nonroot:x:65532:" >> /etc/group'
+7.4 Imagen final
+FROM scratch AS app
+
+COPY --from=chiseler /rootfs/ /
+
+COPY --from=etcfiles --chown=nonroot:nonroot /home/nonroot /home/nonroot
+COPY --from=etcfiles /etc/passwd /etc/passwd
+COPY --from=etcfiles /etc/group  /etc/group
+
+COPY --from=build --chown=nonroot:nonroot /out/myapp /usr/local/bin/myapp
+
+ENV HOME=/home/nonroot
+WORKDIR /home/nonroot
+VOLUME ["/home/nonroot"]
+
+USER nonroot:nonroot
+ENTRYPOINT ["/usr/local/bin/my
